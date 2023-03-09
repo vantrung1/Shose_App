@@ -14,7 +14,12 @@
         android:theme="@style/Theme.Shose_App"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity.Onboard_Activity"
+            android:exported="true" >
+
+        </activity>
+        <activity
+            android:name=".Activity.splash_activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,6 +27,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

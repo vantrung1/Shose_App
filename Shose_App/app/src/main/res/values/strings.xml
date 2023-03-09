@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Shose_App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="smart_gorge"><![CDATA[Smart, Gorgeous & Fashionable
+Collection]]></string>
+    <string name="smart_gorge2"><![CDATA[There Are Many Beautiful And
+Attractive Plants To Your Room]]></string>
+    <string name="smart_gorge3"><![CDATA[Amet Minim Lit Nodeseru Saku
+Nandu sit Alique Dolor]]></string>
 </resources>
