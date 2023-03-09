@@ -20,7 +20,7 @@ public class Onboard_Activity extends AppCompatActivity {
     ViewPager viewPager;
     CircleIndicator circleIndicator;
     private ViewPapgerAdapter adapter;
-
+    //dsad
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
