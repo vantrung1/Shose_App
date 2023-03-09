@@ -14,10 +14,20 @@
         android:theme="@style/Theme.Shose_App"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.FogetPassActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.SignInActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.Onboard_Activity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".Activity.splash_activity"
             android:exported="true">
@@ -29,7 +39,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

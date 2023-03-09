@@ -29,6 +29,27 @@ public class Onboard_Activity extends AppCompatActivity {
         adapter = new ViewPapgerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPager.setAdapter(adapter);
         circleIndicator.setViewPager(viewPager);
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                if(position ==0){
+                    btnOnboardNext.setText("Get Started");
+                }
+                else {
+                    btnOnboardNext.setText("Next");
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
     }
 
     private void initUi() {
@@ -49,7 +70,7 @@ public class Onboard_Activity extends AppCompatActivity {
                     btnOnboardNext.setText("Get Started");
                 }
                 if (viewPager.getCurrentItem() ==2) {
-                    Intent i =new Intent(Onboard_Activity.this, MainActivity.class);
+                    Intent i =new Intent(Onboard_Activity.this, SignInActivity.class);
                     startActivity(i);
                 }
             }
