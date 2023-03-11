@@ -2,6 +2,7 @@
 <resources xmlns:ns1="http://schemas.android.com/tools">
     <color name="background">#F8F9FA</color>
     <color name="black">#FF000000</color>
+    <color name="lavender">#8692f7</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -11,6 +12,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <color name="xam">#707B81</color>
+    <dimen name="settings_container_padding">16dp</dimen>
+    <dimen name="settings_divider_height">1dp</dimen>
+    <dimen name="settings_icon_end_margin">16dp</dimen>
+    <dimen name="settings_icon_width_and_height">24dp</dimen>
     <string name="app_name">Shose_App</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="recovery">Please Enter Your Email Address To
@@ -21,6 +26,22 @@ Collection]]></string>
 Attractive Plants To Your Room]]></string>
     <string name="smart_gorge3"><![CDATA[Amet Minim Lit Nodeseru Saku
 Nandu sit Alique Dolor]]></string>
+    <style name="AppSettings_imageView_icon">
+        <item name="android:layout_width">@dimen/settings_icon_width_and_height</item>
+        <item name="android:layout_height">@dimen/settings_icon_width_and_height</item>
+        <item name="android:layout_marginEnd">@dimen/settings_icon_end_margin</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+    <style name="RelactiveSettings_settingContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:padding">@dimen/settings_container_padding</item>
+    </style>
     <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <item name="boxCornerRadiusBottomEnd">20dp</item>
@@ -41,5 +62,15 @@ Nandu sit Alique Dolor]]></string>
         
         <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
         
+
+
+    </style>
+    <style name="easySettings_textView_title">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textAppearance">?android:textAppearanceMedium</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_alignParentTop">true</item>
     </style>
 </resources>
