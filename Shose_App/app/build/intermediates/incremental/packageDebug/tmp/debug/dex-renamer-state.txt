@@ -1,8 +1,9 @@
-#Fri Mar 10 00:04:07 ICT 2023
+#Sat Mar 11 13:10:34 ICT 2023
 path.4=7/classes.dex
 path.3=4/classes.dex
 path.2=12/classes.dex
 path.1=0/classes.dex
+path.5=9/classes.dex
 path.0=classes.dex
 base.4=C\:\\FPTPoly\\Shose_App\\Shose_App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\7\\classes.dex
 base.3=C\:\\FPTPoly\\Shose_App\\Shose_App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\4\\classes.dex
@@ -13,4 +14,6 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
+renamed.5=classes6.dex
 renamed.4=classes5.dex
+base.5=C\:\\FPTPoly\\Shose_App\\Shose_App\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\9\\classes.dex

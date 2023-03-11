@@ -8,8 +8,8 @@
         <item name="color">@color/white</item>
         <item name="boxCornerRadiusTopStart">20dp</item>
     </style>
-<<<<<<< HEAD
-=======
+<!--<<<<<<< HEAD-->
+<!--=======-->
     <style name="AppSettings_imageView_icon">
         <item name="android:layout_width">@dimen/settings_icon_width_and_height</item>
         <item name="android:layout_height">@dimen/settings_icon_width_and_height</item>

@@ -4,7 +4,7 @@
             "outputFile": "edu.fpt.shose_app-mergeDebugResources-3:/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\tn012\\.gradle\\caches\\transforms-3\\f2e27e329ef8021037e61d4cd08907ed\\transformed\\appcompat-1.6.1\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\f2e27e329ef8021037e61d4cd08907ed\\transformed\\appcompat-1.6.1\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",
