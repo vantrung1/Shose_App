@@ -66,10 +66,8 @@ public class Onboard_Activity extends AppCompatActivity {
                     Log.d("TAG", "onClick: next");
                     btnOnboardNext.setText("Next");
                 }
-                if (viewPager.getCurrentItem() == 0) {
-                    btnOnboardNext.setText("Get Started");
-                }
-                if (viewPager.getCurrentItem() ==2) {
+
+               else if (viewPager.getCurrentItem() ==2) {
                     Intent i =new Intent(Onboard_Activity.this, SignInActivity.class);
                     startActivity(i);
                 }

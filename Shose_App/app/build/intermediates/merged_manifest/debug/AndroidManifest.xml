@@ -33,7 +33,8 @@
             android:exported="false" />
         <activity
             android:name="edu.fpt.shose_app.Activity.HomeActivity"
-            android:exported="false" />
+            android:exported="true" >
+        </activity>
 
         <meta-data
             android:name="com.google.android.gms.version"

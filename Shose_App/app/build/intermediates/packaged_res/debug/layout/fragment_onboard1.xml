@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
+
     android:orientation="vertical"
     tools:context=".Fragment.OnboardFragment1">
     <ImageView
-        android:layout_marginTop="100dp"
+
         android:src="@drawable/onboard1"
-        android:layout_width="375dp"
-        android:layout_height="324dp"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
     <TextView
         android:id="@+id/start_journ"
         android:layout_width="300dp"
