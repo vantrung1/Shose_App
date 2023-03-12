@@ -19,7 +19,9 @@
     <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
         android:id="@+id/viewPager"
-
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:paddingTop="60dp"
         android:layout_height="match_parent"/>
     <RelativeLayout
         android:id="@+id/layoutbottom"

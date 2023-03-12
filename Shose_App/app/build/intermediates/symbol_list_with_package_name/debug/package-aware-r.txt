@@ -898,6 +898,11 @@ attr navigationIconTint
 attr navigationMode
 attr navigationRailStyle
 attr navigationViewStyle
+attr nbAnimationDuration
+attr nbAnimationEnabled
+attr nbBackground
+attr nbEllipsizeText
+attr nbMaxTextLength
 attr nestedScrollFlags
 attr nestedScrollViewStyle
 attr nestedScrollable
@@ -2745,6 +2750,7 @@ drawable avd_show_password
 drawable backgroud_circle
 drawable background_btn_dangnhap
 drawable background_btn_dangnhapgmail
+drawable bag
 drawable baseline_add_24
 drawable baseline_chevron_right_24
 drawable baseline_delete_24
@@ -2807,6 +2813,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable icon_back
 drawable icon_gg
+drawable iconmenu
 drawable image_profile
 drawable logo
 drawable m3_appbar_background
@@ -2868,6 +2875,7 @@ drawable mtrl_switch_track
 drawable mtrl_switch_track_decoration
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
+drawable nb_badge_bg
 drawable nike
 drawable notification_action_background
 drawable notification_bg
@@ -2894,6 +2902,7 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id CircleIndicator
+id CoordinatorLayouthome
 id FUNCTION
 id Favorite
 id META
@@ -3070,6 +3079,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drawerlayout
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -3102,6 +3112,7 @@ id fitStart
 id fitToContents
 id fitXY
 id fixed
+id fl_container
 id flip
 id floating
 id forever
@@ -3148,11 +3159,14 @@ id invisible
 id inward
 id italic
 id item_touch_helper_previous_elevation
+id iv_badge_bg
 id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layoutGioHang
 id layoutbottom
+id layoutop
 id left
 id leftToRight
 id legacy
@@ -3189,6 +3203,7 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id matrix
+id menuSl
 id message
 id middle
 id mini
@@ -3223,6 +3238,8 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nameUser
+id navigation
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3279,6 +3296,7 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id scorllView
 id screen
 id scroll
 id scrollIndicatorDown
@@ -3420,6 +3438,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_badge_text
 id unchecked
 id uniform
 id unlabeled
@@ -3582,6 +3601,7 @@ layout design_text_input_start_icon
 layout fragment_onboadrd2
 layout fragment_onboadrd3
 layout fragment_onboard1
+layout header_layout
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
@@ -3635,6 +3655,7 @@ layout mtrl_search_bar
 layout mtrl_search_view
 layout notification_action
 layout notification_action_tombstone
+layout notification_badge
 layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
@@ -5035,6 +5056,7 @@ styleable NavigationBarActiveIndicator android_height android_width android_colo
 styleable NavigationBarView backgroundTint elevation itemActiveIndicatorStyle itemBackground itemIconSize itemIconTint itemPaddingBottom itemPaddingTop itemRippleColor itemTextAppearanceActive itemTextAppearanceInactive itemTextColor labelVisibilityMode menu
 styleable NavigationRailView headerLayout itemMinHeight menuGravity paddingBottomSystemWindowInsets paddingTopSystemWindowInsets
 styleable NavigationView android_layout_gravity android_background android_fitsSystemWindows android_maxWidth bottomInsetScrimEnabled dividerInsetEnd dividerInsetStart drawerLayoutCornerSize elevation headerLayout itemBackground itemHorizontalPadding itemIconPadding itemIconSize itemIconTint itemMaxLines itemRippleColor itemShapeAppearance itemShapeAppearanceOverlay itemShapeFillColor itemShapeInsetBottom itemShapeInsetEnd itemShapeInsetStart itemShapeInsetTop itemTextAppearance itemTextColor itemVerticalPadding menu shapeAppearance shapeAppearanceOverlay subheaderColor subheaderInsetEnd subheaderInsetStart subheaderTextAppearance topInsetScrimEnabled
+styleable NotificationBadge android_textSize android_textColor nbAnimationDuration nbAnimationEnabled nbBackground nbEllipsizeText nbMaxTextLength
 styleable OnClick clickAction targetId
 styleable OnSwipe autoCompleteMode dragDirection dragScale dragThreshold limitBoundsTo maxAcceleration maxVelocity moveWhenScrollAtTop nestedScrollFlags onTouchUp rotationCenterId springBoundary springDamping springMass springStiffness springStopThreshold touchAnchorId touchAnchorSide touchRegionId
 styleable PopupWindow android_popupBackground android_popupAnimationStyle overlapAnchor
