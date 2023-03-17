@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="21"
-        android:targetSdkVersion="32" />
+        android:targetSdkVersion="31" />
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -30,15 +30,16 @@
         android:theme="@style/Theme.Shose_App" >
         <activity
             android:name="edu.fpt.shose_app.Activity.MyCartActivity"
-            android:exported="false" />
-        <activity
-            android:name="edu.fpt.shose_app.Activity.HomeActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="edu.fpt.shose_app.Activity.HomeActivity"
+            android:exported="false" >
         </activity>
 
         <meta-data
