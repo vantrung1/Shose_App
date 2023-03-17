@@ -3328,6 +3328,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recy_1_product
 id recy_my_cart
 id reverseSawtooth
 id right
