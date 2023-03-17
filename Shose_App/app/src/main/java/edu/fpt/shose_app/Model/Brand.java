@@ -3,29 +3,41 @@ package edu.fpt.shose_app.Model;
 import java.io.Serializable;
 
 public class Brand implements Serializable {
-    private boolean ischeck = false;
 
-    public boolean isIscheck() {
-        return ischeck;
-    }
-
-    public void setIscheck(boolean ischeck) {
-        this.ischeck = ischeck;
-    }
 
     private int Id;
     private String brandName;
     private String desc;
     private String image;
+    private String create_at;
+    private String update_at;
 
     public Brand() {
     }
 
-    public Brand(int id, String brandName, String desc, String image) {
+    public String getCreate_at() {
+        return create_at;
+    }
+
+    public void setCreate_at(String create_at) {
+        this.create_at = create_at;
+    }
+
+    public String getUpdate_at() {
+        return update_at;
+    }
+
+    public void setUpdate_at(String update_at) {
+        this.update_at = update_at;
+    }
+
+    public Brand(int id, String brandName, String desc, String image, String create_at, String update_at) {
         Id = id;
         this.brandName = brandName;
         this.desc = desc;
         this.image = image;
+        this.create_at = create_at;
+        this.update_at = update_at;
     }
 
     public int getId() {

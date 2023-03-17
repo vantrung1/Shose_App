@@ -40,12 +40,14 @@ drawable icon_back
 drawable icon_gg
 drawable iconmenu
 drawable image_profile
+drawable itemclick
 drawable logo
 drawable nike
 drawable nike_icon
 drawable onboard1
 drawable onboard2
 drawable onboard3
+drawable product
 font fonttext
 id CircleIndicator
 id CoordinatorLayouthome
@@ -82,9 +84,13 @@ id imageView_icon3
 id imageView_icon4
 id image_brand
 id img_camera
+id item_product_image
+id item_product_name
+id item_product_price
 id layoutGioHang
 id layoutbottom
 id layoutop
+id layuotItem
 id ln_item_dv
 id logo
 id menuSl
@@ -100,6 +106,7 @@ id name_brand
 id navigation
 id profile_image
 id profile_image_header
+id recy_1_product
 id scorllView
 id signIn
 id smart_gorge
@@ -112,6 +119,7 @@ id textInputLayout1
 id textInputLayout2
 id textInputLayout3
 id textInputLayout4
+id textTopic
 id textView
 id textView1
 id textView2
@@ -125,6 +133,7 @@ id textViewAppSettings
 id textViewPassword
 id toolbar
 id toolbar2
+id topicProduct
 id viewPager
 layout activity_account_settings
 layout activity_foget_pass
@@ -141,6 +150,7 @@ layout fragment_onboadrd3
 layout fragment_onboard1
 layout header_layout
 layout item_brand
+layout item_product_home
 menu bottom_menu
 menu nav_menu
 mipmap ic_launcher

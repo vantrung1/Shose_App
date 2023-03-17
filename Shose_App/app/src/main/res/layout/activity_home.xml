@@ -94,7 +94,8 @@
                             android:layout_marginBottom="10dp"
                             android:text="See All" />
                         <androidx.recyclerview.widget.RecyclerView
-                            android:layout_marginTop="5dp"
+                            android:id="@+id/recy_1_product"
+                            android:layout_marginTop="10dp"
                             android:layout_width="match_parent"
                             android:layout_below="@id/topicProduct"
                             android:layout_height="wrap_content"/>
