@@ -1337,6 +1337,7 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color button
 color button_material_dark
 color button_material_light
 color cardview_dark_background
@@ -2751,6 +2752,8 @@ drawable avd_show_password
 drawable backgroud_circle
 drawable background_btn_dangnhap
 drawable background_btn_dangnhapgmail
+drawable background_buttom_sheet
+drawable background_item_my_cart
 drawable bag
 drawable baseline_add_24
 drawable baseline_chevron_right_24
@@ -2768,6 +2771,12 @@ drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
 drawable btn_checkbox_unchecked_to_checked_mtrl_animation
+drawable btn_delete_gray
+drawable btn_delete_red
+drawable btn_minus_blue
+drawable btn_minus_white
+drawable btn_plus_blue
+drawable btn_plus_white
 drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
@@ -2817,6 +2826,8 @@ drawable icon_back
 drawable icon_gg
 drawable iconmenu
 drawable image_profile
+drawable img_net_dut
+drawable itemclick
 drawable logo
 drawable m3_appbar_background
 drawable m3_avd_hide_password
@@ -2895,6 +2906,7 @@ drawable notify_panel_notification_icon_bg
 drawable onboard1
 drawable onboard2
 drawable onboard3
+drawable product
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -3014,6 +3026,7 @@ id bounceStart
 id btnGmail
 id btnLogin
 id btn_OnboardNext
+id btn_checkout
 id btn_create
 id btnloginGmail
 id buttonPanel
@@ -3165,7 +3178,18 @@ id info
 id invisible
 id inward
 id italic
+id item_btnIMG_minus_cart
+id item_btnIMG_plus_cart
+id item_img_cart
+id item_img_delete_cart
+id item_product_image
+id item_product_name
+id item_product_price
 id item_touch_helper_previous_elevation
+id item_txt_name_cart
+id item_txt_price_cart
+id item_txt_quantity_cart
+id item_txt_size_cart
 id iv_badge_bg
 id jumpToEnd
 id jumpToStart
@@ -3174,6 +3198,7 @@ id layout
 id layoutGioHang
 id layoutbottom
 id layoutop
+id layuotItem
 id left
 id leftToRight
 id legacy
@@ -3181,6 +3206,7 @@ id light
 id line1
 id line3
 id linear
+id linearLayout
 id listMode
 id list_item
 id ln_item_dv
@@ -3302,6 +3328,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recy_my_cart
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3417,6 +3444,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textTopic
 id textView
 id textView1
 id textView2
@@ -3444,8 +3472,10 @@ id title_template
 id toggle
 id toolbar
 id toolbar2
+id toolbar_cart
 id top
 id topPanel
+id topicProduct
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -3456,6 +3486,9 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tv_badge_text
+id txt_price_shopping
+id txt_price_subtotal
+id txt_price_total
 id unchecked
 id uniform
 id unlabeled
@@ -3620,6 +3653,8 @@ layout fragment_onboadrd3
 layout fragment_onboard1
 layout header_layout
 layout item_brand
+layout item_my_cart
+layout item_product_home
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
