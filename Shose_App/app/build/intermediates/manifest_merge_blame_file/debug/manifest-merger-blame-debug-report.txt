@@ -54,66 +54,66 @@
 33            android:exported="false" />
 33-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:20:13-37
 34        <activity
-34-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:21:9-25:20
+34-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:21:9-29:20
 35            android:name="edu.fpt.shose_app.Activity.HomeActivity"
 35-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:22:13-50
 36            android:exported="true" >
 36-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:23:13-36
-37        </activity>
-38
-39        <meta-data
-39-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:27:9-29:69
-40            android:name="com.google.android.gms.version"
-40-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:28:13-58
-41            android:value="@integer/google_play_services_version" />
-41-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:29:13-66
-42
-43        <activity
-43-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:31:9-33:40
-44            android:name="edu.fpt.shose_app.Activity.FogetPassActivity"
-44-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:32:13-55
-45            android:exported="false" />
-45-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:33:13-37
-46        <activity
-46-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:34:9-36:40
-47            android:name="edu.fpt.shose_app.Activity.ProfileActivity"
-47-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:35:13-53
-48            android:exported="false" />
-48-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:36:13-37
-49        <activity
-49-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:37:9-39:40
-50            android:name="edu.fpt.shose_app.Activity.SignUpActivity"
-50-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:38:13-52
-51            android:exported="false" />
-51-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:39:13-37
-52        <activity
-52-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:40:9-42:40
-53            android:name="edu.fpt.shose_app.Activity.SignInActivity"
-53-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:41:13-52
-54            android:exported="false" />
-54-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:42:13-37
-55        <activity
-55-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:43:9-45:39
-56            android:name="edu.fpt.shose_app.Activity.Onboard_Activity"
-56-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:44:13-54
-57            android:exported="true" />
-57-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:45:13-36
-58        <activity
-58-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:46:9-54:20
-59            android:name="edu.fpt.shose_app.Activity.splash_activity"
-59-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:47:13-53
-60            android:exported="true" >
-60-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:48:13-36
-61            <intent-filter>
-61-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:49:13-53:29
-62                <action android:name="android.intent.action.MAIN" />
-62-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:50:17-69
-62-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:50:25-66
-63
-64                <category android:name="android.intent.category.LAUNCHER" />
-64-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:52:17-77
-64-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:52:27-74
-65            </intent-filter>
+37            <intent-filter>
+37-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:24:13-28:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:25:17-69
+38-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:25:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:27:17-77
+40-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:27:27-74
+41            </intent-filter>
+42        </activity>
+43
+44        <meta-data
+44-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:31:9-33:69
+45            android:name="com.google.android.gms.version"
+45-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:32:13-58
+46            android:value="@integer/google_play_services_version" />
+46-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:33:13-66
+47
+48        <activity
+48-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:35:9-37:40
+49            android:name="edu.fpt.shose_app.Activity.FogetPassActivity"
+49-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:36:13-55
+50            android:exported="false" />
+50-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:37:13-37
+51        <activity
+51-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:38:9-40:40
+52            android:name="edu.fpt.shose_app.Activity.ProfileActivity"
+52-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:39:13-53
+53            android:exported="false" />
+53-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:40:13-37
+54        <activity
+54-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:41:9-43:40
+55            android:name="edu.fpt.shose_app.Activity.SignUpActivity"
+55-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:42:13-52
+56            android:exported="false" />
+56-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:43:13-37
+57        <activity
+57-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:44:9-46:40
+58            android:name="edu.fpt.shose_app.Activity.SignInActivity"
+58-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:45:13-52
+59            android:exported="false" />
+59-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:46:13-37
+60        <activity
+60-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:47:9-49:39
+61            android:name="edu.fpt.shose_app.Activity.Onboard_Activity"
+61-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:48:13-54
+62            android:exported="true" />
+62-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:49:13-36
+63        <activity
+63-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:50:9-54:20
+64            android:name="edu.fpt.shose_app.Activity.splash_activity"
+64-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:51:13-53
+65            android:exported="true" >
+65-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:52:13-36
 66        </activity>
 67        <activity
 67-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:55:9-57:39

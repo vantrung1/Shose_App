@@ -190,7 +190,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGmail"
+        app:layout_constraintTop_toBottomOf="@+id/btnloginGmail"
         app:layout_constraintVertical_bias="0.63" />
 
     <TextView
@@ -205,6 +205,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/btnGmail"
+        app:layout_constraintTop_toBottomOf="@+id/btnloginGmail"
         app:layout_constraintVertical_bias="0.63" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:paddingStart="20dp"
     android:layout_height="200dp"
+    android:elevation="8dp"
 
     >
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profile_image"
+        android:id="@+id/profile_image_header"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="20dp"
