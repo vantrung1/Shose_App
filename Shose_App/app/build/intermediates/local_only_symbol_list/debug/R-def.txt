@@ -80,6 +80,7 @@ id drawerlayout
 id edEmail
 id edUsername
 id edchangepassword
+id edconfirmpassword
 id edpassword
 id fab
 id fab_home

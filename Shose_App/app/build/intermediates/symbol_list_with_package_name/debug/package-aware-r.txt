@@ -3106,6 +3106,7 @@ id east
 id edEmail
 id edUsername
 id edchangepassword
+id edconfirmpassword
 id edit_query
 id edpassword
 id elastic

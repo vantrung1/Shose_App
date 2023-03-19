@@ -4,17 +4,39 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
+
 import android.os.Bundle;
+import android.util.Log;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
+
+import java.util.ArrayList;
+
+import edu.fpt.shose_app.Model.Brand;
+import edu.fpt.shose_app.Model.User;
 import edu.fpt.shose_app.R;
+import edu.fpt.shose_app.Retrofit.ApiApp;
+import edu.fpt.shose_app.Utils.Utils;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SignUpActivity extends AppCompatActivity {
     TextView Signin;
-    AppCompatButton btnSignIn;
+    TextInputLayout txt1, txt2, txt3, txt4;
+    TextInputEditText edUsername, edEmail, edpassword, edconfirmpassword;
+    AppCompatButton btnSignUp;
+    ApiApp apiInterface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,24 +47,143 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void initUI() {
+        txt1 = findViewById(R.id.textInputLayout1);
+        txt2 = findViewById(R.id.textInputLayout2);
+        txt3 = findViewById(R.id.textInputLayout3);
+        txt4 = findViewById(R.id.textInputLayout4);
+
+        edUsername = findViewById(R.id.edUsername);
+        edEmail = findViewById(R.id.edEmail);
+        edpassword = findViewById(R.id.edpassword);
+        edconfirmpassword = findViewById(R.id.edconfirmpassword);
+
         Signin = findViewById(R.id.signIn);
-        btnSignIn = findViewById(R.id.btn_create);
+        btnSignUp = findViewById(R.id.btn_create);
     }
 
     private void initActino() {
         Signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i =new Intent(SignUpActivity.this, SignInActivity.class);
+                Intent i = new Intent(SignUpActivity.this, SignInActivity.class);
                 startActivity(i);
             }
         });
-        btnSignIn.setOnClickListener(new View.OnClickListener() {
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i =new Intent(SignUpActivity.this, SignInActivity.class);
-                startActivity(i);
+//                Intent i = new Intent(SignUpActivity.this, SignInActivity.class);
+//                startActivity(i);
+                if (!validateUserName() | !validateEmail() | !validatePass() | !validateConfirmPass()) {
+                    return;
+                }
+                POST_Retrofit_User();
             }
         });
+    }
+
+    //Post api len sever
+    void POST_Retrofit_User() {
+        // tạo đối tượng chuyển đổi
+        Gson gson = new GsonBuilder().setLenient().create();
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Utils.BASE_URL_API)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build();
+        apiInterface = retrofit.create(ApiApp.class);
+        // tạo đối tượng DTO để gửi lên server
+        User objUser = new User();
+        objUser.setName(edUsername.getText().toString());
+        objUser.setEmail(edEmail.getText().toString());
+        objUser.setPassword(edpassword.getText().toString());
+
+        Call<User> objCall = apiInterface.postUser(objUser);
+        objCall.enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+
+                if (response.isSuccessful()) {
+                    User user = response.body();
+                    Toast.makeText(getApplicationContext(), "them thanh cong", Toast.LENGTH_LONG).show();
+
+                } else {
+                    Toast.makeText(getApplicationContext(), "them khong thanh cong", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+
+            }
+        });
+    }
+
+    //validate
+    private boolean validateUserName() {
+        String username = txt1.getEditText().getText().toString();
+        String val = "[a-zA-Z\\s]+";
+        if (username.isEmpty()) {
+            txt1.setError("Field can't be empty");
+            return false;
+        } else if (username.length() >= 20) {
+            txt1.setError("UserName to Long");
+            return false;
+        } else if (!username.matches(val)) {
+            txt1.requestFocus();
+            txt1.setError("Enter only alphabetical character");
+            return false;
+        } else {
+            txt1.setError(null);
+            return true;
+        }
+    }
+
+    private boolean validateEmail() {
+        String email = txt2.getEditText().getText().toString();
+        if (email.isEmpty()) {
+            txt2.setError("Field can't be empty");
+            return false;
+        } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            txt2.setError("Please enter a valid email anddress");
+            return false;
+        } else {
+            txt2.setError(null);
+            return true;
+        }
+    }
+
+    private boolean validatePass() {
+        String pass = txt3.getEditText().getText().toString().trim();
+        String val =
+                "(?=.*[a-zA-Z])" +
+                        "(?=.*[@#$%^&+=])" +
+                        "(?=\\S+$)" +
+                        ".{4,}" +
+                        "$";
+        if (pass.isEmpty()) {
+            txt3.setError("Field can't be empty");
+            return false;
+        } else if (!pass.matches(val)) {
+            txt3.setError("Password is too weak");
+            return false;
+        } else {
+            txt3.setError(null);
+            return true;
+        }
+    }
+
+    private boolean validateConfirmPass() {
+        String confirm_pass = txt4.getEditText().getText().toString().trim();
+        if (confirm_pass.isEmpty()) {
+            txt4.setError("Field can't be empty");
+            return false;
+        } else if (!confirm_pass.equals(edpassword.getText().toString())) {
+            txt4.setError("Password do not mach");
+            return false;
+        } else {
+            txt4.setError(null);
+            return true;
+        }
     }
 }
