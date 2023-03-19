@@ -171,9 +171,6 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
     private void getallBrand(){
-
-
-
         Call<ArrayList<Brand>> objGetMOto = apiInterface.getAllBrand();
         // thực hiện gọi
         objGetMOto.enqueue(new Callback<ArrayList<Brand>>() {

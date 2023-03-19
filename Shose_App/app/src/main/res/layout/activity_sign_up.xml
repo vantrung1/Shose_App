@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:background="@color/background"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar2"
@@ -18,19 +18,19 @@
             app:layout_constraintBaseline_toTopOf="parent" />
 
         <TextView
-            app:layout_constraintTop_toBottomOf="@id/toolbar2"
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="83dp"
-            android:layout_marginEnd="82dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="82dp"
             android:text="Create Account"
             android:textColor="#1A2530"
             android:textSize="28sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar2"
             tools:layout_editor_absoluteY="88dp" />
 
         <TextView
@@ -68,10 +68,12 @@
             android:layout_marginTop="62dp"
             android:layout_marginEnd="20dp"
             app:boxBackgroundColor="@color/white"
+            app:errorEnabled="true"
+            app:helperTextTextColor="@color/red"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintVertical_bias="0.122"
-            app:layout_constraintTop_toBottomOf="@+id/textView2">
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.122">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edUsername"
@@ -102,8 +104,10 @@
             style="@style/TextInputLayout"
             android:layout_width="335dp"
             android:layout_height="wrap_content"
-            app:boxBackgroundColor="@color/white"
             android:layout_marginTop="30dp"
+            app:boxBackgroundColor="@color/white"
+            app:errorEnabled="true"
+            app:helperTextTextColor="@color/red"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout1"
@@ -138,9 +142,11 @@
             style="@style/TextInputLayout"
             android:layout_width="335dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             app:boxBackgroundColor="@color/white"
             app:endIconMode="password_toggle"
-            android:layout_marginTop="30dp"
+            app:errorEnabled="true"
+            app:helperTextTextColor="@color/red"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
@@ -160,7 +166,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:text="Change Password"
+            android:text="Confirm Password"
             android:textColor="#1A2530"
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/textInputLayout4"
@@ -175,32 +181,35 @@
             style="@style/TextInputLayout"
             android:layout_width="335dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             app:boxBackgroundColor="@color/white"
             app:endIconMode="password_toggle"
-            android:layout_marginTop="30dp"
+            app:errorEnabled="true"
+            app:helperTextTextColor="@color/red"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
             app:layout_constraintVertical_bias="0.144">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edchangepassword"
+                android:id="@+id/edconfirmpassword"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="17"
                 android:hint="Password"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_create"
-            android:layout_marginTop="50dp"
             android:layout_width="335dp"
             android:layout_height="0dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/background_btn_dangnhap"
             android:elevation="3dp"
-            android:text="Sign In"
+            android:text="Sign Up"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18sp"
@@ -215,18 +224,18 @@
             android:layout_width="335dp"
             android:layout_height="0dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/background_btn_dangnhapgmail"
-            android:elevation="3dp"
-            android:text="Sign in with google"
             android:drawableStart="@drawable/icon_gg"
             android:drawablePadding="6dp"
+            android:elevation="3dp"
             android:paddingLeft="70dp"
             android:paddingRight="70dp"
+            android:text="Sign in with google"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="18sp"
-            android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.07"
             app:layout_constraintStart_toStartOf="parent"
@@ -244,10 +253,10 @@
             android:text="Already have an account?"
             android:textColor="@color/xam"
             android:textSize="16sp"
+            app:layout_constraintBaseline_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnGmail"
-            app:layout_constraintBaseline_toBottomOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/btnGmail" />
 
         <TextView
             android:id="@+id/signIn"

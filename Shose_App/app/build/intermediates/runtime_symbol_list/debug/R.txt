@@ -3105,6 +3105,7 @@ int id east 0x7f0900be
 int id edEmail 0x7f0900bf
 int id edUsername 0x7f0900c0
 int id edchangepassword 0x7f0900c1
+int id edconfirmpassword 0x7f09025c
 int id edit_query 0x7f0900c2
 int id edpassword 0x7f0900c3
 int id elastic 0x7f0900c4
