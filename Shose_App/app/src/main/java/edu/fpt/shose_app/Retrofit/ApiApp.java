@@ -14,6 +14,9 @@ public interface ApiApp {
     @POST("register")
     Call<User> postUser(@Body User objUser);
 
+    @POST("login")
+    Call<User> postLogin(@Body User objLogin);
+
     @GET("brands")
     Call<ArrayList<Brand>> getAllBrand();
 }
