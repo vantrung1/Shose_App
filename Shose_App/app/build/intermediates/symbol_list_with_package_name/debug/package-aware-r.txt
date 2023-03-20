@@ -3184,7 +3184,9 @@ id item_img_cart
 id item_img_delete_cart
 id item_product_image
 id item_product_name
+id item_product_name2
 id item_product_price
+id item_product_price2
 id item_touch_helper_previous_elevation
 id item_txt_name_cart
 id item_txt_price_cart
@@ -3329,6 +3331,7 @@ id radio
 id ratio
 id rectangles
 id recy_1_product
+id recy_2_product
 id recy_my_cart
 id reverseSawtooth
 id right
@@ -3348,6 +3351,8 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id seall1
+id seall2
 id search_badge
 id search_bar
 id search_bar_text_view
@@ -3477,6 +3482,7 @@ id toolbar_cart
 id top
 id topPanel
 id topicProduct
+id topicProduct2
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -3655,6 +3661,7 @@ layout fragment_onboard1
 layout header_layout
 layout item_brand
 layout item_my_cart
+layout item_product2
 layout item_product_home
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

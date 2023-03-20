@@ -101,7 +101,9 @@ id item_img_cart
 id item_img_delete_cart
 id item_product_image
 id item_product_name
+id item_product_name2
 id item_product_price
+id item_product_price2
 id item_txt_name_cart
 id item_txt_price_cart
 id item_txt_quantity_cart
@@ -127,8 +129,11 @@ id navigation
 id profile_image
 id profile_image_header
 id recy_1_product
+id recy_2_product
 id recy_my_cart
 id scorllView
+id seall1
+id seall2
 id signIn
 id smart_gorge
 id start_journ
@@ -156,6 +161,7 @@ id toolbar
 id toolbar2
 id toolbar_cart
 id topicProduct
+id topicProduct2
 id txt_price_shopping
 id txt_price_subtotal
 id txt_price_total
@@ -176,6 +182,7 @@ layout fragment_onboard1
 layout header_layout
 layout item_brand
 layout item_my_cart
+layout item_product2
 layout item_product_home
 menu bottom_menu
 menu nav_menu
