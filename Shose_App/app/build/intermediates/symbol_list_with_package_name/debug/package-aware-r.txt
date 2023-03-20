@@ -3105,8 +3105,9 @@ id easeOut
 id east
 id edEmail
 id edUsername
+id ed_Email
+id ed_password
 id edchangepassword
-id edconfirmpassword
 id edit_query
 id edpassword
 id elastic
@@ -3494,6 +3495,8 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tv_badge_text
+id txtInputLayout1
+id txtInputLayout2
 id txt_price_shopping
 id txt_price_subtotal
 id txt_price_total

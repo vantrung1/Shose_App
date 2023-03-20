@@ -79,8 +79,9 @@ id btnloginGmail
 id drawerlayout
 id edEmail
 id edUsername
+id ed_Email
+id ed_password
 id edchangepassword
-id edconfirmpassword
 id edpassword
 id fab
 id fab_home
@@ -163,6 +164,8 @@ id toolbar2
 id toolbar_cart
 id topicProduct
 id topicProduct2
+id txtInputLayout1
+id txtInputLayout2
 id txt_price_shopping
 id txt_price_subtotal
 id txt_price_total
