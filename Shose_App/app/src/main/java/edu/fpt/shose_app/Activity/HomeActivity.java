@@ -12,6 +12,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,6 +27,7 @@ import com.google.gson.GsonBuilder;
 import java.util.ArrayList;
 
 import edu.fpt.shose_app.Adapter.Brand_Adapter;
+import edu.fpt.shose_app.Adapter.ProducAdapter2;
 import edu.fpt.shose_app.Adapter.ProductAdapter;
 import edu.fpt.shose_app.Model.Brand;
 import edu.fpt.shose_app.Model.Product;
@@ -41,24 +43,30 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class HomeActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-    RecyclerView recyclerViewBrand,recy_1_product;
+    RecyclerView recyclerViewBrand,recy_1_product,recy_2_product;
     ArrayList<Brand> brandArrayList;
     ArrayList<Product> productArrayList;
+    ArrayList<Product> productArrayList2;
     FloatingActionButton floatingActionButton;
     NavigationView navigationView_home;
     DrawerLayout drawerLayout_home;
     Brand_Adapter brand_adapter;
     ProductAdapter productAdapter;
+    ProducAdapter2 productAdapter2;
     Toolbar toolbar;
     Retrofit retrofit;
     Gson gson;
     ApiApp apiInterface;
+    private int currentPosition = 0;
+    private Handler handler = new Handler();
+    private Runnable runnable;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         brandArrayList = new ArrayList<>();
         productArrayList = new ArrayList<>();
+        productArrayList2 = new ArrayList<>();
         gson = new GsonBuilder().setLenient().create();
         retrofit = new Retrofit.Builder()
                 .baseUrl(Utils.BASE_URL_API)
@@ -68,9 +76,11 @@ public class HomeActivity extends AppCompatActivity {
         apiInterface = retrofit.create(ApiApp.class);
         brand_adapter = new Brand_Adapter(this,brandArrayList);
         productAdapter = new ProductAdapter(this,productArrayList);
+        productAdapter2 = new ProducAdapter2(this,productArrayList2);
         initUi();
         initAction();
-
+//        startAutoScroll();
+//        stopAutoScroll();
 
     }
 
@@ -122,13 +132,17 @@ public class HomeActivity extends AppCompatActivity {
 
         recyclerViewBrand = findViewById(R.id.RecyclerViewHome_brand);
         recy_1_product = findViewById(R.id.recy_1_product);
+        recy_2_product = findViewById(R.id.recy_2_product);
         LinearLayoutManager layoutManager = new LinearLayoutManager(HomeActivity.this, LinearLayoutManager.HORIZONTAL, false);
         LinearLayoutManager layoutManager2 = new LinearLayoutManager(HomeActivity.this, LinearLayoutManager.HORIZONTAL, false);
+        LinearLayoutManager layoutManager3 = new LinearLayoutManager(HomeActivity.this, LinearLayoutManager.HORIZONTAL, false);
         recyclerViewBrand.setLayoutManager(layoutManager);
         recy_1_product.setLayoutManager(layoutManager2);
+        recy_2_product.setLayoutManager(layoutManager3);
 
         recyclerViewBrand.setAdapter(brand_adapter);
         recy_1_product.setAdapter(productAdapter);
+        recy_2_product.setAdapter(productAdapter2);
 
 
         getallBrand();
@@ -188,6 +202,28 @@ public class HomeActivity extends AppCompatActivity {
 
             }
         });
+    }
+    private void startAutoScroll() {
+        if (runnable == null) {
+            runnable = new Runnable() {
+                public void run() {
+                    currentPosition++;
+                    if (currentPosition == productAdapter2.getItemCount()) {
+                        currentPosition = 0;
+                    }
+                    recy_2_product.smoothScrollToPosition(currentPosition);
+                    handler.postDelayed(this, 2000); // 2 seconds delay
+                }
+            };
+            handler.postDelayed(runnable, 2000); // 2 seconds delay
+        }
+    }
+
+    private void stopAutoScroll() {
+        if (runnable != null) {
+            handler.removeCallbacks(runnable);
+            runnable = null;
+        }
     }
     @Override
     public void onBackPressed() {
