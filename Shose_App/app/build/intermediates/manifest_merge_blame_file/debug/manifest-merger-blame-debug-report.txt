@@ -26,158 +26,163 @@
 17-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 18
 19    <application
-19-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:8:5-62:19
+19-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:8:5-66:19
 20        android:allowBackup="true"
-20-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:9:9-35
+20-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:11:9-35
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 21-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 22        android:dataExtractionRules="@xml/data_extraction_rules"
-22-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:10:9-65
+22-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:12:9-65
 23        android:debuggable="true"
 24        android:fullBackupContent="@xml/backup_rules"
-24-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:11:9-54
+24-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:13:9-54
 25        android:icon="@mipmap/ic_launcher"
-25-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:12:9-43
+25-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:14:9-43
 26        android:label="@string/app_name"
-26-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:13:9-41
-27        android:roundIcon="@mipmap/ic_launcher_round"
-27-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:14:9-54
-28        android:supportsRtl="true"
-28-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:15:9-35
-29        android:testOnly="true"
-30        android:theme="@style/Theme.Shose_App" >
-30-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:16:9-47
-31        <activity
-31-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:18:9-22:20
-32            android:name="edu.fpt.shose_app.Activity.MyCartActivity"
-32-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:19:13-52
-33            android:exported="true" >
-33-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:20:13-36
-34        </activity>
-35        <activity
-35-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:23:9-27:20
-36            android:name="edu.fpt.shose_app.Activity.HomeActivity"
-36-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:24:13-50
-37            android:exported="true" >
-37-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:25:13-36
-38        </activity>
-39
-40        <meta-data
-40-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:29:9-31:69
-41            android:name="com.google.android.gms.version"
-41-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:30:13-58
-42            android:value="@integer/google_play_services_version" />
-42-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:31:13-66
-43
-44        <activity
-44-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:33:9-35:40
-45            android:name="edu.fpt.shose_app.Activity.FogetPassActivity"
-45-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:34:13-55
-46            android:exported="false" />
-46-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:35:13-37
-47        <activity
-47-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:36:9-38:40
-48            android:name="edu.fpt.shose_app.Activity.ProfileActivity"
-48-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:37:13-53
-49            android:exported="false" />
-49-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:38:13-37
-50        <activity
-50-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:39:9-47:20
-51            android:name="edu.fpt.shose_app.Activity.SignUpActivity"
-51-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:40:13-52
-52            android:exported="true" >
-52-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:41:13-36
-53            <intent-filter>
-53-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:42:13-46:29
-54                <action android:name="android.intent.action.MAIN" />
-54-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:43:17-69
-54-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:43:25-66
-55
-56                <category android:name="android.intent.category.LAUNCHER" />
-56-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:45:17-77
-56-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:45:27-74
-57            </intent-filter>
-58        </activity>
-59        <activity
-59-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:48:9-50:40
-60            android:name="edu.fpt.shose_app.Activity.SignInActivity"
-60-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:49:13-52
-61            android:exported="false" />
-61-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:50:13-37
-62        <activity
-62-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:51:9-53:39
-63            android:name="edu.fpt.shose_app.Activity.Onboard_Activity"
-63-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:52:13-54
-64            android:exported="true" />
-64-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:53:13-36
+26-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:15:9-41
+27        android:networkSecurityConfig="@xml/network_security_config"
+27-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:10:9-69
+28        android:roundIcon="@mipmap/ic_launcher_round"
+28-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:16:9-54
+29        android:supportsRtl="true"
+29-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:17:9-35
+30        android:testOnly="true"
+31        android:theme="@style/Theme.Shose_App"
+31-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:18:9-47
+32        android:usesCleartextTraffic="true" >
+32-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:9:9-44
+33        <activity
+33-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:20:9-24:20
+34            android:name="edu.fpt.shose_app.Activity.MyCartActivity"
+34-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:21:13-52
+35            android:exported="true" >
+35-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:22:13-36
+36        </activity>
+37        <activity
+37-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:25:9-29:20
+38            android:name="edu.fpt.shose_app.Activity.HomeActivity"
+38-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:26:13-50
+39            android:exported="true" >
+39-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:27:13-36
+40        </activity>
+41
+42        <meta-data
+42-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:31:9-33:69
+43            android:name="com.google.android.gms.version"
+43-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:32:13-58
+44            android:value="@integer/google_play_services_version" />
+44-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:33:13-66
+45
+46        <activity
+46-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:35:9-37:40
+47            android:name="edu.fpt.shose_app.Activity.FogetPassActivity"
+47-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:36:13-55
+48            android:exported="false" />
+48-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:37:13-37
+49        <activity
+49-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:38:9-40:40
+50            android:name="edu.fpt.shose_app.Activity.ProfileActivity"
+50-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:39:13-53
+51            android:exported="false" />
+51-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:40:13-37
+52        <activity
+52-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:41:9-45:20
+53            android:name="edu.fpt.shose_app.Activity.SignUpActivity"
+53-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:42:13-52
+54            android:exported="true" >
+54-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:43:13-36
+55        </activity>
+56        <activity
+56-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:46:9-54:20
+57            android:name="edu.fpt.shose_app.Activity.SignInActivity"
+57-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:47:13-52
+58            android:exported="true" >
+58-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:48:13-36
+59            <intent-filter>
+59-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:49:13-53:29
+60                <action android:name="android.intent.action.MAIN" />
+60-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:50:17-69
+60-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:50:25-66
+61
+62                <category android:name="android.intent.category.LAUNCHER" />
+62-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:52:17-77
+62-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:52:27-74
+63            </intent-filter>
+64        </activity>
 65        <activity
-65-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:54:9-58:20
-66            android:name="edu.fpt.shose_app.Activity.splash_activity"
-66-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:55:13-53
-67            android:exported="true" >
-67-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:56:13-36
-68        </activity>
-69        <activity
-69-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:59:9-61:39
-70            android:name="edu.fpt.shose_app.MainActivity"
-70-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:60:13-41
-71            android:exported="true" />
-71-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:61:13-36
+65-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:55:9-57:39
+66            android:name="edu.fpt.shose_app.Activity.Onboard_Activity"
+66-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:56:13-54
+67            android:exported="true" />
+67-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:57:13-36
+68        <activity
+68-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:58:9-62:20
+69            android:name="edu.fpt.shose_app.Activity.splash_activity"
+69-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:59:13-53
+70            android:exported="true" >
+70-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:60:13-36
+71        </activity>
 72        <activity
-72-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:23:9-27:75
-73            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-73-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:24:13-93
-74            android:excludeFromRecents="true"
-74-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:25:13-46
-75            android:exported="false"
-75-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:26:13-37
-76            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-76-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:27:13-72
-77        <!--
-78            Service handling Google Sign-In user revocation. For apps that do not integrate with
-79            Google Sign-In, this service will never be started.
-80        -->
-81        <service
-81-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:33:9-37:51
-82            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-82-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:34:13-89
-83            android:exported="true"
-83-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:35:13-36
-84            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-84-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:36:13-107
-85            android:visibleToInstantApps="true" />
-85-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:37:13-48
-86
-87        <activity
-87-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\admin\.gradle\caches\transforms-3\5466824ca35740d3c6aeb4c5d463f1b2\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-88            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-88-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\admin\.gradle\caches\transforms-3\5466824ca35740d3c6aeb4c5d463f1b2\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-89            android:exported="false"
-89-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\admin\.gradle\caches\transforms-3\5466824ca35740d3c6aeb4c5d463f1b2\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-90            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-90-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\admin\.gradle\caches\transforms-3\5466824ca35740d3c6aeb4c5d463f1b2\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
-91
-92        <provider
-92-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-93            android:name="androidx.startup.InitializationProvider"
-93-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-94            android:authorities="edu.fpt.shose_app.androidx-startup"
-94-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-95            android:exported="false" >
-95-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-96            <meta-data
-96-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-97                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-97-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-98                android:value="androidx.startup" />
-98-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+72-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:63:9-65:39
+73            android:name="edu.fpt.shose_app.MainActivity"
+73-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:64:13-41
+74            android:exported="true" />
+74-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:65:13-36
+75        <activity
+75-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:23:9-27:75
+76            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+76-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:24:13-93
+77            android:excludeFromRecents="true"
+77-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:25:13-46
+78            android:exported="false"
+78-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:26:13-37
+79            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+79-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:27:13-72
+80        <!--
+81            Service handling Google Sign-In user revocation. For apps that do not integrate with
+82            Google Sign-In, this service will never be started.
+83        -->
+84        <service
+84-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:33:9-37:51
+85            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+85-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:34:13-89
+86            android:exported="true"
+86-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:35:13-36
+87            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+87-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:36:13-107
+88            android:visibleToInstantApps="true" />
+88-->[com.google.android.gms:play-services-auth:20.4.1] C:\Users\admin\.gradle\caches\transforms-3\2df878708d4e2e4104ec4555da64ad38\transformed\play-services-auth-20.4.1\AndroidManifest.xml:37:13-48
+89
+90        <activity
+90-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\admin\.gradle\caches\transforms-3\5466824ca35740d3c6aeb4c5d463f1b2\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+91            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+91-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\admin\.gradle\caches\transforms-3\5466824ca35740d3c6aeb4c5d463f1b2\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+92            android:exported="false"
+92-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\admin\.gradle\caches\transforms-3\5466824ca35740d3c6aeb4c5d463f1b2\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+93            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+93-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\admin\.gradle\caches\transforms-3\5466824ca35740d3c6aeb4c5d463f1b2\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+94
+95        <provider
+95-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+96            android:name="androidx.startup.InitializationProvider"
+96-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+97            android:authorities="edu.fpt.shose_app.androidx-startup"
+97-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+98            android:exported="false" >
+98-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
 99            <meta-data
-99-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\admin\.gradle\caches\transforms-3\86041ab2b0d2128b301212662b855cec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-100                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-100-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\admin\.gradle\caches\transforms-3\86041ab2b0d2128b301212662b855cec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+99-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+100                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+100-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
 101                android:value="androidx.startup" />
-101-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\admin\.gradle\caches\transforms-3\86041ab2b0d2128b301212662b855cec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-102        </provider>
-103    </application>
-104
-105</manifest>
+101-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+102            <meta-data
+102-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\admin\.gradle\caches\transforms-3\86041ab2b0d2128b301212662b855cec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+103                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+103-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\admin\.gradle\caches\transforms-3\86041ab2b0d2128b301212662b855cec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+104                android:value="androidx.startup" />
+104-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\admin\.gradle\caches\transforms-3\86041ab2b0d2128b301212662b855cec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+105        </provider>
+106    </application>
+107
+108</manifest>

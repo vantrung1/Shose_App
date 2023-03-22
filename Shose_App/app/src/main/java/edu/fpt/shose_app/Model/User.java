@@ -3,41 +3,28 @@ package edu.fpt.shose_app.Model;
 import java.io.Serializable;
 
 public class User implements Serializable {
-    private int Id;
-    private int address_id;
+    private int id;
     private String name;
+    private String address_id;
+    private String role_id;
     private String phoneNumber;
     private String email;
     private String password;
     private String avatar;
+    private String token;
+    private String status;
+    private String created_at;
+    private String updated_at;
 
     public User() {
     }
 
-    public User(int id, int address_id, String name, String phoneNumber, String email, String password, String avatar) {
-        Id = id;
-        this.address_id = address_id;
-        this.name = name;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
-        this.password = password;
-        this.avatar = avatar;
-    }
-
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
-    }
-
-    public int getAddress_id() {
-        return address_id;
-    }
-
-    public void setAddress_id(int address_id) {
-        this.address_id = address_id;
+        this.id = id;
     }
 
     public String getName() {
@@ -46,6 +33,22 @@ public class User implements Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getAddress_id() {
+        return address_id;
+    }
+
+    public void setAddress_id(String address_id) {
+        this.address_id = address_id;
+    }
+
+    public String getRole_id() {
+        return role_id;
+    }
+
+    public void setRole_id(String role_id) {
+        this.role_id = role_id;
     }
 
     public String getPhoneNumber() {
@@ -78,5 +81,52 @@ public class User implements Serializable {
 
     public void setAvatar(String avatar) {
         this.avatar = avatar;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getCreated_at() {
+        return created_at;
+    }
+
+    public void setCreated_at(String created_at) {
+        this.created_at = created_at;
+    }
+
+    public String getUpdated_at() {
+        return updated_at;
+    }
+
+    public void setUpdated_at(String updated_at) {
+        this.updated_at = updated_at;
+    }
+
+    public User(int id, String name, String address_id, String role_id, String phoneNumber, String email, String password, String avatar, String token, String status, String created_at, String updated_at) {
+        this.id = id;
+        this.name = name;
+        this.address_id = address_id;
+        this.role_id = role_id;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+        this.password = password;
+        this.avatar = avatar;
+        this.token = token;
+        this.status = status;
+        this.created_at = created_at;
+        this.updated_at = updated_at;
     }
 }

@@ -24,6 +24,7 @@ import com.google.gson.GsonBuilder;
 
 import edu.fpt.shose_app.MainActivity;
 import edu.fpt.shose_app.Model.User;
+import edu.fpt.shose_app.Model.loginRequest;
 import edu.fpt.shose_app.R;
 import edu.fpt.shose_app.Retrofit.ApiApp;
 import edu.fpt.shose_app.Utils.Utils;
@@ -116,14 +117,23 @@ public class SignInActivity extends AppCompatActivity {
         objLogin.setEmail(edEmail.getText().toString());
         objLogin.setPassword(edpassword.getText().toString());
 
-        Call<User> objCall = apiInterface.postLogin(objLogin);
-        objCall.enqueue(new Callback<User>() {
+        Call<loginRequest> objCall = apiInterface._logGin(edEmail.getText().toString(),edpassword.getText().toString());
+        objCall.enqueue(new Callback<loginRequest>() {
             @Override
-            public void onResponse(Call<User> call, Response<User> response) {
+            public void onResponse(Call<loginRequest> call, Response<loginRequest> response) {
 
                 if (response.isSuccessful()) {
-                    User user = response.body();
-                    Toast.makeText(getApplicationContext(), "Dang nhap thanh cong", Toast.LENGTH_LONG).show();
+                    loginRequest loginRequest = response.body();
+                    if(loginRequest.getStatus().equals("202")){
+                        Utils.Users_Utils = loginRequest.getData();
+                        Toast.makeText(getApplicationContext(), "Dang nhap thanh cong", Toast.LENGTH_LONG).show();
+                        Intent i = new Intent(SignInActivity.this, HomeActivity.class);
+                        startActivity(i);
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(), "Tài khoản hoặc mật khẩu không đúng", Toast.LENGTH_LONG).show();
+                    }
+
 
                 } else {
                     Toast.makeText(getApplicationContext(), "Dang nhap khong thanh cong", Toast.LENGTH_LONG).show();
@@ -131,8 +141,8 @@ public class SignInActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<User> call, Throwable t) {
-
+            public void onFailure(Call<loginRequest> call, Throwable t) {
+                Toast.makeText(getApplicationContext(), "Dang nhap khong thanh congấ", Toast.LENGTH_LONG).show();
             }
         });
     }

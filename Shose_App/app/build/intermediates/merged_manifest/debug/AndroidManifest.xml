@@ -24,10 +24,12 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.Shose_App" >
+        android:theme="@style/Theme.Shose_App"
+        android:usesCleartextTraffic="true" >
         <activity
             android:name="edu.fpt.shose_app.Activity.MyCartActivity"
             android:exported="true" >
@@ -50,15 +52,16 @@
         <activity
             android:name="edu.fpt.shose_app.Activity.SignUpActivity"
             android:exported="true" >
+        </activity>
+        <activity
+            android:name="edu.fpt.shose_app.Activity.SignInActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="edu.fpt.shose_app.Activity.SignInActivity"
-            android:exported="false" />
         <activity
             android:name="edu.fpt.shose_app.Activity.Onboard_Activity"
             android:exported="true" />
