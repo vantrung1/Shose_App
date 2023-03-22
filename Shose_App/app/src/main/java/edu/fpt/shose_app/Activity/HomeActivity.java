@@ -152,6 +152,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 drawerLayout_home.openDrawer (GravityCompat.START);
+
             }
         });
         navigationView_home.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {

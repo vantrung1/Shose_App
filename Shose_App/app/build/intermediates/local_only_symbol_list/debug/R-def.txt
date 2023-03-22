@@ -205,3 +205,4 @@ style Theme.Shose_App
 style easySettings_textView_title
 xml backup_rules
 xml data_extraction_rules
+xml network_security_config
