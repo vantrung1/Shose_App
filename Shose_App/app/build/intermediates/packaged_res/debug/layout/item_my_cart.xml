@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:elevation="8dp"
+    app:cardCornerRadius="4dp"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_width="87dp"
+            android:layout_height="85dp"
+            android:background="@drawable/background_item_my_cart">
+
+            <ImageView
+                android:id="@+id/item_img_cart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/product" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="10"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_txt_name_cart"
+                android:layout_width="107dp"
+                android:layout_height="20dp"
+                android:gravity="top"
+                android:lineSpacingExtra="-1sp"
+                android:text="Nike Club Max" />
+
+            <TextView
+                android:id="@+id/item_txt_price_cart"
+                android:layout_width="45dp"
+                android:layout_height="20dp"
+                android:gravity="top"
+                android:lineSpacingExtra="2sp"
+                android:text="$2000"
+                android:translationY="-0.89sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/item_btnIMG_minus_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_minus_white" />
+
+                <TextView
+                    android:id="@+id/item_txt_quantity_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="3dp"
+                    android:text="1"
+                    android:textSize="14dp" />
+
+                <ImageView
+                    android:id="@+id/item_btnIMG_plus_cart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/btn_plus_blue" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp">
+            <TextView
+                android:id="@+id/item_txt_size_cart"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="40"
+                android:textSize="14dp"
+                android:layout_marginBottom="20dp"
+                />
+            <ImageView
+                android:id="@+id/item_img_delete_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_delete_gray" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+

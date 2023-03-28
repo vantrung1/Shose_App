@@ -24,7 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <TextView
-        android:id="@+id/nameUser"
+        android:id="@+id/profile_Name_header"
         android:text="Nguyễn Van trung"
         android:textSize="24dp"
         android:textStyle="bold"

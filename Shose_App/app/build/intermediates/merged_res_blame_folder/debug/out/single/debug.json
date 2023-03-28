@@ -92,6 +92,10 @@
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-7:\\layout\\activity_profile.xml"
     },
     {
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-5:\\menu_profile_menu.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-7:\\menu\\profile_menu.xml"
+    },
+    {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-5:\\drawable_iconmenu.png.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-7:\\drawable\\iconmenu.png"
     },
@@ -118,6 +122,10 @@
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-5:\\layout_activity_account_settings.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-7:\\layout\\activity_account_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-5:\\xml_network_security_config.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-7:\\xml\\network_security_config.xml"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-5:\\layout_item_product_home.xml.flat",
@@ -180,6 +188,10 @@
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-7:\\drawable\\camera_image.png"
     },
     {
+        "merged": "edu.fpt.shose_app-merged_res-5:/layout_activity_profile.xml.flat",
+        "source": "edu.fpt.shose_app-main-7:/layout/activity_profile.xml"
+    },
+    {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-5:\\drawable_baseline_favorite_border_24.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-7:\\drawable\\baseline_favorite_border_24.xml"
     },
@@ -208,16 +220,16 @@
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-7:\\layout\\activity_onboard.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-5:/xml_network_security_config.xml.flat",
-        "source": "edu.fpt.shose_app-main-7:/xml/network_security_config.xml"
-    },
-    {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-5:\\drawable_baseline_add_24.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-7:\\drawable\\baseline_add_24.xml"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-5:\\layout_activity_sign_up.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-7:\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-5:\\drawable_baseline_border_color_24.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-7:\\drawable\\baseline_border_color_24.xml"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-5:\\layout_fragment_onboard1.xml.flat",

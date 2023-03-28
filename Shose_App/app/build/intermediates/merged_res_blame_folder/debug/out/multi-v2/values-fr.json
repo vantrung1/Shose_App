@@ -89,6 +89,23 @@
                         "endColumns": "164",
                         "endOffsets": "5059"
                     }
+                },
+                {
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\01ad5bd2f018f79093252622caa7f430\\transformed\\ucrop-2.2.6\\res\\values-fr\\values-fr.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,124,182",
+                        "endColumns": "68,57,52",
+                        "endOffsets": "119,177,230"
+                    },
+                    "to": {
+                        "startLines": "115,116,117",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "10730,10799,10857",
+                        "endColumns": "68,57,52",
+                        "endOffsets": "10794,10852,10905"
+                    }
                 }
             ]
         }

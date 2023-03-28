@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mnu_profile" android:title="Profile"
+        android:icon="@drawable/baseline_person_outline_24"/>
+    <item android:id="@+id/mnu_home" android:title="Home Page"
+        android:icon="@drawable/baseline_home_24"/>
+    <item android:id="@+id/mnu_cart" android:title="My Cart"
+        android:icon="@drawable/baseline_shopping_bag_24"/>
+    <item android:id="@+id/mnu_favorite" android:title="Favorite"
+        android:icon="@drawable/baseline_favorite_border_24" />
+    <item android:id="@+id/mnu_orders" android:title="Orders"
+        android:icon="@drawable/baseline_favorite_border_24" />
+    <item android:id="@+id/mnu_notifi" android:title="Notifications"
+        android:iconTintMode="@color/white"
+        android:icon="@drawable/baseline_notifications_none_24" />
+    <item android:title=""/>
+    <item android:title="">
+        <menu>
+            <item android:id="@+id/mnu_exit" android:title="Sign Out"
+                android:icon="@drawable/baseline_logout_24" />
+        </menu>
+    </item>
+</menu>

@@ -16,8 +16,11 @@ import android.os.Handler;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
@@ -60,6 +63,7 @@ public class HomeActivity extends AppCompatActivity {
     private int currentPosition = 0;
     private Handler handler = new Handler();
     private Runnable runnable;
+    View header_view;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,9 +83,17 @@ public class HomeActivity extends AppCompatActivity {
         productAdapter2 = new ProducAdapter2(this,productArrayList2);
         initUi();
         initAction();
+        initHeader();
 //        startAutoScroll();
 //        stopAutoScroll();
 
+    }
+
+    private void initHeader() {
+        ImageView imageView = header_view.findViewById(R.id.profile_image_header);
+        TextView textView = header_view.findViewById(R.id.profile_Name_header);
+        Glide.with(HomeActivity.this).load(Utils.Users_Utils.getAvatar()).placeholder(R.drawable.image_profile).into(imageView);
+        textView.setText(Utils.Users_Utils.getName());
     }
 
     private void initAction() {
@@ -103,7 +115,8 @@ public class HomeActivity extends AppCompatActivity {
                         return true;
                     case R.id.Profile:
                         // Handle settings button click
-                        Log.d("TAG", "onNavigationItemSelected: Profile");
+                        Intent i = new Intent(HomeActivity.this, ProfileActivity.class);
+                        startActivity(i);
                         return true;
                 }
                 return false;
@@ -129,7 +142,7 @@ public class HomeActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Store Location");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationIcon(R.drawable.iconmenu);
-
+        header_view =navigationView_home.getHeaderView(0);
         recyclerViewBrand = findViewById(R.id.RecyclerViewHome_brand);
         recy_1_product = findViewById(R.id.recy_1_product);
         recy_2_product = findViewById(R.id.recy_2_product);
@@ -161,6 +174,8 @@ public class HomeActivity extends AppCompatActivity {
                 switch (item.getItemId())
                 {
                     case R.id.mnu_profile:
+                        Intent i = new Intent(HomeActivity.this, ProfileActivity.class);
+                        startActivity(i);
 
                         break;
                     case R.id.mnu_home:
