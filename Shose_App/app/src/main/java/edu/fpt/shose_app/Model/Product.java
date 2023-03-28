@@ -1,6 +1,7 @@
 package edu.fpt.shose_app.Model;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class Product implements Serializable {
     private int id;
@@ -34,13 +35,7 @@ public class Product implements Serializable {
         this.name = name;
     }
 
-    public String getImage() {
-        return image;
-    }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
 
     public int getPrice() {
         return price;
@@ -104,6 +99,14 @@ public class Product implements Serializable {
 
     public void setUpdate_at(String update_at) {
         this.update_at = update_at;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public Product(int id, String name, String image, int price, String sale, int brandID, String desc, String content, String status, String create_at, String update_at) {

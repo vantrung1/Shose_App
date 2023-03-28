@@ -16,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.bumptech.glide.Glide;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.lang.annotation.ElementType;
 import java.util.ArrayList;
@@ -23,15 +25,21 @@ import java.util.List;
 
 import edu.fpt.shose_app.Model.Brand;
 import edu.fpt.shose_app.R;
+import edu.fpt.shose_app.Retrofit.ApiApp;
+import edu.fpt.shose_app.Utils.Utils;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Brand_Adapter extends RecyclerView.Adapter<Brand_Adapter.myViewHolder> {
     private Context context;
+
     private ArrayList<Brand> brandList;
     private int ischeckPostion = 0;
 
     public Brand_Adapter(Context context, ArrayList<Brand> brandList) {
         this.context = context;
         this.brandList = brandList;
+
     }
     public void setBrandSelected(ArrayList<Brand> brandList){
         this.brandList = new ArrayList<>();
@@ -57,7 +65,14 @@ public class Brand_Adapter extends RecyclerView.Adapter<Brand_Adapter.myViewHold
     public int getItemCount() {
         return brandList.size();
     }
-
+    public Brand getSelected(){
+        if(ischeckPostion != -1){
+            return brandList.get(ischeckPostion);
+        }
+        else {
+            return null;
+        }
+    }
     public class myViewHolder extends RecyclerView.ViewHolder {
         TextView name_brand;
         ImageView imageView_brand;
@@ -95,13 +110,6 @@ public class Brand_Adapter extends RecyclerView.Adapter<Brand_Adapter.myViewHold
                 }
             });
         }
-        public Brand getSelected(){
-            if(ischeckPostion != -1){
-                return brandList.get(ischeckPostion);
-            }
-            else {
-                return null;
-            }
-        }
+
     }
 }

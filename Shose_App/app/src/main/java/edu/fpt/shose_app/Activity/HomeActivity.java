@@ -34,6 +34,7 @@ import edu.fpt.shose_app.Adapter.ProducAdapter2;
 import edu.fpt.shose_app.Adapter.ProductAdapter;
 import edu.fpt.shose_app.Model.Brand;
 import edu.fpt.shose_app.Model.Product;
+import edu.fpt.shose_app.Model.ProductRequest;
 import edu.fpt.shose_app.R;
 import edu.fpt.shose_app.Retrofit.ApiApp;
 import edu.fpt.shose_app.Utils.Utils;
@@ -84,9 +85,36 @@ public class HomeActivity extends AppCompatActivity {
         initUi();
         initAction();
         initHeader();
+        get_product();
 //        startAutoScroll();
 //        stopAutoScroll();
 
+    }
+
+    private void get_product() {
+        Call<ProductRequest> objgetBrands = apiInterface.getApiProductById(1);
+        // thực hiện gọi
+        objgetBrands.enqueue(new Callback<ProductRequest>() {
+            @Override
+            public void onResponse(Call<ProductRequest> call, Response<ProductRequest> response) {
+                if(response.isSuccessful()){
+                    ProductRequest productRequest = response.body();
+
+                    if (productRequest.getStatus().equals("202")){
+                        productArrayList.clear();
+                        productArrayList = productRequest.getData();
+                        productAdapter.setBrandSelected(productArrayList);
+                        Log.d("sssssssssssss", "onResponse: "+productArrayList.size());
+                    }
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ProductRequest> call, Throwable t) {
+                Log.d("ssssssssss", "onFailure: ");
+            }
+        });
     }
 
     private void initHeader() {
@@ -201,9 +229,9 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
     private void getallBrand(){
-        Call<ArrayList<Brand>> objGetMOto = apiInterface.getAllBrand();
+        Call<ArrayList<Brand>> objgetBrands = apiInterface.getAllBrand();
         // thực hiện gọi
-        objGetMOto.enqueue(new Callback<ArrayList<Brand>>() {
+        objgetBrands.enqueue(new Callback<ArrayList<Brand>>() {
             @Override
             public void onResponse(Call<ArrayList<Brand>> call, Response<ArrayList<Brand>> response) {
                 if(response.isSuccessful()){

@@ -5,7 +5,7 @@
     app:cardCornerRadius="8dp"
     android:elevation="4dp"
     android:layout_marginEnd="10dp"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
     <RelativeLayout
         android:id="@+id/layuotItem"
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_marginBottom="5dp"
             android:layout_marginTop="15dp"
-            android:layout_height="wrap_content"/>
+            android:layout_height="200dp"/>
         <TextView
             android:id="@+id/textTopic"
             android:text="BEST SELLER"
@@ -34,22 +34,23 @@
             android:fontFamily="@font/fonttext"
             android:textColor="@color/black"
             android:layout_below="@+id/textTopic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_width="150dp"
+            android:layout_height="70dp"/>
         <TextView
             android:id="@+id/item_product_price"
             android:text="200.000.00"
             android:textSize="12dp"
-
             android:textColor="@color/black"
-            android:layout_below="@+id/item_product_name"
+            android:layout_below="@id/item_product_name"
+            android:layout_marginBottom="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <ImageView
             android:src="@drawable/itemclick"
             android:layout_alignParentRight="true"
-            android:layout_alignBottom="@id/item_product_price"
-            android:layout_width="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_width="50dp"
+            android:id="@+id/itemclcik"
             android:layout_height="wrap_content"/>
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
