@@ -126,12 +126,12 @@ public class SignInActivity extends AppCompatActivity {
                     loginRequest loginRequest = response.body();
                     if(loginRequest.getStatus().equals("202")){
                         Utils.Users_Utils = loginRequest.getData();
-                        Toast.makeText(getApplicationContext(), "Dang nhap thanh cong", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), loginRequest.getMessage(), Toast.LENGTH_LONG).show();
                         Intent i = new Intent(SignInActivity.this, HomeActivity.class);
                         startActivity(i);
                     }
                     else {
-                        Toast.makeText(getApplicationContext(), "Tài khoản hoặc mật khẩu không đúng", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), loginRequest.getMessage(), Toast.LENGTH_LONG).show();
                     }
 
 

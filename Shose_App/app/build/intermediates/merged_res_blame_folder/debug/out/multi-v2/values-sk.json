@@ -21,6 +21,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\01ad5bd2f018f79093252622caa7f430\\transformed\\ucrop-2.2.6\\res\\values-sk\\values-sk.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,125,182",
+                        "endColumns": "69,56,50",
+                        "endOffsets": "120,177,228"
+                    },
+                    "to": {
+                        "startLines": "117,118,119",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "10465,10535,10592",
+                        "endColumns": "69,56,50",
+                        "endOffsets": "10530,10587,10638"
+                    }
+                },
+                {
                     "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\5466824ca35740d3c6aeb4c5d463f1b2\\transformed\\play-services-base-18.0.1\\res\\values-sk\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
