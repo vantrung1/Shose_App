@@ -47,6 +47,7 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable icon_back
 drawable icon_gg
+drawable icon_plus
 drawable iconmenu
 drawable image_profile
 drawable img_net_dut
@@ -139,6 +140,7 @@ id textInputLayout1
 id textInputLayout2
 id textInputLayout3
 id textInputLayout4
+id textToast
 id textTopic
 id textView
 id textView1
@@ -155,8 +157,6 @@ id toolbar
 id toolbar2
 id toolbar_cart
 id topicProduct
-id txt_price_shopping
-id txt_price_subtotal
 id txt_price_total
 id viewPager
 layout activity_account_settings

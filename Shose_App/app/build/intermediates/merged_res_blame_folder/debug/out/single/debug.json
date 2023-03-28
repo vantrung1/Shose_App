@@ -96,6 +96,10 @@
         "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-38:\\layout\\activity_profile.xml"
     },
     {
+        "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-36:\\drawable_icon_plus.xml.flat",
+        "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-38:\\drawable\\icon_plus.xml"
+    },
+    {
         "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-36:\\font_fonttext.otf.flat",
         "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-38:\\font\\fonttext.otf"
     },

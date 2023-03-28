@@ -2824,6 +2824,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable icon_back
 drawable icon_gg
+drawable icon_plus
 drawable iconmenu
 drawable image_profile
 drawable img_net_dut
@@ -3443,6 +3444,7 @@ id textInputLayout4
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textToast
 id textTop
 id textTopic
 id textView
@@ -3486,8 +3488,6 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tv_badge_text
-id txt_price_shopping
-id txt_price_subtotal
 id txt_price_total
 id unchecked
 id uniform
