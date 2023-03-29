@@ -154,6 +154,7 @@ id textInputLayout1
 id textInputLayout2
 id textInputLayout3
 id textInputLayout4
+id textToast
 id textTopic
 id textView
 id textView1
@@ -174,8 +175,6 @@ id topicProduct
 id topicProduct2
 id txtInputLayout1
 id txtInputLayout2
-id txt_price_shopping
-id txt_price_subtotal
 id txt_price_total
 id update
 id viewPager
