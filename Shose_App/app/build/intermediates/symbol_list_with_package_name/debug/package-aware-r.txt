@@ -3565,6 +3565,7 @@ id textInputLayout4
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textToast
 id textTop
 id textTopic
 id textView
@@ -3616,8 +3617,6 @@ id triangle
 id tv_badge_text
 id txtInputLayout1
 id txtInputLayout2
-id txt_price_shopping
-id txt_price_subtotal
 id txt_price_total
 id ucrop
 id ucrop_frame
