@@ -63,6 +63,9 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.myViewHold
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 cartList.remove(pos);
                                 notifyDataSetChanged();
+                                dialogInterface.dismiss();
+                                EventBus.getDefault().postSticky(new TotalEvent());
+
                             }
                         });
                         builder.setNegativeButton("Huy", new DialogInterface.OnClickListener() {
@@ -78,10 +81,11 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.myViewHold
                     if (cartList.get(pos).getQuantity() >= 0) {
                         int quantityNew = cartList.get(pos).getQuantity() + 1;
                         cartList.get(pos).setQuantity(quantityNew);
+                        holder.txt_quantity_cart.setText(cartList.get(pos).getQuantity() + "");
+                        EventBus.getDefault().postSticky(new TotalEvent());
                     }
                 }
-                holder.txt_quantity_cart.setText(cartList.get(pos).getQuantity() + "");
-                EventBus.getDefault().postSticky(new TotalEvent());
+
             }
         });
     }

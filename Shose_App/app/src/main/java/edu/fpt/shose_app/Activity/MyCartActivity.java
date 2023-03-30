@@ -56,31 +56,37 @@ public class MyCartActivity extends AppCompatActivity {
         recyclerViewCart.setLayoutManager(layoutManager);
 
         txt_total = findViewById(R.id.txt_price_total);
+        textToast= findViewById(R.id.textToast);
+
 
         Utils.cartLists = new ArrayList<>();
         Utils.cartLists.add(new Cart("https://thumbs.dreamstime.com/b/blue-shoes-29507491.jpg", "Nike", 20000, 1, 40));
-        Utils.cartLists.add(new Cart( "https://thumbs.dreamstime.com/b/blue-shoes-29507491.jpg", "Nike", 20000, 1,39));
-        Utils.cartLists.add(new Cart("https://thumbs.dreamstime.com/b/blue-shoes-29507491.jpg", "Nike", 20000, 1,42));
-        Utils.cartLists.add(new Cart("https://thumbs.dreamstime.com/b/blue-shoes-29507491.jpg", "Nike", 20000, 1, 40));
-        Utils.cartLists.add(new Cart( "https://thumbs.dreamstime.com/b/blue-shoes-29507491.jpg", "Nike", 20000, 1,39));
-        Utils.cartLists.add(new Cart("https://thumbs.dreamstime.com/b/blue-shoes-29507491.jpg", "Nike", 20000, 1,42));
-        Utils.cartLists.add(new Cart("https://thumbs.dreamstime.com/b/blue-shoes-29507491.jpg", "Nike", 20000, 1, 40));
+//        Utils.cartLists.add(new Cart( "https://thumbs.dreamstime.com/b/blue-shoes-29507491.jpg", "Nike", 20000, 1,39));
+//        Utils.cartLists.add(new Cart("https://thumbs.dreamstime.com/b/blue-shoes-29507491.jpg", "Nike", 20000, 1,42));
+//        Utils.cartLists.add(new Cart("https://thumbs.dreamstime.com/b/blue-shoes-29507491.jpg", "Nike", 20000, 1, 40));
+//        Utils.cartLists.add(new Cart( "https://thumbs.dreamstime.com/b/blue-shoes-29507491.jpg", "Nike", 20000, 1,39));
+//        Utils.cartLists.add(new Cart("https://thumbs.dreamstime.com/b/blue-shoes-29507491.jpg", "Nike", 20000, 1,42));
+//        Utils.cartLists.add(new Cart("https://thumbs.dreamstime.com/b/blue-shoes-29507491.jpg", "Nike", 20000, 1, 40));
         if (Utils.cartLists.size() == 0) {
             textToast.setText("Giỏ hàng trống");
             textToast.setVisibility(View.VISIBLE);
         } else {
             adapter = new MyCartAdapter(getApplicationContext(), Utils.cartLists);
             recyclerViewCart.setAdapter(adapter);
+
+
         }
     }
 
     private void totalCartCost() {
         long total = 0;
-        for (int i = 0; i < Utils.cartLists.size(); i++) {
-            total = total + (Utils.cartLists.get(i).getPrice() * Utils.cartLists.get(i).getQuantity());
-        }
-        DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
-        txt_total.setText(decimalFormat.format(total));
+
+            for (int i = 0; i < Utils.cartLists.size(); i++) {
+                total = total + (Utils.cartLists.get(i).getPrice() * Utils.cartLists.get(i).getQuantity());
+            }
+            DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
+            txt_total.setText(decimalFormat.format(total));
+
     }
 
     @Override
@@ -99,6 +105,11 @@ public class MyCartActivity extends AppCompatActivity {
     public void eventToatl(TotalEvent event) {
         if (event != null) {
             totalCartCost();
+            if (Utils.cartLists.size() == 0) {
+
+                textToast.setVisibility(View.VISIBLE);
+            }
         }
+
     }
 }
