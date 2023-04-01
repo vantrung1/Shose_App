@@ -1,5 +1,6 @@
 package edu.fpt.shose_app.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -9,8 +10,6 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -23,6 +22,7 @@ public class MyCartActivity extends AppCompatActivity {
     RecyclerView recyclerViewCart;
     AppCompatButton appCompatButton;
     TextView txt_subtotal, txt_shopping, txt_total;
+    AppCompatButton btn_checkout;
     ArrayList<Cart> arrayListCart;
     MyCartAdapter adapter;
 
@@ -34,7 +34,7 @@ public class MyCartActivity extends AppCompatActivity {
     }
 
     private void initUi() {
-        appCompatButton = findViewById(R.id.btn_checkout);
+        appCompatButton = findViewById(R.id.btn_Payment);
         toolbar = findViewById(R.id.toolbar_cart);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("My Cart");
@@ -53,6 +53,13 @@ public class MyCartActivity extends AppCompatActivity {
         txt_subtotal = findViewById(R.id.txt_price_subtotal);
         txt_shopping = findViewById(R.id.txt_price_shopping);
         txt_total = findViewById(R.id.txt_price_total);
+        appCompatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MyCartActivity.this, Check_Out_MainActivity.class);
+                startActivity(i);
+            }
+        });
 
         arrayListCart = new ArrayList<>();
         arrayListCart.add(new Cart( "https://thumbs.dreamstime.com/b/blue-shoes-29507491.jpg", "Nike", 20000, 1,40));
@@ -66,4 +73,6 @@ public class MyCartActivity extends AppCompatActivity {
         adapter = new MyCartAdapter(getApplicationContext(), arrayListCart);
         recyclerViewCart.setAdapter(adapter);
     }
+
+
 }

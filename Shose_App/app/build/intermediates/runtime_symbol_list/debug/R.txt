@@ -2805,6 +2805,7 @@ int drawable design_ic_visibility 0x7f0700af
 int drawable design_ic_visibility_off 0x7f0700b0
 int drawable design_password_eye 0x7f0700b1
 int drawable design_snackbar_background 0x7f0700b2
+int drawable drop_down_24 0x7f07011f
 int drawable googleg_disabled_color_18 0x7f0700b3
 int drawable googleg_standard_color_18 0x7f0700b4
 int drawable ic_arrow_back_black_24 0x7f0700b5
@@ -2823,10 +2824,14 @@ int drawable ic_mtrl_chip_close_circle 0x7f0700c1
 int drawable ic_search_black_24 0x7f0700c2
 int drawable icon_back 0x7f0700c3
 int drawable icon_gg 0x7f0700c4
+int drawable icon_pen 0x7f07011e
 int drawable iconmenu 0x7f0700c5
+int drawable image_email 0x7f07011c
+int drawable image_phone 0x7f07011d
 int drawable image_profile 0x7f0700c6
 int drawable img_net_dut 0x7f0700c7
 int drawable itemclick 0x7f0700c8
+int drawable location_24 0x7f070120
 int drawable logo 0x7f0700c9
 int drawable m3_appbar_background 0x7f0700ca
 int drawable m3_avd_hide_password 0x7f0700cb
@@ -2919,6 +2924,7 @@ int id CircleIndicator 0x7f090004
 int id CoordinatorLayouthome 0x7f090005
 int id FUNCTION 0x7f090006
 int id Favorite 0x7f090007
+int id ImgCart 0x7f090266
 int id META 0x7f090008
 int id NO_DEBUG 0x7f090009
 int id Notifications 0x7f09000a
@@ -3025,7 +3031,7 @@ int id bounceStart 0x7f09006e
 int id btnGmail 0x7f09006f
 int id btnLogin 0x7f090070
 int id btn_OnboardNext 0x7f090071
-int id btn_checkout 0x7f090072
+int id btn_Payment 0x7f090267
 int id btn_create 0x7f090073
 int id btnloginGmail 0x7f090074
 int id buttonPanel 0x7f090075
@@ -3125,6 +3131,7 @@ int id fill 0x7f0900d2
 int id fill_horizontal 0x7f0900d3
 int id fill_vertical 0x7f0900d4
 int id filled 0x7f0900d5
+int id filled_exposed 0x7f09026a
 int id fitCenter 0x7f0900d6
 int id fitEnd 0x7f0900d7
 int id fitStart 0x7f0900d8
@@ -3480,6 +3487,7 @@ int id toggle 0x7f090235
 int id toolbar 0x7f090236
 int id toolbar2 0x7f090237
 int id toolbar_cart 0x7f090238
+int id toolbar_check_out_main 0x7f090269
 int id top 0x7f090239
 int id topPanel 0x7f09023a
 int id topicProduct 0x7f09023b
@@ -3633,6 +3641,7 @@ int layout abc_search_view 0x7f0c0019
 int layout abc_select_dialog_material 0x7f0c001a
 int layout abc_tooltip 0x7f0c001b
 int layout activity_account_settings 0x7f0c001c
+int layout activity_check_out_main 0x7f0c007d
 int layout activity_foget_pass 0x7f0c001d
 int layout activity_home 0x7f0c001e
 int layout activity_main 0x7f0c001f
@@ -3658,6 +3667,7 @@ int layout design_navigation_menu 0x7f0c0032
 int layout design_navigation_menu_item 0x7f0c0033
 int layout design_text_input_end_icon 0x7f0c0034
 int layout design_text_input_start_icon 0x7f0c0035
+int layout drop_down_item 0x7f0c007e
 int layout fragment_onboadrd2 0x7f0c0036
 int layout fragment_onboadrd3 0x7f0c0037
 int layout fragment_onboard1 0x7f0c0038

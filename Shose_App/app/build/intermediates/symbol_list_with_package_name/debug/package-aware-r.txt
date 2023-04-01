@@ -2806,6 +2806,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable drop_down_24
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_arrow_back_black_24
@@ -2824,10 +2825,14 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable icon_back
 drawable icon_gg
+drawable icon_pen
 drawable iconmenu
+drawable image_email
+drawable image_phone
 drawable image_profile
 drawable img_net_dut
 drawable itemclick
+drawable location_24
 drawable logo
 drawable m3_appbar_background
 drawable m3_avd_hide_password
@@ -2920,6 +2925,7 @@ id CircleIndicator
 id CoordinatorLayouthome
 id FUNCTION
 id Favorite
+id ImgCart
 id META
 id NO_DEBUG
 id Notifications
@@ -3026,7 +3032,7 @@ id bounceStart
 id btnGmail
 id btnLogin
 id btn_OnboardNext
-id btn_checkout
+id btn_Payment
 id btn_create
 id btnloginGmail
 id buttonPanel
@@ -3126,6 +3132,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id filled_exposed
 id fitCenter
 id fitEnd
 id fitStart
@@ -3481,6 +3488,7 @@ id toggle
 id toolbar
 id toolbar2
 id toolbar_cart
+id toolbar_check_out_main
 id top
 id topPanel
 id topicProduct
@@ -3634,6 +3642,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_account_settings
+layout activity_check_out_main
 layout activity_foget_pass
 layout activity_home
 layout activity_main
@@ -3659,6 +3668,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout drop_down_item
 layout fragment_onboadrd2
 layout fragment_onboadrd3
 layout fragment_onboard1

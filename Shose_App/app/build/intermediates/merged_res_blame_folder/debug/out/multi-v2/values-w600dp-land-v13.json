@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "edu.fpt.shose_app-mergeDebugResources-3:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+            "outputFile": "edu.fpt.shose_app-mergeDebugResources-34:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\1d6008e40b174b18ef5fa9ea4cd35014\\transformed\\material-1.8.0\\res\\values-w600dp-land-v13\\values-w600dp-land-v13.xml",
+                    "source": "/Users/vilong/.gradle/caches/transforms-3/1d6008e40b174b18ef5fa9ea4cd35014/transformed/material-1.8.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
