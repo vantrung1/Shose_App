@@ -1,5 +1,6 @@
 package edu.fpt.shose_app.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -57,7 +58,13 @@ public class MyCartActivity extends AppCompatActivity {
 
         txt_total = findViewById(R.id.txt_price_total);
         textToast= findViewById(R.id.textToast);
-
+        appCompatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MyCartActivity.this, Check_Out_MainActivity.class);
+                startActivity(i);
+            }
+        });
 
         Utils.cartLists = new ArrayList<>();
         Utils.cartLists.add(new Cart("https://thumbs.dreamstime.com/b/blue-shoes-29507491.jpg", "Nike", 20000, 1, 40));
