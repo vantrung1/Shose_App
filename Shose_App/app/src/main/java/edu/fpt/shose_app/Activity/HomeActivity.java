@@ -27,11 +27,17 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
+
 import java.util.ArrayList;
 
 import edu.fpt.shose_app.Adapter.Brand_Adapter;
 import edu.fpt.shose_app.Adapter.ProducAdapter2;
 import edu.fpt.shose_app.Adapter.ProductAdapter;
+import edu.fpt.shose_app.EventBus.BrandEvent;
+import edu.fpt.shose_app.EventBus.TotalEvent;
 import edu.fpt.shose_app.Model.Brand;
 import edu.fpt.shose_app.Model.Product;
 import edu.fpt.shose_app.Model.ProductRequest;
@@ -65,13 +71,14 @@ public class HomeActivity extends AppCompatActivity {
     private Handler handler = new Handler();
     private Runnable runnable;
     View header_view;
+    TextView txta;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         brandArrayList = new ArrayList<>();
         productArrayList = new ArrayList<>();
-        productArrayList2 = new ArrayList<>();
+        //productArrayList2 = new ArrayList<>();
         gson = new GsonBuilder().setLenient().create();
         retrofit = new Retrofit.Builder()
                 .baseUrl(Utils.BASE_URL_API)
@@ -81,18 +88,18 @@ public class HomeActivity extends AppCompatActivity {
         apiInterface = retrofit.create(ApiApp.class);
         brand_adapter = new Brand_Adapter(this,brandArrayList);
         productAdapter = new ProductAdapter(this,productArrayList);
-        productAdapter2 = new ProducAdapter2(this,productArrayList2);
+        productAdapter2 = new ProducAdapter2(this,productArrayList);
         initUi();
         initAction();
         initHeader();
-        get_product();
+
 //        startAutoScroll();
 //        stopAutoScroll();
 
     }
 
-    private void get_product() {
-        Call<ProductRequest> objgetBrands = apiInterface.getApiProductById(1);
+    private void get_product(int id) {
+        Call<ProductRequest> objgetBrands = apiInterface.getApiProductById(id);
         // thực hiện gọi
         objgetBrands.enqueue(new Callback<ProductRequest>() {
             @Override
@@ -103,8 +110,16 @@ public class HomeActivity extends AppCompatActivity {
                     if (productRequest.getStatus().equals("202")){
                         productArrayList.clear();
                         productArrayList = productRequest.getData();
+                        if(productArrayList.size() ==0){
+                            txta.setVisibility(View.VISIBLE);
+                        }
+                        else {
+                            txta.setVisibility(View.INVISIBLE);
+
+                        }
                         productAdapter.setBrandSelected(productArrayList);
-                        Log.d("sssssssssssss", "onResponse: "+productArrayList.size());
+                        productAdapter2.setProdcut(productArrayList);
+                        Log.d("TAG", "onResponse: "+productArrayList.size());
                     }
 
                 }
@@ -112,7 +127,7 @@ public class HomeActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<ProductRequest> call, Throwable t) {
-                Log.d("ssssssssss", "onFailure: ");
+                Log.d("ssssssssss", "onFailure: "+t.getLocalizedMessage());
             }
         });
     }
@@ -161,6 +176,7 @@ public class HomeActivity extends AppCompatActivity {
 
     private void initUi() {
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        txta = findViewById(R.id.txta);
         bottomNavigationView.setBackground(null);
         floatingActionButton = findViewById(R.id.fab_home);
         navigationView_home = findViewById(R.id.navigation);
@@ -238,6 +254,7 @@ public class HomeActivity extends AppCompatActivity {
                     brandArrayList.clear();
                     brandArrayList = response.body();
                     brand_adapter.setBrandSelected(brandArrayList);
+                    get_product(brandArrayList.get(0).getId());
                 }
             }
 
@@ -293,5 +310,22 @@ public class HomeActivity extends AppCompatActivity {
     protected void onDestroy() {
 
         super.onDestroy();
+    }
+    protected void onStart() {
+        super.onStart();
+        EventBus.getDefault().register(this);
+    }
+
+    @Override
+    protected void onStop() {
+        EventBus.getDefault().unregister(this);
+        super.onStop();
+    }
+    @Subscribe(sticky = true, threadMode = ThreadMode.MAIN)
+    public void eventBrand(BrandEvent event) {
+        if (event != null) {
+            get_product(brand_adapter.getSelected().getId());
+        }
+
     }
 }
