@@ -45,11 +45,6 @@
         <activity
             android:name="edu.fpt.shose_app.Activity.MyCartActivity"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="edu.fpt.shose_app.Activity.HomeActivity"
@@ -88,7 +83,16 @@
         </activity>
         <activity
             android:name="edu.fpt.shose_app.MainActivity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="edu.fpt.shose_app.Activity.Check_Out_MainActivity"
+            android:exported="false" />
         <activity
             android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
             android:screenOrientation="unspecified"

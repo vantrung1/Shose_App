@@ -3,14 +3,14 @@ package edu.fpt.shose_app.Model;
 import com.google.gson.annotations.SerializedName;
 
 public class Image {
-    @SerializedName("id")
-    private String id;
-    @SerializedName("image")
-    private String image;
 
-    public Image(String id, String image) {
+    private String id;
+
+    private String name;
+
+    public Image(String id, String name) {
         this.id = id;
-        this.image = image;
+        this.name = name;
     }
 
     public String getId() {
@@ -21,11 +21,11 @@ public class Image {
         this.id = id;
     }
 
-    public String getImage() {
-        return image;
+    public String getName() {
+        return name;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setName(String name) {
+        this.name = name;
     }
 }

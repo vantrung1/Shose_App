@@ -19,10 +19,14 @@ import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.lang.annotation.ElementType;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.fpt.shose_app.EventBus.BrandEvent;
+import edu.fpt.shose_app.EventBus.TotalEvent;
 import edu.fpt.shose_app.Model.Brand;
 import edu.fpt.shose_app.R;
 import edu.fpt.shose_app.Retrofit.ApiApp;
@@ -106,6 +110,7 @@ public class Brand_Adapter extends RecyclerView.Adapter<Brand_Adapter.myViewHold
                     if(ischeckPostion != getAdapterPosition()){
                         notifyItemChanged(ischeckPostion);
                         ischeckPostion = getAdapterPosition();
+                        EventBus.getDefault().postSticky(new BrandEvent());
                     }
                 }
             });

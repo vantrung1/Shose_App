@@ -50,12 +50,11 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.myviewHo
 
     @Override
     public void onBindViewHolder(@NonNull ProductAdapter.myviewHolder holder, int position) {
-        Gson gson = new Gson();
-        String jonsimage = productArrayList.get(position).getImage();
 
-        Type listType = new TypeToken<List<Image>>(){}.getType();
-        List<Image> myObjects = gson.fromJson(jonsimage, listType);
-        Glide.with(context).load(myObjects.get(0).getImage()).into(holder.itemproduct_img);
+
+
+
+        Glide.with(context).load(productArrayList.get(position).getImage().get(0).get("1").getName()).into(holder.itemproduct_img);
        // Log.d("TAG", "onBindViewHolder: "+myObjects.get(0).getImage());
         holder.itemproduct_name.setText(productArrayList.get(position).getName());
         holder.itemproduct_price.setText(productArrayList.get(position).getPrice()+"");

@@ -13,7 +13,7 @@ public class Brand implements Serializable {
         this.ischeck = ischeck;
     }
 
-    private int Id;
+    private int id;
     private String brandName;
     private String desc;
     private String image;
@@ -22,18 +22,18 @@ public class Brand implements Serializable {
     }
 
     public Brand(int id, String brandName, String desc, String image) {
-        Id = id;
+        this.id = id;
         this.brandName = brandName;
         this.desc = desc;
         this.image = image;
     }
 
     public int getId() {
-        return Id;
+        return id;
     }
 
     public void setId(int id) {
-        Id = id;
+        id = id;
     }
 
     public String getBrandName() {
