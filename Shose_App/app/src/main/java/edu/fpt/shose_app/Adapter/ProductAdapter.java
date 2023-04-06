@@ -1,6 +1,7 @@
 package edu.fpt.shose_app.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +22,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.fpt.shose_app.Activity.HomeActivity;
+import edu.fpt.shose_app.Activity.ProductDetailActivity;
+import edu.fpt.shose_app.Interface.OnItemClickListener;
 import edu.fpt.shose_app.Model.Brand;
 import edu.fpt.shose_app.Model.Image;
 import edu.fpt.shose_app.Model.Product;
@@ -31,6 +34,7 @@ import edu.fpt.shose_app.Utils.Utils;
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.myviewHolder> {
     private Context context;
     private ArrayList<Product> productArrayList;
+
 
     public ProductAdapter(Context context, ArrayList<Product> productArrayList) {
         this.context = context;
@@ -49,15 +53,25 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.myviewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ProductAdapter.myviewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ProductAdapter.myviewHolder holder, int i) {
 
 
 
 
-        Glide.with(context).load(productArrayList.get(position).getImage().get(0).get("1").getName()).into(holder.itemproduct_img);
+        Glide.with(context).load(productArrayList.get(i).getImage().get(0).get("1").getName()).into(holder.itemproduct_img);
        // Log.d("TAG", "onBindViewHolder: "+myObjects.get(0).getImage());
-        holder.itemproduct_name.setText(productArrayList.get(position).getName());
-        holder.itemproduct_price.setText(productArrayList.get(position).getPrice()+"");
+        holder.itemproduct_name.setText(productArrayList.get(i).getName());
+        holder.itemproduct_price.setText(productArrayList.get(i).getPrice()+"");
+
+        holder.itemproduct_name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context, ProductDetailActivity.class);
+                intent.putExtra("product",productArrayList.get(i));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -65,14 +79,16 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.myviewHo
         return productArrayList.size();
     }
 
-    public class myviewHolder extends RecyclerView.ViewHolder {
+    public class myviewHolder extends RecyclerView.ViewHolder  {
         ImageView itemproduct_img;
         TextView itemproduct_name,itemproduct_price;
+         OnItemClickListener onItemClickListener;
         public myviewHolder(@NonNull View itemView) {
             super(itemView);
             itemproduct_img = itemView.findViewById(R.id.item_product_image);
             itemproduct_name = itemView.findViewById(R.id.item_product_name);
             itemproduct_price = itemView.findViewById(R.id.item_product_price);
         }
+
     }
 }

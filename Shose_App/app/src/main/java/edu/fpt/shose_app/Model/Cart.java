@@ -1,22 +1,24 @@
 package edu.fpt.shose_app.Model;
 
 public class Cart {
-
+    private int idCart;
     private String image;
     private String cartName;
     private int price;
     private int quantity;
-
-    private  int size;
+    private String color;
+    private int size;
 
     public Cart() {
     }
 
-    public Cart( String image, String cartName, int price, int quantity, int size) {
+    public Cart(int idCart, String image, String cartName, int price, int quantity, String color, int size) {
+        this.idCart = idCart;
         this.image = image;
         this.cartName = cartName;
         this.price = price;
         this.quantity = quantity;
+        this.color = color;
         this.size = size;
     }
 
@@ -58,5 +60,21 @@ public class Cart {
 
     public void setSize(int size) {
         this.size = size;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public int getIdCart() {
+        return idCart;
+    }
+
+    public void setIdCart(int idCart) {
+        this.idCart = idCart;
     }
 }

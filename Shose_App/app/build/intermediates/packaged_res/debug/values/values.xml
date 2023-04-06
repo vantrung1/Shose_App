@@ -3,6 +3,7 @@
     <color name="background">#F8F9FA</color>
     <color name="black">#FF000000</color>
     <color name="button">#5B9EE1</color>
+    <color name="gray">#DADFE3</color>
     <color name="lavender">#8692f7</color>
     <color name="nav">#2D3B48</color>
     <color name="purple_200">#FFBB86FC</color>
@@ -14,6 +15,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <color name="xam">#707B81</color>
+    <color name="xam_nhe">#E5E6E6</color>
     <dimen name="settings_container_padding">16dp</dimen>
     <dimen name="settings_divider_height">1dp</dimen>
     <dimen name="settings_icon_end_margin">16dp</dimen>
@@ -35,6 +37,10 @@ Nandu sit Alique Dolor]]></string>
         <item name="android:layout_alignParentStart">true</item>
         <item name="android:layout_centerVertical">true</item>
         <item name="android:scaleType">fitCenter</item>
+    </style>
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
     </style>
     <style name="RelactiveSettings_settingContainer">
         <item name="android:layout_width">match_parent</item>
@@ -64,8 +70,6 @@ Nandu sit Alique Dolor]]></string>
         
         <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
         
-
-
     </style>
     <style name="easySettings_textView_title">
         <item name="android:layout_width">match_parent</item>
