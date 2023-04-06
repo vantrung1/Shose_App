@@ -3,6 +3,7 @@ package edu.fpt.shose_app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -61,6 +62,16 @@ public class MyCartActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        appCompatButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String price = txt_total.getText().toString();
+                Intent intent = new Intent(MyCartActivity.this,Check_Out_MainActivity.class);
+                intent.putExtra("STRING_DATA", price);
+                startActivity(intent);
             }
         });
         recyclerViewCart = findViewById(R.id.recy_my_cart);
