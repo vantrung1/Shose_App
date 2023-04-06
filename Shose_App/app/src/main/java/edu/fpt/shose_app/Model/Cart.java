@@ -1,7 +1,7 @@
 package edu.fpt.shose_app.Model;
 
 public class Cart {
-    private int idCart;
+    private int idProduct;
     private String image;
     private String cartName;
     private int price;
@@ -12,14 +12,22 @@ public class Cart {
     public Cart() {
     }
 
-    public Cart(int idCart, String image, String cartName, int price, int quantity, String color, int size) {
-        this.idCart = idCart;
+    public Cart(int idProduct, String image, String cartName, int price, int quantity, String color, int size) {
+        this.idProduct = idProduct;
         this.image = image;
         this.cartName = cartName;
         this.price = price;
         this.quantity = quantity;
         this.color = color;
         this.size = size;
+    }
+
+    public int getIdProduct() {
+        return idProduct;
+    }
+
+    public void setIdProduct(int idProduct) {
+        this.idProduct = idProduct;
     }
 
     public String getImage() {
@@ -70,11 +78,5 @@ public class Cart {
         this.color = color;
     }
 
-    public int getIdCart() {
-        return idCart;
-    }
 
-    public void setIdCart(int idCart) {
-        this.idCart = idCart;
-    }
 }
