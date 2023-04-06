@@ -8,15 +8,18 @@ public class Product implements Serializable {
     private int id;
     private String name;
     private List<Map<String, Image>> image;
-    private String price;
+    private List<Map<String, Size>> size;
+    private int price;
     private String sale;
-    private String brandID;
+    private int brandID;
     private String desc;
     private String content;
     private String status;
-    private String created_at;
-    private String updated_at;
-    private String branch;
+    private String create_at;
+    private String update_at;
+
+    public Product() {
+    }
 
     public int getId() {
         return id;
@@ -34,19 +37,13 @@ public class Product implements Serializable {
         this.name = name;
     }
 
-    public List<Map<String, Image>> getImage() {
-        return image;
-    }
 
-    public void setImage(List<Map<String, Image>> image) {
-        this.image = image;
-    }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
@@ -58,11 +55,11 @@ public class Product implements Serializable {
         this.sale = sale;
     }
 
-    public String getBrandID() {
+    public int getBrandID() {
         return brandID;
     }
 
-    public void setBrandID(String brandID) {
+    public void setBrandID(int brandID) {
         this.brandID = brandID;
     }
 
@@ -90,68 +87,50 @@ public class Product implements Serializable {
         this.status = status;
     }
 
-    public String getCreated_at() {
-        return created_at;
+    public String getCreate_at() {
+        return create_at;
     }
 
-    public void setCreated_at(String created_at) {
-        this.created_at = created_at;
+    public void setCreate_at(String create_at) {
+        this.create_at = create_at;
     }
 
-    public String getUpdated_at() {
-        return updated_at;
+    public String getUpdate_at() {
+        return update_at;
     }
 
-    public void setUpdated_at(String updated_at) {
-        this.updated_at = updated_at;
+    public void setUpdate_at(String update_at) {
+        this.update_at = update_at;
     }
 
-    public String getBranch() {
-        return branch;
+    public List<Map<String, Image>> getImage() {
+        return image;
     }
 
-    public void setBranch(String branch) {
-        this.branch = branch;
+    public void setImage(List<Map<String, Image>> image) {
+        this.image = image;
     }
 
-    public Product() {
+    public List<Map<String, Size>> getSize() {
+        return size;
     }
 
-    public Product(int id, String name, List<Map<String, Image>> image, String price, String sale, String brandID, String desc, String content, String status, String created_at, String updated_at, String branch) {
+    public void setSize(List<Map<String, Size>> size) {
+        this.size = size;
+    }
+
+    public Product(int id, String name, List<Map<String, Image>> image, List<Map<String, Size>> size, int price, String sale, int brandID, String desc, String content, String status, String create_at, String update_at) {
         this.id = id;
         this.name = name;
         this.image = image;
+        this.size = size;
         this.price = price;
         this.sale = sale;
         this.brandID = brandID;
         this.desc = desc;
         this.content = content;
         this.status = status;
-        this.created_at = created_at;
-        this.updated_at = updated_at;
-        this.branch = branch;
-    }
-
-    public class Images {
-        private String name;
-        private int id;
-        // Getters và setters cho các trường này
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public int getId() {
-            return id;
-        }
-
-        public void setId(int id) {
-            this.id = id;
-        }
+        this.create_at = create_at;
+        this.update_at = update_at;
     }
 }
-

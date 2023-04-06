@@ -2,7 +2,9 @@ package edu.fpt.shose_app.Model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class Image {
+import java.io.Serializable;
+
+public class Image implements Serializable {
 
     private String id;
 

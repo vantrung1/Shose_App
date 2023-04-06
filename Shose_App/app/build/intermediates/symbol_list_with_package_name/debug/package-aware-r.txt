@@ -41,6 +41,10 @@ anim m3_side_sheet_slide_out
 anim mtrl_bottom_sheet_slide_in
 anim mtrl_bottom_sheet_slide_out
 anim mtrl_card_lowers_interpolator
+anim slide_in_bottom
+anim slide_in_right
+anim slide_out_bottom
+anim slide_out_right
 anim ucrop_loader_circle_path
 anim ucrop_loader_circle_scale
 animator design_appbar_state_list_animator
@@ -1421,6 +1425,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color gray
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color lavender
@@ -2003,6 +2008,7 @@ color ucrop_color_widget_text
 color ucrop_scale_text_view_selector
 color white
 color xam
+color xam_nhe
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -2824,8 +2830,11 @@ drawable background_item_my_cart
 drawable bag
 drawable baseline_add_24
 drawable baseline_border_color_24
+drawable baseline_check_box_24
 drawable baseline_chevron_right_24
+drawable baseline_close_24
 drawable baseline_delete_24
+drawable baseline_expand_more_24
 drawable baseline_favorite_border_24
 drawable baseline_home_24
 drawable baseline_logout_24
@@ -2850,6 +2859,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable camera_image
+drawable check_box_outline_blank_24
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -2897,11 +2907,13 @@ drawable icon_back
 drawable icon_gg
 drawable icon_pen
 drawable iconmenu
+drawable image_check_box
 drawable image_email
 drawable image_phone
 drawable image_profile
 drawable img_net_dut
 drawable itemclick
+drawable loading
 drawable location_24
 drawable logo
 drawable m3_appbar_background
@@ -3123,6 +3135,7 @@ id btn_OnboardNext
 id btn_Payment
 id btn_checkout
 id btn_create
+id btn_xacnhan
 id btnloginGmail
 id buttonPanel
 id cache_measures
@@ -3138,6 +3151,7 @@ id chain
 id chain2
 id chains
 id checkbox
+id checkbox_item_cart
 id checked
 id chronometer
 id circle_center
@@ -3276,6 +3290,8 @@ id image_view_state_aspect_ratio
 id image_view_state_rotate
 id image_view_state_scale
 id img_camera
+id img_close
+id img_update_cart
 id immediateStop
 id included
 id indeterminate
@@ -3286,7 +3302,6 @@ id italic
 id item_btnIMG_minus_cart
 id item_btnIMG_plus_cart
 id item_img_cart
-id item_img_delete_cart
 id item_product_image
 id item_product_img2
 id item_product_name
@@ -3294,9 +3309,12 @@ id item_product_name2
 id item_product_price
 id item_product_price2
 id item_touch_helper_previous_elevation
+id item_txt_color_cart
 id item_txt_name_cart
 id item_txt_price_cart
 id item_txt_quantity_cart
+id item_txt_quantity_cart_update
+id item_txt_sale_cart
 id item_txt_size_cart
 id itemclcik
 id iv_badge_bg
@@ -3319,6 +3337,7 @@ id line1
 id line3
 id linear
 id linearLayout
+id linearLayout_item
 id listMode
 id list_item
 id ln_item_dv
@@ -3451,6 +3470,8 @@ id rectangles
 id recy_1_product
 id recy_2_product
 id recy_my_cart
+id recycler_dialog_color
+id recycler_dialog_size
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3625,9 +3646,12 @@ id triangle
 id tv_badge_text
 id txtInputLayout1
 id txtInputLayout2
+id txt_price
 id txt_price_shopping
 id txt_price_subtotal
 id txt_price_total
+id txt_quantity
+id txt_sale
 id txta
 id ucrop
 id ucrop_frame
@@ -3779,10 +3803,12 @@ layout activity_home
 layout activity_main
 layout activity_my_cart
 layout activity_onboard
+layout activity_product_detail
 layout activity_profile
 layout activity_sign_in
 layout activity_sign_up
 layout activity_splash
+layout baseline_expand_more_24
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3800,6 +3826,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_choose_app
+layout dialog_update_cart
 layout drop_down_item
 layout fragment_onboadrd2
 layout fragment_onboadrd3
@@ -4368,6 +4395,7 @@ style Base_Widget_MaterialComponents_TextView
 style CardView
 style CardView_Dark
 style CardView_Light
+style DialogAnimation
 style MaterialAlertDialog_Material3
 style MaterialAlertDialog_Material3_Animation
 style MaterialAlertDialog_Material3_Body_Text
