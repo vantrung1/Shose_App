@@ -71,9 +71,9 @@ public class MyCartActivity extends AppCompatActivity {
         textToast = findViewById(R.id.textToast);
 
         Utils.cartLists = new ArrayList<>();
-        Utils.cartLists.add(new Cart(1,"https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2022/09/giay-the-thao-nike-air-jordan-1-high-og-unc-university-blue-555088-134-575441-134-mau-xanh-trang-size-41-631998251b927-08092022142213.jpg", "Nike", 20000, 1, "Trang-xanh", 40));
-        Utils.cartLists.add(new Cart(2,"https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2022/09/giay-the-thao-nike-air-jordan-1-high-og-unc-university-blue-555088-134-575441-134-mau-xanh-trang-size-41-631998251b927-08092022142213.jpg", "Nike", 20000, 1, "Trang-xanh", 40));
-        Utils.cartLists.add(new Cart(3,"https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2022/09/giay-the-thao-nike-air-jordan-1-high-og-unc-university-blue-555088-134-575441-134-mau-xanh-trang-size-41-631998251b927-08092022142213.jpg", "Nike", 20000, 1, "Trang-xanh", 40));
+        Utils.cartLists.add(new Cart(1, "https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2022/09/giay-the-thao-nike-air-jordan-1-high-og-unc-university-blue-555088-134-575441-134-mau-xanh-trang-size-41-631998251b927-08092022142213.jpg", "Nike", 20000, 1, "Trang-xanh", 40));
+        Utils.cartLists.add(new Cart(2, "https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2022/09/giay-the-thao-nike-air-jordan-1-high-og-unc-university-blue-555088-134-575441-134-mau-xanh-trang-size-41-631998251b927-08092022142213.jpg", "Nike", 20000, 1, "Trang-xanh", 40));
+        Utils.cartLists.add(new Cart(3, "https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2022/09/giay-the-thao-nike-air-jordan-1-high-og-unc-university-blue-555088-134-575441-134-mau-xanh-trang-size-41-631998251b927-08092022142213.jpg", "Nike", 20000, 1, "Trang-xanh", 40));
 
         if (Utils.cartLists.size() == 0) {
             textToast.setText("Giỏ hàng trống");
@@ -99,10 +99,13 @@ public class MyCartActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         int position = viewHolder.getAdapterPosition();
-                        Utils.cartLists.remove(position);
-                        adapter.notifyDataSetChanged();
-                        dialogInterface.dismiss();
-                        EventBus.getDefault().postSticky(new TotalEvent());
+                        for (i = 0; i < Utils.buyCartLits.size(); i++) {
+                            Utils.cartLists.remove(position);
+                            Utils.buyCartLits.remove(i);
+                            adapter.notifyDataSetChanged();
+                            dialogInterface.dismiss();
+                            EventBus.getDefault().postSticky(new TotalEvent());
+                        }
                     }
                 });
                 builder.setNegativeButton("Huy", new DialogInterface.OnClickListener() {
