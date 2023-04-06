@@ -3133,6 +3133,7 @@ id btnGmail
 id btnLogin
 id btn_OnboardNext
 id btn_Payment
+id btn_addCart
 id btn_checkout
 id btn_create
 id btn_xacnhan
@@ -3192,6 +3193,11 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id detailDesc
+id detailcontent
+id detailname
+id detailprice
+id detailsale
 id dialog_button
 id dimensions
 id direct
@@ -3285,12 +3291,14 @@ id imageView_icon3
 id imageView_icon4
 id image_brand
 id image_view_crop
+id image_view_item
 id image_view_logo
 id image_view_state_aspect_ratio
 id image_view_state_rotate
 id image_view_state_scale
 id img_camera
 id img_close
+id img_detail
 id img_update_cart
 id immediateStop
 id included
@@ -3322,7 +3330,9 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layoutBottom
 id layoutGioHang
+id layoutGioHang_detail
 id layout_aspect_ratio
 id layout_rotate_wheel
 id layout_scale_wheel
@@ -3467,6 +3477,8 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyImageDetail
+id recySizeDetail
 id recy_1_product
 id recy_2_product
 id recy_my_cart
@@ -3529,6 +3541,8 @@ id showHome
 id showTitle
 id signIn
 id sin
+id sizeItem
+id size_name
 id skipCollapsed
 id skipped
 id slide
@@ -3628,6 +3642,7 @@ id toolbar
 id toolbar2
 id toolbar_cart
 id toolbar_check_out_main
+id toolbar_detail
 id toolbar_profile
 id toolbar_title
 id top
@@ -3643,6 +3658,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv1
 id tv_badge_text
 id txtInputLayout1
 id txtInputLayout2
@@ -3833,9 +3849,11 @@ layout fragment_onboadrd3
 layout fragment_onboard1
 layout header_layout
 layout item_brand
+layout item_image
 layout item_my_cart
 layout item_product2
 layout item_product_home
+layout itemsize
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

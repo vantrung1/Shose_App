@@ -10,7 +10,7 @@ public class Product implements Serializable {
     private List<Map<String, Image>> image;
     private List<Map<String, Size>> size;
     private int price;
-    private String sale;
+    private int sale;
     private int brandID;
     private String desc;
     private String content;
@@ -47,11 +47,11 @@ public class Product implements Serializable {
         this.price = price;
     }
 
-    public String getSale() {
+    public int getSale() {
         return sale;
     }
 
-    public void setSale(String sale) {
+    public void setSale(int sale) {
         this.sale = sale;
     }
 
@@ -119,7 +119,7 @@ public class Product implements Serializable {
         this.size = size;
     }
 
-    public Product(int id, String name, List<Map<String, Image>> image, List<Map<String, Size>> size, int price, String sale, int brandID, String desc, String content, String status, String create_at, String update_at) {
+    public Product(int id, String name, List<Map<String, Image>> image, List<Map<String, Size>> size, int price, int sale, int brandID, String desc, String content, String status, String create_at, String update_at) {
         this.id = id;
         this.name = name;
         this.image = image;
