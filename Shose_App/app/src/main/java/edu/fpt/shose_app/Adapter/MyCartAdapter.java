@@ -61,21 +61,19 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.myViewHold
         holder.txt_quantity_cart.setText(cart.getQuantity() + "");
         holder.txt_color_cart.setText("Phan loai: " + cart.getColor() + ", ");
         holder.txt_size_cart.setText(cart.getSize() + "");
+        if(cart.isIscheck()){
+            holder.checkbox_item_cart.setChecked(true);
+        }
+        else {
+            holder.checkbox_item_cart.setChecked(false);
+        }
         Glide.with(context).load(cart.getImage()).into(holder.img_cart);
         holder.checkbox_item_cart.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b) {
-                    Utils.buyCartLits.add(cart);
-                    EventBus.getDefault().postSticky(new TotalEvent());
-                } else {
-                    for (int i = 0; i < Utils.buyCartLits.size(); i++) {
-                        if (Utils.buyCartLits.get(i).getIdProduct() == cart.getIdProduct()) {
-                            Utils.buyCartLits.remove(i);
-                            EventBus.getDefault().postSticky(new TotalEvent());
-                        }
-                    }
-                }
+                cart.setIscheck(b);
+                EventBus.getDefault().postSticky(new TotalEvent());
+
             }
         });
 
@@ -95,13 +93,10 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.myViewHold
                         builder.setPositiveButton("Dong y", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                for (i = 0; i < Utils.buyCartLits.size(); i++) {
-                                    cartList.remove(pos);
-                                    Utils.buyCartLits.remove(i);
-                                    notifyDataSetChanged();
-                                    dialogInterface.dismiss();
-                                    EventBus.getDefault().postSticky(new TotalEvent());
-                                }
+                                Utils.cartLists.remove(pos);
+                                notifyDataSetChanged();
+                                dialogInterface.dismiss();
+                                EventBus.getDefault().postSticky(new TotalEvent());
                             }
                         });
                         builder.setNegativeButton("Huy", new DialogInterface.OnClickListener() {
