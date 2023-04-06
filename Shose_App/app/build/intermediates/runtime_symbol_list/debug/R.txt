@@ -40,6 +40,8 @@ int anim m3_side_sheet_slide_out 0x7f010026
 int anim mtrl_bottom_sheet_slide_in 0x7f010027
 int anim mtrl_bottom_sheet_slide_out 0x7f010028
 int anim mtrl_card_lowers_interpolator 0x7f010029
+int anim slide_in_bottom 0x7f01002c
+int anim slide_out_bottom 0x7f01002d
 int anim ucrop_loader_circle_path 0x7f01002a
 int anim ucrop_loader_circle_scale 0x7f01002b
 int animator design_appbar_state_list_animator 0x7f020000
@@ -2002,6 +2004,7 @@ int color ucrop_color_widget_text 0x7f0502ad
 int color ucrop_scale_text_view_selector 0x7f0502ae
 int color white 0x7f0502af
 int color xam 0x7f0502b0
+int color xam_nhe 0x7f0502b1
 int dimen abc_action_bar_content_inset_material 0x7f060000
 int dimen abc_action_bar_content_inset_with_nav 0x7f060001
 int dimen abc_action_bar_default_height_material 0x7f060002
@@ -2144,6 +2147,8 @@ int dimen design_tab_scrollable_min_width 0x7f06008a
 int dimen design_tab_text_size 0x7f06008b
 int dimen design_tab_text_size_2line 0x7f06008c
 int dimen design_textinput_caption_translate_y 0x7f06008d
+int dimen dimen_10 0x7f0602dc
+int dimen dimen_20 0x7f0602dd
 int dimen disabled_alpha_material_dark 0x7f06008e
 int dimen disabled_alpha_material_light 0x7f06008f
 int dimen fastscroll_default_thickness 0x7f060090
@@ -2823,8 +2828,11 @@ int drawable background_item_my_cart 0x7f07007e
 int drawable bag 0x7f07007f
 int drawable baseline_add_24 0x7f070080
 int drawable baseline_border_color_24 0x7f070081
+int drawable baseline_check_box_24 0x7f070137
 int drawable baseline_chevron_right_24 0x7f070082
+int drawable baseline_close_24 0x7f070135
 int drawable baseline_delete_24 0x7f070083
+int drawable baseline_expand_more_24 0x7f070136
 int drawable baseline_favorite_border_24 0x7f070084
 int drawable baseline_home_24 0x7f070085
 int drawable baseline_logout_24 0x7f070086
@@ -2849,6 +2857,7 @@ int drawable btn_radio_off_to_on_mtrl_animation 0x7f070098
 int drawable btn_radio_on_mtrl 0x7f070099
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f07009a
 int drawable camera_image 0x7f07009b
+int drawable check_box_outline_blank_24 0x7f070138
 int drawable common_full_open_on_phone 0x7f07009c
 int drawable common_google_signin_btn_icon_dark 0x7f07009d
 int drawable common_google_signin_btn_icon_dark_focused 0x7f07009e
@@ -2894,6 +2903,7 @@ int drawable ic_search_black_24 0x7f0700c5
 int drawable icon_back 0x7f0700c6
 int drawable icon_gg 0x7f0700c7
 int drawable iconmenu 0x7f0700c8
+int drawable image_check_box 0x7f070139
 int drawable image_profile 0x7f0700c9
 int drawable img_net_dut 0x7f0700ca
 int drawable itemclick 0x7f0700cb
@@ -3116,6 +3126,7 @@ int id btnLogin 0x7f090070
 int id btn_OnboardNext 0x7f090071
 int id btn_checkout 0x7f090072
 int id btn_create 0x7f090073
+int id btn_xacnhan 0x7f09028e
 int id btnloginGmail 0x7f090074
 int id buttonPanel 0x7f090075
 int id cache_measures 0x7f090076
@@ -3131,6 +3142,7 @@ int id chain 0x7f09007f
 int id chain2 0x7f090080
 int id chains 0x7f090081
 int id checkbox 0x7f090082
+int id checkbox_item_cart 0x7f09029d
 int id checked 0x7f090083
 int id chronometer 0x7f090084
 int id circle_center 0x7f090085
@@ -3257,6 +3269,7 @@ int id image2 0x7f0900fd
 int id image3 0x7f0900fe
 int id image4 0x7f0900ff
 int id imageView 0x7f090100
+int id imageView2 0x7f09028f
 int id imageView_icon1 0x7f090101
 int id imageView_icon2 0x7f090102
 int id imageView_icon3 0x7f090103
@@ -3268,6 +3281,8 @@ int id image_view_state_aspect_ratio 0x7f090108
 int id image_view_state_rotate 0x7f090109
 int id image_view_state_scale 0x7f09010a
 int id img_camera 0x7f09010b
+int id img_close 0x7f090290
+int id img_update_cart 0x7f090291
 int id immediateStop 0x7f09010c
 int id included 0x7f09010d
 int id indeterminate 0x7f09010e
@@ -3278,7 +3293,6 @@ int id italic 0x7f090112
 int id item_btnIMG_minus_cart 0x7f090113
 int id item_btnIMG_plus_cart 0x7f090114
 int id item_img_cart 0x7f090115
-int id item_img_delete_cart 0x7f090116
 int id item_product_image 0x7f090117
 int id item_product_img2 0x7f090118
 int id item_product_name 0x7f090119
@@ -3286,9 +3300,12 @@ int id item_product_name2 0x7f09011a
 int id item_product_price 0x7f09011b
 int id item_product_price2 0x7f09011c
 int id item_touch_helper_previous_elevation 0x7f09011d
+int id item_txt_color_cart 0x7f09028c
 int id item_txt_name_cart 0x7f09011e
 int id item_txt_price_cart 0x7f09011f
 int id item_txt_quantity_cart 0x7f090120
+int id item_txt_quantity_cart_update 0x7f09029a
+int id item_txt_sale_cart 0x7f09029c
 int id item_txt_size_cart 0x7f090121
 int id itemclcik 0x7f090122
 int id iv_badge_bg 0x7f090123
@@ -3311,6 +3328,7 @@ int id line1 0x7f090133
 int id line3 0x7f090134
 int id linear 0x7f090135
 int id linearLayout 0x7f090136
+int id linearLayout_item 0x7f090299
 int id listMode 0x7f090137
 int id list_item 0x7f090138
 int id ln_item_dv 0x7f090139
@@ -3443,6 +3461,8 @@ int id rectangles 0x7f0901b7
 int id recy_1_product 0x7f0901b8
 int id recy_2_product 0x7f0901b9
 int id recy_my_cart 0x7f0901ba
+int id recycler_dialog_color 0x7f090293
+int id recycler_dialog_size 0x7f090294
 int id reverseSawtooth 0x7f0901bb
 int id right 0x7f0901bc
 int id rightToLeft 0x7f0901bd
@@ -3616,7 +3636,12 @@ int id triangle 0x7f090264
 int id tv_badge_text 0x7f090265
 int id txtInputLayout1 0x7f090266
 int id txtInputLayout2 0x7f090267
+int id txt_color 0x7f090295
+int id txt_price 0x7f090296
 int id txt_price_total 0x7f090268
+int id txt_quantity 0x7f090297
+int id txt_sale 0x7f09029b
+int id txt_size 0x7f090298
 int id ucrop 0x7f090269
 int id ucrop_frame 0x7f09026a
 int id ucrop_photobox 0x7f09026b
@@ -3787,14 +3812,17 @@ int layout design_navigation_menu_item 0x7f0c0033
 int layout design_text_input_end_icon 0x7f0c0034
 int layout design_text_input_start_icon 0x7f0c0035
 int layout dialog_choose_app 0x7f0c0036
+int layout dialog_update_cart 0x7f0c0084
 int layout fragment_onboadrd2 0x7f0c0037
 int layout fragment_onboadrd3 0x7f0c0038
 int layout fragment_onboard1 0x7f0c0039
 int layout header_layout 0x7f0c003a
 int layout item_brand 0x7f0c003b
+int layout item_color 0x7f0c0085
 int layout item_my_cart 0x7f0c003c
 int layout item_product2 0x7f0c003d
 int layout item_product_home 0x7f0c003e
+int layout item_size 0x7f0c0086
 int layout m3_alert_dialog 0x7f0c003f
 int layout m3_alert_dialog_actions 0x7f0c0040
 int layout m3_alert_dialog_title 0x7f0c0041
@@ -4354,6 +4382,7 @@ int style Base_Widget_MaterialComponents_TextView 0x7f120119
 int style CardView 0x7f12011a
 int style CardView_Dark 0x7f12011b
 int style CardView_Light 0x7f12011c
+int style DialogAnimation 0x7f120451
 int style MaterialAlertDialog_Material3 0x7f12011d
 int style MaterialAlertDialog_Material3_Animation 0x7f12011e
 int style MaterialAlertDialog_Material3_Body_Text 0x7f12011f
