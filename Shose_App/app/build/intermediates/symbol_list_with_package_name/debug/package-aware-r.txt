@@ -3664,8 +3664,9 @@ id txtInputLayout1
 id txtInputLayout2
 id txt_price
 id txt_price_shopping
-id txt_price_subtotal
+id txt_price_subtotal_check_out
 id txt_price_total
+id txt_price_total_check_out
 id txt_quantity
 id txt_sale
 id txta

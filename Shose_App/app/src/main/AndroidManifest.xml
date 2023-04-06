@@ -21,7 +21,7 @@
             android:name=".Activity.ProductDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".Activity.MyCartActivity"
+            android:name=".Activity.HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activity.HomeActivity"
+            android:name=".Activity.MyCartActivity"
             android:exported="true"></activity>
 
         <meta-data
