@@ -8,11 +8,20 @@ public class Cart {
     private int quantity;
     private String color;
     private int size;
+    private boolean ischeck;
 
     public Cart() {
     }
 
-    public Cart(int idProduct, String image, String cartName, int price, int quantity, String color, int size) {
+    public boolean isIscheck() {
+        return ischeck;
+    }
+
+    public void setIscheck(boolean ischeck) {
+        this.ischeck = ischeck;
+    }
+
+    public Cart(int idProduct, String image, String cartName, int price, int quantity, String color, int size, boolean ischeck) {
         this.idProduct = idProduct;
         this.image = image;
         this.cartName = cartName;
@@ -20,6 +29,7 @@ public class Cart {
         this.quantity = quantity;
         this.color = color;
         this.size = size;
+        this.ischeck = ischeck;
     }
 
     public int getIdProduct() {

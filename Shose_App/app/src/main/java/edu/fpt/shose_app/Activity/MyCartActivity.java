@@ -82,9 +82,9 @@ public class MyCartActivity extends AppCompatActivity {
         textToast = findViewById(R.id.textToast);
 
         Utils.cartLists = new ArrayList<>();
-        Utils.cartLists.add(new Cart(1, "https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2022/09/giay-the-thao-nike-air-jordan-1-high-og-unc-university-blue-555088-134-575441-134-mau-xanh-trang-size-41-631998251b927-08092022142213.jpg", "Nike", 20000, 1, "Trang-xanh", 40));
-        Utils.cartLists.add(new Cart(2, "https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2022/09/giay-the-thao-nike-air-jordan-1-high-og-unc-university-blue-555088-134-575441-134-mau-xanh-trang-size-41-631998251b927-08092022142213.jpg", "Nike", 20000, 1, "Trang-xanh", 40));
-        Utils.cartLists.add(new Cart(3, "https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2022/09/giay-the-thao-nike-air-jordan-1-high-og-unc-university-blue-555088-134-575441-134-mau-xanh-trang-size-41-631998251b927-08092022142213.jpg", "Nike", 20000, 1, "Trang-xanh", 40));
+        Utils.cartLists.add(new Cart(1, "https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2022/09/giay-the-thao-nike-air-jordan-1-high-og-unc-university-blue-555088-134-575441-134-mau-xanh-trang-size-41-631998251b927-08092022142213.jpg", "Nike", 20000, 1, "Trang-xanh", 40,false));
+        Utils.cartLists.add(new Cart(2, "https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2022/09/giay-the-thao-nike-air-jordan-1-high-og-unc-university-blue-555088-134-575441-134-mau-xanh-trang-size-41-631998251b927-08092022142213.jpg", "Nike", 20000, 1, "Trang-xanh", 40,false));
+        Utils.cartLists.add(new Cart(3, "https://cdn.vuahanghieu.com/unsafe/0x900/left/top/smart/filters:quality(90)/https://admin.vuahanghieu.com/upload/product/2022/09/giay-the-thao-nike-air-jordan-1-high-og-unc-university-blue-555088-134-575441-134-mau-xanh-trang-size-41-631998251b927-08092022142213.jpg", "Nike", 20000, 1, "Trang-xanh", 40,false));
 
         if (Utils.cartLists.size() == 0) {
             textToast.setText("Giỏ hàng trống");
@@ -94,48 +94,14 @@ public class MyCartActivity extends AppCompatActivity {
             recyclerViewCart.setAdapter(adapter);
 
         }
-
-        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT) {
-            @Override
-            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
-                return false;
-            }
-
-            @Override
-            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MyCartActivity.this);
-                builder.setTitle("Thong bao");
-                builder.setMessage("ban co muon xoa san pham nay khoi gio hang?");
-                builder.setPositiveButton("Dong y", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        int position = viewHolder.getAdapterPosition();
-                        for (i = 0; i < Utils.buyCartLits.size(); i++) {
-                            Utils.cartLists.remove(position);
-                            Utils.buyCartLits.remove(i);
-                            adapter.notifyDataSetChanged();
-                            dialogInterface.dismiss();
-                            EventBus.getDefault().postSticky(new TotalEvent());
-                        }
-                    }
-                });
-                builder.setNegativeButton("Huy", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        adapter.notifyDataSetChanged();
-                        dialogInterface.dismiss();
-                    }
-                });
-                builder.show();
-            }
-        });
-        itemTouchHelper.attachToRecyclerView(recyclerViewCart);
     }
 
     private void totalCartCost() {
         long total = 0;
-        for (int i = 0; i < Utils.buyCartLits.size(); i++) {
-            total = total + (Utils.buyCartLits.get(i).getPrice() * Utils.buyCartLits.get(i).getQuantity());
+        for (int i = 0; i < Utils.cartLists.size(); i++) {
+            if(Utils.cartLists.get(i).isIscheck()){
+                total = total + (Utils.cartLists.get(i).getPrice() * Utils.cartLists.get(i).getQuantity());
+            }
         }
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         txt_total.setText(decimalFormat.format(total));
