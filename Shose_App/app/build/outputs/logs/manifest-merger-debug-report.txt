@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-72:12
-INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-72:12
-INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-72:12
-INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-72:12
+ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-74:12
+INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-74:12
+INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-74:12
+INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-74:12
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\DaoTuan\.gradle\caches\transforms-3\1d6008e40b174b18ef5fa9ea4cd35014\transformed\material-1.8.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\DaoTuan\.gradle\caches\transforms-3\4b929ab10fd806b94f86bd527f89dd0a\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
 MERGED from [com.nex3z:notification-badge:1.0.4] C:\Users\DaoTuan\.gradle\caches\transforms-3\70688d8f5f0eaf6f02f8e12f08dd9f86\transformed\notification-badge-1.0.4\AndroidManifest.xml:2:1-13:12
@@ -62,22 +62,22 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\DaoTuan\.gradle\
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\DaoTuan\.gradle\caches\transforms-3\4a128805ae54552b7183634231e39ff5\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\DaoTuan\.gradle\caches\transforms-3\ae4109ec1e873f2074e4c3a60211a759\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\DaoTuan\.gradle\caches\transforms-3\9d8d7feb3580355ffff343143a4678dc\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
-INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-72:12
-INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-72:12
-INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-72:12
+INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-74:12
+INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-74:12
+INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-74:12
 	package
 		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:4:5-32
 		INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml
 		INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-72:12
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-74:12
 		INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-72:12
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:1-74:12
 		INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:2:11-69
@@ -86,7 +86,7 @@ ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest
 	android:name
 		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:6:22-64
 application
-ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:8:5-70:19
+ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:8:5-72:19
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\DaoTuan\.gradle\caches\transforms-3\1d6008e40b174b18ef5fa9ea4cd35014\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\DaoTuan\.gradle\caches\transforms-3\1d6008e40b174b18ef5fa9ea4cd35014\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\DaoTuan\.gradle\caches\transforms-3\4b929ab10fd806b94f86bd527f89dd0a\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -154,83 +154,83 @@ ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest
 	android:name
 		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:21:13-59
 activity#edu.fpt.shose_app.Activity.MyCartActivity
-ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:23:9-25:48
+ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:23:9-31:20
 	android:exported
 		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:25:13-36
 	android:name
 		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:24:13-52
-activity#edu.fpt.shose_app.Activity.HomeActivity
-ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:26:9-28:48
-	android:exported
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:28:13-36
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:26:13-30:29
+action#android.intent.action.MAIN
+ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:27:17-69
 	android:name
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:27:13-50
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:27:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:29:17-77
+	android:name
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:29:27-74
+activity#edu.fpt.shose_app.Activity.HomeActivity
+ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:32:9-34:48
+	android:exported
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:34:13-36
+	android:name
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:33:13-50
 meta-data#com.google.android.gms.version
-ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:30:9-32:69
+ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:36:9-38:69
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\DaoTuan\.gradle\caches\transforms-3\28a741edc80a99d6fd4d8140326ebccf\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
 MERGED from [com.google.android.gms:play-services-basement:18.1.0] C:\Users\DaoTuan\.gradle\caches\transforms-3\28a741edc80a99d6fd4d8140326ebccf\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:32:13-66
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:38:13-66
 	android:name
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:31:13-58
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:37:13-58
 activity#edu.fpt.shose_app.Activity.FogetPassActivity
-ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:34:9-36:40
+ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:40:9-42:40
 	android:exported
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:36:13-37
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:35:13-55
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:41:13-55
 activity#edu.fpt.shose_app.Activity.ProfileActivity
-ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:37:9-39:40
+ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:43:9-45:40
 	android:exported
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:39:13-37
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:45:13-37
 	android:name
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:38:13-53
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:44:13-53
 activity#edu.fpt.shose_app.Activity.SignUpActivity
-ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:40:9-42:48
+ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:46:9-48:48
 	android:exported
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:42:13-36
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:48:13-36
 	android:name
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:41:13-52
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:47:13-52
 activity#edu.fpt.shose_app.Activity.SignInActivity
-ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:43:9-51:20
+ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:49:9-53:20
 	android:exported
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:45:13-36
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:51:13-36
 	android:name
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:44:13-52
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:46:13-50:29
-action#android.intent.action.MAIN
-ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:47:17-69
-	android:name
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:47:25-66
-category#android.intent.category.LAUNCHER
-ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:49:17-77
-	android:name
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:49:27-74
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:50:13-52
 activity#edu.fpt.shose_app.Activity.Onboard_Activity
-ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:52:9-54:39
+ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:54:9-56:39
 	android:exported
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:54:13-36
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:56:13-36
 	android:name
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:53:13-54
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:55:13-54
 activity#edu.fpt.shose_app.Activity.splash_activity
-ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:55:9-57:48
+ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:57:9-59:48
 	android:exported
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:57:13-36
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:59:13-36
 	android:name
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:56:13-53
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:58:13-53
 activity#edu.fpt.shose_app.MainActivity
-ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:58:9-66:20
+ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:60:9-68:20
 	android:exported
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:60:13-36
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:62:13-36
 	android:name
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:59:13-41
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:61:13-41
 activity#edu.fpt.shose_app.Activity.Check_Out_MainActivity
-ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:67:9-69:40
+ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:69:9-71:40
 	android:exported
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:69:13-37
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:71:13-37
 	android:name
-		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:68:13-60
+		ADDED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml:70:13-60
 uses-sdk
 INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\AppDATN_Shoseapp\Shose_Apps\Shose_App\app\src\main\AndroidManifest.xml
