@@ -3,7 +3,9 @@ package edu.fpt.shose_app.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
@@ -42,10 +44,13 @@ public class SignInActivity extends AppCompatActivity {
     AppCompatButton btnLogin, loginGmail;
     private GoogleSignInClient mGoogleSignInClient;
     ApiApp apiInterface;
-
+    SharedPreferences sharedPreferences ;
+    SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sharedPreferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
         setContentView(R.layout.activity_sign_in);
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -54,6 +59,16 @@ public class SignInActivity extends AppCompatActivity {
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
         initUI();
         initAction();
+        String username = sharedPreferences.getString("username", "1");
+        String pass = sharedPreferences.getString("pass", "1");
+        if(pass.equals("1")||username.equals("1")){
+            return;
+        }
+        else {
+            edEmail.setText(username);
+            Log.d("TAG", "onCreate: "+username+pass);
+            POST_Retrofit_Login(username,pass);
+        }
     }
 
     private void initUI() {
@@ -90,7 +105,7 @@ public class SignInActivity extends AppCompatActivity {
                 if (!validateEmail() | !validatePass()) {
                     return;
                 }
-                POST_Retrofit_Login();
+                POST_Retrofit_Login(edEmail.getText().toString(),edpassword.getText().toString());
             }
         });
         loginGmail.setOnClickListener(new View.OnClickListener() {
@@ -103,7 +118,7 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     //Post api len sever
-    void POST_Retrofit_Login() {
+    void POST_Retrofit_Login(String emai, String pass) {
         // tạo đối tượng chuyển đổi
         Gson gson = new GsonBuilder().setLenient().create();
 
@@ -113,11 +128,9 @@ public class SignInActivity extends AppCompatActivity {
                 .build();
         apiInterface = retrofit.create(ApiApp.class);
         // tạo đối tượng DTO để gửi lên server
-        User objLogin = new User();
-        objLogin.setEmail(edEmail.getText().toString());
-        objLogin.setPassword(edpassword.getText().toString());
 
-        Call<loginRequest> objCall = apiInterface._logGin(edEmail.getText().toString(),edpassword.getText().toString());
+
+        Call<loginRequest> objCall = apiInterface._logGin(emai,pass);
         objCall.enqueue(new Callback<loginRequest>() {
             @Override
             public void onResponse(Call<loginRequest> call, Response<loginRequest> response) {
@@ -129,6 +142,11 @@ public class SignInActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), loginRequest.getMessage(), Toast.LENGTH_LONG).show();
                         Intent i = new Intent(SignInActivity.this, HomeActivity.class);
                         startActivity(i);
+
+                        editor.putString("username", emai);
+                        editor.putString("pass", pass);
+                        editor.apply();
+
                     }
                     else {
                         Toast.makeText(getApplicationContext(), loginRequest.getMessage(), Toast.LENGTH_LONG).show();
@@ -142,7 +160,7 @@ public class SignInActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<loginRequest> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), "Dang nhap khong thanh congấ", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Error Sever", Toast.LENGTH_LONG).show();
             }
         });
     }

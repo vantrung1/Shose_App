@@ -18,6 +18,7 @@ import org.greenrobot.eventbus.EventBus;
 import java.util.List;
 
 import edu.fpt.shose_app.EventBus.ImageEvent;
+import edu.fpt.shose_app.EventBus.SizeEvent;
 import edu.fpt.shose_app.Model.Size;
 import edu.fpt.shose_app.R;
 
@@ -42,7 +43,14 @@ public class sizeAdapter extends RecyclerView.Adapter<sizeAdapter.MyViewHolder> 
     public void onBindViewHolder(@NonNull sizeAdapter.MyViewHolder holder, int position) {
             holder.bind(sizeList.get(position));
     }
-
+    public String getSelected(){
+        if(ischeckPostion != -1){
+            return sizeList.get(ischeckPostion).getSize();
+        }
+        else {
+            return null;
+        }
+    }
     @Override
     public int getItemCount() {
         return sizeList.size();
@@ -77,7 +85,7 @@ public class sizeAdapter extends RecyclerView.Adapter<sizeAdapter.MyViewHolder> 
                     if(ischeckPostion != getAdapterPosition()){
                         notifyItemChanged(ischeckPostion);
                         ischeckPostion = getAdapterPosition();
-                        EventBus.getDefault().postSticky(new ImageEvent());
+                        EventBus.getDefault().postSticky(new SizeEvent());
                     }
                 }
             });

@@ -52,5 +52,11 @@
             android:layout_width="50dp"
             android:id="@+id/itemclcik"
             android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_width="40dp"
+            android:id="@+id/itemClickFav"
+            android:layout_height="40dp"/>
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

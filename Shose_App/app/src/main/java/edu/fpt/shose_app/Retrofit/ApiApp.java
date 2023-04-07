@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import edu.fpt.shose_app.Model.Brand;
 import edu.fpt.shose_app.Model.Product;
 import edu.fpt.shose_app.Model.ProductRequest;
+import edu.fpt.shose_app.Model.SizeRequest;
 import edu.fpt.shose_app.Model.User;
 import edu.fpt.shose_app.Model.loginRequest;
 import retrofit2.Call;
@@ -27,6 +28,8 @@ public interface ApiApp {
     Call<ArrayList<Brand>> getAllBrand();
     @GET("products/branch/{id}")
     Call<ProductRequest> getApiProductById(@Path("id") int id);
+    @GET("sizes/product/{id}")
+    Call<SizeRequest> getQuantitySize(@Path("id") int id);
     @POST("login")
     @FormUrlEncoded
     Call<loginRequest> _logGin(@Field("email") String email,

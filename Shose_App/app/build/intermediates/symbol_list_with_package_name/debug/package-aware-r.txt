@@ -3194,11 +3194,15 @@ id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
 id detailDesc
+id detailSaleTop
 id detailcontent
 id detailname
 id detailprice
 id detailsale
+id dialog_btnIMG_minus_cart
+id dialog_btnIMG_plus_cart
 id dialog_button
+id dialog_txt_quantity_cart_update
 id dimensions
 id direct
 id disableHome
@@ -3307,6 +3311,7 @@ id info
 id invisible
 id inward
 id italic
+id itemClickFav
 id item_btnIMG_minus_cart
 id item_btnIMG_plus_cart
 id item_img_cart
@@ -3321,7 +3326,6 @@ id item_txt_color_cart
 id item_txt_name_cart
 id item_txt_price_cart
 id item_txt_quantity_cart
-id item_txt_quantity_cart_update
 id item_txt_sale_cart
 id item_txt_size_cart
 id itemclcik
@@ -3333,6 +3337,7 @@ id layout
 id layoutBottom
 id layoutGioHang
 id layoutGioHang_detail
+id layoutTitle
 id layout_aspect_ratio
 id layout_rotate_wheel
 id layout_scale_wheel
@@ -3476,6 +3481,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id rcv_favourite
 id rectangles
 id recyImageDetail
 id recySizeDetail
@@ -3643,6 +3649,7 @@ id toolbar2
 id toolbar_cart
 id toolbar_check_out_main
 id toolbar_detail
+id toolbar_favourite
 id toolbar_profile
 id toolbar_title
 id top
@@ -3659,6 +3666,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tv1
+id tvTitleFav
 id tv_badge_text
 id txtInputLayout1
 id txtInputLayout2
@@ -3815,6 +3823,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_account_settings
 layout activity_check_out_main
+layout activity_favourite
 layout activity_foget_pass
 layout activity_home
 layout activity_main

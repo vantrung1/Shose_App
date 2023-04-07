@@ -123,12 +123,12 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.myViewHold
 
                     ImageView img_update_cart = dialog.findViewById(R.id.img_update_cart);
                     ImageView img_close = dialog.findViewById(R.id.img_close);
-                    ImageView item_btnIMG_minus_cart = dialog.findViewById(R.id.item_btnIMG_minus_cart);
-                    ImageView item_btnIMG_plus_cart = dialog.findViewById(R.id.item_btnIMG_plus_cart);
+                    ImageView item_btnIMG_minus_cart = dialog.findViewById(R.id.dialog_btnIMG_minus_cart);
+                    ImageView item_btnIMG_plus_cart = dialog.findViewById(R.id.dialog_btnIMG_plus_cart);
                     TextView txt_price = dialog.findViewById(R.id.txt_price);
                     TextView txt_sale = dialog.findViewById(R.id.txt_sale);
                     TextView txt_quantity = dialog.findViewById(R.id.txt_quantity);
-                    TextView txt_quantity_cart_update = dialog.findViewById(R.id.item_txt_quantity_cart_update);
+                    TextView txt_quantity_cart_update = dialog.findViewById(R.id.dialog_txt_quantity_cart_update);
 
                     RecyclerView recycler_dialog_color = dialog.findViewById(R.id.recycler_dialog_color);
                     RecyclerView recycler_dialog_size = dialog.findViewById(R.id.recycler_dialog_size);
