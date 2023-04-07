@@ -17,7 +17,7 @@ public class Product implements Serializable {
     private String status;
     private String create_at;
     private String update_at;
-
+    private boolean isFavourite;//biến lưu trữ trạng thái sản phẩm yêu thích
     public Product() {
     }
 
@@ -119,7 +119,15 @@ public class Product implements Serializable {
         this.size = size;
     }
 
-    public Product(int id, String name, List<Map<String, Image>> image, List<Map<String, Size>> size, int price, int sale, int brandID, String desc, String content, String status, String create_at, String update_at) {
+    public boolean isFavourite() {
+        return isFavourite;
+    }
+
+    public void setFavourite(boolean favourite) {
+        isFavourite = favourite;
+    }
+
+    public Product(int id, String name, List<Map<String, Image>> image, List<Map<String, Size>> size, int price, int sale, int brandID, String desc, String content, String status, String create_at, String update_at, boolean isFavourite) {
         this.id = id;
         this.name = name;
         this.image = image;
@@ -132,5 +140,6 @@ public class Product implements Serializable {
         this.status = status;
         this.create_at = create_at;
         this.update_at = update_at;
+        this.isFavourite = isFavourite;
     }
 }

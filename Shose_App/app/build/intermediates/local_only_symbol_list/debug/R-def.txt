@@ -37,6 +37,7 @@ drawable baseline_chevron_right_24
 drawable baseline_close_24
 drawable baseline_delete_24
 drawable baseline_expand_more_24
+drawable baseline_favorite_24
 drawable baseline_favorite_border_24
 drawable baseline_home_24
 drawable baseline_logout_24
@@ -128,7 +129,9 @@ id image_view_item
 id img_camera
 id img_close
 id img_detail
+id img_toolbar
 id img_update_cart
+id itemClickFav
 id item_btnIMG_minus_cart
 id item_btnIMG_plus_cart
 id item_img_cart
@@ -149,6 +152,8 @@ id itemclcik
 id layoutBottom
 id layoutGioHang
 id layoutGioHang_detail
+id layoutHeart
+id layoutTitle
 id layoutbottom
 id layoutop
 id layuotItem
@@ -173,6 +178,7 @@ id profile_image_header
 id profile_name
 id profile_password
 id profile_phone
+id rcv_favourite
 id recyImageDetail
 id recySizeDetail
 id recy_1_product
@@ -214,10 +220,12 @@ id toolbar2
 id toolbar_cart
 id toolbar_check_out_main
 id toolbar_detail
+id toolbar_favourite
 id toolbar_profile
 id topicProduct
 id topicProduct2
 id tv1
+id tvTitleFav
 id txtInputLayout1
 id txtInputLayout2
 id txt_price
@@ -232,6 +240,7 @@ id update
 id viewPager
 layout activity_account_settings
 layout activity_check_out_main
+layout activity_favourite_main
 layout activity_foget_pass
 layout activity_home
 layout activity_main

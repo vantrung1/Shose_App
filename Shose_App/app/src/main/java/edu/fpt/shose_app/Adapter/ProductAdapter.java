@@ -1,13 +1,18 @@
 package edu.fpt.shose_app.Adapter;
 
+import static android.content.Context.MODE_PRIVATE;
+
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -52,6 +57,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.myviewHo
         return  new myviewHolder(view);
     }
 
+    @SuppressLint("RecyclerView")
     @Override
     public void onBindViewHolder(@NonNull ProductAdapter.myviewHolder holder, int i) {
 
@@ -72,6 +78,41 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.myviewHo
                 context.startActivity(intent);
             }
         });
+
+        holder.itemClickFav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Product product = productArrayList.get(i);
+                Log.d("fff", "onClick: " +  productArrayList.get(i));
+                boolean isFavourite = product.isFavourite();
+                product.setFavourite(!isFavourite);
+                holder.itemClickFav.setImageResource(product.isFavourite() ? R.drawable.baseline_favorite_24 : R.drawable.baseline_favorite_border_24);
+                Toast.makeText(context,"" + i,Toast.LENGTH_LONG).show();
+
+                //
+                // Lưu danh sách sản phẩm yêu thích vào SharedPreferences
+                saveFavouriteProducts(productArrayList);
+
+
+
+            }
+        });
+    }
+    private void saveFavouriteProducts(ArrayList<Product> favouriteProducts) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences("SHARED_PREFS", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        Gson gson = new Gson();
+        String json = gson.toJson(favouriteProducts);
+        editor.putString("FAVOURITE_PRODUCTS", json);
+        editor.apply();
+    }
+    private ArrayList<Product> loadFavouriteProducts() {
+        SharedPreferences sharedPreferences = context.getSharedPreferences("SHARED_PREFS", MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = sharedPreferences.getString("FAVOURITE_PRODUCTS", null);
+        Type type = new TypeToken<ArrayList<Product>>() {}.getType();
+        return gson.fromJson(json, type);
     }
 
     @Override
@@ -80,7 +121,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.myviewHo
     }
 
     public class myviewHolder extends RecyclerView.ViewHolder  {
-        ImageView itemproduct_img;
+        ImageView itemproduct_img,itemClickFav;
         TextView itemproduct_name,itemproduct_price;
          OnItemClickListener onItemClickListener;
         public myviewHolder(@NonNull View itemView) {
@@ -88,6 +129,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.myviewHo
             itemproduct_img = itemView.findViewById(R.id.item_product_image);
             itemproduct_name = itemView.findViewById(R.id.item_product_name);
             itemproduct_price = itemView.findViewById(R.id.item_product_price);
+            itemClickFav = itemView.findViewById(R.id.itemClickFav);
+
         }
 
     }

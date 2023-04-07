@@ -150,6 +150,8 @@ public class HomeActivity extends AppCompatActivity {
                         return true;
                     case R.id.Favorite:
                         // Handle profile button click
+                        Intent intent_Favorite = new Intent(HomeActivity.this, FavouriteMainActivity.class);
+                        startActivity(intent_Favorite);
                         Log.d("TAG", "onNavigationItemSelected: Favorite");
                         return true;
                     case R.id.Notifications:
@@ -158,8 +160,8 @@ public class HomeActivity extends AppCompatActivity {
                         return true;
                     case R.id.Profile:
                         // Handle settings button click
-                        Intent i = new Intent(HomeActivity.this, ProfileActivity.class);
-                        startActivity(i);
+                        Intent intent_Profile = new Intent(HomeActivity.this, ProfileActivity.class);
+                        startActivity(intent_Profile);
                         return true;
                 }
                 return false;

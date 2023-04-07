@@ -2835,6 +2835,7 @@ drawable baseline_chevron_right_24
 drawable baseline_close_24
 drawable baseline_delete_24
 drawable baseline_expand_more_24
+drawable baseline_favorite_24
 drawable baseline_favorite_border_24
 drawable baseline_home_24
 drawable baseline_logout_24
@@ -3299,6 +3300,7 @@ id image_view_state_scale
 id img_camera
 id img_close
 id img_detail
+id img_toolbar
 id img_update_cart
 id immediateStop
 id included
@@ -3307,6 +3309,7 @@ id info
 id invisible
 id inward
 id italic
+id itemClickFav
 id item_btnIMG_minus_cart
 id item_btnIMG_plus_cart
 id item_img_cart
@@ -3333,6 +3336,8 @@ id layout
 id layoutBottom
 id layoutGioHang
 id layoutGioHang_detail
+id layoutHeart
+id layoutTitle
 id layout_aspect_ratio
 id layout_rotate_wheel
 id layout_scale_wheel
@@ -3476,6 +3481,7 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
+id rcv_favourite
 id rectangles
 id recyImageDetail
 id recySizeDetail
@@ -3643,6 +3649,7 @@ id toolbar2
 id toolbar_cart
 id toolbar_check_out_main
 id toolbar_detail
+id toolbar_favourite
 id toolbar_profile
 id toolbar_title
 id top
@@ -3659,6 +3666,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tv1
+id tvTitleFav
 id tv_badge_text
 id txtInputLayout1
 id txtInputLayout2
@@ -3815,6 +3823,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_account_settings
 layout activity_check_out_main
+layout activity_favourite_main
 layout activity_foget_pass
 layout activity_home
 layout activity_main

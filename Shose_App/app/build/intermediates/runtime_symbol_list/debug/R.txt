@@ -2834,6 +2834,7 @@ int drawable baseline_chevron_right_24 0x7f070083
 int drawable baseline_close_24 0x7f070084
 int drawable baseline_delete_24 0x7f070085
 int drawable baseline_expand_more_24 0x7f070086
+int drawable baseline_favorite_24 0x7f07013d
 int drawable baseline_favorite_border_24 0x7f070087
 int drawable baseline_home_24 0x7f070088
 int drawable baseline_logout_24 0x7f070089
@@ -3298,6 +3299,7 @@ int id image_view_state_scale 0x7f090115
 int id img_camera 0x7f090116
 int id img_close 0x7f090117
 int id img_detail 0x7f090118
+int id img_toolbar 0x7f0902af
 int id img_update_cart 0x7f090119
 int id immediateStop 0x7f09011a
 int id included 0x7f09011b
@@ -3306,6 +3308,7 @@ int id info 0x7f09011d
 int id invisible 0x7f09011e
 int id inward 0x7f09011f
 int id italic 0x7f090120
+int id itemClickFav 0x7f0902b0
 int id item_btnIMG_minus_cart 0x7f090121
 int id item_btnIMG_plus_cart 0x7f090122
 int id item_img_cart 0x7f090123
@@ -3332,6 +3335,8 @@ int id layout 0x7f090137
 int id layoutBottom 0x7f090138
 int id layoutGioHang 0x7f090139
 int id layoutGioHang_detail 0x7f09013a
+int id layoutHeart 0x7f0902b1
+int id layoutTitle 0x7f0902b2
 int id layout_aspect_ratio 0x7f09013b
 int id layout_rotate_wheel 0x7f09013c
 int id layout_scale_wheel 0x7f09013d
@@ -3475,6 +3480,7 @@ int id progress_circular 0x7f0901c6
 int id progress_horizontal 0x7f0901c7
 int id radio 0x7f0901c8
 int id ratio 0x7f0901c9
+int id rcv_favourite 0x7f0902b3
 int id rectangles 0x7f0901ca
 int id recyImageDetail 0x7f0901cb
 int id recySizeDetail 0x7f0901cc
@@ -3642,6 +3648,7 @@ int id toolbar2 0x7f09026d
 int id toolbar_cart 0x7f09026e
 int id toolbar_check_out_main 0x7f09026f
 int id toolbar_detail 0x7f090270
+int id toolbar_favourite 0x7f0902b4
 int id toolbar_profile 0x7f090271
 int id toolbar_title 0x7f090272
 int id top 0x7f090273
@@ -3658,6 +3665,7 @@ int id transition_scene_layoutid_cache 0x7f09027d
 int id transition_transform 0x7f09027e
 int id triangle 0x7f09027f
 int id tv1 0x7f090280
+int id tvTitleFav 0x7f0902b5
 int id tv_badge_text 0x7f090281
 int id txtInputLayout1 0x7f090282
 int id txtInputLayout2 0x7f090283
@@ -3814,6 +3822,7 @@ int layout abc_select_dialog_material 0x7f0c001a
 int layout abc_tooltip 0x7f0c001b
 int layout activity_account_settings 0x7f0c001c
 int layout activity_check_out_main 0x7f0c001d
+int layout activity_favourite_main 0x7f0c008b
 int layout activity_foget_pass 0x7f0c001e
 int layout activity_home 0x7f0c001f
 int layout activity_main 0x7f0c0020

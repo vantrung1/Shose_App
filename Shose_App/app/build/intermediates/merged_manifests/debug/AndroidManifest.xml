@@ -43,6 +43,9 @@
         android:theme="@style/Theme.Shose_App"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="edu.fpt.shose_app.Activity.FavouriteMainActivity"
+            android:exported="false" />
+        <activity
             android:name="edu.fpt.shose_app.Activity.ProductDetailActivity"
             android:exported="false" />
         <activity
