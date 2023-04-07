@@ -92,11 +92,14 @@ public class ProfileActivity extends AppCompatActivity {
         txtname = findViewById(R.id.profile_name);
         profile_image = findViewById(R.id.profile_image);
         txtname.setText(Utils.Users_Utils.getName());
-        if(Utils.Users_Utils.getPhoneNumber().equals("0")){
+        if(Utils.Users_Utils.getPhoneNumber() == null){
+            txtPhone.setText("Phone number not updated");
+        }
+        else if(Utils.Users_Utils.getPhoneNumber().equals("0")){
             txtPhone.setText("Phone number not updated");
         }
         else {
-            txtPhone.setText("Phone number not updated");
+            txtPhone.setText(Utils.Users_Utils.getPhoneNumber());
         }
        // txtPass.setText(Utils.Users_Utils.getPassword());
         txtEmail.setText(Utils.Users_Utils.getEmail());
