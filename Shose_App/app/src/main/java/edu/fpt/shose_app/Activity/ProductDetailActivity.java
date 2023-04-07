@@ -12,6 +12,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -34,73 +37,88 @@ import edu.fpt.shose_app.Adapter.imageAdapter;
 import edu.fpt.shose_app.Adapter.sizeAdapter;
 import edu.fpt.shose_app.EventBus.BrandEvent;
 import edu.fpt.shose_app.EventBus.ImageEvent;
+import edu.fpt.shose_app.EventBus.SizeEvent;
+import edu.fpt.shose_app.Fragment.dialogProduct;
 import edu.fpt.shose_app.Model.Image;
 import edu.fpt.shose_app.Model.Product;
+import edu.fpt.shose_app.Model.ProductRequest;
 import edu.fpt.shose_app.Model.Size;
+import edu.fpt.shose_app.Model.SizeRequest;
 import edu.fpt.shose_app.R;
+import edu.fpt.shose_app.Retrofit.ApiApp;
+import edu.fpt.shose_app.Utils.Utils;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ProductDetailActivity extends AppCompatActivity {
      private Product product;
-    private  TextView txtName,txtDesc,txtprice,txtsale,txtcontent;
+    private  TextView txtName,txtDesc,txtprice,txtsale,txtcontent,txtsaleTop;
     private Toolbar toolbar;
     private RecyclerView recyImage,recySize;
+    private int soluong = 1;
     ImageView imageViewdetail;
     AppCompatButton add_to_cart;
     private edu.fpt.shose_app.Adapter.imageAdapter imageAdapter;
     private edu.fpt.shose_app.Adapter.sizeAdapter sizeAdapter;
+    Retrofit retrofit;
+    Gson gson;
+    ApiApp apiInterface;
+    List<SizeRequest.SizeQuantity> sizeQuantityList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_detail);
         product= (Product) getIntent().getSerializableExtra("product");
+        gson = new GsonBuilder().setLenient().create();
+        retrofit = new Retrofit.Builder()
+                .baseUrl(Utils.BASE_URL_API)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build();
+
+        apiInterface = retrofit.create(ApiApp.class);
         initiu();
         initactionbar();
         initAction();
+        getQuantilySize(product.getId());
+        sizeQuantityList = new ArrayList<>();
+    }
+
+    private void getQuantilySize(int id) {
+        Call<SizeRequest> objgetBrands = apiInterface.getQuantitySize(id);
+        // thực hiện gọi
+        objgetBrands.enqueue(new Callback<SizeRequest>() {
+            @Override
+            public void onResponse(Call<SizeRequest> call, Response<SizeRequest> response) {
+                if(response.isSuccessful()){
+                    SizeRequest sizeRequest = response.body();
+                    sizeQuantityList = sizeRequest.getData();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<SizeRequest> call, Throwable t) {
+                Log.d("ssssssssss", "onFailure: "+t.getLocalizedMessage());
+            }
+        });
     }
 
     private void initAction() {
+
         add_to_cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(ProductDetailActivity.this);
-                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                dialog.setContentView(R.layout.dialog_update_cart);
+                dialogProduct dialog = new dialogProduct(ProductDetailActivity.this,product,sizeAdapter,sizeQuantityList);
 
-                ImageView img_update_cart = dialog.findViewById(R.id.img_update_cart);
-                ImageView img_close = dialog.findViewById(R.id.img_close);
-                ImageView item_btnIMG_minus_cart = dialog.findViewById(R.id.item_btnIMG_minus_cart);
-                ImageView item_btnIMG_plus_cart = dialog.findViewById(R.id.item_btnIMG_plus_cart);
-                TextView txt_price = dialog.findViewById(R.id.txt_price);
-                TextView txt_sale = dialog.findViewById(R.id.txt_sale);
-                TextView txt_quantity = dialog.findViewById(R.id.txt_quantity);
-                TextView txt_quantity_cart_update = dialog.findViewById(R.id.item_txt_quantity_cart_update);
-
-                RecyclerView recycler_dialog_color = dialog.findViewById(R.id.recycler_dialog_color);
-                RecyclerView recycler_dialog_size = dialog.findViewById(R.id.recycler_dialog_size);
-
-                AppCompatButton appCompatButton2 = dialog.findViewById(R.id.btn_xacnhan);
-                //recy
-                recycler_dialog_size.setAdapter(sizeAdapter);
-                recycler_dialog_size.setLayoutManager(new LinearLayoutManager(ProductDetailActivity.this, LinearLayoutManager.HORIZONTAL, false));
-
-                Glide.with(ProductDetailActivity.this).load(product.getImage().get(0).get("1").getName()).into(img_update_cart);
-                txt_price.setText(new DecimalFormat("###,###,###,###").format(product.getPrice()));
-                txt_price.setPaintFlags(txt_price.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-                txt_sale.setText(new DecimalFormat("###,###,###,###").format(product.getSale()));
-                txt_quantity_cart_update.setText("40");
-
-                img_close.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        dialog.dismiss();
-                    }
-                });
-
+                dialog.show();
                 dialog.show();
                 dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
                 dialog.getWindow().setGravity(Gravity.BOTTOM);
+
             }
         });
     }
@@ -125,6 +143,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         txtDesc = findViewById(R.id.detailDesc);
         txtprice = findViewById(R.id.detailprice);
         txtsale = findViewById(R.id.detailsale);
+        txtsaleTop = findViewById(R.id.detailSaleTop);
         txtcontent = findViewById(R.id.detailcontent);
         imageViewdetail = findViewById(R.id.img_detail);
         recyImage = findViewById(R.id.recyImageDetail);
@@ -135,6 +154,11 @@ public class ProductDetailActivity extends AppCompatActivity {
         txtcontent.setText(product.getContent());
         txtprice.setText(new DecimalFormat("###,###,###").format(product.getPrice()));
         txtsale.setText(new DecimalFormat("###,###,###").format(product.getSale()));
+        txtsaleTop.setText(new DecimalFormat("###,###,###").format(product.getSale()));
+        Paint paint = txtprice.getPaint();
+        paint.setFlags(Paint.STRIKE_THRU_TEXT_FLAG | Paint.ANTI_ALIAS_FLAG);
+        // Áp dụng đối tượng Paint vào TextView
+        txtprice.setPaintFlags(paint.getFlags());
         Glide.with(getApplicationContext()).load(product.getImage().get(0).get("1").getName()).placeholder(R.drawable.loading).into(imageViewdetail);
         //recy
         recyImage.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));

@@ -99,10 +99,14 @@ id btn_xacnhan
 id btnloginGmail
 id checkbox_item_cart
 id detailDesc
+id detailSaleTop
 id detailcontent
 id detailname
 id detailprice
 id detailsale
+id dialog_btnIMG_minus_cart
+id dialog_btnIMG_plus_cart
+id dialog_txt_quantity_cart_update
 id drawerlayout
 id edEmail
 id edUsername
@@ -129,6 +133,7 @@ id img_camera
 id img_close
 id img_detail
 id img_update_cart
+id itemClickFav
 id item_btnIMG_minus_cart
 id item_btnIMG_plus_cart
 id item_img_cart
@@ -142,13 +147,13 @@ id item_txt_color_cart
 id item_txt_name_cart
 id item_txt_price_cart
 id item_txt_quantity_cart
-id item_txt_quantity_cart_update
 id item_txt_sale_cart
 id item_txt_size_cart
 id itemclcik
 id layoutBottom
 id layoutGioHang
 id layoutGioHang_detail
+id layoutTitle
 id layoutbottom
 id layoutop
 id layuotItem
@@ -173,6 +178,7 @@ id profile_image_header
 id profile_name
 id profile_password
 id profile_phone
+id rcv_favourite
 id recyImageDetail
 id recySizeDetail
 id recy_1_product
@@ -214,10 +220,12 @@ id toolbar2
 id toolbar_cart
 id toolbar_check_out_main
 id toolbar_detail
+id toolbar_favourite
 id toolbar_profile
 id topicProduct
 id topicProduct2
 id tv1
+id tvTitleFav
 id txtInputLayout1
 id txtInputLayout2
 id txt_price
@@ -232,6 +240,7 @@ id update
 id viewPager
 layout activity_account_settings
 layout activity_check_out_main
+layout activity_favourite
 layout activity_foget_pass
 layout activity_home
 layout activity_main

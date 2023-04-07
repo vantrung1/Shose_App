@@ -13,8 +13,7 @@ import edu.fpt.shose_app.R;
 public class OnboardFragment1 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBERds
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
