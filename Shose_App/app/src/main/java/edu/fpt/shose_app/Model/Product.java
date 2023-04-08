@@ -17,6 +17,15 @@ public class Product implements Serializable {
     private String status;
     private String create_at;
     private String update_at;
+    private String color;
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 
     public Product() {
     }
@@ -119,10 +128,11 @@ public class Product implements Serializable {
         this.size = size;
     }
 
-    public Product(int id, String name, List<Map<String, Image>> image, List<Map<String, Size>> size, int price, int sale, int brandID, String desc, String content, String status, String create_at, String update_at) {
+    public Product(int id, String name, List<Map<String, Image>> image, List<Map<String, Size>> size, int price, int sale, int brandID, String desc, String content, String status, String create_at, String update_at,String color) {
         this.id = id;
         this.name = name;
         this.image = image;
+        this.color = color;
         this.size = size;
         this.price = price;
         this.sale = sale;
