@@ -107,9 +107,9 @@ public class HomeActivity extends AppCompatActivity {
                 if(response.isSuccessful()){
                     ProductRequest productRequest = response.body();
 
-                    if (productRequest.getStatus().equals("202")){
+
                         productArrayList.clear();
-                        productArrayList = productRequest.getData();
+                        productArrayList = productRequest.getProducts();
                         if(productArrayList.size() ==0){
                             txta.setVisibility(View.VISIBLE);
                         }
@@ -120,7 +120,7 @@ public class HomeActivity extends AppCompatActivity {
                         productAdapter.setBrandSelected(productArrayList);
                         productAdapter2.setProdcut(productArrayList);
                         Log.d("TAG", "onResponse: "+productArrayList.size());
-                    }
+
 
                 }
             }

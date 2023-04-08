@@ -24,10 +24,10 @@ public class Loading {
         View view = LayoutInflater.from(activity).inflate(R.layout.loading, null);
         builder.setView(view);
         alertDialog = builder.create();
-        ProgressBar progressBar = view.findViewById(R.id.progressBar);
-        Sprite threeBuonce = new ThreeBounce();
-        progressBar.setIndeterminateDrawable(threeBuonce);
-        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+//        ProgressBar progressBar = view.findViewById(R.id.progressBar);
+//        Sprite threeBuonce = new ThreeBounce();
+//        progressBar.setIndeterminateDrawable(threeBuonce);
+//        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
     }
 
     public void LoadingDialog() {

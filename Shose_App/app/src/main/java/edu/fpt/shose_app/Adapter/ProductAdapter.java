@@ -58,7 +58,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.myviewHo
 
 
 
-        Glide.with(context).load(productArrayList.get(i).getImage().get(0).get("1").getName()).into(holder.itemproduct_img);
+        Glide.with(context).load(productArrayList.get(i).getImage().get(0).get("image1").getName()).into(holder.itemproduct_img);
        // Log.d("TAG", "onBindViewHolder: "+myObjects.get(0).getImage());
         holder.itemproduct_name.setText(productArrayList.get(i).getName());
         holder.itemproduct_price.setText(productArrayList.get(i).getPrice()+"");

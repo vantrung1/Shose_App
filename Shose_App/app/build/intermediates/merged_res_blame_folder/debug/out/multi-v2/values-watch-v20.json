@@ -4,7 +4,7 @@
             "outputFile": "edu.fpt.shose_app-mergeDebugResources-3:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\2df878708d4e2e4104ec4555da64ad38\\transformed\\play-services-auth-20.4.1\\res\\values-watch-v20\\values.xml",
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\d6e96108f3985c002934a33d89f2a9a0\\transformed\\play-services-auth-20.5.0\\res\\values-watch-v20\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

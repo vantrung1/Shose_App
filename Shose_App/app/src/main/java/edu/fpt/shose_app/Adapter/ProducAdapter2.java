@@ -40,7 +40,7 @@ public class ProducAdapter2 extends RecyclerView.Adapter<ProducAdapter2.myViewHo
     @Override
     public void onBindViewHolder(@NonNull ProducAdapter2.myViewHolder holder, int position) {
 
-        Glide.with(context).load(productArrayList.get(position).getImage().get(0).get("1").getName()).into(holder.itemproduct_img2);
+        Glide.with(context).load(productArrayList.get(position).getImage().get(0).get("image1").getName()).into(holder.itemproduct_img2);
         // Log.d("TAG", "onBindViewHolder: "+myObjects.get(0).getImage());
         holder.itemproduct_name2.setText(productArrayList.get(position).getName());
         holder.itemproduct_price2.setText(productArrayList.get(position).getPrice()+"");

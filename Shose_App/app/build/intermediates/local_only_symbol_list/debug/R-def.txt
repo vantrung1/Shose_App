@@ -95,6 +95,7 @@ id btn_Payment
 id btn_addCart
 id btn_checkout
 id btn_create
+id btn_thaydoi
 id btn_xacnhan
 id btnloginGmail
 id checkbox_item_cart
@@ -109,10 +110,13 @@ id dialog_btnIMG_plus_cart
 id dialog_txt_quantity_cart_update
 id drawerlayout
 id edEmail
+id edNewPass
+id edReNewPass
 id edUsername
 id ed_Email
 id ed_password
 id edchangepassword
+id edoldpass
 id edpassword
 id fab
 id fab_home
@@ -239,6 +243,7 @@ id txta
 id update
 id viewPager
 layout activity_account_settings
+layout activity_change_password
 layout activity_check_out_main
 layout activity_favourite
 layout activity_foget_pass
@@ -254,6 +259,7 @@ layout activity_splash
 layout baseline_expand_more_24
 layout dialog_update_cart
 layout drop_down_item
+layout fragment_change_password
 layout fragment_onboadrd2
 layout fragment_onboadrd3
 layout fragment_onboard1
@@ -264,6 +270,7 @@ layout item_my_cart
 layout item_product2
 layout item_product_home
 layout itemsize
+layout loading
 menu bottom_menu
 menu nav_menu
 menu profile_menu

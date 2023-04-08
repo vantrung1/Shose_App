@@ -68,6 +68,10 @@
         "source": "edu.fpt.shose_app-main-7:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "edu.fpt.shose_app-merged_res-5:/layout_loading.xml.flat",
+        "source": "edu.fpt.shose_app-main-7:/layout/loading.xml"
+    },
+    {
         "merged": "edu.fpt.shose_app-merged_res-5:/xml_data_extraction_rules.xml.flat",
         "source": "edu.fpt.shose_app-main-7:/xml/data_extraction_rules.xml"
     },
@@ -86,6 +90,10 @@
     {
         "merged": "edu.fpt.shose_app-merged_res-5:/mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "edu.fpt.shose_app-main-7:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "edu.fpt.shose_app-merged_res-5:/layout_activity_change_password.xml.flat",
+        "source": "edu.fpt.shose_app-main-7:/layout/activity_change_password.xml"
     },
     {
         "merged": "edu.fpt.shose_app-merged_res-5:/layout_activity_profile.xml.flat",
@@ -110,6 +118,10 @@
     {
         "merged": "edu.fpt.shose_app-merged_res-5:/layout_activity_check_out_main.xml.flat",
         "source": "edu.fpt.shose_app-main-7:/layout/activity_check_out_main.xml"
+    },
+    {
+        "merged": "edu.fpt.shose_app-merged_res-5:/layout_fragment_change_password.xml.flat",
+        "source": "edu.fpt.shose_app-main-7:/layout/fragment_change_password.xml"
     },
     {
         "merged": "edu.fpt.shose_app-merged_res-5:/drawable_image_phone.png.flat",
