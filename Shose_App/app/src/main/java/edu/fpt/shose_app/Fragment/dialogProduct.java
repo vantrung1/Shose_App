@@ -2,6 +2,7 @@ package edu.fpt.shose_app.Fragment;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Paint;
 import android.view.View;
 import android.widget.ImageView;
@@ -21,17 +22,21 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.fpt.shose_app.Activity.MyCartActivity;
 import edu.fpt.shose_app.Activity.ProductDetailActivity;
 import edu.fpt.shose_app.Adapter.sizeAdapter;
 import edu.fpt.shose_app.EventBus.SizeEvent;
+import edu.fpt.shose_app.Model.Cart;
 import edu.fpt.shose_app.Model.Product;
 import edu.fpt.shose_app.Model.SizeRequest;
 import edu.fpt.shose_app.R;
+import edu.fpt.shose_app.Utils.Utils;
 
 public class dialogProduct extends Dialog {
     List<SizeRequest.SizeQuantity> sizeQuantityList;
     sizeAdapter adapter;
    public int soluong = 1;
+   public int quantity = 0;
     TextView txt_quantity;
     @Override
     public void onStart() {
@@ -51,7 +56,8 @@ public class dialogProduct extends Dialog {
 
             for (SizeRequest.SizeQuantity sizeQuantity : sizeQuantityList){
                 if(sizeQuantity.getSize().equals(adapter.getSelected())){
-                    txt_quantity.setText(sizeQuantity.getQuantity());
+                    quantity= Integer.parseInt(sizeQuantity.getQuantity());
+                    txt_quantity.setText(quantity+"");
                 }
             }
         }
@@ -86,11 +92,15 @@ public class dialogProduct extends Dialog {
         txt_price.setPaintFlags(txt_price.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         txt_sale.setText(new DecimalFormat("###,###,###,###").format(product.getSale()));
         txt_quantity_cart_update.setText(soluong+"");
-        txt_quantity.setText(sizeQuantityList.get(0).getQuantity());
+        quantity = Integer.parseInt(sizeQuantityList.get(0).getQuantity());
+        txt_quantity.setText(quantity+"");
         item_btnIMG_minus_cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(soluong != 1){
+                if(soluong <= 1){
+                    return;
+                }
+                else {
                     soluong = soluong - 1;
                     txt_quantity_cart_update.setText(soluong+"");
                 }
@@ -99,14 +109,46 @@ public class dialogProduct extends Dialog {
         item_btnIMG_plus_cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                soluong = soluong +1 ;
-                txt_quantity_cart_update.setText(soluong+"");
+               if(soluong >= quantity){
+                   return;
+               }
+               else {
+                   soluong = soluong +1 ;
+                   txt_quantity_cart_update.setText(soluong+"");
+               }
             }
         });
         img_close.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                dismiss();
+            }
+        });
+        appCompatButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean flag=false;
+
+
+                for(Cart cart: Utils.cartLists){
+                        if( cart.getIdProduct() == product.getId()&&cart.getSize() == Integer.parseInt(adapter.getSelected())){
+                            int sl =cart.getQuantity()+soluong;
+                            cart.setQuantity(sl);
+                            flag = true;
+                            Intent i =new Intent(context, MyCartActivity.class);
+                            dismiss();
+                            context.startActivity(i);
+                        }
+                }
+                if(flag == false){
+                    Utils.cartLists.add(new Cart(product.getId(),product.getImage().get(0).get("1").getName(),product.getName(),product.getSale(),soluong,product.getColor(),Integer.parseInt(adapter.getSelected()),false));
+                    Intent i =new Intent(context, MyCartActivity.class);
+                    dismiss();
+                    context.startActivity(i);
+                }
+
+
+
             }
         });
     }
