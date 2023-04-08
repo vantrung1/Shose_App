@@ -87,7 +87,7 @@ public class dialogProduct extends Dialog {
         recycler_dialog_size.setAdapter(sizeAdapter);
         recycler_dialog_size.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
 
-        Glide.with(context).load(product.getImage().get(0).get("1").getName()).into(img_update_cart);
+        Glide.with(context).load(product.getImage().get(0).get("image1").getName()).into(img_update_cart);
         txt_price.setText(new DecimalFormat("###,###,###,###").format(product.getPrice()));
         txt_price.setPaintFlags(txt_price.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         txt_sale.setText(new DecimalFormat("###,###,###,###").format(product.getSale()));
@@ -141,7 +141,7 @@ public class dialogProduct extends Dialog {
                         }
                 }
                 if(flag == false){
-                    Utils.cartLists.add(new Cart(product.getId(),product.getImage().get(0).get("1").getName(),product.getName(),product.getSale(),soluong,product.getColor(),Integer.parseInt(adapter.getSelected()),false));
+                    Utils.cartLists.add(new Cart(product.getId(),product.getImage().get(0).get("image1").getName(),product.getName(),product.getSale(),soluong,product.getColor(),Integer.parseInt(adapter.getSelected()),false));
                     Intent i =new Intent(context, MyCartActivity.class);
                     dismiss();
                     context.startActivity(i);

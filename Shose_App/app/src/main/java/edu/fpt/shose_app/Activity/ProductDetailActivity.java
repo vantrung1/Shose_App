@@ -159,7 +159,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         paint.setFlags(Paint.STRIKE_THRU_TEXT_FLAG | Paint.ANTI_ALIAS_FLAG);
         // Áp dụng đối tượng Paint vào TextView
         txtprice.setPaintFlags(paint.getFlags());
-        Glide.with(getApplicationContext()).load(product.getImage().get(0).get("1").getName()).placeholder(R.drawable.loading).into(imageViewdetail);
+        Glide.with(getApplicationContext()).load(product.getImage().get(0).get("image1").getName()).placeholder(R.drawable.loading).into(imageViewdetail);
         //recy
         recyImage.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         recySize.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
