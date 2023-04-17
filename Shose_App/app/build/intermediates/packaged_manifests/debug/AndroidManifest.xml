@@ -11,12 +11,13 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <queries>
-
+        <package android:name="vn.com.vng.zalopay.sb1" />
+        <package android:name="vn.com.vng.zalopay" />
+        <package android:name="com.zing.zalo" />
         <!-- Query Camera Packages -->
         <intent>
             <action android:name="android.media.action.IMAGE_CAPTURE" />
-        </intent>
-        <!-- Query Open Document -->
+        </intent> <!-- Query Open Document -->
         <intent>
             <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
         </intent>
@@ -91,7 +92,19 @@
         </activity>
         <activity
             android:name="edu.fpt.shose_app.Activity.Check_Out_MainActivity"
-            android:exported="false" />
+            android:exported="true"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="app"
+                    android:scheme="demozpdk" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
             android:screenOrientation="unspecified"

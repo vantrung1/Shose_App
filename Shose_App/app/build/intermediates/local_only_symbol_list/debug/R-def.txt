@@ -86,6 +86,7 @@ id RecoveryPassword
 id RecyclerViewHome_brand
 id SearchViewHome
 id SignUp
+id address_checkout
 id bottomAppBar
 id bottomNavigationView
 id btnGmail
@@ -116,8 +117,10 @@ id edUsername
 id ed_Email
 id ed_password
 id edchangepassword
+id editPhone
 id edoldpass
 id edpassword
+id email_checkout
 id fab
 id fab_home
 id filled_exposed
@@ -175,6 +178,7 @@ id mnu_orders
 id mnu_profile
 id name_brand
 id navigation
+id phone_checkout
 id profile_Name_header
 id profile_email
 id profile_image
