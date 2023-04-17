@@ -10,5 +10,5 @@ public class Utils {
     public static final String BASE_URL_API = "https://shoseapp.click/api/";
     public static User Users_Utils = new User();
     public static List<Cart> cartLists =new ArrayList<>();
-    public static List<Cart> buyCartLits = new ArrayList<>();
+  //  public static List<Cart> buyCartLits = new ArrayList<>();
 }
