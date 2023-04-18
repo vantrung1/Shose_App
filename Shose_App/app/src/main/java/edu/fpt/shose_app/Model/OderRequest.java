@@ -3,32 +3,27 @@ package edu.fpt.shose_app.Model;
 import java.util.ArrayList;
 
 public class OderRequest {
-    private boolean success;
-    private String message;
-    private ArrayList<Oder> result;
+    private String status;
+    private ArrayList<Oder> data;
 
-
-    public boolean isSuccess() {
-        return success;
+    public OderRequest(String status, ArrayList<Oder> data) {
+        this.status = status;
+        this.data = data;
     }
 
-    public void setSuccess(boolean success) {
-        this.success = success;
+    public String getStatus() {
+        return status;
     }
 
-    public String getMessage() {
-        return message;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public void setMessage(String message) {
-        this.message = message;
+    public ArrayList<Oder> getData() {
+        return data;
     }
 
-    public ArrayList<Oder> getResult() {
-        return result;
-    }
-
-    public void setResult(ArrayList<Oder> result) {
-        this.result = result;
+    public void setData(ArrayList<Oder> data) {
+        this.data = data;
     }
 }

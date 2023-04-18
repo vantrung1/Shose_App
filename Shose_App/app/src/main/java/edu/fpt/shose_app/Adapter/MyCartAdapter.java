@@ -57,7 +57,7 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.myViewHold
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
         holder.txt_price_cart.setText("đ" + decimalFormat.format((cart.getPrice())));
         holder.txt_price_cart.setPaintFlags(holder.txt_price_cart.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-        holder.txt_sale_cart.setText("đ" + decimalFormat.format((cart.getPrice())));
+        holder.txt_sale_cart.setText("đ" + decimalFormat.format((cart.getSale())));
         holder.txt_quantity_cart.setText(cart.getQuantity() + "");
         holder.txt_color_cart.setText("Phan loai: " + cart.getColor() + ", ");
         holder.txt_size_cart.setText(cart.getSize() + "");

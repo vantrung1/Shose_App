@@ -5,6 +5,7 @@ public class Cart {
     private String image;
     private String cartName;
     private int price;
+    private int sale;
     private int quantity;
     private String color;
     private int size;
@@ -18,7 +19,7 @@ public class Cart {
         this.ischeck = ischeck;
     }
 
-    public Cart(int idProduct, String image, String cartName, int price, int quantity, String color, int size, boolean ischeck) {
+    public Cart(int idProduct, String image, String cartName, int price, int quantity, String color, int size,int sale, boolean ischeck) {
         this.idProduct = idProduct;
         this.image = image;
         this.cartName = cartName;
@@ -26,7 +27,16 @@ public class Cart {
         this.quantity = quantity;
         this.color = color;
         this.size = size;
+        this.sale = sale;
         this.ischeck = ischeck;
+    }
+
+    public int getSale() {
+        return sale;
+    }
+
+    public void setSale(int sale) {
+        this.sale = sale;
     }
 
     public int getIdProduct() {

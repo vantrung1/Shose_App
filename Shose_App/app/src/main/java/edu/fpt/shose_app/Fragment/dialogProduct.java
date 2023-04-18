@@ -141,7 +141,7 @@ public class dialogProduct extends Dialog {
                         }
                 }
                 if(flag == false){
-                    Utils.cartLists.add(new Cart(product.getId(),product.getImage().get(0).get("image1").getName(),product.getName(),product.getSale(),soluong,product.getColor(),Integer.parseInt(adapter.getSelected()),false));
+                    Utils.cartLists.add(new Cart(product.getId(),product.getImage().get(0).get("image1").getName(),product.getName(),product.getPrice(),soluong,product.getColor(),Integer.parseInt(adapter.getSelected()),product.getSale(),false));
                     Intent i =new Intent(context, MyCartActivity.class);
                     dismiss();
                     context.startActivity(i);

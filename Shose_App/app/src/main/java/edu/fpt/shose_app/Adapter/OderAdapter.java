@@ -16,6 +16,7 @@ import com.bumptech.glide.Glide;
 import java.util.ArrayList;
 
 import edu.fpt.shose_app.Model.Oder;
+import edu.fpt.shose_app.Model.Product;
 import edu.fpt.shose_app.R;
 
 public class OderAdapter extends RecyclerView.Adapter<OderAdapter.myviewHolder> {
@@ -26,7 +27,11 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.myviewHolder> 
         this.context = context;
         this.oderArrayList = oderArrayList;
     }
-
+    public void setorderlist(ArrayList<Oder> oderArrayList){
+        this.oderArrayList = new ArrayList<>();
+        this.oderArrayList = oderArrayList;
+        notifyDataSetChanged();
+    }
     @NonNull
     @Override
     public OderAdapter.myviewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -36,13 +41,13 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.myviewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull OderAdapter.myviewHolder holder, int position) {
-        Glide.with(context).load(oderArrayList.get(position).getProducts_oder().get(1).get("iamge")).into(holder.item_img_wait_for_confirm);
-        holder.txtAttributes.setText(oderArrayList.get(position).getProducts_oder().get(0).get("attributes") + "");
-        holder.txtName.setText(oderArrayList.get(position).getProducts_oder().get(2).get("attributes") + "");
-        holder.txtQuantity.setText(oderArrayList.get(position).getProducts_oder().get(5).get("quantity") + "");
-        holder.txt_quantity2.setText(oderArrayList.get(position).getProducts_oder().get(5).get("quantity") + "sản phẩm");
-        holder.txtPrice.setText(oderArrayList.get(position).getProducts_oder().get(3).get("price") + "");
-        holder.txtSale.setText(oderArrayList.get(position).getProducts_oder().get(6).get("sale") + "");
+        Glide.with(context).load(oderArrayList.get(position).getProducts().get(0).getImage()).placeholder(R.drawable.product).into(holder.item_img_wait_for_confirm);
+        holder.txtAttributes.setText(oderArrayList.get(position).getProducts().get(0).getAttributes() + "");
+        holder.txtName.setText(oderArrayList.get(position).getProducts().get(0).getName() + "");
+        holder.txtQuantity.setText("x"+oderArrayList.get(position).getProducts().get(0).getQuantity() );
+        holder.txt_quantity2.setText(oderArrayList.get(position).getQuantity()+ "sản phẩm");
+        holder.txtPrice.setText(oderArrayList.get(position).getProducts().get(0).getPrice() + "");
+        holder.txtSale.setText(oderArrayList.get(position).getProducts().get(0).getSale() + "");
         holder.txtTotal.setText(oderArrayList.get(position).getTotal());
     }
 

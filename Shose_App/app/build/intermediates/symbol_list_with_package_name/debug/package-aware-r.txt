@@ -3119,6 +3119,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id address_checkout
 id adjust_height
 id adjust_width
 id alertTitle
@@ -3258,6 +3259,7 @@ id edit_query
 id edoldpass
 id edpassword
 id elastic
+id email_checkout
 id embed
 id end
 id endToStart
@@ -3500,6 +3502,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id phone_checkout
 id pin
 id position
 id postLayout

@@ -70,7 +70,7 @@ public class WaitForConfirmationFragment extends Fragment {
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
         apiInterface = retrofit.create(ApiApp.class);
-        get_oder(1,1);
+        get_oder(Utils.Users_Utils.getId(),1);
         oderArrayList = new ArrayList<>();
         oderAdapter = new OderAdapter(getActivity(), oderArrayList);
         recy_wait_for.setAdapter(oderAdapter);
@@ -85,7 +85,7 @@ public class WaitForConfirmationFragment extends Fragment {
                 if (response.isSuccessful()) {
                     OderRequest oderRequest = response.body();
 //                    oderArrayList.clear();
-                    oderArrayList = oderRequest.getResult();
+                    oderArrayList = oderRequest.getData();
 //                    if (oderArrayList.size() == 0) {
 //                        txta.setVisibility(View.VISIBLE);
 //                    } else {
@@ -93,6 +93,7 @@ public class WaitForConfirmationFragment extends Fragment {
 //                    }
 
                     Log.d("zzzzzz", "onResponse: " + oderArrayList.size());
+                    oderAdapter.setorderlist(oderArrayList);
                 }
             }
 

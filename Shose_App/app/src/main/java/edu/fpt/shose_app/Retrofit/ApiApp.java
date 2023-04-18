@@ -39,4 +39,50 @@ public interface ApiApp {
     @GET("history/{user}-{status}")
     Call<OderRequest> getOder(@Path("user") int user_id,
                               @Path("status") int status);
+    @POST("oderdetail")
+    @FormUrlEncoded
+    Call<MyResponse> create_oder(@Field("user_id") int user_id,
+                                 @Field("address_id") int address_id,
+                                 @Field("number") int number,
+                                 @Field("total") String total,
+                                 @Field("note") String note,
+                                 @Field("paymentAmount") String paymentAmount,
+                                 @Field("status") String status,
+                                 @Field("products") String products,
+                                 @Field("quantity") int quantity);
+    public class MyResponse{
+        private String status;
+        private String message;
+        private  String id_oder;
+
+        public MyResponse(String status, String message, String id_oder) {
+            this.status = status;
+            this.message = message;
+            this.id_oder = id_oder;
+        }
+
+        public String getStatus() {
+            return status;
+        }
+
+        public void setStatus(String status) {
+            this.status = status;
+        }
+
+        public String getMessage() {
+            return message;
+        }
+
+        public void setMessage(String message) {
+            this.message = message;
+        }
+
+        public String getId_oder() {
+            return id_oder;
+        }
+
+        public void setId_oder(String id_oder) {
+            this.id_oder = id_oder;
+        }
+    }
 }

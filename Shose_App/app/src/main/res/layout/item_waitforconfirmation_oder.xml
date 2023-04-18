@@ -3,6 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
+    android:elevation="8dp"
+    android:background="@color/background"
     android:orientation="vertical">
 
     <LinearLayout
@@ -40,12 +42,12 @@
 
                 <TextView
                     android:id="@+id/item_txt_attributes_confirm"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
                     android:gravity="top"
                     android:lineSpacingExtra="-1sp"
-                    android:text="Nike Club Max"
+                    android:text="xanh, 38"
                     android:textColor="@color/xam" />
 
                 <TextView
@@ -78,6 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="đ2000"
+                    android:layout_marginRight="5dp"
                     android:textColor="@color/red"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -103,7 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="1 sản phẩm"
+            android:text="3 sản phẩm"
             android:textColor="@color/xam" />
 
         <TextView

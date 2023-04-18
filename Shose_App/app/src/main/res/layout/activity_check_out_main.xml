@@ -54,6 +54,7 @@
                 <TextView
                     android:layout_width="250dp"
                     android:textSize="14dp"
+                    android:id="@+id/email_checkout"
                     android:layout_height="wrap_content"
                     android:text="googlegmail.com"/>
                 <TextView
@@ -87,6 +88,7 @@
                 <TextView
                     android:layout_width="250dp"
                     android:textSize="14dp"
+                    android:id="@+id/phone_checkout"
                     android:layout_height="wrap_content"
                     android:text="+1234-567-890"/>
                 <TextView
@@ -129,6 +131,7 @@
                 <TextView
                     android:layout_width="250dp"
                     android:textSize="14dp"
+                    android:id="@+id/address_checkout"
                     android:layout_height="wrap_content"
                     android:text="so 2, duong tran duy hung, trung hoa, cau giay,HN"/>
                 <TextView

@@ -8,23 +8,22 @@ public class Oder {
     private int id_Oder;
     private int quantity;
     private int price;
-    private List<Map<String, Products_Oder>> products_oder;
+    private List< Products_Oder> products;
     private int status;
     private int user_id;
     private int id_address;
     private int number;
-    private int total;
+    private String total;
     private String note;
-    private int paymentAmount;
+    private String paymentAmount;
     private String create_at;
     private String update_at;
 
-    public Oder(int id, int id_Oder, int quantity, int price, List<Map<String, Products_Oder>> products_oder, int status, int user_id, int id_address, int number, int total, String note, int paymentAmount, String create_at, String update_at) {
+    public Oder(int id, int id_Oder, int quantity, int price, int status, int user_id, int id_address, int number, String total, String note, String paymentAmount, String create_at, String update_at) {
         this.id = id;
         this.id_Oder = id_Oder;
         this.quantity = quantity;
         this.price = price;
-        this.products_oder = products_oder;
         this.status = status;
         this.user_id = user_id;
         this.id_address = id_address;
@@ -34,6 +33,14 @@ public class Oder {
         this.paymentAmount = paymentAmount;
         this.create_at = create_at;
         this.update_at = update_at;
+    }
+
+    public List<Products_Oder> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Products_Oder> products) {
+        this.products = products;
     }
 
     public int getId() {
@@ -68,14 +75,6 @@ public class Oder {
         this.price = price;
     }
 
-    public List<Map<String, Products_Oder>> getProducts_oder() {
-        return products_oder;
-    }
-
-    public void setProducts_oder(List<Map<String, Products_Oder>> products_oder) {
-        this.products_oder = products_oder;
-    }
-
     public int getStatus() {
         return status;
     }
@@ -108,11 +107,11 @@ public class Oder {
         this.number = number;
     }
 
-    public int getTotal() {
+    public String getTotal() {
         return total;
     }
 
-    public void setTotal(int total) {
+    public void setTotal(String total) {
         this.total = total;
     }
 
@@ -124,11 +123,11 @@ public class Oder {
         this.note = note;
     }
 
-    public int getPaymentAmount() {
+    public String getPaymentAmount() {
         return paymentAmount;
     }
 
-    public void setPaymentAmount(int paymentAmount) {
+    public void setPaymentAmount(String paymentAmount) {
         this.paymentAmount = paymentAmount;
     }
 

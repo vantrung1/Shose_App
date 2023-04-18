@@ -234,7 +234,8 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(icc);
                         break;
                     case R.id.mnu_orders:
-
+                        Intent i3 = new Intent(HomeActivity.this, OderActivity.class);
+                        startActivity(i3);
                         break;
                     case R.id.mnu_notifi:
 
