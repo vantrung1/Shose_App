@@ -5,6 +5,7 @@ import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
 import java.util.ArrayList;
 
 import edu.fpt.shose_app.Model.Brand;
+import edu.fpt.shose_app.Model.OderRequest;
 import edu.fpt.shose_app.Model.Product;
 import edu.fpt.shose_app.Model.ProductRequest;
 import edu.fpt.shose_app.Model.SizeRequest;
@@ -35,4 +36,7 @@ public interface ApiApp {
     Call<loginRequest> _logGin(@Field("email") String email,
                                @Field("password")String password);
 
+    @GET("history/{user}-{status}")
+    Call<OderRequest> getOder(@Path("user") int user_id,
+                              @Path("status") int status);
 }
