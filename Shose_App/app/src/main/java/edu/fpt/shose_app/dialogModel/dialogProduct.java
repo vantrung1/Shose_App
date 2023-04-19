@@ -1,4 +1,4 @@
-package edu.fpt.shose_app.Fragment;
+package edu.fpt.shose_app.dialogModel;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -146,9 +146,6 @@ public class dialogProduct extends Dialog {
                     dismiss();
                     context.startActivity(i);
                 }
-
-
-
             }
         });
     }

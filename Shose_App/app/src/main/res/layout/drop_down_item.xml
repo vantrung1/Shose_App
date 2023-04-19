@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:padding="12dp"
     android:maxLines="1"
+    android:background="@drawable/shadow"
     android:ellipsize="end"
     android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1">
 

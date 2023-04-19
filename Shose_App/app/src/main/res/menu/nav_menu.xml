@@ -6,8 +6,8 @@
         android:icon="@drawable/baseline_home_24"/>
     <item android:id="@+id/mnu_cart" android:title="My Cart"
         android:icon="@drawable/baseline_shopping_bag_24"/>
-    <item android:id="@+id/mnu_favorite" android:title="Favorite"
-        android:icon="@drawable/baseline_favorite_border_24" />
+    <item android:id="@+id/mnu_Chat" android:title="Chat"
+        android:icon="@drawable/baseline_chat_bubble_outline_24" />
     <item android:id="@+id/mnu_orders" android:title="Orders"
         android:icon="@drawable/baseline_favorite_border_24" />
     <item android:id="@+id/mnu_notifi" android:title="Notifications"

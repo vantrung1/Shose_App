@@ -18,9 +18,11 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".ChatBoxActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.OderActivity"
-            android:exported="true" >
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".Activity.FavouriteActivity"
             android:exported="false" />
@@ -29,7 +31,7 @@
             android:exported="false" />
         <activity
             android:name=".Activity.HomeActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Activity.MyCartActivity"
             android:exported="true" />
@@ -61,22 +63,23 @@
             android:exported="true" />
         <activity
             android:name=".Activity.splash_activity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Activity.Check_Out_MainActivity"
             android:exported="true"
             android:launchMode="singleInstance">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="demozpdk"
-                    android:host="app" />
+
+                <data
+                    android:host="app"
+                    android:scheme="demozpdk" />
             </intent-filter>
         </activity>
     </application>
