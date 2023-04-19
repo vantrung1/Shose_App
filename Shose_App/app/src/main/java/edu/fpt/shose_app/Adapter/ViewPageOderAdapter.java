@@ -24,12 +24,10 @@ public class ViewPageOderAdapter extends FragmentStatePagerAdapter {
             case 0:
                 return new WaitForConfirmationFragment();
             case 1:
-                return new WaitingForGoodsFragment();
-            case 2:
                 return new TransportFragment();
-            case 3:
+            case 2:
                 return new DeliveredFragment();
-            case 4:
+            case 3:
                 return new CancelFragment();
             default:
                 return new DeliveredFragment();
@@ -39,7 +37,7 @@ public class ViewPageOderAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public int getCount() {
-        return 5;
+        return 4;
     }
     @Nullable
     @Override
@@ -50,15 +48,12 @@ public class ViewPageOderAdapter extends FragmentStatePagerAdapter {
                 title = "Chờ xác nhận";
                 break;
             case 1:
-                title = "Chờ lấy hàng";
-                break;
-            case 2:
                 title = "Đang giao";
                 break;
-            case 3:
+            case 2:
                 title = "Đã giao";
                 break;
-            case 4:
+            case 3:
                 title = "Đã hủy";
                 break;
         }
