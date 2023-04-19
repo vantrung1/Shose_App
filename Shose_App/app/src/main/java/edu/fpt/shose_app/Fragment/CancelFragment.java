@@ -2,60 +2,44 @@ package edu.fpt.shose_app.Fragment;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import java.util.ArrayList;
+
+import edu.fpt.shose_app.Adapter.CancelAdapterOder;
+import edu.fpt.shose_app.Adapter.TransportAtapter;
+import edu.fpt.shose_app.Model.Oder;
+import edu.fpt.shose_app.Model.OderRequest;
 import edu.fpt.shose_app.R;
+import edu.fpt.shose_app.Retrofit.ApiApp;
+import edu.fpt.shose_app.Utils.Utils;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link CancelFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class CancelFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public CancelFragment() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment CancelFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static CancelFragment newInstance(String param1, String param2) {
-        CancelFragment fragment = new CancelFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    ArrayList<Oder> oderArrayList;
+    Retrofit retrofit;
+    Gson gson;
+    ApiApp apiInterface;
+    CancelAdapterOder cancelAdapterOder;
+    TextView txta;
+    RecyclerView recy_cancel;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -63,4 +47,56 @@ public class CancelFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_cancel, container, false);
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        recy_cancel = view.findViewById(R.id.recy_cancel);
+        txta = view.findViewById(R.id.txta);
+
+        oderArrayList = null;
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+        recy_cancel.setLayoutManager(layoutManager);
+
+        gson = new GsonBuilder().setLenient().create();
+        retrofit = new Retrofit.Builder()
+                .baseUrl(Utils.BASE_URL_API)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build();
+        apiInterface = retrofit.create(ApiApp.class);
+        get_oder(Utils.Users_Utils.getId(), 2);
+        oderArrayList = new ArrayList<>();
+        cancelAdapterOder = new CancelAdapterOder(getActivity(), oderArrayList);
+        recy_cancel.setAdapter(cancelAdapterOder);
+    }
+
+    private void get_oder(int id, int status) {
+        Call<OderRequest> objGetOder = apiInterface.getOder(id, status);
+        // thực hiện gọi
+        objGetOder.enqueue(new Callback<OderRequest>() {
+            @Override
+            public void onResponse(Call<OderRequest> call, Response<OderRequest> response) {
+                if (response.isSuccessful()) {
+                    OderRequest oderRequest = response.body();
+//                    oderArrayList.clear();
+                    oderArrayList = oderRequest.getData();
+//                    if (oderArrayList.size() == 0) {
+//                        txta.setVisibility(View.VISIBLE);
+//                    } else {
+//                        txta.setVisibility(View.INVISIBLE);
+//                    }
+
+                    Log.d("zzzzzz", "onResponse: " + oderArrayList.size());
+                    cancelAdapterOder.setorderlist(oderArrayList);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<OderRequest> call, Throwable t) {
+                Log.d("ssssssssss", "onFailure: " + t.getLocalizedMessage());
+            }
+
+        });
+    }
+
 }

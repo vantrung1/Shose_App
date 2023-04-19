@@ -3,12 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.TransportFragment"
-    android:background="@color/background">
+    android:background="@color/background"
+    tools:context=".Fragment.TransportFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recy_transport"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/txta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topicProduct"
+        android:gravity="center"
+        android:text="Chua co san pham"
+        android:textSize="40dp"
+        android:visibility="invisible" />
 
 </FrameLayout>
