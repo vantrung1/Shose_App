@@ -229,8 +229,8 @@ public class HomeActivity extends AppCompatActivity {
                         Intent ics = new Intent(HomeActivity.this, MyCartActivity.class);
                         startActivity(ics);
                         break;
-                    case R.id.mnu_favorite:
-                        Intent icc = new Intent(HomeActivity.this, FavouriteActivity.class);
+                    case R.id.mnu_Chat:
+                        Intent icc = new Intent(HomeActivity.this, ChatBoxActivity.class);
                         startActivity(icc);
                         break;
                     case R.id.mnu_orders:

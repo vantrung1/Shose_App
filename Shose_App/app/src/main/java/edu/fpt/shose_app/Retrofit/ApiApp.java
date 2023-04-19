@@ -10,6 +10,7 @@ import edu.fpt.shose_app.Model.Product;
 import edu.fpt.shose_app.Model.ProductRequest;
 import edu.fpt.shose_app.Model.SizeRequest;
 import edu.fpt.shose_app.Model.User;
+import edu.fpt.shose_app.Model.addRess_response;
 import edu.fpt.shose_app.Model.loginRequest;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -85,4 +86,6 @@ public interface ApiApp {
             this.id_oder = id_oder;
         }
     }
+    @GET("address/{user_id}")
+    Call<addRess_response> getallAdess(@Path("user_id") int user_id);
 }

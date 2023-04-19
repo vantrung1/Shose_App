@@ -3,11 +3,9 @@ package edu.fpt.shose_app.Activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
@@ -16,7 +14,6 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -35,13 +32,10 @@ import java.util.Map;
 
 import edu.fpt.shose_app.Adapter.imageAdapter;
 import edu.fpt.shose_app.Adapter.sizeAdapter;
-import edu.fpt.shose_app.EventBus.BrandEvent;
 import edu.fpt.shose_app.EventBus.ImageEvent;
-import edu.fpt.shose_app.EventBus.SizeEvent;
-import edu.fpt.shose_app.Fragment.dialogProduct;
+import edu.fpt.shose_app.dialogModel.dialogProduct;
 import edu.fpt.shose_app.Model.Image;
 import edu.fpt.shose_app.Model.Product;
-import edu.fpt.shose_app.Model.ProductRequest;
 import edu.fpt.shose_app.Model.Size;
 import edu.fpt.shose_app.Model.SizeRequest;
 import edu.fpt.shose_app.R;

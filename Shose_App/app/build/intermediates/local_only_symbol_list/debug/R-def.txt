@@ -79,6 +79,8 @@ drawable onboard1
 drawable onboard2
 drawable onboard3
 drawable product
+drawable shadow
+drawable successful
 font fonttext
 id CircleIndicator
 id CoordinatorLayouthome
@@ -89,7 +91,6 @@ id RecoveryPassword
 id RecyclerViewHome_brand
 id SearchViewHome
 id SignUp
-id address_checkout
 id bottomAppBar
 id bottomNavigationView
 id btnGmail
@@ -97,6 +98,7 @@ id btnLogin
 id btn_OnboardNext
 id btn_Payment
 id btn_addCart
+id btn_back_home
 id btn_cancel
 id btn_checkout
 id btn_create
@@ -130,6 +132,7 @@ id email_checkout
 id fab
 id fab_home
 id filled_exposed
+id filled_exposed_address
 id home
 id image1
 id image2
@@ -305,6 +308,7 @@ layout activity_sign_in
 layout activity_sign_up
 layout activity_splash
 layout baseline_expand_more_24
+layout dialog
 layout dialog_cancel_order_detail
 layout dialog_update_cart
 layout drop_down_item
