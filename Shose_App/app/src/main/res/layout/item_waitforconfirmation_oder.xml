@@ -113,6 +113,11 @@
             android:text="3 sản phẩm"
             android:textColor="@color/xam" />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/baseline_gpp_good_24" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -125,7 +130,7 @@
             android:id="@+id/item_txt_total_confirm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:text="d100.000"
             android:textColor="@color/red" />
     </LinearLayout>

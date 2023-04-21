@@ -1,9 +1,10 @@
 package edu.fpt.shose_app.Model;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Map;
 
-public class Oder {
+public class Oder implements Serializable {
     private int id;
     private int id_Oder;
     private int quantity;
@@ -12,18 +13,19 @@ public class Oder {
     private int status;
     private int user_id;
     private int id_address;
-    private int number;
+    private String number;
     private String total;
     private String note;
     private String paymentAmount;
-    private String create_at;
-    private String update_at;
+    private String created_at;
+    private String updated_at;
 
-    public Oder(int id, int id_Oder, int quantity, int price, int status, int user_id, int id_address, int number, String total, String note, String paymentAmount, String create_at, String update_at) {
+    public Oder(int id, int id_Oder, int quantity, int price, List<Products_Oder> products, int status, int user_id, int id_address, String number, String total, String note, String paymentAmount, String created_at, String updated_at) {
         this.id = id;
         this.id_Oder = id_Oder;
         this.quantity = quantity;
         this.price = price;
+        this.products = products;
         this.status = status;
         this.user_id = user_id;
         this.id_address = id_address;
@@ -31,16 +33,8 @@ public class Oder {
         this.total = total;
         this.note = note;
         this.paymentAmount = paymentAmount;
-        this.create_at = create_at;
-        this.update_at = update_at;
-    }
-
-    public List<Products_Oder> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<Products_Oder> products) {
-        this.products = products;
+        this.created_at = created_at;
+        this.updated_at = updated_at;
     }
 
     public int getId() {
@@ -75,6 +69,14 @@ public class Oder {
         this.price = price;
     }
 
+    public List<Products_Oder> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Products_Oder> products) {
+        this.products = products;
+    }
+
     public int getStatus() {
         return status;
     }
@@ -99,11 +101,11 @@ public class Oder {
         this.id_address = id_address;
     }
 
-    public int getNumber() {
+    public String getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(String number) {
         this.number = number;
     }
 
@@ -131,19 +133,19 @@ public class Oder {
         this.paymentAmount = paymentAmount;
     }
 
-    public String getCreate_at() {
-        return create_at;
+    public String getCreated_at() {
+        return created_at;
     }
 
-    public void setCreate_at(String create_at) {
-        this.create_at = create_at;
+    public void setCreated_at(String created_at) {
+        this.created_at = created_at;
     }
 
-    public String getUpdate_at() {
-        return update_at;
+    public String getUpdated_at() {
+        return updated_at;
     }
 
-    public void setUpdate_at(String update_at) {
-        this.update_at = update_at;
+    public void setUpdated_at(String updated_at) {
+        this.updated_at = updated_at;
     }
 }

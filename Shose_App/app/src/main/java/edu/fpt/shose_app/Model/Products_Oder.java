@@ -1,6 +1,8 @@
 package edu.fpt.shose_app.Model;
 
-public class Products_Oder {
+import java.io.Serializable;
+
+public class Products_Oder implements Serializable {
     private String attributes;
     private String image;
     private String name;
