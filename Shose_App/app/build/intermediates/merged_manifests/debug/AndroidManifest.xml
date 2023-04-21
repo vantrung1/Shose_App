@@ -44,9 +44,15 @@
         android:theme="@style/Theme.Shose_App"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name="edu.fpt.shose_app.Activity.OderActivity"
+            android:name="edu.fpt.shose_app.Activity.CancelOderBtnActivity"
             android:exported="true" >
         </activity>
+        <activity
+            android:name="edu.fpt.shose_app.Activity.ChatBoxActivity"
+            android:exported="false" />
+        <activity
+            android:name="edu.fpt.shose_app.Activity.OderActivity"
+            android:exported="true" />
         <activity
             android:name="edu.fpt.shose_app.Activity.FavouriteActivity"
             android:exported="false" />
@@ -87,8 +93,7 @@
             android:exported="true" />
         <activity
             android:name="edu.fpt.shose_app.Activity.splash_activity"
-            android:exported="true" >
-        </activity>
+            android:exported="true" />
         <activity
             android:name="edu.fpt.shose_app.MainActivity"
             android:exported="true" />

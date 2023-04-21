@@ -1,6 +1,7 @@
 package edu.fpt.shose_app.Adapter;
 
 import android.content.Context;
+import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import edu.fpt.shose_app.Model.Oder;
@@ -47,8 +49,9 @@ public class DeliveredAdapter extends RecyclerView.Adapter<DeliveredAdapter.myvi
         holder.txtName.setText(oderArrayList.get(position).getProducts().get(0).getName() + "");
         holder.txtQuantity.setText("x" + oderArrayList.get(position).getProducts().get(0).getQuantity());
         holder.txt_quantity2.setText(oderArrayList.get(position).getQuantity() + "sản phẩm");
-        holder.txtPrice.setText(oderArrayList.get(position).getProducts().get(0).getPrice() + "");
-        holder.txtSale.setText(oderArrayList.get(position).getProducts().get(0).getSale() + "");
+        holder.txtPrice.setText(new DecimalFormat("###,###,###").format(oderArrayList.get(position).getProducts().get(0).getPrice()));
+        holder.txtPrice.setPaintFlags(  holder.txtPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+        holder.txtSale.setText(new DecimalFormat("###,###,###").format(oderArrayList.get(position).getProducts().get(0).getSale()));
         holder.txtTotal.setText(oderArrayList.get(position).getTotal());
     }
 
