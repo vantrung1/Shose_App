@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/gpp_good/baseline_gpp_good_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Library/Android/sdk/platforms/icons/material/materialicons/notifications/baseline_notifications_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -29,8 +29,8 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="e5e6e6" />
-                            <entry key="outputName" value="baseline_gpp_good_24" />
-                            <entry key="sourceFile" value="E:\AppDATN_Shoseapp\Shose_App\Shose_App" />
+                            <entry key="outputName" value="notifications_24" />
+                            <entry key="sourceFile" value="/E:\AppDATN_Shoseapp\Shose_App\Shose_App" />
                           </map>
                         </option>
                       </PersistentState>

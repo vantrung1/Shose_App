@@ -3002,6 +3002,7 @@ drawable notification_icon_background
 drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
+drawable notifications_24
 drawable notify_panel_notification_icon_bg
 drawable onboard1
 drawable onboard2
@@ -4096,6 +4097,8 @@ string bottomsheet_action_expand
 string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
+string channel_description
+string channel_name
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
