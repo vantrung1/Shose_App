@@ -1,7 +1,13 @@
 
         package edu.fpt.shose_app.Activity;
 
+        import android.annotation.SuppressLint;
+        import android.app.Notification;
+        import android.app.NotificationManager;
+        import android.content.Context;
         import android.content.Intent;
+        import android.graphics.Bitmap;
+        import android.graphics.BitmapFactory;
         import android.graphics.Color;
         import android.graphics.drawable.ColorDrawable;
         import android.os.Bundle;
@@ -19,6 +25,8 @@
         import androidx.appcompat.app.AppCompatActivity;
         import androidx.appcompat.widget.AppCompatButton;
         import androidx.appcompat.widget.Toolbar;
+        import androidx.core.app.NotificationCompat;
+        import androidx.core.app.NotificationManagerCompat;
 
         import com.google.gson.Gson;
         import com.google.gson.GsonBuilder;
@@ -26,6 +34,7 @@
         import org.json.JSONObject;
 
         import java.util.ArrayList;
+        import java.util.Date;
         import java.util.List;
 
 
@@ -38,7 +47,6 @@
         import edu.fpt.shose_app.Retrofit.ApiApp;
         import edu.fpt.shose_app.Utils.Utils;
         import edu.fpt.shose_app.dialogModel.dialogOrder;
-        import edu.fpt.shose_app.dialogModel.dialogProduct;
         import edu.fpt.shose_app.zalo.Api.CreateOrder;
         import retrofit2.Call;
         import retrofit2.Callback;
@@ -52,7 +60,8 @@
 
 
         public class Check_Out_MainActivity extends AppCompatActivity {
-    Toolbar toolbar;
+            private static final int NOTIFICATION_ID = 1;
+            Toolbar toolbar;
     Retrofit retrofit;
     Gson gson;
     ApiApp apiInterface;
@@ -141,13 +150,17 @@
                             //   codezalo = (data.getString("zp_trans_token"));
                             PayZalo(data.getString("zp_trans_token"));
                         }
-
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
+
                 }
                 else {
                     CreateOder(Utils.Users_Utils.getId(), 1,02304302403, data_price,"note",PaymentAmount,"1",jsonprocuts,3);
+                }
+
+                if(PaymentAmount.equalsIgnoreCase("cash on delivery")){
+                    SendNotification();//--------------------Notification
                 }
 
             }
@@ -221,12 +234,12 @@
         // address
         autoCompleteAdress = findViewById(R.id.filled_exposed_address);
 
-        if(Utils.Users_Utils.getPhoneNumber().equals("")){
+        /*if(Utils.Users_Utils.getPhoneNumber().equals("")){
             phonecheckout.setText("hay nhap sdt");
         }
         else {
             phonecheckout.setText(Utils.Users_Utils.getPhoneNumber());
-        }
+        }*/
 
         // address_checkout.setText(Utils.Users_Utils.getEmail());
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -290,5 +303,28 @@
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         ZaloPaySDK.getInstance().onResult(intent);
+    }
+
+    @SuppressLint("MissingPermission")
+    private void SendNotification(){
+        Bitmap bitmap = BitmapFactory.decodeResource( getResources(), R.mipmap.ic_launcher);
+
+        Notification notification = new NotificationCompat.Builder(this, MyApplication.CHANNEL_ID)
+                .setContentTitle("Order Success")
+                .setContentText("Your order will be delivered in 3 to 5 days")
+                .setSmallIcon(R.drawable.notifications_24)
+                .setLargeIcon(bitmap)
+                .build();
+
+        NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(this);
+        notificationManagerCompat.notify(getNotificationId(), notification);
+
+        /*NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        if (notificationManager != null){
+            notificationManager.notify(getNotificationId(), notification);
+        }*/
+    }
+    private int getNotificationId(){
+        return (int) new Date().getTime();
     }
 }

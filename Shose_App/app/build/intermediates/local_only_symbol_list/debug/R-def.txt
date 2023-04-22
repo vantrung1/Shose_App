@@ -82,6 +82,7 @@ drawable location_24
 drawable logo
 drawable nike
 drawable nike_icon
+drawable notifications_24
 drawable onboard1
 drawable onboard2
 drawable onboard3
@@ -371,6 +372,8 @@ menu profile_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 string app_name
+string channel_description
+string channel_name
 string hello_blank_fragment
 string recovery
 string smart_gorge
