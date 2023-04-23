@@ -98,6 +98,7 @@
                     android:text="Phone"/>
             </LinearLayout>
             <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/img_update_phone"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginTop="10dp"
