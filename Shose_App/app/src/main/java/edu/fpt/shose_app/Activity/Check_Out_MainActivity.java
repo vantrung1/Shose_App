@@ -2,6 +2,7 @@
         package edu.fpt.shose_app.Activity;
 
         import android.annotation.SuppressLint;
+        import android.app.Dialog;
         import android.app.Notification;
         import android.app.NotificationManager;
         import android.content.Context;
@@ -16,9 +17,13 @@
         import android.view.Gravity;
         import android.view.View;
         import android.view.ViewGroup;
+        import android.view.Window;
+        import android.view.WindowManager;
         import android.widget.AdapterView;
         import android.widget.ArrayAdapter;
         import android.widget.AutoCompleteTextView;
+        import android.widget.Button;
+        import android.widget.EditText;
         import android.widget.TextView;
         import android.widget.Toast;
 
@@ -28,6 +33,7 @@
         import androidx.core.app.NotificationCompat;
         import androidx.core.app.NotificationManagerCompat;
 
+        import com.google.android.material.imageview.ShapeableImageView;
         import com.google.gson.Gson;
         import com.google.gson.GsonBuilder;
 
@@ -74,6 +80,8 @@
     String data_price,codezalo;
     List<address> addressList;
     AutoCompleteTextView autoCompleteTextView,autoCompleteAdress;
+    ShapeableImageView img_update_phone;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -165,6 +173,12 @@
 
             }
         });
+        img_update_phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                OpenDialogUpdatePhone(Gravity.CENTER);
+            }
+        });
 
     }
     private void PayZalo(String codezalo){
@@ -233,6 +247,7 @@
         emailcheck_out.setText(Utils.Users_Utils.getEmail());
         // address
         autoCompleteAdress = findViewById(R.id.filled_exposed_address);
+        img_update_phone = findViewById(R.id.img_update_phone);
 
         /*if(Utils.Users_Utils.getPhoneNumber().equals("")){
             phonecheckout.setText("hay nhap sdt");
@@ -327,4 +342,43 @@
     private int getNotificationId(){
         return (int) new Date().getTime();
     }
+
+    private void OpenDialogUpdatePhone(int gravity){
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.layout_dialog_custom_phone);
+
+        Window window = dialog.getWindow();
+        if (window == null){
+            return;
+        }
+
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        WindowManager.LayoutParams windowAttributes = window.getAttributes();
+        windowAttributes.gravity = gravity;
+        window.setAttributes(windowAttributes);
+
+        //click out off dialog
+        if (Gravity.BOTTOM == gravity){
+            dialog.setCancelable(true);
+        }else {
+            dialog.setCancelable(false);
+        }
+
+        EditText edt_add_phone = dialog.findViewById(R.id.edt_add_phone);
+        Button btn_cancel_phone = dialog.findViewById(R.id.btn_cancel_phone);
+        Button btn_add_phone = dialog.findViewById(R.id.btn_add_phone);
+
+        btn_cancel_phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
 }
