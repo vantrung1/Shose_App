@@ -1355,6 +1355,7 @@ int color background_floating_material_light 0x7f05001f
 int color background_material_dark 0x7f050020
 int color background_material_light 0x7f050021
 int color black 0x7f050022
+int color blue 0x7f0502b6
 int color bright_foreground_disabled_material_dark 0x7f050023
 int color bright_foreground_disabled_material_light 0x7f050024
 int color bright_foreground_inverse_material_dark 0x7f050025
@@ -2856,6 +2857,11 @@ int drawable baseline_person_outline_24 0x7f070093
 int drawable baseline_shopping_bag_24 0x7f070094
 int drawable baseline_shopping_cart_24 0x7f070095
 int drawable baseline_task_alt_24 0x7f070096
+int drawable bg_blue_conner_10 0x7f070147
+int drawable bg_blue_conner_16_topleft_topright 0x7f070148
+int drawable bg_gray_conner_10 0x7f070149
+int drawable bg_white_conner_10_gray 0x7f07014a
+int drawable bg_white_conner_16 0x7f07014b
 int drawable btn_checkbox_checked_mtrl 0x7f070097
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f070098
 int drawable btn_checkbox_unchecked_mtrl 0x7f070099
@@ -3164,8 +3170,12 @@ int id btnLogin 0x7f09007f
 int id btn_OnboardNext 0x7f090080
 int id btn_Payment 0x7f090081
 int id btn_addCart 0x7f090082
+int id btn_add_mail 0x7f090310
+int id btn_add_phone 0x7f09030c
 int id btn_back_home 0x7f090083
 int id btn_cancel 0x7f090084
+int id btn_cancel_mail 0x7f090311
+int id btn_cancel_phone 0x7f09030d
 int id btn_chat 0x7f090085
 int id btn_checkout 0x7f090086
 int id btn_create 0x7f090087
@@ -3271,6 +3281,8 @@ int id edchangepassword 0x7f0900ea
 int id edit_query 0x7f0900eb
 int id edoldpass 0x7f0900ec
 int id edpassword 0x7f0900ed
+int id edt_add_mail 0x7f090312
+int id edt_add_phone 0x7f09030e
 int id elastic 0x7f0900ee
 int id email_checkout 0x7f0900ef
 int id embed 0x7f0900f0
@@ -3346,6 +3358,8 @@ int id img_camera 0x7f090135
 int id img_close 0x7f090136
 int id img_detail 0x7f090137
 int id img_update_cart 0x7f090138
+int id img_update_mail 0x7f090313
+int id img_update_phone 0x7f09030f
 int id immediateStop 0x7f090139
 int id included 0x7f09013a
 int id indeterminate 0x7f09013b
@@ -3982,6 +3996,8 @@ int layout item_products_oder 0x7f0c0055
 int layout item_transport_oder 0x7f0c0056
 int layout item_waitforconfirmation_oder 0x7f0c0057
 int layout itemsize 0x7f0c0058
+int layout layout_dialog_custom_mail 0x7f0c00a0
+int layout layout_dialog_custom_phone 0x7f0c009f
 int layout loading 0x7f0c0059
 int layout m3_alert_dialog 0x7f0c005a
 int layout m3_alert_dialog_actions 0x7f0c005b

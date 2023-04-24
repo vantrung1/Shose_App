@@ -6,6 +6,7 @@ anim slide_out_bottom
 anim slide_out_right
 color background
 color black
+color blue
 color button
 color cam_dam
 color cam_nhat
@@ -56,6 +57,11 @@ drawable baseline_person_outline_24
 drawable baseline_shopping_bag_24
 drawable baseline_shopping_cart_24
 drawable baseline_task_alt_24
+drawable bg_blue_conner_10
+drawable bg_blue_conner_16_topleft_topright
+drawable bg_gray_conner_10
+drawable bg_white_conner_10_gray
+drawable bg_white_conner_16
 drawable btn_delete_gray
 drawable btn_delete_red
 drawable btn_minus_blue
@@ -106,8 +112,12 @@ id btnLogin
 id btn_OnboardNext
 id btn_Payment
 id btn_addCart
+id btn_add_mail
+id btn_add_phone
 id btn_back_home
 id btn_cancel
+id btn_cancel_mail
+id btn_cancel_phone
 id btn_chat
 id btn_checkout
 id btn_create
@@ -137,6 +147,8 @@ id ed_password
 id edchangepassword
 id edoldpass
 id edpassword
+id edt_add_mail
+id edt_add_phone
 id email_checkout
 id fab
 id fab_home
@@ -158,6 +170,8 @@ id img_camera
 id img_close
 id img_detail
 id img_update_cart
+id img_update_mail
+id img_update_phone
 id itemClickFav
 id item_btnIMG_minus_cart
 id item_btnIMG_plus_cart
@@ -365,6 +379,8 @@ layout item_products_oder
 layout item_transport_oder
 layout item_waitforconfirmation_oder
 layout itemsize
+layout layout_dialog_custom_mail
+layout layout_dialog_custom_phone
 layout loading
 menu bottom_menu
 menu nav_menu

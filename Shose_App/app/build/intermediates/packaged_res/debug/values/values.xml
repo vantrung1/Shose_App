@@ -2,6 +2,7 @@
 <resources xmlns:ns1="http://schemas.android.com/tools">
     <color name="background">#F8F9FA</color>
     <color name="black">#FF000000</color>
+    <color name="blue">#5B9EE1</color>
     <color name="button">#5B9EE1</color>
     <color name="cam_dam">#FF7700</color>
     <color name="cam_nhat">#FDE0C6</color>
