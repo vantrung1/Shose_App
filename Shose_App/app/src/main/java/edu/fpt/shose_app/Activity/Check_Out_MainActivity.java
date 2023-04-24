@@ -13,6 +13,8 @@
         import android.graphics.drawable.ColorDrawable;
         import android.os.Bundle;
         import android.os.StrictMode;
+        import android.text.InputType;
+        import android.text.TextUtils;
         import android.util.Log;
         import android.view.Gravity;
         import android.view.View;
@@ -74,13 +76,13 @@
     TextView txt_total_check_out,txt_price_total_check_out,emailcheck_out,phonecheckout,address_checkout;
     List<products> productsList_checkOut;
     AppCompatButton btn_payment;
-    private String PaymentAmount = "cash on delivery";
+    private String PaymentAmount = "Cash on delivery";
     private String jsonprocuts;
     private int id_oder;
     String data_price,codezalo;
     List<address> addressList;
     AutoCompleteTextView autoCompleteTextView,autoCompleteAdress;
-    ShapeableImageView img_update_phone;
+    ShapeableImageView img_update_phone,img_update_mail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,13 +115,13 @@
         txt_price_total_check_out.setText(data_price);
 
 
-        String[] type = new String[]{"cash on delivery","Zalo Pay"};
+        String[] type = new String[]{"Cash on delivery","Zalo Pay"};
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this,R.layout.drop_down_item,type);
 
         autoCompleteTextView = findViewById(R.id.filled_exposed);
-
+        autoCompleteTextView.setText("Cash on delivery");
         autoCompleteTextView.setAdapter(adapter);
 
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -143,6 +145,7 @@
             public void onClick(View v) {
 
                 Log.d("TAG", "onClick: "+PaymentAmount);
+
                 if(PaymentAmount.equalsIgnoreCase("Zalo Pay")){
                     CreateOrder orderApi = new CreateOrder();
 
@@ -167,7 +170,7 @@
                     CreateOder(Utils.Users_Utils.getId(), 1,02304302403, data_price,"note",PaymentAmount,"1",jsonprocuts,3);
                 }
 
-                if(PaymentAmount.equalsIgnoreCase("cash on delivery")){
+                if(PaymentAmount.equalsIgnoreCase("Cash on delivery")){
                     SendNotification();//--------------------Notification
                 }
 
@@ -177,6 +180,12 @@
             @Override
             public void onClick(View view) {
                 OpenDialogUpdatePhone(Gravity.CENTER);
+            }
+        });
+        img_update_mail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                OpenDialogUpdateMail(Gravity.CENTER);
             }
         });
 
@@ -248,7 +257,7 @@
         // address
         autoCompleteAdress = findViewById(R.id.filled_exposed_address);
         img_update_phone = findViewById(R.id.img_update_phone);
-
+        img_update_mail  = findViewById(R.id.img_update_mail);
         /*if(Utils.Users_Utils.getPhoneNumber().equals("")){
             phonecheckout.setText("hay nhap sdt");
         }
@@ -371,6 +380,7 @@
         Button btn_cancel_phone = dialog.findViewById(R.id.btn_cancel_phone);
         Button btn_add_phone = dialog.findViewById(R.id.btn_add_phone);
 
+        edt_add_phone.setText(phonecheckout.getText().toString());
         btn_cancel_phone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -378,7 +388,78 @@
             }
         });
 
+        btn_add_phone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String matkhau = edt_add_phone.getText().toString();
+                if (TextUtils.isEmpty(matkhau)){
+                    edt_add_phone.setError("please add your phone");
+                }
+                if (matkhau.length() != 10 ){
+                        edt_add_phone.setError("Please Enter valid phone number");
+                        edt_add_phone.requestFocus();
+                } else {
+                phonecheckout.setText(edt_add_phone.getText().toString());
+                dialog.dismiss();
+            }
+
+            }
+        });
+
         dialog.show();
     }
+    private void OpenDialogUpdateMail(int gravity){
+        final Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.layout_dialog_custom_mail);
 
+        Window window = dialog.getWindow();
+        if (window == null){
+            return;
+        }
+
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+
+        WindowManager.LayoutParams windowAttributes = window.getAttributes();
+        windowAttributes.gravity = gravity;
+        window.setAttributes(windowAttributes);
+
+        //click out off dialog
+        if (Gravity.BOTTOM == gravity){
+            dialog.setCancelable(true);
+        }else {
+            dialog.setCancelable(false);
+        }
+
+        EditText edt_add_mail = dialog.findViewById(R.id.edt_add_mail);
+        Button btn_cancel_mail = dialog.findViewById(R.id.btn_cancel_mail);
+        Button btn_add_mail = dialog.findViewById(R.id.btn_add_mail);
+
+        edt_add_mail.setText(emailcheck_out.getText().toString());
+        btn_cancel_mail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        btn_add_mail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String matkhau = edt_add_mail.getText().toString();
+                if (TextUtils.isEmpty(matkhau)){
+                    edt_add_mail.setError("please add your mail");
+                }
+                if (!android.util.Patterns.EMAIL_ADDRESS.matcher(matkhau).matches()) {
+                    edt_add_mail.setError("Please Enter valid email");
+                    edt_add_mail.requestFocus();
+                }
+                else {
+                    emailcheck_out.setText(edt_add_mail.getText().toString());
+                    dialog.dismiss();
+                }
+            }
+        });
+        dialog.show();
+    }
 }
