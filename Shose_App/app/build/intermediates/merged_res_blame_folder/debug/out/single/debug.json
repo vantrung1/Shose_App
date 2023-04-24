@@ -240,6 +240,10 @@
         "source": "/Users/vilong/.gradle/daemon/7.5/edu.fpt.shose_app-main-41:/drawable/bg_white_conner_16.xml"
     },
     {
+        "merged": "/Users/vilong/.gradle/daemon/7.5/edu.fpt.shose_app-merged_res-39:/layout_activity_notification.xml.flat",
+        "source": "/Users/vilong/.gradle/daemon/7.5/edu.fpt.shose_app-main-41:/layout/activity_notification.xml"
+    },
+    {
         "merged": "/Users/vilong/.gradle/daemon/7.5/edu.fpt.shose_app-merged_res-39:/layout_fragment_onboadrd2.xml.flat",
         "source": "/Users/vilong/.gradle/daemon/7.5/edu.fpt.shose_app-main-41:/layout/fragment_onboadrd2.xml"
     },
@@ -308,10 +312,6 @@
         "source": "/Users/vilong/.gradle/daemon/7.5/edu.fpt.shose_app-main-41:/layout/activity_check_out_main.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-39:/layout_layout_dialog_custom_mail.xml.flat",
-        "source": "edu.fpt.shose_app-main-41:/layout/layout_dialog_custom_mail.xml"
-    },
-    {
         "merged": "/Users/vilong/.gradle/daemon/7.5/edu.fpt.shose_app-merged_res-39:/drawable_nike.png.flat",
         "source": "/Users/vilong/.gradle/daemon/7.5/edu.fpt.shose_app-main-41:/drawable/nike.png"
     },
@@ -354,6 +354,10 @@
     {
         "merged": "/Users/vilong/.gradle/daemon/7.5/edu.fpt.shose_app-merged_res-39:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "/Users/vilong/.gradle/daemon/7.5/edu.fpt.shose_app-main-41:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "edu.fpt.shose_app-merged_res-39:/layout_activity_notification.xml.flat",
+        "source": "edu.fpt.shose_app-main-41:/layout/activity_notification.xml"
     },
     {
         "merged": "/Users/vilong/.gradle/daemon/7.5/edu.fpt.shose_app-merged_res-39:/drawable_baseline_shopping_cart_24.xml.flat",

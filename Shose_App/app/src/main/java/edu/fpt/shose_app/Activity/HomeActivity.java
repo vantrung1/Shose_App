@@ -154,8 +154,8 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(icc);
                         return true;
                     case R.id.Notifications:
-                        // Handle settings button click
-                        Log.d("TAG", "onNavigationItemSelected: Notifications");
+                        Intent iccc = new Intent(HomeActivity.this,  Notification.class);
+                        startActivity(iccc);
                         return true;
                     case R.id.Profile:
                         // Handle settings button click

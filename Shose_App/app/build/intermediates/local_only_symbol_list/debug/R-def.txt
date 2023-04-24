@@ -309,6 +309,7 @@ id toolbar_cart
 id toolbar_check_out_main
 id toolbar_detail
 id toolbar_favourite
+id toolbar_notification
 id toolbar_oder
 id toolbar_profile
 id topicProduct
@@ -345,6 +346,7 @@ layout activity_foget_pass
 layout activity_home
 layout activity_main
 layout activity_my_cart
+layout activity_notification
 layout activity_oder
 layout activity_onboard
 layout activity_product_detail
