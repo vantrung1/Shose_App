@@ -249,6 +249,7 @@
         getSupportActionBar().setTitle("Checkout");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationIcon(R.drawable.icon_back);
+
         btn_payment = findViewById(R.id.btn_Payment);
         emailcheck_out = findViewById(R.id.email_checkout);
         phonecheckout = findViewById(R.id.phone_checkout);

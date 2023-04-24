@@ -3755,6 +3755,7 @@ int id toolbar_cart 0x7f0902c0
 int id toolbar_check_out_main 0x7f0902c1
 int id toolbar_detail 0x7f0902c2
 int id toolbar_favourite 0x7f0902c3
+int id toolbar_notification 0x7f090314
 int id toolbar_oder 0x7f0902c4
 int id toolbar_profile 0x7f0902c5
 int id toolbar_title 0x7f0902c6
@@ -3945,6 +3946,7 @@ int layout activity_foget_pass 0x7f0c0022
 int layout activity_home 0x7f0c0023
 int layout activity_main 0x7f0c0024
 int layout activity_my_cart 0x7f0c0025
+int layout activity_notification 0x7f0c00a1
 int layout activity_oder 0x7f0c0026
 int layout activity_onboard 0x7f0c0027
 int layout activity_product_detail 0x7f0c0028
