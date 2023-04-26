@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import edu.fpt.shose_app.Model.Product;
@@ -43,7 +44,7 @@ public class ProducAdapter2 extends RecyclerView.Adapter<ProducAdapter2.myViewHo
         Glide.with(context).load(productArrayList.get(position).getImage().get(0).get("image1").getName()).into(holder.itemproduct_img2);
         // Log.d("TAG", "onBindViewHolder: "+myObjects.get(0).getImage());
         holder.itemproduct_name2.setText(productArrayList.get(position).getName());
-        holder.itemproduct_price2.setText(productArrayList.get(position).getPrice()+"");
+        holder.itemproduct_price2.setText(new DecimalFormat("###,###,### VNĐ").format(productArrayList.get(position).getPrice()));
     }
 
     @Override

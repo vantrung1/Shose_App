@@ -53,6 +53,7 @@ drawable baseline_notifications_active_24
 drawable baseline_notifications_none_24
 drawable baseline_payment_24
 drawable baseline_person_outline_24
+drawable baseline_search_24
 drawable baseline_shopping_bag_24
 drawable baseline_shopping_cart_24
 drawable baseline_task_alt_24
@@ -65,6 +66,7 @@ drawable btn_plus_white
 drawable camera_image
 drawable check_box_outline_blank_24
 drawable drop_down_24
+drawable edittext_no_underline
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable icon_back
@@ -213,6 +215,7 @@ id layoutBottom
 id layoutGioHang
 id layoutGioHang_detail
 id layoutTitle
+id layout_right_allproduct
 id layoutbottom
 id layoutop
 id layuotItem
@@ -247,6 +250,8 @@ id recyImageDetail
 id recySizeDetail
 id recy_1_product
 id recy_2_product
+id recy_3_product
+id recy_allproduct
 id recy_cancel
 id recy_cancel_oder_btn
 id recy_delivered
@@ -257,8 +262,7 @@ id recy_waiting
 id recycler_dialog_color
 id recycler_dialog_size
 id scorllView
-id seall1
-id seall2
+id seall
 id signIn
 id sizeItem
 id size_name
@@ -289,6 +293,7 @@ id textViewAppSettings
 id textViewPassword
 id toolbar
 id toolbar2
+id toolbar_allproduct
 id toolbar_cancel_oder
 id toolbar_cart
 id toolbar_check_out_main
@@ -298,6 +303,7 @@ id toolbar_oder
 id toolbar_profile
 id topicProduct
 id topicProduct2
+id topicProduct3
 id tv1
 id tvTitleFav
 id txtInputLayout1
@@ -337,6 +343,7 @@ layout activity_profile
 layout activity_sign_in
 layout activity_sign_up
 layout activity_splash
+layout allproduct_activity
 layout baseline_expand_more_24
 layout dialog
 layout dialog_cancel_order_detail

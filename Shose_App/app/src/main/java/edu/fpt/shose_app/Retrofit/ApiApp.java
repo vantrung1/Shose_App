@@ -3,6 +3,7 @@ package edu.fpt.shose_app.Retrofit;
 import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import edu.fpt.shose_app.Model.Brand;
 import edu.fpt.shose_app.Model.OderRequest;
@@ -88,4 +89,6 @@ public interface ApiApp {
     }
     @GET("address/{user_id}")
     Call<addRess_response> getallAdess(@Path("user_id") int user_id);
+    @GET("products")
+    Call<ArrayList<Product>> getallProduct();
 }

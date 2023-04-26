@@ -26,6 +26,9 @@
             android:name=".Activity.ChatBoxActivity"
             android:exported="false" />
         <activity
+            android:name=".Activity.AllProduct"
+            android:exported="false" />
+        <activity
             android:name=".Activity.OderActivity"
             android:exported="true" />
         <activity

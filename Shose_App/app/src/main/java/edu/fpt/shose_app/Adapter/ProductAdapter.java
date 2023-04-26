@@ -18,6 +18,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.Serializable;
 import java.lang.reflect.Type;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,13 +56,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.myviewHo
     @Override
     public void onBindViewHolder(@NonNull ProductAdapter.myviewHolder holder, int i) {
 
-
-
-
         Glide.with(context).load(productArrayList.get(i).getImage().get(0).get("image1").getName()).into(holder.itemproduct_img);
        // Log.d("TAG", "onBindViewHolder: "+myObjects.get(0).getImage());
         holder.itemproduct_name.setText(productArrayList.get(i).getName());
-        holder.itemproduct_price.setText(productArrayList.get(i).getPrice()+"");
+        holder.itemproduct_price.setText(new DecimalFormat("###,###,### VNĐ").format(productArrayList.get(i).getPrice()));
 
         holder.itemproduct_name.setOnClickListener(new View.OnClickListener() {
             @Override
