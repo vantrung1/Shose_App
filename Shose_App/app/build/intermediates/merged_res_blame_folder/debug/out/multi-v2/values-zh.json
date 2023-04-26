@@ -4,7 +4,7 @@
             "outputFile": "edu.fpt.shose_app-mergeDebugResources-37:/values-zh/values-zh.xml",
             "map": [
                 {
-                    "source": "/Users/vilong/.gradle/caches/transforms-3/01ad5bd2f018f79093252622caa7f430/transformed/ucrop-2.2.6/res/values-zh/values-zh.xml",
+                    "source": "/Users/neko/.gradle/caches/transforms-3/01ad5bd2f018f79093252622caa7f430/transformed/ucrop-2.2.6/res/values-zh/values-zh.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

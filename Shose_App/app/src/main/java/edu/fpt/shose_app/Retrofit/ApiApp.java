@@ -3,6 +3,7 @@ package edu.fpt.shose_app.Retrofit;
 import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import edu.fpt.shose_app.Model.Brand;
 import edu.fpt.shose_app.Model.OderRequest;
@@ -22,6 +23,10 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface ApiApp {
+    @GET("search")
+    Call<List<Product>> searchProducts(@Query("q") String query);
+    @GET("products")
+    Call<List<Product>> getAllProducts();
 
     @POST("register")
     Call<User> postUser(@Body User objUser);

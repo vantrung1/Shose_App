@@ -71,6 +71,7 @@ drawable btn_plus_white
 drawable camera_image
 drawable check_box_outline_blank_24
 drawable drop_down_24
+drawable ic_delete
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable icon_back
@@ -154,6 +155,8 @@ id fab
 id fab_home
 id filled_exposed
 id filled_exposed_address
+id history_item_delete
+id history_item_text
 id home
 id image1
 id image2
@@ -254,6 +257,7 @@ id profile_name
 id profile_password
 id profile_phone
 id rcv_favourite
+id rcv_search
 id rd_reason_cancel1
 id rd_reason_cancel2
 id rd_reason_cancel3
@@ -274,6 +278,11 @@ id recycler_dialog_size
 id scorllView
 id seall1
 id seall2
+id search
+id search_history_list_view
+id search_history_scrollview
+id search_results_list_view
+id search_view
 id signIn
 id sizeItem
 id size_name
@@ -316,6 +325,7 @@ id topicProduct
 id topicProduct2
 id tv1
 id tvTitleFav
+id tv_product_name
 id txtInputLayout1
 id txtInputLayout2
 id txt_address_users
@@ -351,6 +361,7 @@ layout activity_oder
 layout activity_onboard
 layout activity_product_detail
 layout activity_profile
+layout activity_search
 layout activity_sign_in
 layout activity_sign_up
 layout activity_splash
@@ -384,8 +395,11 @@ layout itemsize
 layout layout_dialog_custom_mail
 layout layout_dialog_custom_phone
 layout loading
+layout product_item
+layout search_history_item_layout
 menu bottom_menu
 menu nav_menu
+menu options_menu
 menu profile_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -393,7 +407,10 @@ string app_name
 string channel_description
 string channel_name
 string hello_blank_fragment
+string no_search_history
 string recovery
+string search
+string search_hint
 string smart_gorge
 string smart_gorge2
 string smart_gorge3

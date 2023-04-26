@@ -28,8 +28,11 @@
     <string name="channel_description">This is Channel 1</string>
     <string name="channel_name">Channel 1</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_search_history">not find Search history</string>
     <string name="recovery">Please Enter Your Email Address To
          Recieve a Verification Code</string>
+    <string name="search">Search</string>
+    <string name="search_hint">Looking for shoes</string>
     <string name="smart_gorge"><![CDATA[Smart, Gorgeous & Fashionable
 Collection]]></string>
     <string name="smart_gorge2"><![CDATA[There Are Many Beautiful And
