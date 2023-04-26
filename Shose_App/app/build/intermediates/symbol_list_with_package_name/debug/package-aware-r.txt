@@ -2855,6 +2855,7 @@ drawable baseline_notifications_active_24
 drawable baseline_notifications_none_24
 drawable baseline_payment_24
 drawable baseline_person_outline_24
+drawable baseline_search_24
 drawable baseline_shopping_bag_24
 drawable baseline_shopping_cart_24
 drawable baseline_task_alt_24
@@ -2904,6 +2905,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable drop_down_24
+drawable edittext_no_underline
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_arrow_back_black_24
@@ -3431,6 +3433,7 @@ id layoutGioHang
 id layoutGioHang_detail
 id layoutTitle
 id layout_aspect_ratio
+id layout_right_allproduct
 id layout_rotate_wheel
 id layout_scale_wheel
 id layoutbottom
@@ -3584,6 +3587,8 @@ id recyImageDetail
 id recySizeDetail
 id recy_1_product
 id recy_2_product
+id recy_3_product
+id recy_allproduct
 id recy_cancel
 id recy_cancel_oder_btn
 id recy_delivered
@@ -3613,8 +3618,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
-id seall1
-id seall2
+id seall
 id search_badge
 id search_bar
 id search_bar_text_view
@@ -3751,6 +3755,7 @@ id title_template
 id toggle
 id toolbar
 id toolbar2
+id toolbar_allproduct
 id toolbar_cancel_oder
 id toolbar_cart
 id toolbar_check_out_main
@@ -3764,6 +3769,7 @@ id top
 id topPanel
 id topicProduct
 id topicProduct2
+id topicProduct3
 id touch_outside
 id transitionToEnd
 id transitionToStart
@@ -3955,6 +3961,7 @@ layout activity_profile
 layout activity_sign_in
 layout activity_sign_up
 layout activity_splash
+layout allproduct_activity
 layout baseline_expand_more_24
 layout custom_dialog
 layout design_bottom_navigation_item

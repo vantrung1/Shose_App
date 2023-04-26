@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -36,8 +37,8 @@ import java.util.ArrayList;
 import edu.fpt.shose_app.Adapter.Brand_Adapter;
 import edu.fpt.shose_app.Adapter.ProducAdapter2;
 import edu.fpt.shose_app.Adapter.ProductAdapter;
+import edu.fpt.shose_app.Adapter.ProductAdapter3;
 import edu.fpt.shose_app.EventBus.BrandEvent;
-import edu.fpt.shose_app.EventBus.TotalEvent;
 import edu.fpt.shose_app.Model.Brand;
 import edu.fpt.shose_app.Model.Product;
 import edu.fpt.shose_app.Model.ProductRequest;
@@ -53,16 +54,17 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class HomeActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-    RecyclerView recyclerViewBrand,recy_1_product,recy_2_product;
+    RecyclerView recyclerViewBrand,recy_1_product,recy_2_product,recy_3_product;
     ArrayList<Brand> brandArrayList;
     ArrayList<Product> productArrayList;
-    ArrayList<Product> productArrayList2;
+    ArrayList<Product> productArrayList3;
     FloatingActionButton floatingActionButton;
     NavigationView navigationView_home;
     DrawerLayout drawerLayout_home;
     Brand_Adapter brand_adapter;
     ProductAdapter productAdapter;
     ProducAdapter2 productAdapter2;
+    ProductAdapter3 productAdapter3;
     Toolbar toolbar;
     Retrofit retrofit;
     Gson gson;
@@ -71,14 +73,14 @@ public class HomeActivity extends AppCompatActivity {
     private Handler handler = new Handler();
     private Runnable runnable;
     View header_view;
-    TextView txta;
+    TextView txta,textViewsee;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         brandArrayList = new ArrayList<>();
         productArrayList = new ArrayList<>();
-        //productArrayList2 = new ArrayList<>();
+        productArrayList3 = new ArrayList<>();
         gson = new GsonBuilder().setLenient().create();
         retrofit = new Retrofit.Builder()
                 .baseUrl(Utils.BASE_URL_API)
@@ -89,6 +91,7 @@ public class HomeActivity extends AppCompatActivity {
         brand_adapter = new Brand_Adapter(this,brandArrayList);
         productAdapter = new ProductAdapter(this,productArrayList);
         productAdapter2 = new ProducAdapter2(this,productArrayList);
+        productAdapter3 = new ProductAdapter3(this,productArrayList);
         initUi();
         initAction();
         initHeader();
@@ -173,11 +176,18 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+        textViewsee.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,AllProduct.class));
+            }
+        });
     }
 
     private void initUi() {
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         txta = findViewById(R.id.txta);
+        textViewsee = findViewById(R.id.seall);
         bottomNavigationView.setBackground(null);
         floatingActionButton = findViewById(R.id.fab_home);
         navigationView_home = findViewById(R.id.navigation);
@@ -191,19 +201,24 @@ public class HomeActivity extends AppCompatActivity {
         recyclerViewBrand = findViewById(R.id.RecyclerViewHome_brand);
         recy_1_product = findViewById(R.id.recy_1_product);
         recy_2_product = findViewById(R.id.recy_2_product);
+        recy_3_product = findViewById(R.id.recy_3_product);
         LinearLayoutManager layoutManager = new LinearLayoutManager(HomeActivity.this, LinearLayoutManager.HORIZONTAL, false);
         LinearLayoutManager layoutManager2 = new LinearLayoutManager(HomeActivity.this, LinearLayoutManager.HORIZONTAL, false);
         LinearLayoutManager layoutManager3 = new LinearLayoutManager(HomeActivity.this, LinearLayoutManager.HORIZONTAL, false);
+
         recyclerViewBrand.setLayoutManager(layoutManager);
         recy_1_product.setLayoutManager(layoutManager2);
+        recy_3_product.setLayoutManager(new GridLayoutManager(HomeActivity.this,2));
         recy_2_product.setLayoutManager(layoutManager3);
 
         recyclerViewBrand.setAdapter(brand_adapter);
         recy_1_product.setAdapter(productAdapter);
         recy_2_product.setAdapter(productAdapter2);
+        recy_3_product.setAdapter(productAdapter3);
 
 
         getallBrand();
+        getAllProduct();
 
 
         toolbar.setNavigationOnClickListener (new View.OnClickListener () {
@@ -247,6 +262,34 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void getAllProduct() {
+        Call<ArrayList<Product>> objgetBrands = apiInterface.getallProduct();
+        // thực hiện gọi
+        objgetBrands.enqueue(new Callback<ArrayList<Product>>() {
+            @Override
+            public void onResponse(Call<ArrayList<Product>> call, Response<ArrayList<Product>> response) {
+                if(response.isSuccessful()){
+                    ArrayList<Product> productRequest = response.body();
+
+
+
+
+                  //  productAdapter.setBrandSelected(productArrayList);
+                    productAdapter3.setProductArrayList(productRequest);
+                    Log.d("TAG", "onResponsesads: "+productRequest.size());
+
+
+                }
+            }
+
+            @Override
+            public void onFailure(Call<ArrayList<Product>> call, Throwable t) {
+                Log.d("ssssssssss", "onFailure: "+t.getLocalizedMessage());
+            }
+        });
+    }
+
     private void getallBrand(){
         Call<ArrayList<Brand>> objgetBrands = apiInterface.getAllBrand();
         // thực hiện gọi

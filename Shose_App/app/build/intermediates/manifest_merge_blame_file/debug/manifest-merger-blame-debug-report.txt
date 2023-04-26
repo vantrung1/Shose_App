@@ -6,306 +6,305 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml
+8-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="31" />
-9-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml
+9-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:6:5-67
-11-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:6:22-64
+11-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:6:5-67
+11-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:6:22-64
 12
 13    <queries>
-13-->[zpdk-release-v3.1.aar] /Users/vilong/.gradle/caches/transforms-3/42e2556a3029704008c3a1f7b7bdbb18/transformed/zpdk-release-v3.1/AndroidManifest.xml:9:5-13:15
+13-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\42e2556a3029704008c3a1f7b7bdbb18\transformed\zpdk-release-v3.1\AndroidManifest.xml:9:5-13:15
 14        <package android:name="vn.com.vng.zalopay.sb1" />
-14-->[zpdk-release-v3.1.aar] /Users/vilong/.gradle/caches/transforms-3/42e2556a3029704008c3a1f7b7bdbb18/transformed/zpdk-release-v3.1/AndroidManifest.xml:10:9-58
-14-->[zpdk-release-v3.1.aar] /Users/vilong/.gradle/caches/transforms-3/42e2556a3029704008c3a1f7b7bdbb18/transformed/zpdk-release-v3.1/AndroidManifest.xml:10:18-55
+14-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\42e2556a3029704008c3a1f7b7bdbb18\transformed\zpdk-release-v3.1\AndroidManifest.xml:10:9-58
+14-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\42e2556a3029704008c3a1f7b7bdbb18\transformed\zpdk-release-v3.1\AndroidManifest.xml:10:18-55
 15        <package android:name="vn.com.vng.zalopay" />
-15-->[zpdk-release-v3.1.aar] /Users/vilong/.gradle/caches/transforms-3/42e2556a3029704008c3a1f7b7bdbb18/transformed/zpdk-release-v3.1/AndroidManifest.xml:11:9-54
-15-->[zpdk-release-v3.1.aar] /Users/vilong/.gradle/caches/transforms-3/42e2556a3029704008c3a1f7b7bdbb18/transformed/zpdk-release-v3.1/AndroidManifest.xml:11:18-51
+15-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\42e2556a3029704008c3a1f7b7bdbb18\transformed\zpdk-release-v3.1\AndroidManifest.xml:11:9-54
+15-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\42e2556a3029704008c3a1f7b7bdbb18\transformed\zpdk-release-v3.1\AndroidManifest.xml:11:18-51
 16        <package android:name="com.zing.zalo" />
-16-->[zpdk-release-v3.1.aar] /Users/vilong/.gradle/caches/transforms-3/42e2556a3029704008c3a1f7b7bdbb18/transformed/zpdk-release-v3.1/AndroidManifest.xml:12:9-49
-16-->[zpdk-release-v3.1.aar] /Users/vilong/.gradle/caches/transforms-3/42e2556a3029704008c3a1f7b7bdbb18/transformed/zpdk-release-v3.1/AndroidManifest.xml:12:18-46
+16-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\42e2556a3029704008c3a1f7b7bdbb18\transformed\zpdk-release-v3.1\AndroidManifest.xml:12:9-49
+16-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\42e2556a3029704008c3a1f7b7bdbb18\transformed\zpdk-release-v3.1\AndroidManifest.xml:12:18-46
 17        <!-- Query Camera Packages -->
 18        <intent>
-18-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:12:9-14:18
+18-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:12:9-14:18
 19            <action android:name="android.media.action.IMAGE_CAPTURE" />
-19-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:13:13-73
-19-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:13:21-70
+19-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:13:13-73
+19-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:13:21-70
 20        </intent> <!-- Query Open Document -->
 21        <intent>
-21-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:16:9-18:18
+21-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:16:9-18:18
 22            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
-22-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:17:13-79
-22-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:17:21-76
+22-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:17:13-79
+22-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:17:21-76
 23        </intent>
 24    </queries>
 25
 26    <permission
-26-->[androidx.core:core:1.9.0] /Users/vilong/.gradle/caches/transforms-3/ec4f76f6c0c02de8ba18086e7bd9baf5/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+26-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 27        android:name="edu.fpt.shose_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-27-->[androidx.core:core:1.9.0] /Users/vilong/.gradle/caches/transforms-3/ec4f76f6c0c02de8ba18086e7bd9baf5/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+27-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 28        android:protectionLevel="signature" />
-28-->[androidx.core:core:1.9.0] /Users/vilong/.gradle/caches/transforms-3/ec4f76f6c0c02de8ba18086e7bd9baf5/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+28-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 29
 30    <uses-permission android:name="edu.fpt.shose_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-30-->[androidx.core:core:1.9.0] /Users/vilong/.gradle/caches/transforms-3/ec4f76f6c0c02de8ba18086e7bd9baf5/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
-30-->[androidx.core:core:1.9.0] /Users/vilong/.gradle/caches/transforms-3/ec4f76f6c0c02de8ba18086e7bd9baf5/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+30-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+30-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 31
 32    <application
-32-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:8:5-92:19
-33        android:name="edu.fpt.shose_app.Activity.MyApplication"
-33-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:9:9-47
-34        android:allowBackup="true"
-34-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:10:9-35
-35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-35-->[androidx.core:core:1.9.0] /Users/vilong/.gradle/caches/transforms-3/ec4f76f6c0c02de8ba18086e7bd9baf5/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
-36        android:dataExtractionRules="@xml/data_extraction_rules"
-36-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:11:9-65
-37        android:debuggable="true"
-38        android:fullBackupContent="@xml/backup_rules"
-38-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:12:9-54
-39        android:icon="@mipmap/ic_launcher"
-39-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:13:9-43
-40        android:label="@string/app_name"
-40-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:14:9-41
-41        android:networkSecurityConfig="@xml/network_security_config"
-41-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:15:9-69
-42        android:roundIcon="@mipmap/ic_launcher_round"
-42-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:16:9-54
-43        android:supportsRtl="true"
-43-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:17:9-35
-44        android:testOnly="true"
-45        android:theme="@style/Theme.Shose_App"
-45-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:18:9-47
-46        android:usesCleartextTraffic="true" >
-46-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:19:9-44
-47        <activity
-47-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:21:9-23:48
-48            android:name="edu.fpt.shose_app.Activity.Notification"
-48-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:22:13-50
-49            android:exported="true" />
-49-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:23:13-36
+32-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:8:5-93:19
+33        android:allowBackup="true"
+33-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:9:9-35
+34        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+34-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\ec4f76f6c0c02de8ba18086e7bd9baf5\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+35        android:dataExtractionRules="@xml/data_extraction_rules"
+35-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:10:9-65
+36        android:debuggable="true"
+37        android:fullBackupContent="@xml/backup_rules"
+37-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:11:9-54
+38        android:icon="@mipmap/ic_launcher"
+38-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:12:9-43
+39        android:label="@string/app_name"
+39-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:13:9-41
+40        android:networkSecurityConfig="@xml/network_security_config"
+40-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:14:9-69
+41        android:roundIcon="@mipmap/ic_launcher_round"
+41-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:15:9-54
+42        android:supportsRtl="true"
+42-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:16:9-35
+43        android:testOnly="true"
+44        android:theme="@style/Theme.Shose_App"
+44-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:17:9-47
+45        android:usesCleartextTraffic="true" >
+45-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:18:9-44
+46        <activity
+46-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:20:9-24:20
+47            android:name="edu.fpt.shose_app.Activity.CancelOderBtnActivity"
+47-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:21:13-59
+48            android:exported="true" >
+48-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:22:13-36
+49        </activity>
 50        <activity
-50-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:24:9-26:48
-51            android:name="edu.fpt.shose_app.Activity.CancelOderBtnActivity"
-51-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:25:13-59
-52            android:exported="true" />
-52-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:26:13-36
+50-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:25:9-27:40
+51            android:name="edu.fpt.shose_app.Activity.ChatBoxActivity"
+51-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:26:13-53
+52            android:exported="false" />
+52-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:27:13-37
 53        <activity
-53-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:27:9-29:40
-54            android:name="edu.fpt.shose_app.Activity.ChatBoxActivity"
-54-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:28:13-53
+53-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:28:9-30:40
+54            android:name="edu.fpt.shose_app.Activity.AllProduct"
+54-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:29:13-48
 55            android:exported="false" />
-55-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:29:13-37
+55-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:30:13-37
 56        <activity
-56-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:30:9-32:39
+56-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:31:9-33:39
 57            android:name="edu.fpt.shose_app.Activity.OderActivity"
-57-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:31:13-50
+57-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:32:13-50
 58            android:exported="true" />
-58-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:32:13-36
+58-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:33:13-36
 59        <activity
-59-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:33:9-35:40
+59-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:34:9-36:40
 60            android:name="edu.fpt.shose_app.Activity.FavouriteActivity"
-60-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:34:13-55
+60-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:35:13-55
 61            android:exported="false" />
-61-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:35:13-37
+61-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:36:13-37
 62        <activity
-62-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:36:9-38:40
+62-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:37:9-39:40
 63            android:name="edu.fpt.shose_app.Activity.ProductDetailActivity"
-63-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:37:13-59
+63-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:38:13-59
 64            android:exported="false" />
-64-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:38:13-37
+64-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:39:13-37
 65        <activity
-65-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:39:9-41:39
+65-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:40:9-42:39
 66            android:name="edu.fpt.shose_app.Activity.HomeActivity"
-66-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:40:13-50
+66-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:41:13-50
 67            android:exported="true" />
-67-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:41:13-36
+67-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:42:13-36
 68        <activity
-68-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:42:9-44:39
+68-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:43:9-45:39
 69            android:name="edu.fpt.shose_app.Activity.MyCartActivity"
-69-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:43:13-52
+69-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:44:13-52
 70            android:exported="true" />
-70-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:44:13-36
+70-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:45:13-36
 71
 72        <meta-data
-72-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:46:9-48:69
+72-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:47:9-49:69
 73            android:name="com.google.android.gms.version"
-73-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:47:13-58
+73-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:48:13-58
 74            android:value="@integer/google_play_services_version" />
-74-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:48:13-66
+74-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:49:13-66
 75
 76        <activity
-76-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:50:9-52:40
+76-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:51:9-53:40
 77            android:name="edu.fpt.shose_app.Activity.FogetPassActivity"
-77-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:51:13-55
+77-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:52:13-55
 78            android:exported="false" />
-78-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:52:13-37
+78-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:53:13-37
 79        <activity
-79-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:53:9-55:40
+79-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:54:9-56:40
 80            android:name="edu.fpt.shose_app.Activity.ProfileActivity"
-80-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:54:13-53
+80-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:55:13-53
 81            android:exported="false" />
-81-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:55:13-37
+81-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:56:13-37
 82        <activity
-82-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:56:9-58:39
+82-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:57:9-59:39
 83            android:name="edu.fpt.shose_app.Activity.SignUpActivity"
-83-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:57:13-52
+83-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:58:13-52
 84            android:exported="true" />
-84-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:58:13-36
+84-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:59:13-36
 85        <activity
-85-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:59:9-67:20
+85-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:60:9-68:20
 86            android:name="edu.fpt.shose_app.Activity.SignInActivity"
-86-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:60:13-52
+86-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:61:13-52
 87            android:exported="true" >
-87-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:61:13-36
+87-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:62:13-36
 88            <intent-filter>
-88-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:62:13-66:29
+88-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:63:13-67:29
 89                <action android:name="android.intent.action.MAIN" />
-89-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:63:17-69
-89-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:63:25-66
+89-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:64:17-69
+89-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:64:25-66
 90
 91                <category android:name="android.intent.category.LAUNCHER" />
-91-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:65:17-77
-91-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:65:27-74
+91-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:66:17-77
+91-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:66:27-74
 92            </intent-filter>
 93        </activity>
 94        <activity
-94-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:68:9-70:39
+94-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:69:9-71:39
 95            android:name="edu.fpt.shose_app.Activity.Onboard_Activity"
-95-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:69:13-54
+95-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:70:13-54
 96            android:exported="true" />
-96-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:70:13-36
+96-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:71:13-36
 97        <activity
-97-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:71:9-73:39
+97-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:72:9-74:39
 98            android:name="edu.fpt.shose_app.Activity.splash_activity"
-98-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:72:13-53
+98-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:73:13-53
 99            android:exported="true" />
-99-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:73:13-36
+99-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:74:13-36
 100        <activity
-100-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:74:9-76:39
+100-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:75:9-77:39
 101            android:name="edu.fpt.shose_app.MainActivity"
-101-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:75:13-41
+101-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:76:13-41
 102            android:exported="true" />
-102-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:76:13-36
+102-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:77:13-36
 103        <activity
-103-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:77:9-91:20
+103-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:78:9-92:20
 104            android:name="edu.fpt.shose_app.Activity.Check_Out_MainActivity"
-104-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:78:13-60
+104-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:79:13-60
 105            android:exported="true"
-105-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:79:13-36
+105-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:80:13-36
 106            android:launchMode="singleInstance" >
-106-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:80:13-48
+106-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:81:13-48
 107            <intent-filter>
-107-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:81:13-90:29
+107-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:82:13-91:29
 108                <action android:name="android.intent.action.VIEW" />
-108-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:82:17-69
-108-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:82:25-66
+108-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:83:17-69
+108-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:83:25-66
 109
 110                <category android:name="android.intent.category.DEFAULT" />
-110-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:84:17-76
-110-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:84:27-73
+110-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:85:17-76
+110-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:85:27-73
 111                <category android:name="android.intent.category.BROWSABLE" />
-111-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:85:17-78
-111-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:85:27-75
+111-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:86:17-78
+111-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:86:27-75
 112
 113                <data
-113-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:87:17-89:49
+113-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:88:17-90:49
 114                    android:host="app"
-114-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:88:21-39
+114-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:89:21-39
 115                    android:scheme="demozpdk" />
-115-->/Users/vilong/Desktop/Shose_App222/Shose_App/app/src/main/AndroidManifest.xml:89:21-46
+115-->C:\FPTPoly\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:90:21-46
 116            </intent-filter>
 117        </activity>
 118        <activity
-118-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:22:9-25:68
+118-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:22:9-25:68
 119            android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
-119-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:23:13-81
+119-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:23:13-81
 120            android:screenOrientation="unspecified"
-120-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:24:13-52
+120-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:24:13-52
 121            android:theme="@style/Theme.Transparent.ImagePicker" />
-121-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:25:13-65
+121-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:25:13-65
 122        <activity
-122-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:26:9-29:72
+122-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:26:9-29:72
 123            android:name="com.yalantis.ucrop.UCropActivity"
-123-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:27:13-60
+123-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:27:13-60
 124            android:screenOrientation="portrait"
-124-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:28:13-49
+124-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:28:13-49
 125            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-125-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:29:13-69
+125-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:29:13-69
 126
 127        <provider
-127-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:31:9-39:20
+127-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:31:9-39:20
 128            android:name="com.github.dhaval2404.imagepicker.ImagePickerFileProvider"
-128-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:32:13-85
+128-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:32:13-85
 129            android:authorities="edu.fpt.shose_app.imagepicker.provider"
-129-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:33:13-72
+129-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:33:13-72
 130            android:exported="false"
-130-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:34:13-37
+130-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:34:13-37
 131            android:grantUriPermissions="true" >
-131-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:35:13-47
+131-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:35:13-47
 132            <meta-data
-132-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:36:13-38:71
+132-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:36:13-38:71
 133                android:name="android.support.FILE_PROVIDER_PATHS"
-133-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:37:17-67
+133-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:37:17-67
 134                android:resource="@xml/image_picker_provider_paths" />
-134-->[com.github.dhaval2404:imagepicker:2.1] /Users/vilong/.gradle/caches/transforms-3/191d848142ba946d1d6e118669c19e1d/transformed/imagepicker-2.1/AndroidManifest.xml:38:17-68
+134-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\191d848142ba946d1d6e118669c19e1d\transformed\imagepicker-2.1\AndroidManifest.xml:38:17-68
 135        </provider>
 136
 137        <activity
-137-->[com.google.android.gms:play-services-auth:20.5.0] /Users/vilong/.gradle/caches/transforms-3/d6e96108f3985c002934a33d89f2a9a0/transformed/play-services-auth-20.5.0/AndroidManifest.xml:23:9-27:75
+137-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\d6e96108f3985c002934a33d89f2a9a0\transformed\play-services-auth-20.5.0\AndroidManifest.xml:23:9-27:75
 138            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-138-->[com.google.android.gms:play-services-auth:20.5.0] /Users/vilong/.gradle/caches/transforms-3/d6e96108f3985c002934a33d89f2a9a0/transformed/play-services-auth-20.5.0/AndroidManifest.xml:24:13-93
+138-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\d6e96108f3985c002934a33d89f2a9a0\transformed\play-services-auth-20.5.0\AndroidManifest.xml:24:13-93
 139            android:excludeFromRecents="true"
-139-->[com.google.android.gms:play-services-auth:20.5.0] /Users/vilong/.gradle/caches/transforms-3/d6e96108f3985c002934a33d89f2a9a0/transformed/play-services-auth-20.5.0/AndroidManifest.xml:25:13-46
+139-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\d6e96108f3985c002934a33d89f2a9a0\transformed\play-services-auth-20.5.0\AndroidManifest.xml:25:13-46
 140            android:exported="false"
-140-->[com.google.android.gms:play-services-auth:20.5.0] /Users/vilong/.gradle/caches/transforms-3/d6e96108f3985c002934a33d89f2a9a0/transformed/play-services-auth-20.5.0/AndroidManifest.xml:26:13-37
+140-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\d6e96108f3985c002934a33d89f2a9a0\transformed\play-services-auth-20.5.0\AndroidManifest.xml:26:13-37
 141            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-141-->[com.google.android.gms:play-services-auth:20.5.0] /Users/vilong/.gradle/caches/transforms-3/d6e96108f3985c002934a33d89f2a9a0/transformed/play-services-auth-20.5.0/AndroidManifest.xml:27:13-72
+141-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\d6e96108f3985c002934a33d89f2a9a0\transformed\play-services-auth-20.5.0\AndroidManifest.xml:27:13-72
 142        <!--
 143            Service handling Google Sign-In user revocation. For apps that do not integrate with
 144            Google Sign-In, this service will never be started.
 145        -->
 146        <service
-146-->[com.google.android.gms:play-services-auth:20.5.0] /Users/vilong/.gradle/caches/transforms-3/d6e96108f3985c002934a33d89f2a9a0/transformed/play-services-auth-20.5.0/AndroidManifest.xml:33:9-37:51
+146-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\d6e96108f3985c002934a33d89f2a9a0\transformed\play-services-auth-20.5.0\AndroidManifest.xml:33:9-37:51
 147            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-147-->[com.google.android.gms:play-services-auth:20.5.0] /Users/vilong/.gradle/caches/transforms-3/d6e96108f3985c002934a33d89f2a9a0/transformed/play-services-auth-20.5.0/AndroidManifest.xml:34:13-89
+147-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\d6e96108f3985c002934a33d89f2a9a0\transformed\play-services-auth-20.5.0\AndroidManifest.xml:34:13-89
 148            android:exported="true"
-148-->[com.google.android.gms:play-services-auth:20.5.0] /Users/vilong/.gradle/caches/transforms-3/d6e96108f3985c002934a33d89f2a9a0/transformed/play-services-auth-20.5.0/AndroidManifest.xml:35:13-36
+148-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\d6e96108f3985c002934a33d89f2a9a0\transformed\play-services-auth-20.5.0\AndroidManifest.xml:35:13-36
 149            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-149-->[com.google.android.gms:play-services-auth:20.5.0] /Users/vilong/.gradle/caches/transforms-3/d6e96108f3985c002934a33d89f2a9a0/transformed/play-services-auth-20.5.0/AndroidManifest.xml:36:13-107
+149-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\d6e96108f3985c002934a33d89f2a9a0\transformed\play-services-auth-20.5.0\AndroidManifest.xml:36:13-107
 150            android:visibleToInstantApps="true" />
-150-->[com.google.android.gms:play-services-auth:20.5.0] /Users/vilong/.gradle/caches/transforms-3/d6e96108f3985c002934a33d89f2a9a0/transformed/play-services-auth-20.5.0/AndroidManifest.xml:37:13-48
+150-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\d6e96108f3985c002934a33d89f2a9a0\transformed\play-services-auth-20.5.0\AndroidManifest.xml:37:13-48
 151
 152        <activity
-152-->[com.google.android.gms:play-services-base:18.2.0] /Users/vilong/.gradle/caches/transforms-3/7dfdc441e22278a3766f7be1eb5d08c2/transformed/play-services-base-18.2.0/AndroidManifest.xml:20:9-22:45
+152-->[com.google.android.gms:play-services-base:18.2.0] C:\Users\admin\.gradle\caches\transforms-3\7dfdc441e22278a3766f7be1eb5d08c2\transformed\play-services-base-18.2.0\AndroidManifest.xml:20:9-22:45
 153            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-153-->[com.google.android.gms:play-services-base:18.2.0] /Users/vilong/.gradle/caches/transforms-3/7dfdc441e22278a3766f7be1eb5d08c2/transformed/play-services-base-18.2.0/AndroidManifest.xml:20:19-85
+153-->[com.google.android.gms:play-services-base:18.2.0] C:\Users\admin\.gradle\caches\transforms-3\7dfdc441e22278a3766f7be1eb5d08c2\transformed\play-services-base-18.2.0\AndroidManifest.xml:20:19-85
 154            android:exported="false"
-154-->[com.google.android.gms:play-services-base:18.2.0] /Users/vilong/.gradle/caches/transforms-3/7dfdc441e22278a3766f7be1eb5d08c2/transformed/play-services-base-18.2.0/AndroidManifest.xml:22:19-43
+154-->[com.google.android.gms:play-services-base:18.2.0] C:\Users\admin\.gradle\caches\transforms-3\7dfdc441e22278a3766f7be1eb5d08c2\transformed\play-services-base-18.2.0\AndroidManifest.xml:22:19-43
 155            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-155-->[com.google.android.gms:play-services-base:18.2.0] /Users/vilong/.gradle/caches/transforms-3/7dfdc441e22278a3766f7be1eb5d08c2/transformed/play-services-base-18.2.0/AndroidManifest.xml:21:19-78
+155-->[com.google.android.gms:play-services-base:18.2.0] C:\Users\admin\.gradle\caches\transforms-3\7dfdc441e22278a3766f7be1eb5d08c2\transformed\play-services-base-18.2.0\AndroidManifest.xml:21:19-78
 156
 157        <provider
-157-->[androidx.emoji2:emoji2:1.2.0] /Users/vilong/.gradle/caches/transforms-3/791b39fe68826e8543c46f2d7f8b152e/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+157-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
 158            android:name="androidx.startup.InitializationProvider"
-158-->[androidx.emoji2:emoji2:1.2.0] /Users/vilong/.gradle/caches/transforms-3/791b39fe68826e8543c46f2d7f8b152e/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+158-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
 159            android:authorities="edu.fpt.shose_app.androidx-startup"
-159-->[androidx.emoji2:emoji2:1.2.0] /Users/vilong/.gradle/caches/transforms-3/791b39fe68826e8543c46f2d7f8b152e/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+159-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
 160            android:exported="false" >
-160-->[androidx.emoji2:emoji2:1.2.0] /Users/vilong/.gradle/caches/transforms-3/791b39fe68826e8543c46f2d7f8b152e/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+160-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
 161            <meta-data
-161-->[androidx.emoji2:emoji2:1.2.0] /Users/vilong/.gradle/caches/transforms-3/791b39fe68826e8543c46f2d7f8b152e/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+161-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
 162                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-162-->[androidx.emoji2:emoji2:1.2.0] /Users/vilong/.gradle/caches/transforms-3/791b39fe68826e8543c46f2d7f8b152e/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+162-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
 163                android:value="androidx.startup" />
-163-->[androidx.emoji2:emoji2:1.2.0] /Users/vilong/.gradle/caches/transforms-3/791b39fe68826e8543c46f2d7f8b152e/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+163-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\791b39fe68826e8543c46f2d7f8b152e\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
 164            <meta-data
-164-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/vilong/.gradle/caches/transforms-3/86041ab2b0d2128b301212662b855cec/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+164-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\admin\.gradle\caches\transforms-3\86041ab2b0d2128b301212662b855cec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
 165                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-165-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/vilong/.gradle/caches/transforms-3/86041ab2b0d2128b301212662b855cec/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+165-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\admin\.gradle\caches\transforms-3\86041ab2b0d2128b301212662b855cec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
 166                android:value="androidx.startup" />
-166-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/vilong/.gradle/caches/transforms-3/86041ab2b0d2128b301212662b855cec/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+166-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\admin\.gradle\caches\transforms-3\86041ab2b0d2128b301212662b855cec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
 167        </provider>
 168    </application>
 169

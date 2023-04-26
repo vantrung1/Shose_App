@@ -54,6 +54,9 @@
             android:name="edu.fpt.shose_app.Activity.ChatBoxActivity"
             android:exported="false" />
         <activity
+            android:name="edu.fpt.shose_app.Activity.AllProduct"
+            android:exported="false" />
+        <activity
             android:name="edu.fpt.shose_app.Activity.OderActivity"
             android:exported="true" />
         <activity
