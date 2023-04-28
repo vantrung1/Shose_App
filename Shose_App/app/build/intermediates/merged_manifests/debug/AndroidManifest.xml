@@ -44,11 +44,16 @@
         android:theme="@style/Theme.Shose_App"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="edu.fpt.shose_app.OderProductReviewsActivity"
+            android:exported="false" />
+        <activity
             android:name="edu.fpt.shose_app.Activity.CancelOderBtnActivity"
-            android:exported="true" >
-        </activity>
+            android:exported="true" />
         <activity
             android:name="edu.fpt.shose_app.Activity.ChatBoxActivity"
+            android:exported="false" />
+        <activity
+            android:name="edu.fpt.shose_app.Activity.Cancel_detail_activity"
             android:exported="false" />
         <activity
             android:name="edu.fpt.shose_app.Activity.OderActivity"

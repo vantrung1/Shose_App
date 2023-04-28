@@ -94,6 +94,7 @@ public class WaitForConfirmationFragment extends Fragment {
 
                     Log.d("zzzzzz", "onResponse: " + oderArrayList.size());
                     oderAdapter.setorderlist(oderArrayList);
+
                 }
             }
 

@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -21,6 +22,8 @@ import edu.fpt.shose_app.Model.Oder;
 import edu.fpt.shose_app.R;
 
 public class DeliveredAdapter extends RecyclerView.Adapter<DeliveredAdapter.myviewHolder> {
+    private edu.fpt.shose_app.Adapter.Products_Oder_Adapter products_oder_adapter;
+    RecyclerView recyclerView;
     private Context context;
     private ArrayList<Oder> oderArrayList;
 
@@ -44,14 +47,7 @@ public class DeliveredAdapter extends RecyclerView.Adapter<DeliveredAdapter.myvi
 
     @Override
     public void onBindViewHolder(@NonNull DeliveredAdapter.myviewHolder holder, int position) {
-        Glide.with(context).load(oderArrayList.get(position).getProducts().get(0).getImage()).placeholder(R.drawable.product).into(holder.item_img_delivered);
-        holder.txtAttributes.setText(oderArrayList.get(position).getProducts().get(0).getAttributes() + "");
-        holder.txtName.setText(oderArrayList.get(position).getProducts().get(0).getName() + "");
-        holder.txtQuantity.setText("x" + oderArrayList.get(position).getProducts().get(0).getQuantity());
         holder.txt_quantity2.setText(oderArrayList.get(position).getQuantity() + "sản phẩm");
-        holder.txtPrice.setText(new DecimalFormat("###,###,###").format(oderArrayList.get(position).getProducts().get(0).getPrice()));
-        holder.txtPrice.setPaintFlags(  holder.txtPrice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-        holder.txtSale.setText(new DecimalFormat("###,###,###").format(oderArrayList.get(position).getProducts().get(0).getSale()));
         holder.txtTotal.setText(oderArrayList.get(position).getTotal());
     }
 
@@ -61,21 +57,19 @@ public class DeliveredAdapter extends RecyclerView.Adapter<DeliveredAdapter.myvi
     }
 
     public class myviewHolder extends RecyclerView.ViewHolder {
-        ImageView item_img_delivered;
-        TextView txtName, txtAttributes, txtQuantity, txt_quantity2, txtPrice, txtSale, txtTotal;
+        TextView  txt_quantity2, txtTotal, txtShow;
         AppCompatButton appCompatButton;
 
         public myviewHolder(@NonNull View itemView) {
             super(itemView);
-            item_img_delivered = itemView.findViewById(R.id.item_img_delivered);
-            txtName = itemView.findViewById(R.id.item_txt_name_delivered);
-            txtAttributes = itemView.findViewById(R.id.item_txt_attributes_delivered);
-            txtQuantity = itemView.findViewById(R.id.item_txt_quantity_delivered);
             txt_quantity2 = itemView.findViewById(R.id.item_txt_quantity2);
-            txtPrice = itemView.findViewById(R.id.item_txt_price_delivered);
-            txtSale = itemView.findViewById(R.id.item_txt_sale_delivered);
             txtTotal = itemView.findViewById(R.id.item_txt_total_delivered);
             appCompatButton = itemView.findViewById(R.id.btn_delivered);
+            txtShow = itemView.findViewById(R.id.txt_show_more);
+            recyclerView = itemView.findViewById(R.id.recy_delivered);
+            recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
+            products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(0).getProducts());
+            recyclerView.setAdapter(products_oder_adapter);
         }
     }
 }

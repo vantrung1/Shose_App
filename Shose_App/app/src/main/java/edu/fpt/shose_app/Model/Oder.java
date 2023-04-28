@@ -7,6 +7,7 @@ import java.util.Map;
 public class Oder implements Serializable {
     private int id;
     private int id_Oder;
+    private String name;
     private int quantity;
     private int price;
     private List< Products_Oder> products;
@@ -20,9 +21,10 @@ public class Oder implements Serializable {
     private String created_at;
     private String updated_at;
 
-    public Oder(int id, int id_Oder, int quantity, int price, List<Products_Oder> products, int status, int user_id, int id_address, String number, String total, String note, String paymentAmount, String created_at, String updated_at) {
+    public Oder(int id, int id_Oder, String name, int quantity, int price, List<Products_Oder> products, int status, int user_id, int id_address, String number, String total, String note, String paymentAmount, String created_at, String updated_at) {
         this.id = id;
         this.id_Oder = id_Oder;
+        this.name = name;
         this.quantity = quantity;
         this.price = price;
         this.products = products;
@@ -51,6 +53,14 @@ public class Oder implements Serializable {
 
     public void setId_Oder(int id_Oder) {
         this.id_Oder = id_Oder;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getQuantity() {
