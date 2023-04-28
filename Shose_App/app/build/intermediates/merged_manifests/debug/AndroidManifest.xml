@@ -30,7 +30,6 @@
     <uses-permission android:name="edu.fpt.shose_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
 
     <application
-        android:name="edu.fpt.shose_app.Activity.MyApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -45,16 +44,13 @@
         android:theme="@style/Theme.Shose_App"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name="edu.fpt.shose_app.Activity.Notification"
-            android:exported="true" />
+            android:name="edu.fpt.shose_app.Activity.Cancel_detail_activity"
+            android:exported="false" />
         <activity
             android:name="edu.fpt.shose_app.Activity.CancelOderBtnActivity"
             android:exported="true" />
         <activity
             android:name="edu.fpt.shose_app.Activity.ChatBoxActivity"
-            android:exported="false" />
-        <activity
-            android:name="edu.fpt.shose_app.Activity.AllProduct"
             android:exported="false" />
         <activity
             android:name="edu.fpt.shose_app.Activity.OderActivity"

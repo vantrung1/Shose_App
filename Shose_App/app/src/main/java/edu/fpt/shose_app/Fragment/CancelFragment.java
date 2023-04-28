@@ -64,7 +64,7 @@ public class CancelFragment extends Fragment {
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
         apiInterface = retrofit.create(ApiApp.class);
-        get_oder(Utils.Users_Utils.getId(), 2);
+        get_oder(Utils.Users_Utils.getId(), 4);
         oderArrayList = new ArrayList<>();
         cancelAdapterOder = new CancelAdapterOder(getActivity(), oderArrayList);
         recy_cancel.setAdapter(cancelAdapterOder);

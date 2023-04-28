@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
@@ -43,6 +44,9 @@ import edu.fpt.shose_app.R;
 import edu.fpt.shose_app.Retrofit.ApiApp;
 import edu.fpt.shose_app.Utils.Utils;
 import edu.fpt.shose_app.dialogModel.dialogProduct;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -77,7 +81,6 @@ public class CancelOderBtnActivity extends AppCompatActivity {
         txtPhone = findViewById(R.id.txt_phone_users);
         txtAddress = findViewById(R.id.txt_address_users);
         txtPaymentAmount = findViewById(R.id.txt_paymentAmount);
-        txtNameProduct = findViewById(R.id.item_txt_name_cancel);
         txtTotal = findViewById(R.id.txt_total);
         txtCreateAt = findViewById(R.id.txt_createAt);
         txtTotal2 = findViewById(R.id.txt_total2);
@@ -107,6 +110,7 @@ public class CancelOderBtnActivity extends AppCompatActivity {
         products_oder_adapter = new Products_Oder_Adapter(this, oder.getProducts());
         recyclerView.setAdapter(products_oder_adapter);
 
+        txtNameUser.setText(oder.getName());
         txtPhone.setText(oder.getNumber());
         txtPaymentAmount.setText(oder.getPaymentAmount());
         txtCreateAt.setText(oder.getCreated_at());
@@ -122,11 +126,24 @@ public class CancelOderBtnActivity extends AppCompatActivity {
         RadioButton radioButton2 = dialog.findViewById(R.id.rd_reason_cancel2);
         RadioButton radioButton3 = dialog.findViewById(R.id.rd_reason_cancel3);
         RadioButton radioButton4 = dialog.findViewById(R.id.rd_reason_cancel4);
+        RadioButton radioButton5 = dialog.findViewById(R.id.rd_reason_cancel5);
+        RadioButton radioButton6 = dialog.findViewById(R.id.rd_reason_cancel6);
+        AppCompatButton btn = dialog.findViewById(R.id.btn_submit);
 
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dialog.dismiss();
+            }
+        });
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                put_status_oder();
+                dialog.dismiss();
+                Intent i = new Intent(getApplicationContext(), OderActivity.class);
+                startActivity(i);
+
             }
         });
 
@@ -135,5 +152,24 @@ public class CancelOderBtnActivity extends AppCompatActivity {
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
         dialog.getWindow().setGravity(Gravity.BOTTOM);
+    }
+
+    public void put_status_oder() {
+        Call<Oder> objPutOder = apiInterface.putOder(oder.getId(), 4);
+
+        objPutOder.enqueue(new Callback<Oder>() {
+
+            @Override
+            public void onResponse(Call<Oder> call, Response<Oder> response) {
+                if (response.isSuccessful()) {
+                    Oder oder = response.body();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Oder> call, Throwable t) {
+
+            }
+        });
     }
 }
