@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "210116168494",
+    "project_id": "shoesapp-c1f6e",
+    "storage_bucket": "shoesapp-c1f6e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210116168494:android:b1047e4ef066b1410048bf",
+        "android_client_info": {
+          "package_name": "edu.fpt.shose_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "210116168494-1b9b2c9nf9u7opbbi4qjpckncepd5s28.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVRbH4XpkTWLeuBf98qLY3ivOMlaP4FcU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "210116168494-1b9b2c9nf9u7opbbi4qjpckncepd5s28.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

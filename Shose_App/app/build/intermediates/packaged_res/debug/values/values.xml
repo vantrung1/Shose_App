@@ -16,12 +16,20 @@
     <color name="white">#FFFFFFFF</color>
     <color name="xam">#707B81</color>
     <color name="xam_nhe">#E5E6E6</color>
+    <color name="xanh">#00ABFD</color>
     <dimen name="settings_container_padding">16dp</dimen>
     <dimen name="settings_divider_height">1dp</dimen>
     <dimen name="settings_icon_end_margin">16dp</dimen>
     <dimen name="settings_icon_width_and_height">24dp</dimen>
     <string name="app_name">Shose_App</string>
+    <string name="default_web_client_id" translatable="false">210116168494-1b9b2c9nf9u7opbbi4qjpckncepd5s28.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">210116168494</string>
+    <string name="google_api_key" translatable="false">AIzaSyCVRbH4XpkTWLeuBf98qLY3ivOMlaP4FcU</string>
+    <string name="google_app_id" translatable="false">1:210116168494:android:b1047e4ef066b1410048bf</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCVRbH4XpkTWLeuBf98qLY3ivOMlaP4FcU</string>
+    <string name="google_storage_bucket" translatable="false">shoesapp-c1f6e.appspot.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="project_id" translatable="false">shoesapp-c1f6e</string>
     <string name="recovery">Please Enter Your Email Address To
          Recieve a Verification Code</string>
     <string name="smart_gorge"><![CDATA[Smart, Gorgeous & Fashionable
@@ -30,6 +38,7 @@ Collection]]></string>
 Attractive Plants To Your Room]]></string>
     <string name="smart_gorge3"><![CDATA[Amet Minim Lit Nodeseru Saku
 Nandu sit Alique Dolor]]></string>
+    <string name="strThongBao">Thông báo</string>
     <style name="AppSettings_imageView_icon">
         <item name="android:layout_width">@dimen/settings_icon_width_and_height</item>
         <item name="android:layout_height">@dimen/settings_icon_width_and_height</item>

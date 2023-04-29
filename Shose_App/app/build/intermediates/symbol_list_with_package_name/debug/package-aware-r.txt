@@ -1359,6 +1359,10 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color browser_actions_bg_grey
+color browser_actions_divider_color
+color browser_actions_text_color
+color browser_actions_title_color
 color button
 color button_material_dark
 color button_material_light
@@ -2009,6 +2013,7 @@ color ucrop_scale_text_view_selector
 color white
 color xam
 color xam_nhe
+color xanh
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -2091,6 +2096,8 @@ dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen appcompat_dialog_background_inset
+dimen browser_actions_context_menu_max_width
+dimen browser_actions_context_menu_min_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -2826,7 +2833,9 @@ drawable backgroud_circle
 drawable background_btn_dangnhap
 drawable background_btn_dangnhapgmail
 drawable background_buttom_sheet
+drawable background_dialog
 drawable background_item_my_cart
+drawable background_tittle
 drawable bag
 drawable baseline_add_24
 drawable baseline_border_color_24
@@ -3129,14 +3138,22 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id browser_actions_header_text
+id browser_actions_menu_item_icon
+id browser_actions_menu_item_text
+id browser_actions_menu_items
+id browser_actions_menu_view
 id btnGmail
 id btnLogin
+id btnThongBao
 id btn_OnboardNext
 id btn_Payment
 id btn_addCart
 id btn_checkout
 id btn_create
+id btn_thaydoi
 id btn_xacnhan
+id btncontinue
 id btnloginGmail
 id buttonPanel
 id cache_measures
@@ -3225,11 +3242,14 @@ id easeInOut
 id easeOut
 id east
 id edEmail
+id edNewPass
+id edReNewPass
 id edUsername
 id ed_Email
 id ed_password
 id edchangepassword
 id edit_query
+id edoldpass
 id edpassword
 id elastic
 id embed
@@ -3477,6 +3497,7 @@ id profile_image_header
 id profile_name
 id profile_password
 id profile_phone
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
@@ -3666,6 +3687,8 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tv1
+id tvMess
+id tvThongBao
 id tvTitleFav
 id tv_badge_text
 id txtInputLayout1
@@ -3822,6 +3845,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_account_settings
+layout activity_change_password
 layout activity_check_out_main
 layout activity_favourite
 layout activity_foget_pass
@@ -3835,6 +3859,8 @@ layout activity_sign_in
 layout activity_sign_up
 layout activity_splash
 layout baseline_expand_more_24
+layout browser_actions_context_menu_page
+layout browser_actions_context_menu_row
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3852,8 +3878,10 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_choose_app
+layout dialog_thong_bao
 layout dialog_update_cart
 layout drop_down_item
+layout fragment_change_password
 layout fragment_onboadrd2
 layout fragment_onboadrd3
 layout fragment_onboard1
@@ -3940,6 +3968,7 @@ menu ucrop_menu_activity
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw firebase_common_keep
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -3999,6 +4028,8 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string copy_toast_msg
+string default_web_client_id
 string error_a11y_label
 string error_camera_app_not_found
 string error_failed_pick_gallery_image
@@ -4010,6 +4041,14 @@ string error_task_cancelled
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fallback_menu_item_copy_link
+string fallback_menu_item_open_in_browser
+string fallback_menu_item_share_link
+string gcm_defaultSenderId
+string google_api_key
+string google_app_id
+string google_crash_reporting_api_key
+string google_storage_bucket
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
@@ -4116,6 +4155,7 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string permission_camera_denied
+string project_id
 string recovery
 string search_menu_title
 string searchbar_scrolling_view_behavior
@@ -4127,6 +4167,7 @@ string smart_gorge
 string smart_gorge2
 string smart_gorge3
 string status_bar_notification_info_overflow
+string strThongBao
 string title_camera
 string title_choose_image_provider
 string title_gallery
@@ -5407,4 +5448,5 @@ styleable ucrop_UCropView ucrop_aspect_ratio_x ucrop_aspect_ratio_y ucrop_circle
 xml backup_rules
 xml data_extraction_rules
 xml image_picker_provider_paths
+xml image_share_filepaths
 xml network_security_config

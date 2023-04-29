@@ -1,406 +1,434 @@
 [
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_baseline_shopping_bag_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/baseline_shopping_bag_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_baseline_border_color_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\baseline_border_color_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_activity_splash.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/activity_splash.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_image_email.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\image_email.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_camera_image.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\camera_image.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/anim_slide_out_bottom.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/anim/slide_out_bottom.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_baseline_person_outline_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\baseline_person_outline_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_baseline_notifications_none_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/baseline_notifications_none_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_dialog_update_cart.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\dialog_update_cart.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_image_phone.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/image_phone.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_baseline_logout_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/baseline_logout_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_baseline_shopping_cart_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\baseline_shopping_cart_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/font_fonttext.otf.flat",
-        "source": "edu.fpt.shose_app-main-40:/font/fonttext.otf"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_fragment_change_password.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\fragment_change_password.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_icon_gg.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/icon_gg.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_background_item_my_cart.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/background_item_my_cart.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_activity_favourite.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\activity_favourite.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/xml_backup_rules.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_icon_back.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\icon_back.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "edu.fpt.shose_app-main-40:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\xml_network_security_config.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\xml\\network_security_config.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/anim_slide_in_right.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/anim/slide_in_right.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_background_btn_dangnhap.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\background_btn_dangnhap.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_background_buttom_sheet.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/background_buttom_sheet.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_activity_change_password.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\activity_change_password.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "edu.fpt.shose_app-main-40:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_activity_onboard.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\activity_onboard.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_ic_launcher_background.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_drop_down_item.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\drop_down_item.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/xml_network_security_config.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/xml/network_security_config.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_fragment_onboadrd3.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\fragment_onboadrd3.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_activity_check_out_main.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/activity_check_out_main.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_baseline_add_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\baseline_add_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_drop_down_item.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/drop_down_item.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_check_box_outline_blank_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\check_box_outline_blank_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "edu.fpt.shose_app-main-40:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_logo.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\logo.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "edu.fpt.shose_app-main-40:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable-v24_btn_minus_white.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable-v24/btn_minus_white.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\activity_main.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_logo.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/logo.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_background_buttom_sheet.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\background_buttom_sheet.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_icon_back.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/icon_back.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_loading.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\loading.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_baseline_close_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/baseline_close_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_dialog_thong_bao.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\dialog_thong_bao.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/menu_profile_menu.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/menu/profile_menu.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_baseline_home_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\baseline_home_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_baseline_notifications_active_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/baseline_notifications_active_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_item_product_home.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\item_product_home.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_item_product2.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/item_product2.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_icon_gg.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\icon_gg.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_product.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/product.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\anim_slide_out_bottom.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\anim\\slide_out_bottom.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_baseline_delete_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/baseline_delete_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_itemsize.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\itemsize.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_camera_image.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/camera_image.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/menu_bottom_menu.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/menu/bottom_menu.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_onboard1.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\onboard1.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_activity_product_detail.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/activity_product_detail.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_fragment_onboard1.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\fragment_onboard1.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_image_check_box.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/image_check_box.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_baseline_favorite_border_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\baseline_favorite_border_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_activity_onboard.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/activity_onboard.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_background_dialog.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\background_dialog.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_baseline_favorite_border_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/baseline_favorite_border_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_activity_my_cart.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\activity_my_cart.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_baseline_person_outline_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/baseline_person_outline_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/anim_slide_out_right.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/anim/slide_out_right.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\menu_nav_menu.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\menu\\nav_menu.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_fragment_onboadrd3.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/fragment_onboadrd3.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "edu.fpt.shose_app-main-40:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\anim_slide_in_bottom.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\anim\\slide_in_bottom.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/anim_slide_in_bottom.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/anim/slide_in_bottom.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\activity_home.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_onboard1.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/onboard1.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_location_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\location_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_baseline_home_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/baseline_home_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_baseline_logout_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\baseline_logout_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_background_btn_dangnhapgmail.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/background_btn_dangnhapgmail.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\menu_bottom_menu.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\menu\\bottom_menu.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "edu.fpt.shose_app-main-40:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_image_profile.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\image_profile.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_activity_profile.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/activity_profile.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_background_tittle.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\background_tittle.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_baseline_add_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/baseline_add_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_item_my_cart.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\item_my_cart.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_item_product_home.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/item_product_home.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_baseline_payment_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\baseline_payment_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_baseline_check_box_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/baseline_check_box_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_baseline_expand_more_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\baseline_expand_more_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable-v24_btn_delete_red.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable-v24/btn_delete_red.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_baseline_shopping_bag_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\baseline_shopping_bag_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_fragment_onboadrd2.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/fragment_onboadrd2.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_item_brand.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\item_brand.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_iconmenu.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/iconmenu.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable-v24_btn_delete_gray.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable-v24\\btn_delete_gray.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_activity_account_settings.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/activity_account_settings.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_onboard2.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/onboard2.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\anim_slide_out_right.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\anim\\slide_out_right.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/menu_nav_menu.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/menu/nav_menu.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/xml_data_extraction_rules.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable-v24_btn_minus_blue.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable-v24\\btn_minus_blue.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_nike.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/nike.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_baseline_notifications_active_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\baseline_notifications_active_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_backgroud_circle.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/backgroud_circle.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_onboard3.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\onboard3.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_header_layout.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/header_layout.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_activity_sign_up.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\activity_sign_up.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_activity_foget_pass.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/activity_foget_pass.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_activity_check_out_main.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\activity_check_out_main.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_itemclick.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/itemclick.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-pngs-36:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_drop_down_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/drop_down_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_baseline_expand_more_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\baseline_expand_more_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_item_brand.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/item_brand.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "edu.fpt.shose_app-main-40:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_image_check_box.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\image_check_box.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_activity_home.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/activity_home.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_location_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/location_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable-v24_btn_minus_white.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable-v24\\btn_minus_white.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable-v24_btn_minus_blue.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable-v24/btn_minus_blue.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\menu_profile_menu.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\menu\\profile_menu.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "edu.fpt.shose_app-pngs-33:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_baseline_notifications_none_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\baseline_notifications_none_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_bag.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/bag.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_item_product2.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\item_product2.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_check_box_outline_blank_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/check_box_outline_blank_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_baseline_close_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\baseline_close_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_item_image.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/item_image.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\anim_slide_in_right.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\anim\\slide_in_right.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_onboard3.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/onboard3.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_nike.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\nike.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "edu.fpt.shose_app-main-40:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_activity_my_cart.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/activity_my_cart.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_baseline_delete_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\baseline_delete_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_baseline_shopping_cart_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/baseline_shopping_cart_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_nike_icon.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\nike_icon.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_itemsize.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/itemsize.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_activity_sign_in.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\activity_sign_in.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "edu.fpt.shose_app-main-40:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable-v24_btn_plus_blue.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable-v24\\btn_plus_blue.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable-v24_btn_plus_white.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable-v24/btn_plus_white.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_baseline_chevron_right_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\baseline_chevron_right_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_activity_sign_up.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/activity_sign_up.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_activity_product_detail.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\activity_product_detail.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_icon_pen.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/icon_pen.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\activity_profile.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_activity_favourite.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/activity_favourite.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\activity_splash.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable-v24_btn_plus_blue.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable-v24/btn_plus_blue.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_iconmenu.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\iconmenu.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "edu.fpt.shose_app-main-40:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_loading.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\loading.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_baseline_expand_more_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/baseline_expand_more_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable-v24_img_net_dut.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable-v24\\img_net_dut.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_baseline_payment_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/baseline_payment_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_background_item_my_cart.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\background_item_my_cart.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_baseline_chevron_right_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/baseline_chevron_right_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_background_btn_dangnhapgmail.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\background_btn_dangnhapgmail.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_image_email.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/image_email.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable-v24_btn_delete_red.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable-v24\\btn_delete_red.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_loading.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/loading.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_drop_down_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\drop_down_24.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_activity_main.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/activity_main.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_itemclick.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\itemclick.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_nike_icon.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/nike_icon.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_fragment_onboadrd2.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\fragment_onboadrd2.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_background_btn_dangnhap.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/background_btn_dangnhap.xml"
+        "merged": "edu.fpt.shose_app-merged_res-41:/layout_activity_change_password.xml.flat",
+        "source": "edu.fpt.shose_app-main-43:/layout/activity_change_password.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_baseline_border_color_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/baseline_border_color_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable_image_profile.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable/image_profile.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_activity_foget_pass.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\activity_foget_pass.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_fragment_onboard1.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/fragment_onboard1.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_baseline_expand_more_24.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/baseline_expand_more_24.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_backgroud_circle.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\backgroud_circle.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_item_my_cart.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/item_my_cart.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_activity_account_settings.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\activity_account_settings.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable-v24_btn_delete_gray.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable-v24/btn_delete_gray.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_item_image.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\item_image.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/drawable-v24_img_net_dut.png.flat",
-        "source": "edu.fpt.shose_app-main-40:/drawable-v24/img_net_dut.png"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable-v24_btn_plus_white.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable-v24\\btn_plus_white.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_activity_sign_in.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/activity_sign_in.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\layout_header_layout.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\layout\\header_layout.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-38:/layout_dialog_update_cart.xml.flat",
-        "source": "edu.fpt.shose_app-main-40:/layout/dialog_update_cart.xml"
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_product.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\product.png"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_image_phone.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\image_phone.png"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\font_fonttext.otf.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\font\\fonttext.otf"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_bag.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\bag.png"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_onboard2.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\onboard2.png"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_baseline_check_box_24.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\baseline_check_box_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\drawable_icon_pen.png.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\drawable\\icon_pen.png"
+    },
+    {
+        "merged": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-41:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Dell\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-43:\\xml\\backup_rules.xml"
     }
 ]
