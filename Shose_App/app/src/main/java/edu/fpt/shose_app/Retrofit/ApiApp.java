@@ -43,13 +43,13 @@ public interface ApiApp {
     Call<loginRequest> _logGin(@Field("email") String email,
                                @Field("password") String password);
 
-    @GET("history/{user}-{status}")
+    @GET("history/{user}/{status}")
     Call<OderRequest> getOder(@Path("user") int user_id,
                               @Path("status") int status);
 
     @FormUrlEncoded
-    @PUT("oderdetail/{id_oder}")
-    Call<Oder> putOder(@Path("id_oder") int id,
+    @PUT("oderdetail/{oder_id}")
+    Call<Oder> putOder(@Path("oder_id") int id,
                        @Field("status") int status);
 
     @POST("oderdetail")

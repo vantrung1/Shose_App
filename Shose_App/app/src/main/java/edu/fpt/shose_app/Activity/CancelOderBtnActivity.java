@@ -155,7 +155,7 @@ public class CancelOderBtnActivity extends AppCompatActivity {
     }
 
     public void put_status_oder() {
-        Call<Oder> objPutOder = apiInterface.putOder(oder.getId(), 4);
+        Call<Oder> objPutOder = apiInterface.putOder(oder.getOder_id(), 4);
 
         objPutOder.enqueue(new Callback<Oder>() {
 
