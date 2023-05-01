@@ -64,7 +64,7 @@ public class DeliveredFragment extends Fragment {
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
         apiInterface = retrofit.create(ApiApp.class);
-        get_oder(Utils.Users_Utils.getId(), 2);
+        get_oder(Utils.Users_Utils.getId(), 3);
         oderArrayList = new ArrayList<>();
         deliveredAdapter = new DeliveredAdapter(getActivity(), oderArrayList);
         recy_delivered.setAdapter(deliveredAdapter);

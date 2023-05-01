@@ -5,54 +5,37 @@ import java.util.List;
 import java.util.Map;
 
 public class Oder implements Serializable {
-    private int id;
-    private int id_Oder;
     private String name;
-    private int quantity;
-    private int price;
-    private List< Products_Oder> products;
-    private int status;
+    private int id;
     private int user_id;
-    private int id_address;
+
+    private int address_id;
     private String number;
     private String total;
     private String note;
     private String paymentAmount;
+    private int status;
     private String created_at;
     private String updated_at;
+    private int oder_id;
+    private List<Products_Oder> products;
+    private int quantity;
 
-    public Oder(int id, int id_Oder, String name, int quantity, int price, List<Products_Oder> products, int status, int user_id, int id_address, String number, String total, String note, String paymentAmount, String created_at, String updated_at) {
-        this.id = id;
-        this.id_Oder = id_Oder;
+    public Oder(String name, int id, int user_id, int address_id, String number, String total, String note, String paymentAmount, int status, String created_at, String updated_at, int oder_id, List<Products_Oder> products, int quantity) {
         this.name = name;
-        this.quantity = quantity;
-        this.price = price;
-        this.products = products;
-        this.status = status;
+        this.id = id;
         this.user_id = user_id;
-        this.id_address = id_address;
+        this.address_id = address_id;
         this.number = number;
         this.total = total;
         this.note = note;
         this.paymentAmount = paymentAmount;
+        this.status = status;
         this.created_at = created_at;
         this.updated_at = updated_at;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getId_Oder() {
-        return id_Oder;
-    }
-
-    public void setId_Oder(int id_Oder) {
-        this.id_Oder = id_Oder;
+        this.oder_id = oder_id;
+        this.products = products;
+        this.quantity = quantity;
     }
 
     public String getName() {
@@ -63,36 +46,12 @@ public class Oder implements Serializable {
         this.name = name;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getId() {
+        return id;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public int getPrice() {
-        return price;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public List<Products_Oder> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<Products_Oder> products) {
-        this.products = products;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getUser_id() {
@@ -103,12 +62,12 @@ public class Oder implements Serializable {
         this.user_id = user_id;
     }
 
-    public int getId_address() {
-        return id_address;
+    public int getAddress_id() {
+        return address_id;
     }
 
-    public void setId_address(int id_address) {
-        this.id_address = id_address;
+    public void setAddress_id(int address_id) {
+        this.address_id = address_id;
     }
 
     public String getNumber() {
@@ -143,6 +102,14 @@ public class Oder implements Serializable {
         this.paymentAmount = paymentAmount;
     }
 
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
+
     public String getCreated_at() {
         return created_at;
     }
@@ -157,5 +124,29 @@ public class Oder implements Serializable {
 
     public void setUpdated_at(String updated_at) {
         this.updated_at = updated_at;
+    }
+
+    public int getOder_id() {
+        return oder_id;
+    }
+
+    public void setOder_id(int oder_id) {
+        this.oder_id = oder_id;
+    }
+
+    public List<Products_Oder> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Products_Oder> products) {
+        this.products = products;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }
