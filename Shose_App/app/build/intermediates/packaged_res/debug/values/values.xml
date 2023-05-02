@@ -36,6 +36,7 @@ Collection]]></string>
 Attractive Plants To Your Room]]></string>
     <string name="smart_gorge3"><![CDATA[Amet Minim Lit Nodeseru Saku
 Nandu sit Alique Dolor]]></string>
+    <string name="strThongBao">Thông báo</string>
     <style name="AppSettings_imageView_icon">
         <item name="android:layout_width">@dimen/settings_icon_width_and_height</item>
         <item name="android:layout_height">@dimen/settings_icon_width_and_height</item>

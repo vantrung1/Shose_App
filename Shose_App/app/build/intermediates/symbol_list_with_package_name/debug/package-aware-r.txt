@@ -1363,6 +1363,10 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color browser_actions_bg_grey
+color browser_actions_divider_color
+color browser_actions_text_color
+color browser_actions_title_color
 color button
 color button_material_dark
 color button_material_light
@@ -2098,6 +2102,8 @@ dimen abc_text_size_subtitle_material_toolbar
 dimen abc_text_size_title_material
 dimen abc_text_size_title_material_toolbar
 dimen appcompat_dialog_background_inset
+dimen browser_actions_context_menu_max_width
+dimen browser_actions_context_menu_min_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -2835,7 +2841,9 @@ drawable background_btn_dangnhapgmail
 drawable background_btn_danhgia
 drawable background_buttom_sheet
 drawable background_custombtn
+drawable background_dialog
 drawable background_item_my_cart
+drawable background_tittle
 drawable bag
 drawable baseline_add_24
 drawable baseline_arrow_forward_ios_24
@@ -3168,8 +3176,14 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id browser_actions_header_text
+id browser_actions_menu_item_icon
+id browser_actions_menu_item_text
+id browser_actions_menu_items
+id browser_actions_menu_view
 id btnGmail
 id btnLogin
+id btnThongBao
 id btn_OnboardNext
 id btn_Payment
 id btn_addCart
@@ -3189,6 +3203,7 @@ id btn_thaydoi
 id btn_transport
 id btn_wait_for_confirm
 id btn_xacnhan
+id btncontinue
 id btnloginGmail
 id buttonPanel
 id cache_measures
@@ -3551,6 +3566,7 @@ id profile_image_header
 id profile_name
 id profile_password
 id profile_phone
+id progressBar
 id progress_circular
 id progress_horizontal
 id radio
@@ -3764,6 +3780,8 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tv1
+id tvMess
+id tvThongBao
 id tvTitleFav
 id tv_badge_text
 id txtInputLayout1
@@ -3953,6 +3971,8 @@ layout activity_sign_up
 layout activity_splash
 layout allproduct_activity
 layout baseline_expand_more_24
+layout browser_actions_context_menu_page
+layout browser_actions_context_menu_row
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3973,6 +3993,7 @@ layout dialog
 layout dialog_cancel_order_detail
 layout dialog_choose_app
 layout dialog_reason_cancel_oder
+layout dialog_thong_bao
 layout dialog_update_cart
 layout drop_down_item
 layout fragment_cancel
@@ -4075,6 +4096,7 @@ menu ucrop_menu_activity
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+raw firebase_common_keep
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -4136,6 +4158,7 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
+string copy_toast_msg
 string error_a11y_label
 string error_camera_app_not_found
 string error_failed_pick_gallery_image
@@ -4147,6 +4170,9 @@ string error_task_cancelled
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string fallback_menu_item_copy_link
+string fallback_menu_item_open_in_browser
+string fallback_menu_item_share_link
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
@@ -4264,6 +4290,7 @@ string smart_gorge
 string smart_gorge2
 string smart_gorge3
 string status_bar_notification_info_overflow
+string strThongBao
 string title_camera
 string title_choose_image_provider
 string title_gallery
@@ -5593,4 +5620,5 @@ styleable ucrop_UCropView ucrop_aspect_ratio_x ucrop_aspect_ratio_y ucrop_circle
 xml backup_rules
 xml data_extraction_rules
 xml image_picker_provider_paths
+xml image_share_filepaths
 xml network_security_config

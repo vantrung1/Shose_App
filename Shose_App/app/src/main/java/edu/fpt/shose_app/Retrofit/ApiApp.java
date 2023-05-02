@@ -1,5 +1,7 @@
 package edu.fpt.shose_app.Retrofit;
 
+import android.database.Observable;
+
 import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
 
 import java.util.ArrayList;
@@ -12,6 +14,7 @@ import edu.fpt.shose_app.Model.Product;
 import edu.fpt.shose_app.Model.ProductRequest;
 import edu.fpt.shose_app.Model.SizeRequest;
 import edu.fpt.shose_app.Model.User;
+import edu.fpt.shose_app.Model.UserRequest;
 import edu.fpt.shose_app.Model.addRess_response;
 import edu.fpt.shose_app.Model.loginRequest;
 import retrofit2.Call;
@@ -105,4 +108,7 @@ public interface ApiApp {
 
     @GET("products")
     Call<ArrayList<Product>> getallProduct();
+    @POST("send-otp")
+    @FormUrlEncoded
+    Call<User> _forgotpassword(@Field("email") String email);
 }
