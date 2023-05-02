@@ -44,6 +44,9 @@
         android:theme="@style/Theme.Shose_App"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="edu.fpt.shose_app.Activity.EvaluateActivity"
+            android:exported="false" />
+        <activity
             android:name="edu.fpt.shose_app.Activity.Cancel_detail_activity"
             android:exported="false" />
         <activity

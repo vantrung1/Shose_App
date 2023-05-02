@@ -18,11 +18,14 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.EvaluateActivity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.Cancel_detail_activity"
             android:exported="false" />
         <activity
             android:name=".Activity.CancelOderBtnActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Activity.ChatBoxActivity"
             android:exported="false" />
