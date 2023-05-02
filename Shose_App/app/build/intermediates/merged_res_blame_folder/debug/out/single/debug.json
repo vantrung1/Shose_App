@@ -60,6 +60,10 @@
         "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\font\\fonttext.otf"
     },
     {
+        "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\drawable_star_border_yellow.xml.flat",
+        "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\drawable\\star_border_yellow.xml"
+    },
+    {
         "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\drawable_itemclick.png.flat",
         "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\drawable\\itemclick.png"
     },
@@ -176,10 +180,6 @@
         "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\layout\\fragment_change_password.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-39:/layout_dialog_reason_cancel_oder.xml.flat",
-        "source": "edu.fpt.shose_app-main-41:/layout/dialog_reason_cancel_oder.xml"
-    },
-    {
         "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\drawable_nike.png.flat",
         "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\drawable\\nike.png"
     },
@@ -240,6 +240,10 @@
         "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\layout\\dialog.xml"
     },
     {
+        "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\drawable_image_check_star.xml.flat",
+        "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\drawable\\image_check_star.xml"
+    },
+    {
         "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\drawable_check_box_outline_blank_24.xml.flat",
         "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\drawable\\check_box_outline_blank_24.xml"
     },
@@ -250,6 +254,10 @@
     {
         "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\drawable_baseline_add_24.xml.flat",
         "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\drawable\\baseline_add_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\layout_activity_evaluate.xml.flat",
+        "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\layout\\activity_evaluate.xml"
     },
     {
         "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
@@ -304,6 +312,10 @@
         "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\drawable\\bg_blue_conner_16_topleft_topright.xml"
     },
     {
+        "merged": "edu.fpt.shose_app-merged_res-39:/layout_activity_evaluate.xml.flat",
+        "source": "edu.fpt.shose_app-main-41:/layout/activity_evaluate.xml"
+    },
+    {
         "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
@@ -318,6 +330,10 @@
     {
         "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\drawable_baseline_delete_24.xml.flat",
         "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\drawable\\baseline_delete_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\drawable_background_cmt.xml.flat",
+        "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\drawable\\background_cmt.xml"
     },
     {
         "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\mipmap-hdpi_ic_launcher.webp.flat",
@@ -410,6 +426,10 @@
     {
         "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\drawable_baseline_notifications_none_24.xml.flat",
         "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\drawable\\baseline_notifications_none_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\drawable_bg_star_yellow.xml.flat",
+        "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\drawable\\bg_star_yellow.xml"
     },
     {
         "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\layout_fragment_cancel.xml.flat",
@@ -524,12 +544,12 @@
         "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\menu\\profile_menu.xml"
     },
     {
-        "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\mipmap-hdpi\\ic_launcher_round.webp"
-    },
-    {
         "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\layout_dialog_reason_cancel_oder.xml.flat",
         "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\layout\\dialog_reason_cancel_oder.xml"
+    },
+    {
+        "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-41:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
         "merged": "C:\\Users\\DaoTuan\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-39:\\drawable-v24_btn_delete_gray.png.flat",

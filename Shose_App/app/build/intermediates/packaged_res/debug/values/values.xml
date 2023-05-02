@@ -20,6 +20,7 @@
     <color name="xam">#707B81</color>
     <color name="xam_nhe">#E5E6E6</color>
     <color name="xanh">#069A8C</color>
+    <color name="yellow">#FFE60D</color>
     <dimen name="settings_container_padding">16dp</dimen>
     <dimen name="settings_divider_height">1dp</dimen>
     <dimen name="settings_icon_end_margin">16dp</dimen>
