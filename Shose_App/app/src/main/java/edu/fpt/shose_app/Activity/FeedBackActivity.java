@@ -11,7 +11,7 @@ import android.widget.TextView;
 import edu.fpt.shose_app.Model.Oder;
 import edu.fpt.shose_app.R;
 
-public class EvaluateActivity extends AppCompatActivity {
+public class FeedBackActivity extends AppCompatActivity {
     private Oder oder;
     Toolbar toolbar;
     RatingBar ratingBar;
@@ -20,8 +20,7 @@ public class EvaluateActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_evaluate);
-//        oder = (Oder) getIntent().getSerializableExtra("evaluate");
+        setContentView(R.layout.activity_feed_back);
         initUi();
     }
 

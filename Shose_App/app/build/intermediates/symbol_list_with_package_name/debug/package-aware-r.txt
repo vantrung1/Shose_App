@@ -3953,6 +3953,7 @@ layout activity_chat_box
 layout activity_check_out_main
 layout activity_evaluate
 layout activity_favourite
+layout activity_feed_back
 layout activity_foget_pass
 layout activity_home
 layout activity_main
