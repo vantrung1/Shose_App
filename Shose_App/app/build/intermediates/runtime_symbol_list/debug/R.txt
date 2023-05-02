@@ -3952,6 +3952,7 @@ int layout activity_chat_box 0x7f0c0020
 int layout activity_check_out_main 0x7f0c0021
 int layout activity_evaluate 0x7f0c0022
 int layout activity_favourite 0x7f0c0023
+int layout activity_feed_back 0x7f0c00a5
 int layout activity_foget_pass 0x7f0c0024
 int layout activity_home 0x7f0c0025
 int layout activity_main 0x7f0c0026

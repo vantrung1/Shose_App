@@ -2,11 +2,9 @@ package edu.fpt.shose_app.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,13 +12,9 @@ import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-import edu.fpt.shose_app.Activity.Cancel_detail_activity;
-import edu.fpt.shose_app.Activity.EvaluateActivity;
+import edu.fpt.shose_app.Activity.FeedBackActivity;
 import edu.fpt.shose_app.Model.Oder;
 import edu.fpt.shose_app.R;
 
@@ -56,7 +50,7 @@ public class DeliveredAdapter extends RecyclerView.Adapter<DeliveredAdapter.myvi
             @Override
             public void onImageClick(View view, int pos, int giatri) {
                 if (giatri == 1) {
-                    Intent intent = new Intent(context, EvaluateActivity.class);
+                    Intent intent = new Intent(context, FeedBackActivity.class);
                     intent.putExtra("evaluate", oderArrayList.get(pos));
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
