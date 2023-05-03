@@ -47,9 +47,6 @@
             android:name="edu.fpt.shose_app.Activity.FeedBackActivity"
             android:exported="false" />
         <activity
-            android:name="edu.fpt.shose_app.Activity.EvaluateActivity"
-            android:exported="false" />
-        <activity
             android:name="edu.fpt.shose_app.Activity.Cancel_detail_activity"
             android:exported="false" />
         <activity
@@ -60,6 +57,9 @@
             android:exported="false" />
         <activity
             android:name="edu.fpt.shose_app.Activity.OderActivity"
+            android:exported="true" />
+        <activity
+            android:name="edu.fpt.shose_app.Activity.SearchActivity"
             android:exported="true" />
         <activity
             android:name="edu.fpt.shose_app.Activity.FavouriteActivity"

@@ -2,6 +2,7 @@ package edu.fpt.shose_app.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -19,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.bumptech.glide.Glide;
@@ -54,6 +56,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class HomeActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
+    SearchView SearchViewHome;
     RecyclerView recyclerViewBrand,recy_1_product,recy_2_product,recy_3_product;
     ArrayList<Brand> brandArrayList;
     ArrayList<Product> productArrayList;
@@ -143,6 +146,26 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void initAction() {
+        SearchViewHome.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                Intent intentSearch = new Intent(HomeActivity.this, SearchActivity.class);
+                startActivity(intentSearch);
+                return true;
+            }
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+        SearchViewHome.setOnCloseListener(new SearchView.OnCloseListener() {
+            @Override
+            public boolean onClose() {
+                // Bắt sự kiện khi người dùng đóng SearchView ở đây
+                Toast.makeText(getApplicationContext(),"kkkkk",Toast.LENGTH_LONG).show();
+                return true;
+            }
+        });
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -185,6 +208,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void initUi() {
+        SearchViewHome = findViewById(R.id.SearchViewHome);
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         txta = findViewById(R.id.txta);
         textViewsee = findViewById(R.id.seall);

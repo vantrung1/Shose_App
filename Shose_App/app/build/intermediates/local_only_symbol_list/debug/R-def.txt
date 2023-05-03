@@ -76,6 +76,7 @@ drawable camera_image
 drawable check_box_outline_blank_24
 drawable drop_down_24
 drawable edittext_no_underline
+drawable ic_delete
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable icon_back
@@ -165,6 +166,8 @@ id fab
 id fab_home
 id filled_exposed
 id filled_exposed_address
+id history_item_delete
+id history_item_text
 id home
 id image1
 id image2
@@ -243,6 +246,7 @@ id profile_name
 id profile_password
 id profile_phone
 id rcv_favourite
+id rcv_search
 id rd_reason_cancel1
 id rd_reason_cancel2
 id rd_reason_cancel3
@@ -269,6 +273,10 @@ id recycler_dialog_color
 id recycler_dialog_size
 id scorllView
 id seall
+id search_history_list_view
+id search_history_scrollview
+id search_results_list_view
+id search_view
 id signIn
 id simpleRatingBar
 id sizeItem
@@ -350,7 +358,6 @@ layout activity_cancel_oder_btn
 layout activity_change_password
 layout activity_chat_box
 layout activity_check_out_main
-layout activity_evaluate
 layout activity_favourite
 layout activity_feed_back
 layout activity_foget_pass
@@ -362,6 +369,7 @@ layout activity_oder
 layout activity_onboard
 layout activity_product_detail
 layout activity_profile
+layout activity_search
 layout activity_sign_in
 layout activity_sign_up
 layout activity_splash
@@ -396,6 +404,7 @@ layout itemsize
 layout layout_dialog_custom_mail
 layout layout_dialog_custom_phone
 layout loading
+layout search_history_item_layout
 menu bottom_menu
 menu nav_menu
 menu profile_menu
@@ -406,6 +415,7 @@ string channel_description
 string channel_name
 string hello_blank_fragment
 string recovery
+string search_hint
 string smart_gorge
 string smart_gorge2
 string smart_gorge3

@@ -41,7 +41,7 @@ public class FeedBackActivity extends AppCompatActivity {
             }
         });
         //-------------
-        setContentView(R.layout.activity_evaluate);
+//        setContentView(R.layout.activity_evaluate);
         ratingBar = findViewById(R.id.simpleRatingBar);
         ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
