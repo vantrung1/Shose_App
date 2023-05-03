@@ -32,6 +32,8 @@
         <activity
             android:name=".Activity.OderActivity"
             android:exported="true" />
+        <activity android:name=".Activity.SearchActivity"
+            android:exported="true"/>
         <activity
             android:name=".Activity.FavouriteActivity"
             android:exported="false" />

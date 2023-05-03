@@ -2914,6 +2914,7 @@ drawable googleg_standard_color_18
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
+drawable ic_delete
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -3338,6 +3339,8 @@ id grouping
 id groups
 id header_title
 id hideable
+id history_item_delete
+id history_item_text
 id home
 id homeAsUp
 id honorRequest
@@ -3564,6 +3567,7 @@ id progress_horizontal
 id radio
 id ratio
 id rcv_favourite
+id rcv_search
 id rd_reason_cancel1
 id rd_reason_cancel2
 id rd_reason_cancel3
@@ -3617,9 +3621,13 @@ id search_button
 id search_close_btn
 id search_edit_frame
 id search_go_btn
+id search_history_list_view
+id search_history_scrollview
 id search_mag_icon
 id search_plate
+id search_results_list_view
 id search_src_text
+id search_view
 id search_view_background
 id search_view_clear_button
 id search_view_content_container
@@ -3951,7 +3959,6 @@ layout activity_cancel_oder_btn
 layout activity_change_password
 layout activity_chat_box
 layout activity_check_out_main
-layout activity_evaluate
 layout activity_favourite
 layout activity_feed_back
 layout activity_foget_pass
@@ -3963,6 +3970,7 @@ layout activity_oder
 layout activity_onboard
 layout activity_product_detail
 layout activity_profile
+layout activity_search
 layout activity_sign_in
 layout activity_sign_up
 layout activity_splash
@@ -4072,6 +4080,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout search_history_item_layout
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -4269,6 +4278,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string permission_camera_denied
 string recovery
+string search_hint
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description

@@ -26,6 +26,10 @@ import retrofit2.http.Query;
 
 public interface ApiApp {
 
+    @GET("search")
+    Call<List<Product>> searchProducts(@Query("q") String query);
+    @GET("products")
+    Call<List<Product>> getAllProducts();
     @POST("register")
     Call<User> postUser(@Body User objUser);
 
