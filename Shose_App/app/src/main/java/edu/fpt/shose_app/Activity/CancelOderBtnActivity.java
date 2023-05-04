@@ -114,6 +114,7 @@ public class CancelOderBtnActivity extends AppCompatActivity {
         txtPhone.setText(oder.getNumber());
         txtPaymentAmount.setText(oder.getPaymentAmount());
         txtCreateAt.setText(oder.getCreated_at());
+        txtAddress.setText(oder.getAddress_id());
     }
 
     public void btn_cancel_oder() {

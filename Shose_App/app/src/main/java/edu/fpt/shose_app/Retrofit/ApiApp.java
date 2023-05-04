@@ -59,8 +59,8 @@ public interface ApiApp {
     @POST("oderdetail")
     @FormUrlEncoded
     Call<MyResponse> create_oder(@Field("user_id") int user_id,
-                                 @Field("address_id") int address_id,
-                                 @Field("number") int number,
+                                 @Field("address_id") String address_id,
+                                 @Field("number") String number,
                                  @Field("total") String total,
                                  @Field("note") String note,
                                  @Field("paymentAmount") String paymentAmount,
@@ -109,4 +109,7 @@ public interface ApiApp {
 
     @GET("products")
     Call<ArrayList<Product>> getallProduct();
+    @POST("send-otp")
+    @FormUrlEncoded
+    Call<User> _forgotpassword(@Field("email") String email);
 }
