@@ -73,13 +73,17 @@
     Retrofit retrofit;
     Gson gson;
     ApiApp apiInterface;
-    TextView txt_total_check_out,txt_price_total_check_out,emailcheck_out,phonecheckout,address_checkout;
+    TextView txt_total_check_out;
+            TextView txt_price_total_check_out;
+            TextView emailcheck_out;
+            TextView phonecheckout;
+            TextView address_checkout;
     List<products> productsList_checkOut;
     AppCompatButton btn_payment;
     private String PaymentAmount = "Cash on delivery";
     private String jsonprocuts;
     private int id_oder;
-    String data_price,codezalo;
+    String data_price,codezalo,address;
     List<address> addressList;
     AutoCompleteTextView autoCompleteTextView,autoCompleteAdress;
     ShapeableImageView img_update_phone,img_update_mail;
@@ -101,7 +105,7 @@
                 .build();
         apiInterface = retrofit.create(ApiApp.class);
         Intent intent = getIntent();
-
+        address= "";
 
         initUi();
         initAction();
@@ -134,7 +138,8 @@
         autoCompleteAdress.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(Check_Out_MainActivity.this, autoCompleteAdress.getText().toString(), Toast.LENGTH_SHORT).show();
+               // Toast.makeText(Check_Out_MainActivity.this, autoCompleteAdress.getText().toString(), Toast.LENGTH_SHORT).show();
+                address = autoCompleteAdress.getText().toString();
             }
         });
     }
@@ -150,7 +155,7 @@
                     CreateOrder orderApi = new CreateOrder();
 
                     try {
-                        JSONObject data = orderApi.createOrder("1000000");
+                        JSONObject data = orderApi.createOrder(data_price);
                         //  Log.d("Amount", txtAmount.getText().toString());
                         //lblZpTransToken.setVisibility(View.VISIBLE);
                         String code = data.getString("return_code");
@@ -167,7 +172,7 @@
 
                 }
                 else {
-                    CreateOder(Utils.Users_Utils.getId(), 1,02304302403, data_price,"note",PaymentAmount,"1",jsonprocuts,3);
+                    CreateOder(Utils.Users_Utils.getId(), address, phonecheckout.getText().toString(), data_price,"note",PaymentAmount,"1",jsonprocuts,3);
                 }
 
                 if(PaymentAmount.equalsIgnoreCase("Cash on delivery")){
@@ -196,7 +201,7 @@
 
             @Override
             public void onPaymentSucceeded(String s, String s1, String s2) {
-                CreateOder(Utils.Users_Utils.getId(), 1,02304302403, data_price,"note",codezalo,"1",jsonprocuts,3);
+                CreateOder(Utils.Users_Utils.getId(), address,phonecheckout.getText().toString(), data_price,"note",codezalo,"1",jsonprocuts,3);
                 Intent intent = new Intent(Check_Out_MainActivity.this,HomeActivity.class);
                 startActivity(intent);
             }
@@ -213,7 +218,7 @@
         });
     }
 
-    private void CreateOder(int user_id, int address_id, int number, String data_price, String note, String Payment, String status, String jsondata,int quantity) {
+    private void CreateOder(int user_id, String address_id, String number, String data_price, String note, String Payment, String status, String jsondata,int quantity) {
 
         Call<ApiApp.MyResponse> objgetBrands = apiInterface.create_oder(user_id, address_id, number, data_price, note, Payment, status, jsondata, quantity);
         // thực hiện gọi
@@ -255,6 +260,7 @@
         phonecheckout = findViewById(R.id.phone_checkout);
         //address_checkout = findViewById(R.id.address_checkout);
         emailcheck_out.setText(Utils.Users_Utils.getEmail());
+        phonecheckout.setText("0"+Utils.Users_Utils.getPhoneNumber());
         // address
         autoCompleteAdress = findViewById(R.id.filled_exposed_address);
         img_update_phone = findViewById(R.id.img_update_phone);

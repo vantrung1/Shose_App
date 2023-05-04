@@ -9,7 +9,7 @@ public class Oder implements Serializable {
     private int id;
     private int user_id;
 
-    private int address_id;
+    private String address_id;
     private String number;
     private String total;
     private String note;
@@ -21,7 +21,7 @@ public class Oder implements Serializable {
     private List<Products_Oder> products;
     private int quantity;
 
-    public Oder(String name, int id, int user_id, int address_id, String number, String total, String note, String paymentAmount, int status, String created_at, String updated_at, int oder_id, List<Products_Oder> products, int quantity) {
+    public Oder(String name, int id, int user_id, String address_id, String number, String total, String note, String paymentAmount, int status, String created_at, String updated_at, int oder_id, List<Products_Oder> products, int quantity) {
         this.name = name;
         this.id = id;
         this.user_id = user_id;
@@ -62,11 +62,11 @@ public class Oder implements Serializable {
         this.user_id = user_id;
     }
 
-    public int getAddress_id() {
+    public String getAddress_id() {
         return address_id;
     }
 
-    public void setAddress_id(int address_id) {
+    public void setAddress_id(String address_id) {
         this.address_id = address_id;
     }
 

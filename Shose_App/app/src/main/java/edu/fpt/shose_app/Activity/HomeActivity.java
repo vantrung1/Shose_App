@@ -11,8 +11,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -278,6 +280,15 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     case R.id.mnu_notifi:
 
+                        break;
+                    case R.id.mnu_exit:
+                        SharedPreferences sharedPreferences  = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("pass", "pass");
+                        editor.apply();
+                        Intent i4 = new Intent(HomeActivity.this, SignInActivity.class);
+                        startActivity(i4);
                         break;
                     default:
                 }
