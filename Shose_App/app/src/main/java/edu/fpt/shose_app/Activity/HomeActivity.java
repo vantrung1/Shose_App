@@ -146,24 +146,19 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void initAction() {
-        SearchViewHome.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        SearchViewHome.setOnSearchClickListener(new View.OnClickListener() {
             @Override
-            public boolean onQueryTextSubmit(String query) {
+            public void onClick(View view) {
                 Intent intentSearch = new Intent(HomeActivity.this, SearchActivity.class);
                 startActivity(intentSearch);
-                return true;
-            }
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
             }
         });
         SearchViewHome.setOnCloseListener(new SearchView.OnCloseListener() {
             @Override
             public boolean onClose() {
                 // Bắt sự kiện khi người dùng đóng SearchView ở đây
-                Toast.makeText(getApplicationContext(),"kkkkk",Toast.LENGTH_LONG).show();
-                return true;
+                SearchViewHome.clearFocus();
+                return false;
             }
         });
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {

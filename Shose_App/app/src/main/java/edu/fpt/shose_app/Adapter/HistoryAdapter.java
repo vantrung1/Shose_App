@@ -277,13 +277,16 @@ import androidx.appcompat.widget.SearchView;
 import java.util.List;
 
 import edu.fpt.shose_app.Activity.SearchActivity;
+import edu.fpt.shose_app.Model.Product;
 import edu.fpt.shose_app.R;
 
 public class HistoryAdapter extends ArrayAdapter<String> {
+    private List<Product> mProducts;
     private final Context mContext;
     private final int mLayoutResourceId;
     private final List<String> mSearchHistoryList;
     private final SearchViewListener mListener;
+
 
     public HistoryAdapter(Context context, int layoutResourceId, List<String> searchHistoryList, SearchViewListener listener) {
         super(context, layoutResourceId, searchHistoryList);
@@ -292,6 +295,7 @@ public class HistoryAdapter extends ArrayAdapter<String> {
         this.mSearchHistoryList = searchHistoryList;
         this.mListener = listener;
     }
+
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -324,15 +328,9 @@ public class HistoryAdapter extends ArrayAdapter<String> {
         holder.deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                holder.deleteButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        ((SearchActivity) mContext).removeSearchHistory(searchQuery);
-                        mListener.getSearchView().setIconified(false);
-                        mListener.getSearchView().setQuery("", false);
-                    }
-                });
-
+                ((SearchActivity) mContext).removeSearchHistory(searchQuery);
+                mListener.getSearchView().setIconified(false);
+                mListener.getSearchView().setQuery("", false);
             }
         });
 
@@ -343,6 +341,11 @@ public class HistoryAdapter extends ArrayAdapter<String> {
         TextView searchText;
         ImageView deleteButton;
     }
+    public void setProducts(List<Product> products) {
+        mProducts = products;
+        notifyDataSetChanged();
+    }
+
 
     public interface SearchViewListener {
         SearchView getSearchView();
@@ -350,6 +353,10 @@ public class HistoryAdapter extends ArrayAdapter<String> {
     @Override
     public int getCount() {
         return mSearchHistoryList.size();
+    }
+    @Override
+    public String getItem(int position) {
+        return mSearchHistoryList.get(position);
     }
 
 }
