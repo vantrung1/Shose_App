@@ -153,6 +153,20 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intentSearch);
             }
         });
+        SearchViewHome.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                Intent intentSearch = new Intent(HomeActivity.this, SearchActivity.class);
+                startActivity(intentSearch);
+                return true;
+            }
+        });
         SearchViewHome.setOnCloseListener(new SearchView.OnCloseListener() {
             @Override
             public boolean onClose() {
