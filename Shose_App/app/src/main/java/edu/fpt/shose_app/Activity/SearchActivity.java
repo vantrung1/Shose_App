@@ -43,18 +43,14 @@ public class SearchActivity extends AppCompatActivity implements HistoryAdapter.
     Toolbar toolbar;
     private RecyclerView rcv_seacrch;
     private ProductAdapter adapter;
-    private HistoryAdapter historyAdapter;
     private List<Product> productList = new ArrayList<>();
     private static final String BASE_URL = "http://shoseapp.click/api/";
 
     private SearchView mSearchView;
     private ArrayAdapter<String> mHistoryAdapter;
     private ArrayList<String> mSearchHistoryList;
-    private LinearLayout mSearchHistoryLayout;
     private ScrollView mSearchHistoryScrollView;
     private ListView mSearchResultsListView;
-    private Context mContext;
-
     public static final int MAX_SEARCH_HISTORY = 20;
     public static final String SEARCH_HISTORY_PREFS_NAME = "SearchHistoryPrefs";
     public static final String SEARCH_HISTORY_PREFS_KEY = "SearchHistory";
@@ -64,46 +60,16 @@ public class SearchActivity extends AppCompatActivity implements HistoryAdapter.
         setContentView(R.layout.activity_search);
         // Initialize search history list
         mSearchHistoryList = new ArrayList<>();
-
         initView();
         initActionBar();
         getProductList();
         HistorySearch();
-//        loadSearchHistory();
-
 
     }
-    //    private void HistorySearch(){
-//        // Set up history adapter and list view
-//        mHistoryAdapter = new HistoryAdapter(this, R.layout.search_history_item_layout, mSearchHistoryList, this); // Pass "this" as the listener parameter
-//        mSearchResultsListView.setAdapter(mHistoryAdapter);
-//        mSearchResultsListView.setVisibility(View.GONE);
-//        // Set up history scroll view
-//        mSearchHistoryScrollView.setVisibility(View.GONE);
-//        mSearchView.setOnSearchClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mSearchResultsListView.setVisibility(View.VISIBLE);
-//                mSearchHistoryScrollView.setVisibility(View.VISIBLE);
-//                rcv_seacrch.setVisibility(View.GONE);
-//            }
-//        });
-//
-//        mSearchView.setOnCloseListener(new SearchView.OnCloseListener() {
-//            @Override
-//            public boolean onClose() {
-//                mSearchResultsListView.setVisibility(View.GONE);
-//                mSearchHistoryScrollView.setVisibility(View.GONE);
-//                rcv_seacrch.setVisibility(View.VISIBLE);
-//                return false;
-//            }
-//        });
-//    }
     private void initView() {
         rcv_seacrch = findViewById(R.id.rcv_search);
         toolbar = findViewById(R.id.toolbar);
         mSearchView = findViewById(R.id.search_view);
-        mSearchHistoryLayout = findViewById(R.id.search_history_list_view);
         mSearchHistoryScrollView = findViewById(R.id.search_history_scrollview);
         mSearchResultsListView = findViewById(R.id.search_results_list_view);
         // Khởi tạo GridLayoutManager với spanCount là 2
@@ -150,16 +116,10 @@ public class SearchActivity extends AppCompatActivity implements HistoryAdapter.
                             // Hide keyboard and clear focus
                             mSearchView.clearFocus();
                             return true;
-
-                            //vấn đề là thêm 2 kiểu khác nhau
                         }
 
                         @Override
                         public boolean onQueryTextChange(String newText) {
-//                            adapter.getFilter().filter(newText);
-//                            mSearchResultsListView.setVisibility(View.GONE);
-//                            mSearchHistoryScrollView.setVisibility(View.GONE);
-//                            rcv_seacrch.setVisibility(View.VISIBLE);
                             // Lấy danh sách lịch sử tìm kiếm từ SharedPreferences
                             SharedPreferences sharedPreferences = getSharedPreferences(SEARCH_HISTORY_PREFS_NAME, MODE_PRIVATE);
                             Set<String> searchHistorySet = sharedPreferences.getStringSet(SEARCH_HISTORY_PREFS_KEY, new HashSet<String>());
@@ -219,64 +179,11 @@ public class SearchActivity extends AppCompatActivity implements HistoryAdapter.
             }
         });
     }
-    //    private void SearchListHistory(){
-//        // Set up search view
-//        mSearchView.setQueryHint("Nhập từ khoá để tìm kiếm");
-//        mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//            @Override
-//            public boolean onQueryTextSubmit(String query) {
-//                // Add query to search history list
-//                if (!mSearchHistoryList.contains(query)) {
-//                    addSearchHistory(query);
-//                }
-//                // Do search
-////                performSearch(query);
-//
-//                // Collapse the search view
-//                mSearchView.clearFocus();
-//
-//                return true;
-//            }
-//
-//            @Override
-//            public boolean onQueryTextChange(String newText) {
-//                // Do nothing
-////                performSearch(newText);
-//                return false;
-//            }
-//        });
-//        // Thiết lập hành động tìm kiếm khi người dùng thay đổi nội dung của SearchView
-//        mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-//            @Override
-//            public boolean onQueryTextSubmit(String query) {
-//                // Xử lý tìm kiếm với từ khoá là "query"
-//                performSearch(query);
-//                return false;
-//            }
-//            @Override
-//            public boolean onQueryTextChange(String newText) {
-//                // Thực hiện tìm kiếm tự động khi người dùng thay đổi nội dung của SearchView
-//                performSearch(newText);
-//                return false;
-//            }
-//        });
-//    }
+
     @Override
     public SearchView getSearchView() {
         return mSearchView;
     }
-    //    private void performSearch(String query) {
-//        List<Product> results = new ArrayList<>();
-//        // Loop through productList to find products that match query
-//        for (Product product : productList) {
-//            if (product.getName().toLowerCase().contains(query.toLowerCase())) {
-//                results.add(product);
-//            }
-//        }
-//        // Update adapter with search results
-//        historyAdapter.setProducts(results);
-//        historyAdapter.notifyDataSetChanged();
-//    }
     private void performSearch(String query) {
         // Clear the previous search results
         mSearchHistoryList.clear();
@@ -321,16 +228,6 @@ public class SearchActivity extends AppCompatActivity implements HistoryAdapter.
         // Notify the adapter that the data has changed
         mHistoryAdapter.notifyDataSetChanged();
     }
-    //    private void loadSearchHistory() {
-//        SharedPreferences prefs = getSharedPreferences(SEARCH_HISTORY_PREFS_NAME, MODE_PRIVATE);
-//        String searchHistoryString = prefs.getString(SEARCH_HISTORY_PREFS_KEY, null);
-//        if (searchHistoryString != null) {
-//            String[] searchHistoryArray = searchHistoryString.split(",");
-//            Set<String> searchHistorySet = new HashSet<>(Arrays.asList(searchHistoryArray));
-//            mSearchHistoryList.addAll(searchHistorySet);
-//            mHistoryAdapter.notifyDataSetChanged();
-//        }
-//    }
     private void loadSearchHistory() {
 //        SharedPreferences prefs = getSharedPreferences(SEARCH_HISTORY_PREFS_NAME, MODE_PRIVATE);
 //        Set<String> searchHistorySet = prefs.getStringSet(SEARCH_HISTORY_PREFS_KEY, null);
@@ -374,25 +271,5 @@ public class SearchActivity extends AppCompatActivity implements HistoryAdapter.
         mHistoryAdapter.addAll(mSearchHistoryList);
         mHistoryAdapter.notifyDataSetChanged();
     }
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.options_menu, menu);
-//        return true;
-//    }
-
-//    @Override
-//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-//        int id = item.getItemId();
-//
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
 }
 
