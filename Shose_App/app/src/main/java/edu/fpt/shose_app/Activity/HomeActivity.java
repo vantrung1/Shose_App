@@ -11,10 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -116,18 +114,18 @@ public class HomeActivity extends AppCompatActivity {
                     ProductRequest productRequest = response.body();
 
 
-                        productArrayList.clear();
-                        productArrayList = productRequest.getProducts();
-                        if(productArrayList.size() ==0){
-                            txta.setVisibility(View.VISIBLE);
-                        }
-                        else {
-                            txta.setVisibility(View.INVISIBLE);
+                    productArrayList.clear();
+                    productArrayList = productRequest.getProducts();
+                    if(productArrayList.size() ==0){
+                        txta.setVisibility(View.VISIBLE);
+                    }
+                    else {
+                        txta.setVisibility(View.INVISIBLE);
 
-                        }
-                        productAdapter.setBrandSelected(productArrayList);
-                        productAdapter2.setProdcut(productArrayList);
-                        Log.d("TAG", "onResponse: "+productArrayList.size());
+                    }
+                    productAdapter.setBrandSelected(productArrayList);
+                    productAdapter2.setProdcut(productArrayList);
+                    Log.d("TAG", "onResponse: "+productArrayList.size());
 
 
                 }
@@ -148,24 +146,19 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void initAction() {
-        SearchViewHome.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        SearchViewHome.setOnSearchClickListener(new View.OnClickListener() {
             @Override
-            public boolean onQueryTextSubmit(String query) {
+            public void onClick(View view) {
                 Intent intentSearch = new Intent(HomeActivity.this, SearchActivity.class);
                 startActivity(intentSearch);
-                return true;
-            }
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                return false;
             }
         });
         SearchViewHome.setOnCloseListener(new SearchView.OnCloseListener() {
             @Override
             public boolean onClose() {
                 // Bắt sự kiện khi người dùng đóng SearchView ở đây
-                Toast.makeText(getApplicationContext(),"kkkkk",Toast.LENGTH_LONG).show();
-                return true;
+                SearchViewHome.clearFocus();
+                return false;
             }
         });
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -281,15 +274,6 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.mnu_notifi:
 
                         break;
-                    case R.id.mnu_exit:
-                        SharedPreferences sharedPreferences  = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
-
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.putString("pass", "pass");
-                        editor.apply();
-                        Intent i4 = new Intent(HomeActivity.this, SignInActivity.class);
-                        startActivity(i4);
-                        break;
                     default:
                 }
                 drawerLayout_home.closeDrawer(navigationView_home);
@@ -310,7 +294,7 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
-                  //  productAdapter.setBrandSelected(productArrayList);
+                    //  productAdapter.setBrandSelected(productArrayList);
                     productAdapter3.setProductArrayList(productRequest);
                     Log.d("TAG", "onResponsesads: "+productRequest.size());
 

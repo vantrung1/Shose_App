@@ -4,7 +4,7 @@
             "outputFile": "edu.fpt.shose_app-mergeDebugResources-40:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/Users/vilong/.gradle/caches/transforms-3/65f05df372fdf615f01a829a29f7597b/transformed/appcompat-1.6.1/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/neko/.gradle/caches/transforms-3/65f05df372fdf615f01a829a29f7597b/transformed/appcompat-1.6.1/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/vilong/.gradle/caches/transforms-3/8e4f9ae5c0cbc5826da0baa03f1a96c0/transformed/material-1.8.0/res/values-large-v4/values-large-v4.xml",
+                    "source": "/Users/neko/.gradle/caches/transforms-3/8e4f9ae5c0cbc5826da0baa03f1a96c0/transformed/material-1.8.0/res/values-large-v4/values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,10",
                         "startColumns": "4,4,4,4",
