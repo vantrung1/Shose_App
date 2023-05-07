@@ -11,4 +11,11 @@ public class Utils {
     public static User Users_Utils = new User();
     public static List<Cart> cartLists =new ArrayList<>();
     public static List<Cart> buyCartLits = new ArrayList<>();
+
+    public static String ID_Received = "100";
+    public static final String SEND_ID = "idsend";
+    public static final String RECEIVEDID_ID = "idreceived";
+    public static final String MESS = "message";
+    public static final String DATETIME = "datetime";
+    public static final String PATH_CHAT = "chat";
 }
