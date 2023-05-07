@@ -1980,6 +1980,7 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color send
 color splash_backgroud
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
@@ -2875,6 +2876,7 @@ drawable bg_gray_conner_10
 drawable bg_star_yellow
 drawable bg_white_conner_10_gray
 drawable bg_white_conner_16
+drawable box_chat
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2936,6 +2938,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_photo_black_48dp
 drawable ic_photo_camera_black_48dp
 drawable ic_search_black_24
+drawable ic_send_24
 drawable icon_back
 drawable icon_gg
 drawable icon_pen
@@ -2971,6 +2974,8 @@ drawable material_ic_keyboard_arrow_previous_black_24dp
 drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
+drawable mess_boxchat
+drawable mess_inputtextback
 drawable mtrl_bottomsheet_drag_handle
 drawable mtrl_checkbox_button
 drawable mtrl_checkbox_button_checked_unchecked
@@ -3304,6 +3309,7 @@ id edReNewPass
 id edUsername
 id ed_Email
 id ed_cmt
+id ed_inputext
 id ed_password
 id edchangepassword
 id edit_query
@@ -3384,6 +3390,7 @@ id image_view_logo
 id image_view_state_aspect_ratio
 id image_view_state_rotate
 id image_view_state_scale
+id img_btnchat
 id img_camera
 id img_close
 id img_detail
@@ -3450,6 +3457,7 @@ id light
 id line1
 id line3
 id linear
+id linear1
 id linearLayout
 id linearLayout_item
 id listMode
@@ -3609,6 +3617,7 @@ id recy_waitconfirm
 id recy_waiting
 id recycler_dialog_color
 id recycler_dialog_size
+id recycleview_boxchat
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3808,6 +3817,8 @@ id txt_address_users
 id txt_attributes_evaluate
 id txt_createAt
 id txt_feedback
+id txt_mess1
+id txt_mess2
 id txt_name_users
 id txt_namepr_evaluate
 id txt_paymentAmount
@@ -3822,11 +3833,13 @@ id txt_reason
 id txt_request_by
 id txt_sale
 id txt_show_more
+id txt_time1
 id txt_total
 id txt_total2
 id txt_update_at
 id txt_update_at_2
 id txta
+id txttime2
 id ucrop
 id ucrop_frame
 id ucrop_photobox
@@ -4037,6 +4050,8 @@ layout item_my_cart
 layout item_product2
 layout item_product_home
 layout item_products_oder
+layout item_receied
+layout item_sendmess
 layout item_transport_oder
 layout item_waitforconfirmation_oder
 layout itemsize
