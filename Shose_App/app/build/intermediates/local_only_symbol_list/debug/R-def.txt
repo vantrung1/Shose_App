@@ -17,6 +17,7 @@ color purple_200
 color purple_500
 color purple_700
 color red
+color send
 color splash_backgroud
 color teal_200
 color teal_700
@@ -68,6 +69,7 @@ drawable bg_gray_conner_10
 drawable bg_star_yellow
 drawable bg_white_conner_10_gray
 drawable bg_white_conner_16
+drawable box_chat
 drawable btn_delete_gray
 drawable btn_delete_red
 drawable btn_minus_blue
@@ -81,6 +83,7 @@ drawable edittext_no_underline
 drawable ic_delete
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_send_24
 drawable icon_back
 drawable icon_gg
 drawable icon_pen
@@ -95,6 +98,8 @@ drawable itemclick
 drawable loading
 drawable location_24
 drawable logo
+drawable mess_boxchat
+drawable mess_inputtextback
 drawable nike
 drawable nike_icon
 drawable notifications_24
@@ -159,6 +164,7 @@ id edReNewPass
 id edUsername
 id ed_Email
 id ed_cmt
+id ed_inputext
 id ed_password
 id edchangepassword
 id edoldpass
@@ -184,6 +190,7 @@ id imageView_icon3
 id imageView_icon4
 id image_brand
 id image_view_item
+id img_btnchat
 id img_camera
 id img_close
 id img_detail
@@ -227,6 +234,7 @@ id layout_right_allproduct
 id layoutbottom
 id layoutop
 id layuotItem
+id linear1
 id linearLayout
 id linearLayout_item
 id ln_item_dv
@@ -276,6 +284,7 @@ id recy_waitconfirm
 id recy_waiting
 id recycler_dialog_color
 id recycler_dialog_size
+id recycleview_boxchat
 id scorllView
 id seall
 id search_history_list_view
@@ -337,6 +346,8 @@ id txt_address_users
 id txt_attributes_evaluate
 id txt_createAt
 id txt_feedback
+id txt_mess1
+id txt_mess2
 id txt_name_users
 id txt_namepr_evaluate
 id txt_paymentAmount
@@ -351,11 +362,13 @@ id txt_reason
 id txt_request_by
 id txt_sale
 id txt_show_more
+id txt_time1
 id txt_total
 id txt_total2
 id txt_update_at
 id txt_update_at_2
 id txta
+id txttime2
 id update
 id viewPager
 id view_pager
@@ -406,6 +419,8 @@ layout item_my_cart
 layout item_product2
 layout item_product_home
 layout item_products_oder
+layout item_receied
+layout item_sendmess
 layout item_transport_oder
 layout item_waitforconfirmation_oder
 layout itemsize
