@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "edu.fpt.shose_app-mergeDebugResources-40:/values-v24/values-v24.xml",
+            "outputFile": "edu.fpt.shose_app-mergeDebugResources-39:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\65f05df372fdf615f01a829a29f7597b\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Minh Tu\\.gradle\\caches\\transforms-3\\65f05df372fdf615f01a829a29f7597b\\transformed\\appcompat-1.6.1\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\8e4f9ae5c0cbc5826da0baa03f1a96c0\\transformed\\material-1.8.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Minh Tu\\.gradle\\caches\\transforms-3\\8e4f9ae5c0cbc5826da0baa03f1a96c0\\transformed\\material-1.8.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",

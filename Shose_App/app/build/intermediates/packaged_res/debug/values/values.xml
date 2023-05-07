@@ -29,14 +29,14 @@
     <string name="app_name">Shose_App</string>
     <string name="channel_description">This is Channel 1</string>
     <string name="channel_name">Channel 1</string>
-    <string name="default_web_client_id" translatable="false">947726009499-9661cvorgfdcnrk9hbu30sai9k6mlisj.apps.googleusercontent.com</string>
-    <string name="gcm_defaultSenderId" translatable="false">947726009499</string>
-    <string name="google_api_key" translatable="false">AIzaSyBJLlZIyCLbpS-olHJOJleZhdG8swKrRM0</string>
-    <string name="google_app_id" translatable="false">1:947726009499:android:997a64fc0568477124b23e</string>
-    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBJLlZIyCLbpS-olHJOJleZhdG8swKrRM0</string>
-    <string name="google_storage_bucket" translatable="false">shoe-app-a2ef6.appspot.com</string>
+    <string name="default_web_client_id" translatable="false">548139971541-7ao9pk5ak1b3ad9ba043fudiehj90n8s.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">548139971541</string>
+    <string name="google_api_key" translatable="false">AIzaSyCFIGWK7F1jog_2M7gx_-SPjYUchcP2F1w</string>
+    <string name="google_app_id" translatable="false">1:548139971541:android:e2832b5eeea0a12414c35c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCFIGWK7F1jog_2M7gx_-SPjYUchcP2F1w</string>
+    <string name="google_storage_bucket" translatable="false">shoeapp-83d82.appspot.com</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="project_id" translatable="false">shoe-app-a2ef6</string>
+    <string name="project_id" translatable="false">shoeapp-83d82</string>
     <string name="recovery">Please Enter Your Email Address To
          Recieve a Verification Code</string>
     <string name="search_hint">Looking for shoes</string>

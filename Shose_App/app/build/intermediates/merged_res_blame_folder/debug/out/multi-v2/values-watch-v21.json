@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "edu.fpt.shose_app-mergeDebugResources-40:/values-watch-v21/values-watch-v21.xml",
+            "outputFile": "edu.fpt.shose_app-mergeDebugResources-39:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\65f05df372fdf615f01a829a29f7597b\\transformed\\appcompat-1.6.1\\res\\values-watch-v21\\values-watch-v21.xml",
+                    "source": "C:\\Users\\Minh Tu\\.gradle\\caches\\transforms-3\\65f05df372fdf615f01a829a29f7597b\\transformed\\appcompat-1.6.1\\res\\values-watch-v21\\values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",

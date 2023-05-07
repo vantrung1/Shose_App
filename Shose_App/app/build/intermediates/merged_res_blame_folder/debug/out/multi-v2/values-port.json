@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "edu.fpt.shose_app-mergeDebugResources-40:/values-port/values-port.xml",
+            "outputFile": "edu.fpt.shose_app-mergeDebugResources-39:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\65f05df372fdf615f01a829a29f7597b\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\Minh Tu\\.gradle\\caches\\transforms-3\\65f05df372fdf615f01a829a29f7597b\\transformed\\appcompat-1.6.1\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
