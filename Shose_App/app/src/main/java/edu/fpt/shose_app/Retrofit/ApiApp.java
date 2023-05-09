@@ -1,11 +1,10 @@
 package edu.fpt.shose_app.Retrofit;
 
-import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import edu.fpt.shose_app.Model.Brand;
+import edu.fpt.shose_app.Model.FeedBack;
 import edu.fpt.shose_app.Model.Oder;
 import edu.fpt.shose_app.Model.OderRequest;
 import edu.fpt.shose_app.Model.Product;
@@ -14,13 +13,18 @@ import edu.fpt.shose_app.Model.SizeRequest;
 import edu.fpt.shose_app.Model.User;
 import edu.fpt.shose_app.Model.addRess_response;
 import edu.fpt.shose_app.Model.loginRequest;
+import edu.fpt.shose_app.Utils.Const;
+import okhttp3.MultipartBody;
+import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
+import retrofit2.http.Part;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
@@ -28,8 +32,10 @@ public interface ApiApp {
 
     @GET("search")
     Call<List<Product>> searchProducts(@Query("q") String query);
+
     @GET("products")
     Call<List<Product>> getAllProducts();
+
     @POST("register")
     Call<User> postUser(@Body User objUser);
 
@@ -109,7 +115,17 @@ public interface ApiApp {
 
     @GET("products")
     Call<ArrayList<Product>> getallProduct();
+
     @POST("send-otp")
     @FormUrlEncoded
     Call<User> _forgotpassword(@Field("email") String email);
+
+    @Multipart
+    @POST("ratings")
+    Call<FeedBack> _feedBack(@Part(Const.KEY_USER_ID) RequestBody user_id,
+                             @Part(Const.KEY_PRODUCT_ID) RequestBody product_id,
+                             @Part(Const.KEY_STAR) RequestBody star,
+                             @Part List<MultipartBody.Part> image,
+                             @Part(Const.KEY_CONTENT) RequestBody content
+    );
 }

@@ -4,7 +4,7 @@
             "outputFile": "edu.fpt.shose_app-mergeDebugResources-40:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "D:\\Shose_App\\Shose_App\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "C:\\Users\\admin\\Downloads\\Shose_App\\Shose_App\\Shose_App\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

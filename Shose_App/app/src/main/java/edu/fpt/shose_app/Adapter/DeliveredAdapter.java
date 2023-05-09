@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
@@ -55,6 +56,9 @@ public class DeliveredAdapter extends RecyclerView.Adapter<DeliveredAdapter.myvi
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 }
+                if (giatri == 2) {
+                    Toast.makeText(context, "Mua lại sản phẩm", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
@@ -66,20 +70,22 @@ public class DeliveredAdapter extends RecyclerView.Adapter<DeliveredAdapter.myvi
 
     public class myviewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView txt_quantity2, txtTotal, txtShow;
-        AppCompatButton appCompatButton;
+        AppCompatButton appCompatButton1, appCompatButton2;
         ImageClickListenner listenner;
 
         public myviewHolder(@NonNull View itemView) {
             super(itemView);
             txt_quantity2 = itemView.findViewById(R.id.item_txt_quantity2);
             txtTotal = itemView.findViewById(R.id.item_txt_total_delivered);
-            appCompatButton = itemView.findViewById(R.id.btn_delivered);
+            appCompatButton1 = itemView.findViewById(R.id.btn_delivered);
+            appCompatButton2 = itemView.findViewById(R.id.btn_delivered_repurchase);
             txtShow = itemView.findViewById(R.id.txt_show_more);
             recyclerView = itemView.findViewById(R.id.recy_delivered);
             recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
             products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(0).getProducts());
             recyclerView.setAdapter(products_oder_adapter);
-            appCompatButton.setOnClickListener(this);
+            appCompatButton1.setOnClickListener(this);
+            appCompatButton2.setOnClickListener(this);
         }
 
         public void setListenner(DeliveredAdapter.ImageClickListenner listenner) {
@@ -88,8 +94,10 @@ public class DeliveredAdapter extends RecyclerView.Adapter<DeliveredAdapter.myvi
 
         @Override
         public void onClick(View view) {
-            if (view == appCompatButton) {
+            if (view == appCompatButton1) {
                 listenner.onImageClick(view, getAdapterPosition(), 1);
+            } else if (view == appCompatButton2) {
+                listenner.onImageClick(view, getAdapterPosition(), 2);
             }
         }
     }

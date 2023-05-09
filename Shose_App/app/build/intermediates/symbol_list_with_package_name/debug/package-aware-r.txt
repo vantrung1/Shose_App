@@ -2846,6 +2846,7 @@ drawable background_cmt
 drawable background_custombtn
 drawable background_dialog
 drawable background_item_my_cart
+drawable background_photo
 drawable background_tittle
 drawable bag
 drawable baseline_add_24
@@ -2866,6 +2867,8 @@ drawable baseline_notifications_active_24
 drawable baseline_notifications_none_24
 drawable baseline_payment_24
 drawable baseline_person_outline_24
+drawable baseline_photo_camera_24
+drawable baseline_photo_library_24
 drawable baseline_search_24
 drawable baseline_shopping_bag_24
 drawable baseline_shopping_cart_24
@@ -3208,8 +3211,9 @@ id btn_chat
 id btn_checkout
 id btn_create
 id btn_delivered
+id btn_delivered_repurchase
 id btn_detail_cancel
-id btn_sent_evaluate
+id btn_send_evaluate
 id btn_submit
 id btn_thaydoi
 id btn_transport
@@ -3384,8 +3388,10 @@ id imageView_icon2
 id imageView_icon3
 id imageView_icon4
 id image_brand
+id image_delete_item
 id image_view_crop
 id image_view_item
+id image_view_item_feed_back
 id image_view_logo
 id image_view_state_aspect_ratio
 id image_view_state_rotate
@@ -3460,6 +3466,8 @@ id linear
 id linear1
 id linearLayout
 id linearLayout_item
+id linear_photo
+id linear_photo_library
 id listMode
 id list_item
 id ln_item_dv
@@ -3599,6 +3607,7 @@ id rd_reason_cancel4
 id rd_reason_cancel5
 id rd_reason_cancel6
 id rectangles
+id recy2_feed_back
 id recyImageDetail
 id recySizeDetail
 id recy_1_product
@@ -3610,6 +3619,7 @@ id recy_cancel_detail_btn
 id recy_cancel_oder
 id recy_cancel_oder_btn
 id recy_delivered
+id recy_feed_back
 id recy_my_cart
 id recy_transport
 id recy_wait_for
@@ -4045,7 +4055,9 @@ layout header_layout
 layout item_brand
 layout item_cancel_oder
 layout item_delivered_oder
+layout item_feed_back
 layout item_image
+layout item_image_feed_back
 layout item_my_cart
 layout item_product2
 layout item_product_home
