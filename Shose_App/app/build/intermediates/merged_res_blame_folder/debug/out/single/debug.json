@@ -16,6 +16,10 @@
         "source": "edu.fpt.shose_app-main-43:/drawable/nike.png"
     },
     {
+        "merged": "edu.fpt.shose_app-merged_res-41:/drawable_baseline_photo_camera_24.xml.flat",
+        "source": "edu.fpt.shose_app-main-43:/drawable/baseline_photo_camera_24.xml"
+    },
+    {
         "merged": "edu.fpt.shose_app-merged_res-41:/drawable_bg_star_yellow.xml.flat",
         "source": "edu.fpt.shose_app-main-43:/drawable/bg_star_yellow.xml"
     },
@@ -244,16 +248,16 @@
         "source": "edu.fpt.shose_app-main-43:/layout/layout_dialog_custom_phone.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-41:/drawable_image_check_box.xml.flat",
-        "source": "edu.fpt.shose_app-main-43:/drawable/image_check_box.xml"
+        "merged": "edu.fpt.shose_app-merged_res-41:/layout_fragment_transport.xml.flat",
+        "source": "edu.fpt.shose_app-main-43:/layout/fragment_transport.xml"
     },
     {
         "merged": "edu.fpt.shose_app-merged_res-41:/drawable_loading.png.flat",
         "source": "edu.fpt.shose_app-main-43:/drawable/loading.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-41:/layout_fragment_transport.xml.flat",
-        "source": "edu.fpt.shose_app-main-43:/layout/fragment_transport.xml"
+        "merged": "edu.fpt.shose_app-merged_res-41:/drawable_image_check_box.xml.flat",
+        "source": "edu.fpt.shose_app-main-43:/drawable/image_check_box.xml"
     },
     {
         "merged": "edu.fpt.shose_app-merged_res-41:/layout_activity_main.xml.flat",
@@ -274,6 +278,10 @@
     {
         "merged": "edu.fpt.shose_app-merged_res-41:/drawable_image_profile.png.flat",
         "source": "edu.fpt.shose_app-main-43:/drawable/image_profile.png"
+    },
+    {
+        "merged": "edu.fpt.shose_app-merged_res-41:/layout_item_image_feed_back.xml.flat",
+        "source": "edu.fpt.shose_app-main-43:/layout/item_image_feed_back.xml"
     },
     {
         "merged": "edu.fpt.shose_app-merged_res-41:/drawable_onboard1.png.flat",
@@ -408,12 +416,12 @@
         "source": "edu.fpt.shose_app-main-43:/drawable-v24/img_net_dut.png"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-41:/layout_dialog_cancel_order_detail.xml.flat",
-        "source": "edu.fpt.shose_app-main-43:/layout/dialog_cancel_order_detail.xml"
-    },
-    {
         "merged": "edu.fpt.shose_app-merged_res-41:/drawable_baseline_notifications_active_24.xml.flat",
         "source": "edu.fpt.shose_app-main-43:/drawable/baseline_notifications_active_24.xml"
+    },
+    {
+        "merged": "edu.fpt.shose_app-merged_res-41:/layout_dialog_cancel_order_detail.xml.flat",
+        "source": "edu.fpt.shose_app-main-43:/layout/dialog_cancel_order_detail.xml"
     },
     {
         "merged": "edu.fpt.shose_app-merged_res-41:/drawable_background_btn_dangnhap.xml.flat",
@@ -500,6 +508,10 @@
         "source": "edu.fpt.shose_app-main-43:/drawable/bg_blue_conner_16_topleft_topright.xml"
     },
     {
+        "merged": "edu.fpt.shose_app-merged_res-41:/drawable_background_photo.xml.flat",
+        "source": "edu.fpt.shose_app-main-43:/drawable/background_photo.xml"
+    },
+    {
         "merged": "edu.fpt.shose_app-merged_res-41:/layout_activity_change_password.xml.flat",
         "source": "edu.fpt.shose_app-main-43:/layout/activity_change_password.xml"
     },
@@ -552,6 +564,10 @@
         "source": "edu.fpt.shose_app-main-43:/layout/layout_dialog_custom_mail.xml"
     },
     {
+        "merged": "edu.fpt.shose_app-merged_res-41:/drawable_baseline_photo_library_24.xml.flat",
+        "source": "edu.fpt.shose_app-main-43:/drawable/baseline_photo_library_24.xml"
+    },
+    {
         "merged": "edu.fpt.shose_app-merged_res-41:/drawable_bg_gray_conner_10.xml.flat",
         "source": "edu.fpt.shose_app-main-43:/drawable/bg_gray_conner_10.xml"
     },
@@ -566,6 +582,10 @@
     {
         "merged": "edu.fpt.shose_app-merged_res-41:/menu_nav_menu.xml.flat",
         "source": "edu.fpt.shose_app-main-43:/menu/nav_menu.xml"
+    },
+    {
+        "merged": "edu.fpt.shose_app-merged_res-41:/layout_item_feed_back.xml.flat",
+        "source": "edu.fpt.shose_app-main-43:/layout/item_feed_back.xml"
     },
     {
         "merged": "edu.fpt.shose_app-merged_res-41:/layout_fragment_waiting_for_goods.xml.flat",

@@ -41,6 +41,12 @@ public class Products_Oder_Adapter extends RecyclerView.Adapter<Products_Oder_Ad
     @Override
     public void onBindViewHolder(@NonNull Products_Oder_Adapter.MyViewHolder holder, int position) {
         holder.bind(products_oderList.get(position));
+        holder.setListenner(new ImageClickListenner() {
+            @Override
+            public void onImageClick(View view, int pos, int giatri) {
+                Toast.makeText(context, "sp1", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -48,9 +54,10 @@ public class Products_Oder_Adapter extends RecyclerView.Adapter<Products_Oder_Ad
         return products_oderList.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView imgProduct;
         TextView txtname, txtattributes, txtquantity, txtprice, txtsale;
+        ImageClickListenner listenner;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -60,6 +67,7 @@ public class Products_Oder_Adapter extends RecyclerView.Adapter<Products_Oder_Ad
             txtquantity = itemView.findViewById(R.id.item_txt_quantity);
             txtprice = itemView.findViewById(R.id.item_txt_price);
             txtsale = itemView.findViewById(R.id.item_txt_sale);
+            itemView.setOnClickListener(this);
         }
 
         void bind(final Products_Oder p_oder) {
@@ -71,5 +79,20 @@ public class Products_Oder_Adapter extends RecyclerView.Adapter<Products_Oder_Ad
             txtprice.setPaintFlags(txtprice.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             txtsale.setText(new DecimalFormat("###,###,###").format(p_oder.getSale()));
         }
+
+        public void setListenner(Products_Oder_Adapter.ImageClickListenner listenner) {
+            this.listenner = listenner;
+        }
+
+        @Override
+        public void onClick(View view) {
+            if (view == itemView) {
+                listenner.onImageClick(view, getAdapterPosition(), 1);
+            }
+        }
+    }
+
+    public interface ImageClickListenner {
+        void onImageClick(View view, int pos, int giatri);
     }
 }
