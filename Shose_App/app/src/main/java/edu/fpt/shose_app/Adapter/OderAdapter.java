@@ -96,6 +96,12 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.myviewHolder> 
             recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
             products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(0).getProducts());
             recyclerView.setAdapter(products_oder_adapter);
+
+            if (oderArrayList.size()>1){
+                txtShow.setVisibility(View.VISIBLE);
+            }else {
+                txtShow.setVisibility(View.GONE);
+            }
             //eventClick
             itemView.setOnClickListener(this);
             txtShow.setOnClickListener(this);

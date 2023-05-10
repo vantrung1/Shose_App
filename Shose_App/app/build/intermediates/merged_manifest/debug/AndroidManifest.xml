@@ -56,6 +56,12 @@
         android:theme="@style/Theme.Shose_App"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="edu.fpt.shose_app.Activity.AllProduct"
+            android:exported="false" />
+        <activity
+            android:name="edu.fpt.shose_app.Activity.InforOderActivity"
+            android:exported="false" />
+        <activity
             android:name="edu.fpt.shose_app.Activity.FeedBackActivity"
             android:exported="false" />
         <activity

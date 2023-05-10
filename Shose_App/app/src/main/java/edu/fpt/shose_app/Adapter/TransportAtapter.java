@@ -1,6 +1,7 @@
 package edu.fpt.shose_app.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,8 @@ import com.bumptech.glide.Glide;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+import edu.fpt.shose_app.Activity.CancelOderBtnActivity;
+import edu.fpt.shose_app.Activity.InforOderActivity;
 import edu.fpt.shose_app.Model.Oder;
 import edu.fpt.shose_app.R;
 
@@ -49,6 +52,18 @@ public class TransportAtapter extends RecyclerView.Adapter<TransportAtapter.myvi
     public void onBindViewHolder(@NonNull TransportAtapter.myviewHolder holder, int position) {
         holder.txt_quantity2.setText(oderArrayList.get(position).getQuantity() + "sản phẩm");
         holder.txtTotal.setText(oderArrayList.get(position).getTotal());
+
+        holder.setListenner(new TransportAtapter.ImageClickListenner() {
+            @Override
+            public void onImageClick(View view, int pos, int giatri) {
+                if (giatri == 1) {
+                    Intent intent = new Intent(context, InforOderActivity.class);
+                    intent.putExtra("inforoder", oderArrayList.get(pos));
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+                }
+            }
+        });
     }
 
     @Override
@@ -56,9 +71,10 @@ public class TransportAtapter extends RecyclerView.Adapter<TransportAtapter.myvi
         return oderArrayList.size();
     }
 
-    public class myviewHolder extends RecyclerView.ViewHolder {
+    public class myviewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView txt_quantity2, txtTotal, txtShow;
         AppCompatButton appCompatButton;
+        ImageClickListenner listenner;
 
         public myviewHolder(@NonNull View itemView) {
             super(itemView);
@@ -70,6 +86,29 @@ public class TransportAtapter extends RecyclerView.Adapter<TransportAtapter.myvi
             recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
             products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(0).getProducts());
             recyclerView.setAdapter(products_oder_adapter);
+
+            if (oderArrayList.size() > 1) {
+                txtShow.setVisibility(View.VISIBLE);
+            } else {
+                txtShow.setVisibility(View.GONE);
+            }
+            //eventClick
+            itemView.setOnClickListener(this);
         }
+
+        public void setListenner(ImageClickListenner listenner) {
+            this.listenner = listenner;
+        }
+
+        @Override
+        public void onClick(View view) {
+            if (view == itemView) {
+                listenner.onImageClick(view, getAdapterPosition(), 1);
+            }
+        }
+    }
+
+    public interface ImageClickListenner {
+        void onImageClick(View view, int pos, int giatri);
     }
 }

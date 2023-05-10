@@ -39,6 +39,7 @@ drawable background_cmt
 drawable background_custombtn
 drawable background_dialog
 drawable background_item_my_cart
+drawable background_photo
 drawable background_tittle
 drawable bag
 drawable baseline_add_24
@@ -59,6 +60,8 @@ drawable baseline_notifications_active_24
 drawable baseline_notifications_none_24
 drawable baseline_payment_24
 drawable baseline_person_outline_24
+drawable baseline_photo_camera_24
+drawable baseline_photo_library_24
 drawable baseline_search_24
 drawable baseline_shopping_bag_24
 drawable baseline_shopping_cart_24
@@ -135,11 +138,13 @@ id btn_cancel
 id btn_cancel_mail
 id btn_cancel_phone
 id btn_chat
+id btn_chat_infor
 id btn_checkout
 id btn_create
 id btn_delivered
+id btn_delivered_repurchase
 id btn_detail_cancel
-id btn_sent_evaluate
+id btn_send_evaluate
 id btn_submit
 id btn_thaydoi
 id btn_transport
@@ -189,7 +194,9 @@ id imageView_icon2
 id imageView_icon3
 id imageView_icon4
 id image_brand
+id image_delete_item
 id image_view_item
+id image_view_item_feed_back
 id img_btnchat
 id img_camera
 id img_close
@@ -237,6 +244,8 @@ id layuotItem
 id linear1
 id linearLayout
 id linearLayout_item
+id linear_photo
+id linear_photo_library
 id ln_item_dv
 id logo
 id menuSl
@@ -266,6 +275,7 @@ id rd_reason_cancel3
 id rd_reason_cancel4
 id rd_reason_cancel5
 id rd_reason_cancel6
+id recy2_feed_back
 id recyImageDetail
 id recySizeDetail
 id recy_1_product
@@ -277,6 +287,8 @@ id recy_cancel_detail_btn
 id recy_cancel_oder
 id recy_cancel_oder_btn
 id recy_delivered
+id recy_feed_back
+id recy_infor_oder
 id recy_my_cart
 id recy_transport
 id recy_wait_for
@@ -330,6 +342,7 @@ id toolbar_check_out_main
 id toolbar_detail
 id toolbar_evaluate
 id toolbar_favourite
+id toolbar_inforoder
 id toolbar_notification
 id toolbar_oder
 id toolbar_profile
@@ -382,6 +395,7 @@ layout activity_favourite
 layout activity_feed_back
 layout activity_foget_pass
 layout activity_home
+layout activity_infor_oder
 layout activity_main
 layout activity_my_cart
 layout activity_notification
@@ -414,7 +428,9 @@ layout header_layout
 layout item_brand
 layout item_cancel_oder
 layout item_delivered_oder
+layout item_feed_back
 layout item_image
+layout item_image_feed_back
 layout item_my_cart
 layout item_product2
 layout item_product_home
