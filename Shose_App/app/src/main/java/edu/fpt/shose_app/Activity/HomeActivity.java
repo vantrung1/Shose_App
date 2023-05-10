@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -288,6 +289,14 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.mnu_notifi:
 
                         break;
+                    case R.id.mnu_exit:
+                        SharedPreferences sharedPreferences = getSharedPreferences("MyPreferences", 0);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("pass", "1");
+                        editor.apply();
+                        Intent i4 = new Intent(HomeActivity.this, SignInActivity.class);
+                        startActivity(i4);
+                        break;
                     default:
                 }
                 drawerLayout_home.closeDrawer(navigationView_home);
@@ -406,5 +415,11 @@ public class HomeActivity extends AppCompatActivity {
             get_product(brand_adapter.getSelected().getId());
         }
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        initHeader();
     }
 }

@@ -142,7 +142,7 @@ public class SignInActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), loginRequest.getMessage(), Toast.LENGTH_LONG).show();
                         Intent i = new Intent(SignInActivity.this, HomeActivity.class);
                         startActivity(i);
-
+                        Utils.Users_Utils.setPassword(pass);
                         editor.putString("username", emai);
                         editor.putString("pass", pass);
                         editor.apply();

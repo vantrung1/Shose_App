@@ -62,6 +62,9 @@
             android:name="edu.fpt.shose_app.Activity.Cancel_detail_activity"
             android:exported="false" />
         <activity
+            android:name="edu.fpt.shose_app.Activity.ChangePassword_activity"
+            android:exported="false" />
+        <activity
             android:name="edu.fpt.shose_app.Activity.CancelOderBtnActivity"
             android:exported="true" />
         <activity

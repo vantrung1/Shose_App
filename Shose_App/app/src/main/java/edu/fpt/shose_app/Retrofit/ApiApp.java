@@ -128,4 +128,6 @@ public interface ApiApp {
                              @Part List<MultipartBody.Part> image,
                              @Part(Const.KEY_CONTENT) RequestBody content
     );
+    @PUT("users/{id}")
+    Call<loginRequest> _updateUser(@Path("id") int id,@Body User user);
 }

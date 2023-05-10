@@ -23,43 +23,17 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <LinearLayout
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recy_feed_back"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:orientation="horizontal">
+                android:layout_margin="10dp" />
 
-                <ImageView
-                    android:id="@+id/item_image_evaluate"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="5dp"
-                    android:src="@drawable/product" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="5dp"
-                    android:gravity="center_vertical"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/txt_namepr_evaluate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Nike Club Max"
-                        android:textColor="@color/black"
-                        android:textSize="23dp" />
-
-                    <TextView
-                        android:id="@+id/txt_attributes_evaluate"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="xanh, 38"
-                        android:textColor="@color/xam" />
-                </LinearLayout>
-            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/img_net_dut" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -107,6 +81,70 @@
                         android:text="Tuyệt vời"
                         android:textColor="@color/yellow" />
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:id="@+id/linear_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_photo"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/baseline_photo_camera_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="Thêm hình ảnh"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear_photo_library"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_photo"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/baseline_photo_library_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="Chọn từ thư viện"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recy2_feed_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -170,7 +208,7 @@
                 </LinearLayout>
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_sent_evaluate"
+                    android:id="@+id/btn_send_evaluate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
