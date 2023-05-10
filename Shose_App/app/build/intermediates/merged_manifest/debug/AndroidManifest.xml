@@ -59,6 +59,9 @@
             android:name="edu.fpt.shose_app.Activity.AllProduct"
             android:exported="false" />
         <activity
+            android:name="edu.fpt.shose_app.Activity.ChangePassword_activity"
+            android:exported="false" />
+        <activity
             android:name="edu.fpt.shose_app.Activity.InforOderActivity"
             android:exported="false" />
         <activity

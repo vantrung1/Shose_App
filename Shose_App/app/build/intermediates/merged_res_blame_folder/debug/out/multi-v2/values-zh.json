@@ -4,7 +4,7 @@
             "outputFile": "edu.fpt.shose_app-mergeDebugResources-40:/values-zh/values-zh.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\DaoTuan\\.gradle\\caches\\transforms-3\\8f612c14bf7e80c08b5832e167cb8571\\transformed\\ucrop-2.2.6\\res\\values-zh\\values-zh.xml",
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\8f612c14bf7e80c08b5832e167cb8571\\transformed\\ucrop-2.2.6\\res\\values-zh\\values-zh.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",

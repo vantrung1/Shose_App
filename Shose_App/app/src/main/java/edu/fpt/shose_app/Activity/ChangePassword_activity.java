@@ -71,7 +71,7 @@ public class ChangePassword_activity extends AppCompatActivity {
     }
 
     public void AnhXa(){
-        String email = getIntent().getExtras().getString("email");
+//        String email = getIntent().getExtras().getString("email");
         edOldPass = findViewById(R.id.edoldpass);
         edNewPass = findViewById(R.id.edNewPass);
         edReNewPass = findViewById(R.id.edReNewPass);

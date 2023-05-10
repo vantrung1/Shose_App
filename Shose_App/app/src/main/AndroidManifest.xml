@@ -31,6 +31,9 @@
             android:name=".Activity.AllProduct"
             android:exported="false" />
         <activity
+            android:name=".Activity.ChangePassword_activity"
+            android:exported="false" />
+        <activity
             android:name=".Activity.InforOderActivity"
             android:exported="false" />
         <activity
