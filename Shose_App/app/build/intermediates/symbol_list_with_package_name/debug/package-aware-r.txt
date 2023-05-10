@@ -3208,6 +3208,7 @@ id btn_cancel
 id btn_cancel_mail
 id btn_cancel_phone
 id btn_chat
+id btn_chat_infor
 id btn_checkout
 id btn_create
 id btn_delivered
@@ -3620,6 +3621,7 @@ id recy_cancel_oder
 id recy_cancel_oder_btn
 id recy_delivered
 id recy_feed_back
+id recy_infor_oder
 id recy_my_cart
 id recy_transport
 id recy_wait_for
@@ -3798,6 +3800,7 @@ id toolbar_check_out_main
 id toolbar_detail
 id toolbar_evaluate
 id toolbar_favourite
+id toolbar_inforoder
 id toolbar_notification
 id toolbar_oder
 id toolbar_profile
@@ -4004,6 +4007,7 @@ layout activity_favourite
 layout activity_feed_back
 layout activity_foget_pass
 layout activity_home
+layout activity_infor_oder
 layout activity_main
 layout activity_my_cart
 layout activity_notification
