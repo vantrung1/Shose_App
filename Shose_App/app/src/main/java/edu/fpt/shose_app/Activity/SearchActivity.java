@@ -43,7 +43,7 @@ public class SearchActivity extends AppCompatActivity implements HistoryAdapter.
     Toolbar toolbar;
     private RecyclerView rcv_seacrch;
     private ProductAdapter adapter;
-    private List<Product> productList = new ArrayList<>();
+    private ArrayList<Product> productList = new ArrayList<>();
     private static final String BASE_URL = "http://shoseapp.click/api/";
 
     private SearchView mSearchView;
@@ -96,13 +96,13 @@ public class SearchActivity extends AppCompatActivity implements HistoryAdapter.
         // Tạo một instance của API service
         ApiApp apiService = retrofit.create(ApiApp.class);
         // Lấy danh sách sản phẩm ban đầu
-        Call<List<Product>> call = apiService.getAllProducts();
-        call.enqueue(new Callback<List<Product>>() {
+        Call<ArrayList<Product>> call = apiService.getallProduct();
+        call.enqueue(new Callback<ArrayList<Product>>() {
             @Override
-            public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
+            public void onResponse(Call<ArrayList<Product>> call, Response<ArrayList<Product>> response) {
                 if (response.isSuccessful()) {
                     productList = response.body();
-                    adapter = new ProductAdapter(SearchActivity.this, (ArrayList<Product>) productList);
+                    adapter = new ProductAdapter(SearchActivity.this,productList);
                     rcv_seacrch.setAdapter(adapter);
                     // Bắt sự kiện cho SearchView
                     mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -148,7 +148,7 @@ public class SearchActivity extends AppCompatActivity implements HistoryAdapter.
                 }
             }
             @Override
-            public void onFailure(Call<List<Product>> call, Throwable t) {
+            public void onFailure(Call<ArrayList<Product>> call, Throwable t) {
                 Log.e("TAG", "Request failed: " + t.getMessage());
             }
         });
@@ -165,6 +165,7 @@ public class SearchActivity extends AppCompatActivity implements HistoryAdapter.
             public void onClick(View v) {
                 mSearchResultsListView.setVisibility(View.VISIBLE);
                 mSearchHistoryScrollView.setVisibility(View.VISIBLE);
+                loadSearchHistory();
                 rcv_seacrch.setVisibility(View.GONE);
             }
         });

@@ -1,25 +1,13 @@
 package edu.fpt.shose_app.Activity;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -28,11 +16,9 @@ import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import java.text.DecimalFormat;
-import java.util.ArrayList;
 
 import edu.fpt.shose_app.Adapter.MyCartAdapter;
-import edu.fpt.shose_app.Model.Cart;
-import edu.fpt.shose_app.EventBus.TotalEvent;
+import edu.fpt.shose_app.dialogModel.EventBus.TotalEvent;
 import edu.fpt.shose_app.R;
 import edu.fpt.shose_app.Utils.Utils;
 
@@ -42,6 +28,8 @@ public class MyCartActivity extends AppCompatActivity {
     AppCompatButton appCompatButton;
     TextView txt_total, textToast;
     MyCartAdapter adapter;
+    String price;
+    int soluong= 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,9 +56,10 @@ public class MyCartActivity extends AppCompatActivity {
         appCompatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String price = txt_total.getText().toString();
+                // price = txt_total.getText().toString();
                 Intent intent = new Intent(MyCartActivity.this,Check_Out_MainActivity.class);
                 intent.putExtra("STRING_DATA", price);
+                intent.putExtra("STRING_soluong", soluong);
                 startActivity(intent);
             }
         });
@@ -101,9 +90,11 @@ public class MyCartActivity extends AppCompatActivity {
         for (int i = 0; i < Utils.cartLists.size(); i++) {
             if(Utils.cartLists.get(i).isIscheck()){
                 total = total + (Utils.cartLists.get(i).getPrice() * Utils.cartLists.get(i).getQuantity());
+                soluong = soluong+(Utils.cartLists.get(i).getQuantity());
             }
         }
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
+        price = total+"";
         txt_total.setText(decimalFormat.format(total));
 
     }

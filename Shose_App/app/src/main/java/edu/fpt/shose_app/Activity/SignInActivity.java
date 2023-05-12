@@ -21,6 +21,8 @@ import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -46,6 +48,7 @@ public class SignInActivity extends AppCompatActivity {
     ApiApp apiInterface;
     SharedPreferences sharedPreferences ;
     SharedPreferences.Editor editor;
+    FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +64,7 @@ public class SignInActivity extends AppCompatActivity {
         initAction();
         String username = sharedPreferences.getString("username", "1");
         String pass = sharedPreferences.getString("pass", "1");
+        firebaseAuth = FirebaseAuth.getInstance();
         if(pass.equals("1")||username.equals("1")){
             return;
         }
@@ -105,7 +109,8 @@ public class SignInActivity extends AppCompatActivity {
                 if (!validateEmail() | !validatePass()) {
                     return;
                 }
-                POST_Retrofit_Login(edEmail.getText().toString(),edpassword.getText().toString());
+                loginFirebase(edEmail.getText().toString(),edpassword.getText().toString());
+
             }
         });
         loginGmail.setOnClickListener(new View.OnClickListener() {
@@ -115,6 +120,30 @@ public class SignInActivity extends AppCompatActivity {
                 startActivityForResult(SignInGmail, 1000);
             }
         });
+    }
+
+    private void loginFirebase(String email, String pass) {
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+
+// Đăng nhập bằng email và mật khẩu
+
+
+        firebaseAuth.signInWithEmailAndPassword(email, pass)
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        // Lấy thông tin người dùng hiện tại
+                        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+                        // Kiểm tra nếu người dùng không null
+                        if (currentUser != null) {
+                            String uid = currentUser.getUid();
+                            POST_Retrofit_Login(edEmail.getText().toString(),edpassword.getText().toString());
+                        }
+                    } else {
+                        // Đăng nhập thất bại
+                        Exception exception = task.getException();
+
+                    }
+                });
     }
 
     //Post api len sever

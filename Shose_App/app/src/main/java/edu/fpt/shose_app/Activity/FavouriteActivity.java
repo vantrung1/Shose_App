@@ -75,8 +75,8 @@ public class FavouriteActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.setNavigationIcon(R.drawable.icon_back);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("");
-        tvTitleFav.setText("Favourite");
+        getSupportActionBar().setTitle("Favourite");
+
         toolbar.setNavigationOnClickListener (new View.OnClickListener () {
             @Override
             public void onClick(View v) {

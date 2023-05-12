@@ -33,8 +33,8 @@ public interface ApiApp {
     @GET("search")
     Call<List<Product>> searchProducts(@Query("q") String query);
 
-    @GET("products")
-    Call<List<Product>> getAllProducts();
+    @GET("products/{id}")
+    Call<List<Product>> getProduct(@Path("id") int id);
 
     @POST("register")
     Call<User> postUser(@Body User objUser);

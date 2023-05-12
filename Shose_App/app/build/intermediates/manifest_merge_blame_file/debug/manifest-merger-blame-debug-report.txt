@@ -31,451 +31,573 @@
 18-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:13:22-64
 19
 20    <queries>
-20-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\6082cc3b4f08c062eaf34b830430dabf\transformed\zpdk-release-v3.1\AndroidManifest.xml:9:5-13:15
+20-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\c81a91780e9a897fb8257f49b3536182\transformed\zpdk-release-v3.1\AndroidManifest.xml:9:5-13:15
 21        <package android:name="vn.com.vng.zalopay.sb1" />
-21-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\6082cc3b4f08c062eaf34b830430dabf\transformed\zpdk-release-v3.1\AndroidManifest.xml:10:9-58
-21-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\6082cc3b4f08c062eaf34b830430dabf\transformed\zpdk-release-v3.1\AndroidManifest.xml:10:18-55
+21-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\c81a91780e9a897fb8257f49b3536182\transformed\zpdk-release-v3.1\AndroidManifest.xml:10:9-58
+21-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\c81a91780e9a897fb8257f49b3536182\transformed\zpdk-release-v3.1\AndroidManifest.xml:10:18-55
 22        <package android:name="vn.com.vng.zalopay" />
-22-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\6082cc3b4f08c062eaf34b830430dabf\transformed\zpdk-release-v3.1\AndroidManifest.xml:11:9-54
-22-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\6082cc3b4f08c062eaf34b830430dabf\transformed\zpdk-release-v3.1\AndroidManifest.xml:11:18-51
+22-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\c81a91780e9a897fb8257f49b3536182\transformed\zpdk-release-v3.1\AndroidManifest.xml:11:9-54
+22-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\c81a91780e9a897fb8257f49b3536182\transformed\zpdk-release-v3.1\AndroidManifest.xml:11:18-51
 23        <package android:name="com.zing.zalo" />
-23-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\6082cc3b4f08c062eaf34b830430dabf\transformed\zpdk-release-v3.1\AndroidManifest.xml:12:9-49
-23-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\6082cc3b4f08c062eaf34b830430dabf\transformed\zpdk-release-v3.1\AndroidManifest.xml:12:18-46
+23-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\c81a91780e9a897fb8257f49b3536182\transformed\zpdk-release-v3.1\AndroidManifest.xml:12:9-49
+23-->[zpdk-release-v3.1.aar] C:\Users\admin\.gradle\caches\transforms-3\c81a91780e9a897fb8257f49b3536182\transformed\zpdk-release-v3.1\AndroidManifest.xml:12:18-46
 24        <!-- Query Camera Packages -->
 25        <intent>
-25-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:12:9-14:18
+25-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:12:9-14:18
 26            <action android:name="android.media.action.IMAGE_CAPTURE" />
-26-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:13:13-73
-26-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:13:21-70
+26-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:13:13-73
+26-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:13:21-70
 27        </intent> <!-- Query Open Document -->
 28        <intent>
-28-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:16:9-18:18
+28-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:16:9-18:18
 29            <action android:name="android.intent.action.OPEN_DOCUMENT_TREE" />
-29-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:17:13-79
-29-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:17:21-76
+29-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:17:13-79
+29-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:17:21-76
 30        </intent>
 31    </queries>
 32
 33    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-33-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:26:5-79
-33-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:26:22-76
-34
-35    <permission
-35-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\d84c5ffb34575cd5707ec7e6c458609e\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
-36        android:name="edu.fpt.shose_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-36-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\d84c5ffb34575cd5707ec7e6c458609e\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
-37        android:protectionLevel="signature" />
-37-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\d84c5ffb34575cd5707ec7e6c458609e\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
-38
-39    <uses-permission android:name="edu.fpt.shose_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-39-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\d84c5ffb34575cd5707ec7e6c458609e\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-39-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\d84c5ffb34575cd5707ec7e6c458609e\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+33-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:26:5-79
+33-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:26:22-76
+34    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+34-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:26:5-68
+34-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:26:22-65
+35    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+35-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:28:5-82
+35-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:28:22-79
+36
+37    <permission
+37-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\43a64de5a16f642f933aa2c844c81289\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+38        android:name="edu.fpt.shose_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+38-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\43a64de5a16f642f933aa2c844c81289\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+39        android:protectionLevel="signature" />
+39-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\43a64de5a16f642f933aa2c844c81289\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 40
-41    <application
-41-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:15:5-116:19
-42        android:name="edu.fpt.shose_app.Activity.MyApplication"
-42-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:16:9-47
-43        android:allowBackup="true"
-43-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:17:9-35
-44        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-44-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\d84c5ffb34575cd5707ec7e6c458609e\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
-45        android:dataExtractionRules="@xml/data_extraction_rules"
-45-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:18:9-65
-46        android:debuggable="true"
-47        android:fullBackupContent="@xml/backup_rules"
-47-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:19:9-54
-48        android:icon="@mipmap/ic_launcher"
-48-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:20:9-43
-49        android:label="@string/app_name"
-49-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:21:9-41
-50        android:largeHeap="true"
-50-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:22:9-33
-51        android:networkSecurityConfig="@xml/network_security_config"
-51-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:23:9-69
-52        android:requestLegacyExternalStorage="true"
-52-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:24:9-52
-53        android:roundIcon="@mipmap/ic_launcher_round"
-53-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:25:9-54
-54        android:supportsRtl="true"
-54-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:26:9-35
-55        android:testOnly="true"
-56        android:theme="@style/Theme.Shose_App"
-56-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:27:9-47
-57        android:usesCleartextTraffic="true" >
-57-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:28:9-44
-58        <activity
-58-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:30:9-32:40
-59            android:name="edu.fpt.shose_app.Activity.AllProduct"
-59-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:31:13-48
-60            android:exported="false" />
-60-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:32:13-37
-61        <activity
-61-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:33:9-35:40
-62            android:name="edu.fpt.shose_app.Activity.ChangePassword_activity"
-62-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:34:13-61
-63            android:exported="false" />
-63-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:35:13-37
-64        <activity
-64-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:36:9-38:40
-65            android:name="edu.fpt.shose_app.Activity.InforOderActivity"
-65-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:37:13-55
-66            android:exported="false" />
-66-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:38:13-37
-67        <activity
-67-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:39:9-41:40
-68            android:name="edu.fpt.shose_app.Activity.FeedBackActivity"
-68-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:40:13-54
-69            android:exported="false" />
-69-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:41:13-37
-70        <activity
-70-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:42:9-44:40
-71            android:name="edu.fpt.shose_app.Activity.Cancel_detail_activity"
-71-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:43:13-60
-72            android:exported="false" />
-72-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:44:13-37
-73        <activity
-73-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:45:9-47:39
-74            android:name="edu.fpt.shose_app.Activity.CancelOderBtnActivity"
-74-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:46:13-59
-75            android:exported="true" />
-75-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:47:13-36
-76        <activity
-76-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:48:9-50:40
-77            android:name="edu.fpt.shose_app.Activity.ChatBoxActivity"
-77-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:49:13-53
-78            android:exported="false" />
-78-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:50:13-37
-79        <activity
-79-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:51:9-53:39
-80            android:name="edu.fpt.shose_app.Activity.OderActivity"
-80-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:52:13-50
-81            android:exported="true" />
-81-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:53:13-36
-82        <activity
-82-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:54:9-56:39
-83            android:name="edu.fpt.shose_app.Activity.SearchActivity"
-83-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:55:13-52
-84            android:exported="true" />
-84-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:56:13-36
-85        <activity
-85-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:57:9-59:40
-86            android:name="edu.fpt.shose_app.Activity.FavouriteActivity"
-86-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:58:13-55
-87            android:exported="false" />
-87-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:59:13-37
-88        <activity
-88-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:60:9-62:40
-89            android:name="edu.fpt.shose_app.Activity.ProductDetailActivity"
-89-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:61:13-59
-90            android:exported="false" />
-90-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:62:13-37
-91        <activity
-91-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:63:9-65:39
-92            android:name="edu.fpt.shose_app.Activity.HomeActivity"
-92-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:64:13-50
-93            android:exported="true" />
-93-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:65:13-36
-94        <activity
-94-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:66:9-68:39
-95            android:name="edu.fpt.shose_app.Activity.MyCartActivity"
-95-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:67:13-52
-96            android:exported="true" />
-96-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:68:13-36
-97
-98        <meta-data
-98-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:70:9-72:69
-99            android:name="com.google.android.gms.version"
-99-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:71:13-58
-100            android:value="@integer/google_play_services_version" />
-100-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:72:13-66
-101
-102        <activity
-102-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:74:9-76:40
-103            android:name="edu.fpt.shose_app.Activity.FogetPassActivity"
-103-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:75:13-55
-104            android:exported="false" />
-104-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:76:13-37
-105        <activity
-105-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:77:9-79:40
-106            android:name="edu.fpt.shose_app.Activity.ProfileActivity"
-106-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:78:13-53
-107            android:exported="false" />
-107-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:79:13-37
-108        <activity
-108-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:80:9-82:39
-109            android:name="edu.fpt.shose_app.Activity.SignUpActivity"
-109-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:81:13-52
-110            android:exported="true" />
-110-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:82:13-36
-111        <activity
-111-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:83:9-91:20
-112            android:name="edu.fpt.shose_app.Activity.SignInActivity"
-112-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:84:13-52
-113            android:exported="true" >
-113-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:85:13-36
-114            <intent-filter>
-114-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:86:13-90:29
-115                <action android:name="android.intent.action.MAIN" />
-115-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:87:17-69
-115-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:87:25-66
-116
-117                <category android:name="android.intent.category.LAUNCHER" />
-117-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:89:17-77
-117-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:89:27-74
-118            </intent-filter>
-119        </activity>
-120        <activity
-120-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:92:9-94:39
-121            android:name="edu.fpt.shose_app.Activity.Onboard_Activity"
-121-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:93:13-54
-122            android:exported="true" />
-122-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:94:13-36
-123        <activity
-123-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:95:9-97:39
-124            android:name="edu.fpt.shose_app.Activity.splash_activity"
-124-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:96:13-53
-125            android:exported="true" />
-125-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:97:13-36
-126        <activity
-126-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:98:9-100:39
-127            android:name="edu.fpt.shose_app.MainActivity"
-127-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:99:13-41
-128            android:exported="true" />
-128-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:100:13-36
-129        <activity
-129-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:101:9-115:20
-130            android:name="edu.fpt.shose_app.Activity.Check_Out_MainActivity"
-130-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:102:13-60
-131            android:exported="true"
-131-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:103:13-36
-132            android:launchMode="singleInstance" >
-132-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:104:13-48
-133            <intent-filter>
-133-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:105:13-114:29
-134                <action android:name="android.intent.action.VIEW" />
-134-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:106:17-69
-134-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:106:25-66
-135
-136                <category android:name="android.intent.category.DEFAULT" />
-136-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:108:17-76
-136-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:108:27-73
-137                <category android:name="android.intent.category.BROWSABLE" />
-137-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:109:17-78
-137-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:109:27-75
-138
-139                <data
-139-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:111:17-113:49
-140                    android:host="app"
-140-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:112:21-39
-141                    android:scheme="demozpdk" />
-141-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:113:21-46
-142            </intent-filter>
-143        </activity>
-144        <activity
-144-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:22:9-25:68
-145            android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
-145-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:23:13-81
-146            android:screenOrientation="unspecified"
-146-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:24:13-52
-147            android:theme="@style/Theme.Transparent.ImagePicker" />
-147-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:25:13-65
-148        <activity
-148-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:26:9-29:72
-149            android:name="com.yalantis.ucrop.UCropActivity"
-149-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:27:13-60
-150            android:screenOrientation="portrait"
-150-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:28:13-49
-151            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-151-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:29:13-69
-152
-153        <provider
-153-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:31:9-39:20
-154            android:name="com.github.dhaval2404.imagepicker.ImagePickerFileProvider"
-154-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:32:13-85
-155            android:authorities="edu.fpt.shose_app.imagepicker.provider"
-155-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:33:13-72
-156            android:exported="false"
-156-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:34:13-37
-157            android:grantUriPermissions="true" >
-157-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:35:13-47
-158            <meta-data
-158-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:36:13-38:71
-159                android:name="android.support.FILE_PROVIDER_PATHS"
-159-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:37:17-67
-160                android:resource="@xml/image_picker_provider_paths" />
-160-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\c8317bbc29f01d148320463b4eb670d5\transformed\imagepicker-2.1\AndroidManifest.xml:38:17-68
-161        </provider>
-162
-163        <activity
-163-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\5a0bd04c934aaaa57e773bec7034f63b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:23:9-27:75
-164            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-164-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\5a0bd04c934aaaa57e773bec7034f63b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:24:13-93
-165            android:excludeFromRecents="true"
-165-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\5a0bd04c934aaaa57e773bec7034f63b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:25:13-46
-166            android:exported="false"
-166-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\5a0bd04c934aaaa57e773bec7034f63b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:26:13-37
-167            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-167-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\5a0bd04c934aaaa57e773bec7034f63b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:27:13-72
-168        <!--
-169            Service handling Google Sign-In user revocation. For apps that do not integrate with
-170            Google Sign-In, this service will never be started.
-171        -->
-172        <service
-172-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\5a0bd04c934aaaa57e773bec7034f63b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:33:9-37:51
-173            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-173-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\5a0bd04c934aaaa57e773bec7034f63b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:34:13-89
-174            android:exported="true"
-174-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\5a0bd04c934aaaa57e773bec7034f63b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:35:13-36
-175            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-175-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\5a0bd04c934aaaa57e773bec7034f63b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:36:13-107
-176            android:visibleToInstantApps="true" />
-176-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\5a0bd04c934aaaa57e773bec7034f63b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:37:13-48
-177
-178        <activity
-178-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:29:9-46:20
-179            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-179-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:30:13-80
-180            android:excludeFromRecents="true"
-180-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:31:13-46
-181            android:exported="true"
-181-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:32:13-36
-182            android:launchMode="singleTask"
-182-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:33:13-44
-183            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-183-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:34:13-72
-184            <intent-filter>
-184-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:35:13-45:29
-185                <action android:name="android.intent.action.VIEW" />
-185-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:106:17-69
-185-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:106:25-66
-186
-187                <category android:name="android.intent.category.DEFAULT" />
-187-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:108:17-76
-187-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:108:27-73
-188                <category android:name="android.intent.category.BROWSABLE" />
-188-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:109:17-78
-188-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:109:27-75
-189
-190                <data
-190-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:111:17-113:49
-191                    android:host="firebase.auth"
-191-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:112:21-39
-192                    android:path="/"
-193                    android:scheme="genericidp" />
-193-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:113:21-46
-194            </intent-filter>
-195        </activity>
-196        <activity
-196-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:47:9-64:20
-197            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-197-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:48:13-79
-198            android:excludeFromRecents="true"
-198-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:49:13-46
-199            android:exported="true"
-199-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:50:13-36
-200            android:launchMode="singleTask"
-200-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:51:13-44
-201            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-201-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:52:13-72
-202            <intent-filter>
-202-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:53:13-63:29
-203                <action android:name="android.intent.action.VIEW" />
-203-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:106:17-69
-203-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:106:25-66
-204
-205                <category android:name="android.intent.category.DEFAULT" />
-205-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:108:17-76
-205-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:108:27-73
-206                <category android:name="android.intent.category.BROWSABLE" />
-206-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:109:17-78
-206-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:109:27-75
-207
-208                <data
-208-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:111:17-113:49
-209                    android:host="firebase.auth"
-209-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:112:21-39
-210                    android:path="/"
-211                    android:scheme="recaptcha" />
-211-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:113:21-46
-212            </intent-filter>
-213        </activity>
-214
-215        <service
-215-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:66:9-72:19
-216            android:name="com.google.firebase.components.ComponentDiscoveryService"
-216-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:67:13-84
-217            android:directBootAware="true"
-217-->[com.google.firebase:firebase-common:20.2.0] C:\Users\admin\.gradle\caches\transforms-3\818ce08cf267b61875ca6b92df6f1a70\transformed\firebase-common-20.2.0\AndroidManifest.xml:34:13-43
-218            android:exported="false" >
-218-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:68:13-37
-219            <meta-data
-219-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:69:13-71:85
-220                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-220-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:70:17-109
-221                android:value="com.google.firebase.components.ComponentRegistrar" />
-221-->[com.google.firebase:firebase-auth:21.3.0] C:\Users\admin\.gradle\caches\transforms-3\86b75db2e9470775fa689153f043ce58\transformed\firebase-auth-21.3.0\AndroidManifest.xml:71:17-82
-222            <meta-data
-222-->[com.google.firebase:firebase-database:20.0.4] C:\Users\admin\.gradle\caches\transforms-3\bea6cc9733ba07f1062a32069f29149a\transformed\firebase-database-20.0.4\AndroidManifest.xml:32:13-34:85
-223                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-223-->[com.google.firebase:firebase-database:20.0.4] C:\Users\admin\.gradle\caches\transforms-3\bea6cc9733ba07f1062a32069f29149a\transformed\firebase-database-20.0.4\AndroidManifest.xml:33:17-109
-224                android:value="com.google.firebase.components.ComponentRegistrar" />
-224-->[com.google.firebase:firebase-database:20.0.4] C:\Users\admin\.gradle\caches\transforms-3\bea6cc9733ba07f1062a32069f29149a\transformed\firebase-database-20.0.4\AndroidManifest.xml:34:17-82
-225            <meta-data
-225-->[com.google.firebase:firebase-firestore:24.1.1] C:\Users\admin\.gradle\caches\transforms-3\f989fef777568574c77712450b77adb9\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:20:13-22:85
-226                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-226-->[com.google.firebase:firebase-firestore:24.1.1] C:\Users\admin\.gradle\caches\transforms-3\f989fef777568574c77712450b77adb9\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:21:17-111
-227                android:value="com.google.firebase.components.ComponentRegistrar" />
-227-->[com.google.firebase:firebase-firestore:24.1.1] C:\Users\admin\.gradle\caches\transforms-3\f989fef777568574c77712450b77adb9\transformed\firebase-firestore-24.1.1\AndroidManifest.xml:22:17-82
-228            <meta-data
-228-->[com.google.firebase:firebase-storage:20.0.1] C:\Users\admin\.gradle\caches\transforms-3\94bf59fa3012bb01c3486302e728645d\transformed\firebase-storage-20.0.1\AndroidManifest.xml:33:13-35:85
-229                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
-229-->[com.google.firebase:firebase-storage:20.0.1] C:\Users\admin\.gradle\caches\transforms-3\94bf59fa3012bb01c3486302e728645d\transformed\firebase-storage-20.0.1\AndroidManifest.xml:34:17-107
-230                android:value="com.google.firebase.components.ComponentRegistrar" />
-230-->[com.google.firebase:firebase-storage:20.0.1] C:\Users\admin\.gradle\caches\transforms-3\94bf59fa3012bb01c3486302e728645d\transformed\firebase-storage-20.0.1\AndroidManifest.xml:35:17-82
-231        </service>
-232
-233        <activity
-233-->[com.google.android.gms:play-services-base:18.2.0] C:\Users\admin\.gradle\caches\transforms-3\7a3c241b4b868011c9ec932cfa0a19c8\transformed\play-services-base-18.2.0\AndroidManifest.xml:20:9-22:45
-234            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-234-->[com.google.android.gms:play-services-base:18.2.0] C:\Users\admin\.gradle\caches\transforms-3\7a3c241b4b868011c9ec932cfa0a19c8\transformed\play-services-base-18.2.0\AndroidManifest.xml:20:19-85
-235            android:exported="false"
-235-->[com.google.android.gms:play-services-base:18.2.0] C:\Users\admin\.gradle\caches\transforms-3\7a3c241b4b868011c9ec932cfa0a19c8\transformed\play-services-base-18.2.0\AndroidManifest.xml:22:19-43
-236            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-236-->[com.google.android.gms:play-services-base:18.2.0] C:\Users\admin\.gradle\caches\transforms-3\7a3c241b4b868011c9ec932cfa0a19c8\transformed\play-services-base-18.2.0\AndroidManifest.xml:21:19-78
-237
-238        <provider
-238-->[com.google.firebase:firebase-common:20.2.0] C:\Users\admin\.gradle\caches\transforms-3\818ce08cf267b61875ca6b92df6f1a70\transformed\firebase-common-20.2.0\AndroidManifest.xml:25:9-30:39
-239            android:name="com.google.firebase.provider.FirebaseInitProvider"
-239-->[com.google.firebase:firebase-common:20.2.0] C:\Users\admin\.gradle\caches\transforms-3\818ce08cf267b61875ca6b92df6f1a70\transformed\firebase-common-20.2.0\AndroidManifest.xml:26:13-77
-240            android:authorities="edu.fpt.shose_app.firebaseinitprovider"
-240-->[com.google.firebase:firebase-common:20.2.0] C:\Users\admin\.gradle\caches\transforms-3\818ce08cf267b61875ca6b92df6f1a70\transformed\firebase-common-20.2.0\AndroidManifest.xml:27:13-72
-241            android:directBootAware="true"
-241-->[com.google.firebase:firebase-common:20.2.0] C:\Users\admin\.gradle\caches\transforms-3\818ce08cf267b61875ca6b92df6f1a70\transformed\firebase-common-20.2.0\AndroidManifest.xml:28:13-43
-242            android:exported="false"
-242-->[com.google.firebase:firebase-common:20.2.0] C:\Users\admin\.gradle\caches\transforms-3\818ce08cf267b61875ca6b92df6f1a70\transformed\firebase-common-20.2.0\AndroidManifest.xml:29:13-37
-243            android:initOrder="100" />
-243-->[com.google.firebase:firebase-common:20.2.0] C:\Users\admin\.gradle\caches\transforms-3\818ce08cf267b61875ca6b92df6f1a70\transformed\firebase-common-20.2.0\AndroidManifest.xml:30:13-36
-244        <provider
-244-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\93eccb9eefe9ef95b7253b5c1c3ab2c9\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-245            android:name="androidx.startup.InitializationProvider"
-245-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\93eccb9eefe9ef95b7253b5c1c3ab2c9\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-246            android:authorities="edu.fpt.shose_app.androidx-startup"
-246-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\93eccb9eefe9ef95b7253b5c1c3ab2c9\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-247            android:exported="false" >
-247-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\93eccb9eefe9ef95b7253b5c1c3ab2c9\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+41    <uses-permission android:name="edu.fpt.shose_app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+41-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\43a64de5a16f642f933aa2c844c81289\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+41-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\43a64de5a16f642f933aa2c844c81289\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+42
+43    <application
+43-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:15:5-126:19
+44        android:name="edu.fpt.shose_app.Activity.MyApplication"
+44-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:16:9-47
+45        android:allowBackup="true"
+45-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:17:9-35
+46        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+46-->[androidx.core:core:1.9.0] C:\Users\admin\.gradle\caches\transforms-3\43a64de5a16f642f933aa2c844c81289\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+47        android:dataExtractionRules="@xml/data_extraction_rules"
+47-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:18:9-65
+48        android:debuggable="true"
+49        android:fullBackupContent="@xml/backup_rules"
+49-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:19:9-54
+50        android:icon="@mipmap/ic_launcher"
+50-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:20:9-43
+51        android:label="@string/app_name"
+51-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:21:9-41
+52        android:largeHeap="true"
+52-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:22:9-33
+53        android:networkSecurityConfig="@xml/network_security_config"
+53-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:23:9-69
+54        android:requestLegacyExternalStorage="true"
+54-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:24:9-52
+55        android:roundIcon="@mipmap/ic_launcher_round"
+55-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:25:9-54
+56        android:supportsRtl="true"
+56-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:26:9-35
+57        android:testOnly="true"
+58        android:theme="@style/Theme.Shose_App"
+58-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:27:9-47
+59        android:usesCleartextTraffic="true" >
+59-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:28:9-44
+60        <activity
+60-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:30:9-32:40
+61            android:name="edu.fpt.shose_app.Activity.AllProduct"
+61-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:31:13-48
+62            android:exported="false" />
+62-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:32:13-37
+63        <activity
+63-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:33:9-35:40
+64            android:name="edu.fpt.shose_app.Activity.Notification"
+64-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:34:13-50
+65            android:exported="false" />
+65-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:35:13-37
+66        <activity
+66-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:36:9-38:40
+67            android:name="edu.fpt.shose_app.Activity.ChangePassword_activity"
+67-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:37:13-61
+68            android:exported="false" />
+68-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:38:13-37
+69        <activity
+69-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:39:9-41:40
+70            android:name="edu.fpt.shose_app.Activity.InforOderActivity"
+70-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:40:13-55
+71            android:exported="false" />
+71-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:41:13-37
+72        <activity
+72-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:42:9-44:40
+73            android:name="edu.fpt.shose_app.Activity.FeedBackActivity"
+73-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:43:13-54
+74            android:exported="false" />
+74-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:44:13-37
+75        <activity
+75-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:45:9-47:40
+76            android:name="edu.fpt.shose_app.Activity.Cancel_detail_activity"
+76-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:46:13-60
+77            android:exported="false" />
+77-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:47:13-37
+78        <activity
+78-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:48:9-50:39
+79            android:name="edu.fpt.shose_app.Activity.CancelOderBtnActivity"
+79-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:49:13-59
+80            android:exported="true" />
+80-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:50:13-36
+81        <activity
+81-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:51:9-53:40
+82            android:name="edu.fpt.shose_app.Activity.ChatBoxActivity"
+82-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:52:13-53
+83            android:exported="false" />
+83-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:53:13-37
+84        <activity
+84-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:54:9-56:39
+85            android:name="edu.fpt.shose_app.Activity.OderActivity"
+85-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:55:13-50
+86            android:exported="true" />
+86-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:56:13-36
+87        <activity
+87-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:57:9-59:39
+88            android:name="edu.fpt.shose_app.Activity.SearchActivity"
+88-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:58:13-52
+89            android:exported="true" />
+89-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:59:13-36
+90        <activity
+90-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:60:9-62:40
+91            android:name="edu.fpt.shose_app.Activity.FavouriteActivity"
+91-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:61:13-55
+92            android:exported="false" />
+92-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:62:13-37
+93        <activity
+93-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:63:9-65:40
+94            android:name="edu.fpt.shose_app.Activity.ProductDetailActivity"
+94-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:64:13-59
+95            android:exported="false" />
+95-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:65:13-37
+96        <activity
+96-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:66:9-68:39
+97            android:name="edu.fpt.shose_app.Activity.HomeActivity"
+97-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:67:13-50
+98            android:exported="true" />
+98-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:68:13-36
+99        <activity
+99-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:69:9-71:39
+100            android:name="edu.fpt.shose_app.Activity.MyCartActivity"
+100-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:70:13-52
+101            android:exported="true" />
+101-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:71:13-36
+102
+103        <meta-data
+103-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:73:9-75:69
+104            android:name="com.google.android.gms.version"
+104-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:74:13-58
+105            android:value="@integer/google_play_services_version" />
+105-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:75:13-66
+106
+107        <activity
+107-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:77:9-79:40
+108            android:name="edu.fpt.shose_app.Activity.FogetPassActivity"
+108-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:78:13-55
+109            android:exported="false" />
+109-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:79:13-37
+110        <activity
+110-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:80:9-82:40
+111            android:name="edu.fpt.shose_app.Activity.ProfileActivity"
+111-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:81:13-53
+112            android:exported="false" />
+112-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:82:13-37
+113        <activity
+113-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:83:9-85:39
+114            android:name="edu.fpt.shose_app.Activity.SignUpActivity"
+114-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:84:13-52
+115            android:exported="true" />
+115-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:85:13-36
+116        <activity
+116-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:86:9-94:20
+117            android:name="edu.fpt.shose_app.Activity.SignInActivity"
+117-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:87:13-52
+118            android:exported="true" >
+118-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:88:13-36
+119            <intent-filter>
+119-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:89:13-93:29
+120                <action android:name="android.intent.action.MAIN" />
+120-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:90:17-69
+120-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:90:25-66
+121
+122                <category android:name="android.intent.category.LAUNCHER" />
+122-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:92:17-77
+122-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:92:27-74
+123            </intent-filter>
+124        </activity>
+125        <activity
+125-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:95:9-97:39
+126            android:name="edu.fpt.shose_app.Activity.Onboard_Activity"
+126-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:96:13-54
+127            android:exported="true" />
+127-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:97:13-36
+128        <activity
+128-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:98:9-100:39
+129            android:name="edu.fpt.shose_app.Activity.splash_activity"
+129-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:99:13-53
+130            android:exported="true" />
+130-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:100:13-36
+131        <activity
+131-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:101:9-103:39
+132            android:name="edu.fpt.shose_app.MainActivity"
+132-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:102:13-41
+133            android:exported="true" />
+133-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:103:13-36
+134        <activity
+134-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:104:9-118:20
+135            android:name="edu.fpt.shose_app.Activity.Check_Out_MainActivity"
+135-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:105:13-60
+136            android:exported="true"
+136-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:106:13-36
+137            android:launchMode="singleInstance" >
+137-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:107:13-48
+138            <intent-filter>
+138-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:108:13-117:29
+139                <action android:name="android.intent.action.VIEW" />
+139-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:109:17-69
+139-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:109:25-66
+140
+141                <category android:name="android.intent.category.DEFAULT" />
+141-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:111:17-76
+141-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:111:27-73
+142                <category android:name="android.intent.category.BROWSABLE" />
+142-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:112:17-78
+142-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:112:27-75
+143
+144                <data
+144-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:114:17-116:49
+145                    android:host="app"
+145-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:115:21-39
+146                    android:scheme="demozpdk" />
+146-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:116:21-46
+147            </intent-filter>
+148        </activity>
+149
+150        <service
+150-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:119:9-125:19
+151            android:name="edu.fpt.shose_app.Service.FirebaseMessReceiver"
+151-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:120:13-57
+152            android:exported="true" >
+152-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:121:13-36
+153            <intent-filter>
+153-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:122:13-124:29
+154                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+154-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:123:17-78
+154-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:123:25-75
+155            </intent-filter>
+156        </service>
+157
+158        <activity
+158-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:22:9-25:68
+159            android:name="com.github.dhaval2404.imagepicker.ImagePickerActivity"
+159-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:23:13-81
+160            android:screenOrientation="unspecified"
+160-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:24:13-52
+161            android:theme="@style/Theme.Transparent.ImagePicker" />
+161-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:25:13-65
+162        <activity
+162-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:26:9-29:72
+163            android:name="com.yalantis.ucrop.UCropActivity"
+163-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:27:13-60
+164            android:screenOrientation="portrait"
+164-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:28:13-49
+165            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+165-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:29:13-69
+166
+167        <provider
+167-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:31:9-39:20
+168            android:name="com.github.dhaval2404.imagepicker.ImagePickerFileProvider"
+168-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:32:13-85
+169            android:authorities="edu.fpt.shose_app.imagepicker.provider"
+169-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:33:13-72
+170            android:exported="false"
+170-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:34:13-37
+171            android:grantUriPermissions="true" >
+171-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:35:13-47
+172            <meta-data
+172-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:36:13-38:71
+173                android:name="android.support.FILE_PROVIDER_PATHS"
+173-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:37:17-67
+174                android:resource="@xml/image_picker_provider_paths" />
+174-->[com.github.dhaval2404:imagepicker:2.1] C:\Users\admin\.gradle\caches\transforms-3\5a05c76645bdbf2bc85588ef4a7ba68a\transformed\imagepicker-2.1\AndroidManifest.xml:38:17-68
+175        </provider>
+176
+177        <activity
+177-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\17b1e0e7419e9b13dd8973e6554d4e1b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:23:9-27:75
+178            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+178-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\17b1e0e7419e9b13dd8973e6554d4e1b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:24:13-93
+179            android:excludeFromRecents="true"
+179-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\17b1e0e7419e9b13dd8973e6554d4e1b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:25:13-46
+180            android:exported="false"
+180-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\17b1e0e7419e9b13dd8973e6554d4e1b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:26:13-37
+181            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+181-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\17b1e0e7419e9b13dd8973e6554d4e1b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:27:13-72
+182        <!--
+183            Service handling Google Sign-In user revocation. For apps that do not integrate with
+184            Google Sign-In, this service will never be started.
+185        -->
+186        <service
+186-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\17b1e0e7419e9b13dd8973e6554d4e1b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:33:9-37:51
+187            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+187-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\17b1e0e7419e9b13dd8973e6554d4e1b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:34:13-89
+188            android:exported="true"
+188-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\17b1e0e7419e9b13dd8973e6554d4e1b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:35:13-36
+189            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+189-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\17b1e0e7419e9b13dd8973e6554d4e1b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:36:13-107
+190            android:visibleToInstantApps="true" />
+190-->[com.google.android.gms:play-services-auth:20.5.0] C:\Users\admin\.gradle\caches\transforms-3\17b1e0e7419e9b13dd8973e6554d4e1b\transformed\play-services-auth-20.5.0\AndroidManifest.xml:37:13-48
+191
+192        <activity
+192-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:29:9-46:20
+193            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+193-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:30:13-80
+194            android:excludeFromRecents="true"
+194-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:31:13-46
+195            android:exported="true"
+195-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:32:13-36
+196            android:launchMode="singleTask"
+196-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:33:13-44
+197            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+197-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:34:13-72
+198            <intent-filter>
+198-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:35:13-45:29
+199                <action android:name="android.intent.action.VIEW" />
+199-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:109:17-69
+199-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:109:25-66
+200
+201                <category android:name="android.intent.category.DEFAULT" />
+201-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:111:17-76
+201-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:111:27-73
+202                <category android:name="android.intent.category.BROWSABLE" />
+202-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:112:17-78
+202-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:112:27-75
+203
+204                <data
+204-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:114:17-116:49
+205                    android:host="firebase.auth"
+205-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:115:21-39
+206                    android:path="/"
+207                    android:scheme="genericidp" />
+207-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:116:21-46
+208            </intent-filter>
+209        </activity>
+210        <activity
+210-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:47:9-64:20
+211            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+211-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:48:13-79
+212            android:excludeFromRecents="true"
+212-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:49:13-46
+213            android:exported="true"
+213-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:50:13-36
+214            android:launchMode="singleTask"
+214-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:51:13-44
+215            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+215-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:52:13-72
+216            <intent-filter>
+216-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:53:13-63:29
+217                <action android:name="android.intent.action.VIEW" />
+217-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:109:17-69
+217-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:109:25-66
+218
+219                <category android:name="android.intent.category.DEFAULT" />
+219-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:111:17-76
+219-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:111:27-73
+220                <category android:name="android.intent.category.BROWSABLE" />
+220-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:112:17-78
+220-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:112:27-75
+221
+222                <data
+222-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:114:17-116:49
+223                    android:host="firebase.auth"
+223-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:115:21-39
+224                    android:path="/"
+225                    android:scheme="recaptcha" />
+225-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:116:21-46
+226            </intent-filter>
+227        </activity>
+228
+229        <service
+229-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:66:9-72:19
+230            android:name="com.google.firebase.components.ComponentDiscoveryService"
+230-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:67:13-84
+231            android:directBootAware="true"
+231-->[com.google.firebase:firebase-common:20.3.2] C:\Users\admin\.gradle\caches\transforms-3\9cd0570c92f5b4062f0c1c45c874b6b2\transformed\firebase-common-20.3.2\AndroidManifest.xml:34:13-43
+232            android:exported="false" >
+232-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:68:13-37
+233            <meta-data
+233-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:69:13-71:85
+234                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+234-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:70:17-109
+235                android:value="com.google.firebase.components.ComponentRegistrar" />
+235-->[com.google.firebase:firebase-auth:22.0.0] C:\Users\admin\.gradle\caches\transforms-3\5cdd53b6af5c85b15385714b4f6929af\transformed\firebase-auth-22.0.0\AndroidManifest.xml:71:17-82
+236            <meta-data
+236-->[com.google.firebase:firebase-firestore:24.6.0] C:\Users\admin\.gradle\caches\transforms-3\232012c715100dc0d494dea1297e50bf\transformed\firebase-firestore-24.6.0\AndroidManifest.xml:19:13-21:85
+237                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+237-->[com.google.firebase:firebase-firestore:24.6.0] C:\Users\admin\.gradle\caches\transforms-3\232012c715100dc0d494dea1297e50bf\transformed\firebase-firestore-24.6.0\AndroidManifest.xml:20:17-111
+238                android:value="com.google.firebase.components.ComponentRegistrar" />
+238-->[com.google.firebase:firebase-firestore:24.6.0] C:\Users\admin\.gradle\caches\transforms-3\232012c715100dc0d494dea1297e50bf\transformed\firebase-firestore-24.6.0\AndroidManifest.xml:21:17-82
+239            <meta-data
+239-->[com.google.firebase:firebase-storage:20.2.0] C:\Users\admin\.gradle\caches\transforms-3\beedae7be7344cc5ebe21d2b77727169\transformed\firebase-storage-20.2.0\AndroidManifest.xml:32:13-34:85
+240                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+240-->[com.google.firebase:firebase-storage:20.2.0] C:\Users\admin\.gradle\caches\transforms-3\beedae7be7344cc5ebe21d2b77727169\transformed\firebase-storage-20.2.0\AndroidManifest.xml:33:17-107
+241                android:value="com.google.firebase.components.ComponentRegistrar" />
+241-->[com.google.firebase:firebase-storage:20.2.0] C:\Users\admin\.gradle\caches\transforms-3\beedae7be7344cc5ebe21d2b77727169\transformed\firebase-storage-20.2.0\AndroidManifest.xml:34:17-82
+242            <meta-data
+242-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:55:13-57:85
+243                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+243-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:56:17-119
+244                android:value="com.google.firebase.components.ComponentRegistrar" />
+244-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:57:17-82
+245            <meta-data
+245-->[com.google.firebase:firebase-database-ktx:20.2.1] C:\Users\admin\.gradle\caches\transforms-3\0720f159d357bda99fea746ed255872d\transformed\firebase-database-ktx-20.2.1\AndroidManifest.xml:14:13-16:85
+246                android:name="com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseKtxRegistrar"
+246-->[com.google.firebase:firebase-database-ktx:20.2.1] C:\Users\admin\.gradle\caches\transforms-3\0720f159d357bda99fea746ed255872d\transformed\firebase-database-ktx-20.2.1\AndroidManifest.xml:15:17-124
+247                android:value="com.google.firebase.components.ComponentRegistrar" />
+247-->[com.google.firebase:firebase-database-ktx:20.2.1] C:\Users\admin\.gradle\caches\transforms-3\0720f159d357bda99fea746ed255872d\transformed\firebase-database-ktx-20.2.1\AndroidManifest.xml:16:17-82
 248            <meta-data
-248-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\93eccb9eefe9ef95b7253b5c1c3ab2c9\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-249                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-249-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\93eccb9eefe9ef95b7253b5c1c3ab2c9\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-250                android:value="androidx.startup" />
-250-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\93eccb9eefe9ef95b7253b5c1c3ab2c9\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+248-->[com.google.firebase:firebase-database:20.2.1] C:\Users\admin\.gradle\caches\transforms-3\7ce4e843713c85eaabc3e4d7a4336e0c\transformed\firebase-database-20.2.1\AndroidManifest.xml:31:13-33:85
+249                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+249-->[com.google.firebase:firebase-database:20.2.1] C:\Users\admin\.gradle\caches\transforms-3\7ce4e843713c85eaabc3e4d7a4336e0c\transformed\firebase-database-20.2.1\AndroidManifest.xml:32:17-109
+250                android:value="com.google.firebase.components.ComponentRegistrar" />
+250-->[com.google.firebase:firebase-database:20.2.1] C:\Users\admin\.gradle\caches\transforms-3\7ce4e843713c85eaabc3e4d7a4336e0c\transformed\firebase-database-20.2.1\AndroidManifest.xml:33:17-82
 251            <meta-data
-251-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\admin\.gradle\caches\transforms-3\d45650b2fab55b9dcbcda4ce3b94348c\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-252                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-252-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\admin\.gradle\caches\transforms-3\d45650b2fab55b9dcbcda4ce3b94348c\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-253                android:value="androidx.startup" />
-253-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\admin\.gradle\caches\transforms-3\d45650b2fab55b9dcbcda4ce3b94348c\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-254        </provider>
-255    </application>
-256
-257</manifest>
+251-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\admin\.gradle\caches\transforms-3\1bc15fa98708fec9854c3381b6d16250\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:27:13-29:85
+252                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+252-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\admin\.gradle\caches\transforms-3\1bc15fa98708fec9854c3381b6d16250\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:28:17-115
+253                android:value="com.google.firebase.components.ComponentRegistrar" />
+253-->[com.google.firebase:firebase-datatransport:18.1.7] C:\Users\admin\.gradle\caches\transforms-3\1bc15fa98708fec9854c3381b6d16250\transformed\firebase-datatransport-18.1.7\AndroidManifest.xml:29:17-82
+254            <meta-data
+254-->[com.google.firebase:firebase-common-ktx:20.3.2] C:\Users\admin\.gradle\caches\transforms-3\fbeecf2b387fd3f2220d402a2089d37f\transformed\firebase-common-ktx-20.3.2\AndroidManifest.xml:14:13-16:85
+255                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+255-->[com.google.firebase:firebase-common-ktx:20.3.2] C:\Users\admin\.gradle\caches\transforms-3\fbeecf2b387fd3f2220d402a2089d37f\transformed\firebase-common-ktx-20.3.2\AndroidManifest.xml:15:17-113
+256                android:value="com.google.firebase.components.ComponentRegistrar" />
+256-->[com.google.firebase:firebase-common-ktx:20.3.2] C:\Users\admin\.gradle\caches\transforms-3\fbeecf2b387fd3f2220d402a2089d37f\transformed\firebase-common-ktx-20.3.2\AndroidManifest.xml:16:17-82
+257            <meta-data
+257-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\admin\.gradle\caches\transforms-3\71315b3e959089292df44b4ecfe8a0d2\transformed\firebase-installations-17.1.3\AndroidManifest.xml:17:13-19:85
+258                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+258-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\admin\.gradle\caches\transforms-3\71315b3e959089292df44b4ecfe8a0d2\transformed\firebase-installations-17.1.3\AndroidManifest.xml:18:17-127
+259                android:value="com.google.firebase.components.ComponentRegistrar" />
+259-->[com.google.firebase:firebase-installations:17.1.3] C:\Users\admin\.gradle\caches\transforms-3\71315b3e959089292df44b4ecfe8a0d2\transformed\firebase-installations-17.1.3\AndroidManifest.xml:19:17-82
+260        </service>
+261
+262        <receiver
+262-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:31:9-38:20
+263            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+263-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:32:13-78
+264            android:exported="true"
+264-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:33:13-36
+265            android:permission="com.google.android.c2dm.permission.SEND" >
+265-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:34:13-73
+266            <intent-filter>
+266-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:35:13-37:29
+267                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+267-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:36:17-81
+267-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:36:25-78
+268            </intent-filter>
+269        </receiver>
+270        <!--
+271             FirebaseMessagingService performs security checks at runtime,
+272             but set to not exported to explicitly avoid allowing another app to call it.
+273        -->
+274        <service
+274-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:44:9-51:19
+275            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+275-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:45:13-82
+276            android:directBootAware="true"
+276-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:46:13-43
+277            android:exported="false" >
+277-->[com.google.firebase:firebase-messaging:23.1.2] C:\Users\admin\.gradle\caches\transforms-3\4fa18ba53e42743067e2c0df0eab0966\transformed\firebase-messaging-23.1.2\AndroidManifest.xml:47:13-37
+278            <intent-filter android:priority="-500" >
+278-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:122:13-124:29
+279                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+279-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:123:17-78
+279-->D:\Shose_App\Shose_App\app\src\main\AndroidManifest.xml:123:25-75
+280            </intent-filter>
+281        </service>
+282
+283        <activity
+283-->[com.google.android.gms:play-services-base:18.2.0] C:\Users\admin\.gradle\caches\transforms-3\2609a9b9ae5995d0dcc4d132731173bf\transformed\play-services-base-18.2.0\AndroidManifest.xml:20:9-22:45
+284            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+284-->[com.google.android.gms:play-services-base:18.2.0] C:\Users\admin\.gradle\caches\transforms-3\2609a9b9ae5995d0dcc4d132731173bf\transformed\play-services-base-18.2.0\AndroidManifest.xml:20:19-85
+285            android:exported="false"
+285-->[com.google.android.gms:play-services-base:18.2.0] C:\Users\admin\.gradle\caches\transforms-3\2609a9b9ae5995d0dcc4d132731173bf\transformed\play-services-base-18.2.0\AndroidManifest.xml:22:19-43
+286            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+286-->[com.google.android.gms:play-services-base:18.2.0] C:\Users\admin\.gradle\caches\transforms-3\2609a9b9ae5995d0dcc4d132731173bf\transformed\play-services-base-18.2.0\AndroidManifest.xml:21:19-78
+287
+288        <service
+288-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\admin\.gradle\caches\transforms-3\552e81a27cdbb789b62d3f617aca3425\transformed\transport-backend-cct-3.1.8\AndroidManifest.xml:28:9-34:19
+289            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+289-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\admin\.gradle\caches\transforms-3\552e81a27cdbb789b62d3f617aca3425\transformed\transport-backend-cct-3.1.8\AndroidManifest.xml:29:13-103
+290            android:exported="false" >
+290-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\admin\.gradle\caches\transforms-3\552e81a27cdbb789b62d3f617aca3425\transformed\transport-backend-cct-3.1.8\AndroidManifest.xml:30:13-37
+291            <meta-data
+291-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\admin\.gradle\caches\transforms-3\552e81a27cdbb789b62d3f617aca3425\transformed\transport-backend-cct-3.1.8\AndroidManifest.xml:31:13-33:39
+292                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+292-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\admin\.gradle\caches\transforms-3\552e81a27cdbb789b62d3f617aca3425\transformed\transport-backend-cct-3.1.8\AndroidManifest.xml:32:17-94
+293                android:value="cct" />
+293-->[com.google.android.datatransport:transport-backend-cct:3.1.8] C:\Users\admin\.gradle\caches\transforms-3\552e81a27cdbb789b62d3f617aca3425\transformed\transport-backend-cct-3.1.8\AndroidManifest.xml:33:17-36
+294        </service>
+295        <service
+295-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\admin\.gradle\caches\transforms-3\2505c6008eab246fe2ed8ed9d45ad58d\transformed\transport-runtime-3.1.8\AndroidManifest.xml:26:9-30:19
+296            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+296-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\admin\.gradle\caches\transforms-3\2505c6008eab246fe2ed8ed9d45ad58d\transformed\transport-runtime-3.1.8\AndroidManifest.xml:27:13-117
+297            android:exported="false"
+297-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\admin\.gradle\caches\transforms-3\2505c6008eab246fe2ed8ed9d45ad58d\transformed\transport-runtime-3.1.8\AndroidManifest.xml:28:13-37
+298            android:permission="android.permission.BIND_JOB_SERVICE" >
+298-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\admin\.gradle\caches\transforms-3\2505c6008eab246fe2ed8ed9d45ad58d\transformed\transport-runtime-3.1.8\AndroidManifest.xml:29:13-69
+299        </service>
+300
+301        <receiver
+301-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\admin\.gradle\caches\transforms-3\2505c6008eab246fe2ed8ed9d45ad58d\transformed\transport-runtime-3.1.8\AndroidManifest.xml:32:9-34:40
+302            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+302-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\admin\.gradle\caches\transforms-3\2505c6008eab246fe2ed8ed9d45ad58d\transformed\transport-runtime-3.1.8\AndroidManifest.xml:33:13-132
+303            android:exported="false" />
+303-->[com.google.android.datatransport:transport-runtime:3.1.8] C:\Users\admin\.gradle\caches\transforms-3\2505c6008eab246fe2ed8ed9d45ad58d\transformed\transport-runtime-3.1.8\AndroidManifest.xml:34:13-37
+304
+305        <provider
+305-->[com.google.firebase:firebase-common:20.3.2] C:\Users\admin\.gradle\caches\transforms-3\9cd0570c92f5b4062f0c1c45c874b6b2\transformed\firebase-common-20.3.2\AndroidManifest.xml:25:9-30:39
+306            android:name="com.google.firebase.provider.FirebaseInitProvider"
+306-->[com.google.firebase:firebase-common:20.3.2] C:\Users\admin\.gradle\caches\transforms-3\9cd0570c92f5b4062f0c1c45c874b6b2\transformed\firebase-common-20.3.2\AndroidManifest.xml:26:13-77
+307            android:authorities="edu.fpt.shose_app.firebaseinitprovider"
+307-->[com.google.firebase:firebase-common:20.3.2] C:\Users\admin\.gradle\caches\transforms-3\9cd0570c92f5b4062f0c1c45c874b6b2\transformed\firebase-common-20.3.2\AndroidManifest.xml:27:13-72
+308            android:directBootAware="true"
+308-->[com.google.firebase:firebase-common:20.3.2] C:\Users\admin\.gradle\caches\transforms-3\9cd0570c92f5b4062f0c1c45c874b6b2\transformed\firebase-common-20.3.2\AndroidManifest.xml:28:13-43
+309            android:exported="false"
+309-->[com.google.firebase:firebase-common:20.3.2] C:\Users\admin\.gradle\caches\transforms-3\9cd0570c92f5b4062f0c1c45c874b6b2\transformed\firebase-common-20.3.2\AndroidManifest.xml:29:13-37
+310            android:initOrder="100" />
+310-->[com.google.firebase:firebase-common:20.3.2] C:\Users\admin\.gradle\caches\transforms-3\9cd0570c92f5b4062f0c1c45c874b6b2\transformed\firebase-common-20.3.2\AndroidManifest.xml:30:13-36
+311        <provider
+311-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\721adc9a429ad61e677555b396bca518\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+312            android:name="androidx.startup.InitializationProvider"
+312-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\721adc9a429ad61e677555b396bca518\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+313            android:authorities="edu.fpt.shose_app.androidx-startup"
+313-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\721adc9a429ad61e677555b396bca518\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+314            android:exported="false" >
+314-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\721adc9a429ad61e677555b396bca518\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+315            <meta-data
+315-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\721adc9a429ad61e677555b396bca518\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+316                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+316-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\721adc9a429ad61e677555b396bca518\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+317                android:value="androidx.startup" />
+317-->[androidx.emoji2:emoji2:1.2.0] C:\Users\admin\.gradle\caches\transforms-3\721adc9a429ad61e677555b396bca518\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+318            <meta-data
+318-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\admin\.gradle\caches\transforms-3\0c7b599fb3c37e99776d9726f14f1858\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+319                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+319-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\admin\.gradle\caches\transforms-3\0c7b599fb3c37e99776d9726f14f1858\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+320                android:value="androidx.startup" />
+320-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\admin\.gradle\caches\transforms-3\0c7b599fb3c37e99776d9726f14f1858\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+321        </provider>
+322    </application>
+323
+324</manifest>

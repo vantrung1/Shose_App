@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "edu.fpt.shose_app-mergeDebugResources-40:/values-hdpi-v4/values-hdpi-v4.xml",
+            "outputFile": "edu.fpt.shose_app-mergeDebugResources-41:/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\65f05df372fdf615f01a829a29f7597b\\transformed\\appcompat-1.6.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-3\\4a8fc8d4cffe1deef03672f2112cd6a4\\transformed\\appcompat-1.6.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -21,6 +21,7 @@ import java.util.ArrayList;
 
 import edu.fpt.shose_app.Activity.CancelOderBtnActivity;
 import edu.fpt.shose_app.Activity.InforOderActivity;
+import edu.fpt.shose_app.Interface.ImageClickr;
 import edu.fpt.shose_app.Model.Oder;
 import edu.fpt.shose_app.R;
 
@@ -29,10 +30,11 @@ public class TransportAtapter extends RecyclerView.Adapter<TransportAtapter.myvi
     RecyclerView recyclerView;
     private Context context;
     private ArrayList<Oder> oderArrayList;
-
-    public TransportAtapter(Context context, ArrayList<Oder> oderArrayList) {
+    private ImageClickr imageClickr;
+    public TransportAtapter(Context context, ArrayList<Oder> oderArrayList, ImageClickr imageClickr) {
         this.context = context;
         this.oderArrayList = oderArrayList;
+        this.imageClickr= imageClickr;
     }
 
     public void setorderlist(ArrayList<Oder> oderArrayList) {
@@ -84,7 +86,7 @@ public class TransportAtapter extends RecyclerView.Adapter<TransportAtapter.myvi
             txtShow = itemView.findViewById(R.id.txt_show_more);
             recyclerView = itemView.findViewById(R.id.recy_transport);
             recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
-            products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(0).getProducts());
+            products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(0).getProducts(),imageClickr);
             recyclerView.setAdapter(products_oder_adapter);
 
             if (oderArrayList.size() > 1) {

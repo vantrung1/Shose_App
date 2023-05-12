@@ -8,11 +8,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import edu.fpt.shose_app.Adapter.Products_Oder_Adapter;
+import edu.fpt.shose_app.Interface.ImageClickr;
 import edu.fpt.shose_app.Model.Oder;
 import edu.fpt.shose_app.R;
 import edu.fpt.shose_app.Retrofit.ApiApp;
@@ -20,7 +22,7 @@ import edu.fpt.shose_app.Utils.Utils;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class Cancel_detail_activity extends AppCompatActivity {
+public class Cancel_detail_activity extends AppCompatActivity implements ImageClickr {
     private edu.fpt.shose_app.Adapter.Products_Oder_Adapter products_oder_adapter;
     RecyclerView recyclerView;
     TextView txtUpdateAt, txtRequestBy, txtUpdateAt2, txtReason, txtPaymentAmount;
@@ -65,11 +67,16 @@ public class Cancel_detail_activity extends AppCompatActivity {
         });
         //-------------
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        products_oder_adapter = new Products_Oder_Adapter(this, oder.getProducts());
+        products_oder_adapter = new Products_Oder_Adapter(this, oder.getProducts(),this);
         recyclerView.setAdapter(products_oder_adapter);
         //-------------
         txtUpdateAt.setText(oder.getUpdated_at());
         txtUpdateAt2.setText(oder.getUpdated_at());
         txtPaymentAmount.setText(oder.getPaymentAmount());
+    }
+
+    @Override
+    public void onImageClick(int position) {
+        Toast.makeText(getApplicationContext(),position+"",Toast.LENGTH_SHORT).show();
     }
 }

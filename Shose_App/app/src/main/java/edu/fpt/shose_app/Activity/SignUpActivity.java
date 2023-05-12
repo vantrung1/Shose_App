@@ -1,5 +1,6 @@
 package edu.fpt.shose_app.Activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
@@ -12,8 +13,13 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -37,7 +43,7 @@ public class SignUpActivity extends AppCompatActivity {
     TextInputEditText edUsername, edEmail, edpassword, edconfirmpassword;
     AppCompatButton btnSignUp;
     ApiApp apiInterface;
-
+    FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,6 +83,8 @@ public class SignUpActivity extends AppCompatActivity {
                 if (!validateUserName() | !validateEmail() | !validatePass() | !validateConfirmPass()) {
                     return;
                 }
+
+
                 POST_Retrofit_User();
             }
         });
@@ -84,39 +92,62 @@ public class SignUpActivity extends AppCompatActivity {
 
     //Post api len sever
     void POST_Retrofit_User() {
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseAuth.createUserWithEmailAndPassword(edEmail.getText().toString(),edpassword.getText().toString())
+                .addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()){
+                            FirebaseUser user = firebaseAuth.getCurrentUser();
+                            if(user!= null){
+                                Log.d("TAG", "onComplete: "+user.getUid());
+                                Gson gson = new GsonBuilder().setLenient().create();
+
+                                Retrofit retrofit = new Retrofit.Builder()
+                                        .baseUrl(Utils.BASE_URL_API)
+                                        .addConverterFactory(GsonConverterFactory.create(gson))
+                                        .build();
+                                apiInterface = retrofit.create(ApiApp.class);
+                                // tạo đối tượng DTO để gửi lên server
+                                User objUser = new User();
+                                objUser.setName(edUsername.getText().toString());
+                                objUser.setEmail(edEmail.getText().toString());
+                                objUser.setPassword(edpassword.getText().toString());
+                                objUser.setFilebase_id(user.getUid());
+
+                                Call<User> objCall = apiInterface.postUser(objUser);
+                                objCall.enqueue(new Callback<User>() {
+                                    @Override
+                                    public void onResponse(Call<User> call, Response<User> response) {
+
+                                        if (response.isSuccessful()) {
+                                            User user = response.body();
+                                            Toast.makeText(getApplicationContext(), "them thanh cong", Toast.LENGTH_LONG).show();
+
+                                        } else {
+                                            Toast.makeText(getApplicationContext(), "them khong thanh cong", Toast.LENGTH_LONG).show();
+                                        }
+                                    }
+
+                                    @Override
+                                    public void onFailure(Call<User> call, Throwable t) {
+
+                                    }
+                                });
+                            }
+                            else {
+                                Toast.makeText(SignUpActivity.this,"email đã tồn tại",Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                        else {
+                            Toast.makeText(SignUpActivity.this,"email đã tồn tại",Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+
+
         // tạo đối tượng chuyển đổi
-        Gson gson = new GsonBuilder().setLenient().create();
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(Utils.BASE_URL_API)
-                .addConverterFactory(GsonConverterFactory.create(gson))
-                .build();
-        apiInterface = retrofit.create(ApiApp.class);
-        // tạo đối tượng DTO để gửi lên server
-        User objUser = new User();
-        objUser.setName(edUsername.getText().toString());
-        objUser.setEmail(edEmail.getText().toString());
-        objUser.setPassword(edpassword.getText().toString());
-
-        Call<User> objCall = apiInterface.postUser(objUser);
-        objCall.enqueue(new Callback<User>() {
-            @Override
-            public void onResponse(Call<User> call, Response<User> response) {
-
-                if (response.isSuccessful()) {
-                    User user = response.body();
-                    Toast.makeText(getApplicationContext(), "them thanh cong", Toast.LENGTH_LONG).show();
-
-                } else {
-                    Toast.makeText(getApplicationContext(), "them khong thanh cong", Toast.LENGTH_LONG).show();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<User> call, Throwable t) {
-
-            }
-        });
     }
 
     //validate

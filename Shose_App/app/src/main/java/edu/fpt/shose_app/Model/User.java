@@ -15,6 +15,7 @@ public class User implements Serializable {
     private String status;
     private String created_at;
     private String updated_at;
+    private String filebase_id;
 
     public User() {
     }
@@ -115,7 +116,15 @@ public class User implements Serializable {
         this.updated_at = updated_at;
     }
 
-    public User(int id, String name, String address_id, String role_id, String phoneNumber, String email, String password, String avatar, String token, String status, String created_at, String updated_at) {
+    public String getFilebase_id() {
+        return filebase_id;
+    }
+
+    public void setFilebase_id(String filebase_id) {
+        this.filebase_id = filebase_id;
+    }
+
+    public User(int id, String name, String address_id, String role_id, String phoneNumber, String email, String password, String avatar, String token, String status, String created_at, String updated_at, String filebase_id) {
         this.id = id;
         this.name = name;
         this.address_id = address_id;
@@ -128,5 +137,6 @@ public class User implements Serializable {
         this.status = status;
         this.created_at = created_at;
         this.updated_at = updated_at;
+        this.filebase_id = filebase_id;
     }
 }

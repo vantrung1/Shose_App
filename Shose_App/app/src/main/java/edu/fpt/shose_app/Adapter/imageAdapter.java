@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -17,8 +16,7 @@ import org.greenrobot.eventbus.EventBus;
 
 import java.util.List;
 
-import edu.fpt.shose_app.EventBus.ImageEvent;
-import edu.fpt.shose_app.Model.Brand;
+import edu.fpt.shose_app.dialogModel.EventBus.ImageEvent;
 import edu.fpt.shose_app.R;
 
 public class imageAdapter extends RecyclerView.Adapter<imageAdapter.ViewHolder> {

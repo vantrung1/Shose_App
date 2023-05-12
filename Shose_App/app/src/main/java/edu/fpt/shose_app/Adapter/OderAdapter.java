@@ -23,6 +23,7 @@ import java.util.ArrayList;
 
 import edu.fpt.shose_app.Activity.CancelOderBtnActivity;
 import edu.fpt.shose_app.Activity.ProductDetailActivity;
+import edu.fpt.shose_app.Interface.ImageClickr;
 import edu.fpt.shose_app.Model.Oder;
 import edu.fpt.shose_app.Model.Product;
 import edu.fpt.shose_app.R;
@@ -32,11 +33,12 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.myviewHolder> 
     RecyclerView recyclerView;
     private Context context;
     private ArrayList<Oder> oderArrayList;
-
-    public OderAdapter(Context context, ArrayList<Oder> oderArrayList) {
+    private ImageClickr imageClickr;
+    private boolean mIsExpanded = true;
+    public OderAdapter(Context context, ArrayList<Oder> oderArrayList,ImageClickr imageClickr) {
         this.context = context;
         this.oderArrayList = oderArrayList;
-    }
+        this.imageClickr = imageClickr;}
 
     public void setorderlist(ArrayList<Oder> oderArrayList) {
         this.oderArrayList = oderArrayList;
@@ -54,6 +56,17 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.myviewHolder> 
     public void onBindViewHolder(@NonNull OderAdapter.myviewHolder holder, int position) {
         holder.txt_quantity2.setText(oderArrayList.get(position).getQuantity() + " sản phẩm");
         holder.txtTotal.setText(oderArrayList.get(position).getTotal());
+        recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
+        products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(position).getProducts(),imageClickr);
+        recyclerView.setAdapter(products_oder_adapter);
+        if(oderArrayList.get(position).getProducts().size()==1){
+            holder.txtShow.setVisibility(View.INVISIBLE);
+
+        }
+        else {
+            holder.txtShow.setVisibility(View.VISIBLE);
+            products_oder_adapter.expand();
+        }
         holder.setListenner(new ImageClickListenner() {
             @Override
             public void onImageClick(View view, int pos, int giatri) {
@@ -64,9 +77,10 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.myviewHolder> 
                     context.startActivity(intent);
                 }
                 if (giatri == 2) {
-                    recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
-                    products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(0).getProducts());
-                    recyclerView.setAdapter(products_oder_adapter);
+//                    recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
+//                    products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(pos).getProducts(),imageClickr);
+//                    recyclerView.setAdapter(products_oder_adapter);
+                    products_oder_adapter.expand();
                 }
             }
         });
@@ -75,7 +89,10 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.myviewHolder> 
 
     @Override
     public int getItemCount() {
-        return oderArrayList.size();
+
+
+            return oderArrayList.size();
+
     }
 
     public class myviewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -92,10 +109,6 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.myviewHolder> 
             txtTotal = itemView.findViewById(R.id.item_txt_total_confirm);
             appCompatButton = itemView.findViewById(R.id.btn_wait_for_confirm);
             txtShow = itemView.findViewById(R.id.txt_show_more);
-
-            recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
-            products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(0).getProducts());
-            recyclerView.setAdapter(products_oder_adapter);
 
             if (oderArrayList.size()>1){
                 txtShow.setVisibility(View.VISIBLE);

@@ -22,6 +22,7 @@ public class dialogOrder extends Dialog {
             public void onClick(View v) {
                 Intent i = new Intent(context, HomeActivity.class);
                 context.startActivity(i);
+                dismiss();
             }
         });
     }

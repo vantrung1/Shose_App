@@ -11,14 +11,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-
 import org.greenrobot.eventbus.EventBus;
 
 import java.util.List;
 
-import edu.fpt.shose_app.EventBus.ImageEvent;
-import edu.fpt.shose_app.EventBus.SizeEvent;
+import edu.fpt.shose_app.dialogModel.EventBus.SizeEvent;
 import edu.fpt.shose_app.Model.Size;
 import edu.fpt.shose_app.R;
 

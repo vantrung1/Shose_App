@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -21,6 +22,7 @@ import java.util.ArrayList;
 
 import edu.fpt.shose_app.Adapter.DeliveredAdapter;
 import edu.fpt.shose_app.Adapter.TransportAtapter;
+import edu.fpt.shose_app.Interface.ImageClickr;
 import edu.fpt.shose_app.Model.Oder;
 import edu.fpt.shose_app.Model.OderRequest;
 import edu.fpt.shose_app.R;
@@ -32,7 +34,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class DeliveredFragment extends Fragment {
+public class DeliveredFragment extends Fragment implements ImageClickr  {
     ArrayList<Oder> oderArrayList;
     Retrofit retrofit;
     Gson gson;
@@ -66,7 +68,7 @@ public class DeliveredFragment extends Fragment {
         apiInterface = retrofit.create(ApiApp.class);
         get_oder(Utils.Users_Utils.getId(), 3);
         oderArrayList = new ArrayList<>();
-        deliveredAdapter = new DeliveredAdapter(getActivity(), oderArrayList);
+        deliveredAdapter = new DeliveredAdapter(getActivity(), oderArrayList,this);
         recy_delivered.setAdapter(deliveredAdapter);
     }
 
@@ -99,4 +101,8 @@ public class DeliveredFragment extends Fragment {
         });
     }
 
+    @Override
+    public void onImageClick(int position) {
+
+    }
 }

@@ -1960,6 +1960,7 @@ color mtrl_textinput_filled_box_default_background_color
 color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color nav
+color notifi
 color notification_action_color_filter
 color notification_icon_bg_color
 color primary_dark_material_dark
@@ -3088,6 +3089,7 @@ id Pulse
 id PulseRing
 id RecoveryPassword
 id RecyclerViewHome_brand
+id RecyclerView_Notification
 id RotatingCircle
 id RotatingPlane
 id SHIFT
@@ -3183,6 +3185,8 @@ id beginOnFirstDraw
 id beginning
 id bestChoice
 id blocking
+id bodyLocation
+id bodyNotifi
 id bottom
 id bottomAppBar
 id bottomNavigationView
@@ -3383,6 +3387,8 @@ id image1
 id image2
 id image3
 id image4
+id imageLocation
+id imageNotifi
 id imageView
 id imageView_icon1
 id imageView_icon2
@@ -3788,7 +3794,9 @@ id textinput_suffix_text
 id time
 id title
 id titleDividerNoCustom
+id titleNotifi
 id title_template
+id titlelocatin
 id toggle
 id toolbar
 id toolbar2
@@ -3852,6 +3860,7 @@ id txt_total2
 id txt_update_at
 id txt_update_at_2
 id txta
+id txtakdks
 id txttime2
 id ucrop
 id ucrop_frame
@@ -4062,7 +4071,9 @@ layout item_delivered_oder
 layout item_feed_back
 layout item_image
 layout item_image_feed_back
+layout item_location
 layout item_my_cart
+layout item_notifi
 layout item_product2
 layout item_product_home
 layout item_products_oder
@@ -4229,6 +4240,8 @@ string fab_transformation_sheet_behavior
 string fallback_menu_item_copy_link
 string fallback_menu_item_open_in_browser
 string fallback_menu_item_share_link
+string fcm_fallback_notification_channel_label
+string firebase_database_url
 string gcm_defaultSenderId
 string google_api_key
 string google_app_id
