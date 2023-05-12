@@ -185,7 +185,7 @@
 
                 }
                 else {
-                    CreateOder(Utils.Users_Utils.getId(), address, phonecheckout.getText().toString(), data_price,"note",PaymentAmount,"1",jsonprocuts,3);
+                    CreateOder(Utils.Users_Utils.getId(), address, phonecheckout.getText().toString(), data_price,"note",PaymentAmount,"1",jsonprocuts,soluong);
                 }
 
 
@@ -212,7 +212,7 @@
 
             @Override
             public void onPaymentSucceeded(String s, String s1, String s2) {
-                CreateOder(Utils.Users_Utils.getId(), address,phonecheckout.getText().toString(), data_price,"note",codezalo,"1",jsonprocuts,3);
+                CreateOder(Utils.Users_Utils.getId(), address,phonecheckout.getText().toString(), data_price,"note",codezalo,"1",jsonprocuts,soluong);
                 Intent intent = new Intent(Check_Out_MainActivity.this,HomeActivity.class);
                 startActivity(intent);
             }

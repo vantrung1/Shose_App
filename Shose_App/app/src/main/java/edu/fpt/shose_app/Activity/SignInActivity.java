@@ -109,7 +109,8 @@ public class SignInActivity extends AppCompatActivity {
                 if (!validateEmail() | !validatePass()) {
                     return;
                 }
-                loginFirebase(edEmail.getText().toString(),edpassword.getText().toString());
+                //loginFirebase(edEmail.getText().toString(),edpassword.getText().toString());
+                POST_Retrofit_Login(edEmail.getText().toString(),edpassword.getText().toString());
 
             }
         });
@@ -136,7 +137,7 @@ public class SignInActivity extends AppCompatActivity {
                         // Kiểm tra nếu người dùng không null
                         if (currentUser != null) {
                             String uid = currentUser.getUid();
-                            POST_Retrofit_Login(edEmail.getText().toString(),edpassword.getText().toString());
+
                         }
                     } else {
                         // Đăng nhập thất bại

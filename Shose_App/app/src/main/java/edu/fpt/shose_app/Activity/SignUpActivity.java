@@ -92,62 +92,63 @@ public class SignUpActivity extends AppCompatActivity {
 
     //Post api len sever
     void POST_Retrofit_User() {
-        firebaseAuth = FirebaseAuth.getInstance();
-        firebaseAuth.createUserWithEmailAndPassword(edEmail.getText().toString(),edpassword.getText().toString())
-                .addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            FirebaseUser user = firebaseAuth.getCurrentUser();
-                            if(user!= null){
-                                Log.d("TAG", "onComplete: "+user.getUid());
-                                Gson gson = new GsonBuilder().setLenient().create();
 
-                                Retrofit retrofit = new Retrofit.Builder()
-                                        .baseUrl(Utils.BASE_URL_API)
-                                        .addConverterFactory(GsonConverterFactory.create(gson))
-                                        .build();
-                                apiInterface = retrofit.create(ApiApp.class);
-                                // tạo đối tượng DTO để gửi lên server
-                                User objUser = new User();
-                                objUser.setName(edUsername.getText().toString());
-                                objUser.setEmail(edEmail.getText().toString());
-                                objUser.setPassword(edpassword.getText().toString());
-                                objUser.setFilebase_id(user.getUid());
-
-                                Call<User> objCall = apiInterface.postUser(objUser);
-                                objCall.enqueue(new Callback<User>() {
-                                    @Override
-                                    public void onResponse(Call<User> call, Response<User> response) {
-
-                                        if (response.isSuccessful()) {
-                                            User user = response.body();
-                                            Toast.makeText(getApplicationContext(), "them thanh cong", Toast.LENGTH_LONG).show();
-
-                                        } else {
-                                            Toast.makeText(getApplicationContext(), "them khong thanh cong", Toast.LENGTH_LONG).show();
-                                        }
-                                    }
-
-                                    @Override
-                                    public void onFailure(Call<User> call, Throwable t) {
-
-                                    }
-                                });
-                            }
-                            else {
-                                Toast.makeText(SignUpActivity.this,"email đã tồn tại",Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                        else {
-                            Toast.makeText(SignUpActivity.this,"email đã tồn tại",Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
+//        firebaseAuth = FirebaseAuth.getInstance();
+//        firebaseAuth.createUserWithEmailAndPassword(edEmail.getText().toString(),edpassword.getText().toString())
+//                .addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        if(task.isSuccessful()){
+//                            FirebaseUser user = firebaseAuth.getCurrentUser();
+//                            if(user!= null){
+//                                Log.d("TAG", "onComplete: "+user.getUid());
+//
+//                            }
+//                            else {
+//                                Toast.makeText(SignUpActivity.this,"email đã tồn tại",Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+//                        else {
+//                            Toast.makeText(SignUpActivity.this,"email đã tồn tại",Toast.LENGTH_SHORT).show();
+//                        }
+//                    }
+//                });
 
 
         // tạo đối tượng chuyển đổi
+        Gson gson = new GsonBuilder().setLenient().create();
 
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Utils.BASE_URL_API)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build();
+        apiInterface = retrofit.create(ApiApp.class);
+        // tạo đối tượng DTO để gửi lên server
+        User objUser = new User();
+        objUser.setName(edUsername.getText().toString());
+        objUser.setEmail(edEmail.getText().toString());
+        objUser.setPassword(edpassword.getText().toString());
+        //objUser.setFilebase_id(user.getUid());
+
+        Call<User> objCall = apiInterface.postUser(objUser);
+        objCall.enqueue(new Callback<User>() {
+            @Override
+            public void onResponse(Call<User> call, Response<User> response) {
+
+                if (response.isSuccessful()) {
+                    User user = response.body();
+                    Toast.makeText(getApplicationContext(), "them thanh cong", Toast.LENGTH_LONG).show();
+
+                } else {
+                    Toast.makeText(getApplicationContext(), "them khong thanh cong", Toast.LENGTH_LONG).show();
+                }
+            }
+
+            @Override
+            public void onFailure(Call<User> call, Throwable t) {
+
+            }
+        });
     }
 
     //validate
