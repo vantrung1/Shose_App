@@ -3,7 +3,6 @@ package edu.fpt.shose_app.Adapter;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,23 +15,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.bumptech.glide.Glide;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 import org.greenrobot.eventbus.EventBus;
 
-import java.lang.annotation.ElementType;
 import java.util.ArrayList;
-import java.util.List;
 
-import edu.fpt.shose_app.EventBus.BrandEvent;
-import edu.fpt.shose_app.EventBus.TotalEvent;
+import edu.fpt.shose_app.dialogModel.EventBus.BrandEvent;
 import edu.fpt.shose_app.Model.Brand;
 import edu.fpt.shose_app.R;
-import edu.fpt.shose_app.Retrofit.ApiApp;
-import edu.fpt.shose_app.Utils.Utils;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Brand_Adapter extends RecyclerView.Adapter<Brand_Adapter.myViewHolder> {
     private Context context;

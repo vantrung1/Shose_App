@@ -23,9 +23,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.fpt.shose_app.Activity.MyCartActivity;
-import edu.fpt.shose_app.Activity.ProductDetailActivity;
 import edu.fpt.shose_app.Adapter.sizeAdapter;
-import edu.fpt.shose_app.EventBus.SizeEvent;
+import edu.fpt.shose_app.dialogModel.EventBus.SizeEvent;
 import edu.fpt.shose_app.Model.Cart;
 import edu.fpt.shose_app.Model.Product;
 import edu.fpt.shose_app.Model.SizeRequest;

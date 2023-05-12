@@ -20,6 +20,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 import edu.fpt.shose_app.Activity.Cancel_detail_activity;
+import edu.fpt.shose_app.Interface.ImageClickr;
 import edu.fpt.shose_app.Model.Oder;
 import edu.fpt.shose_app.R;
 
@@ -28,10 +29,11 @@ public class CancelAdapterOder extends RecyclerView.Adapter<CancelAdapterOder.my
     RecyclerView recyclerView;
     private Context context;
     private ArrayList<Oder> oderArrayList;
-
-    public CancelAdapterOder(Context context, ArrayList<Oder> oderArrayList) {
+    private ImageClickr imageClickr;
+    public CancelAdapterOder(Context context, ArrayList<Oder> oderArrayList  ,ImageClickr imageClickr) {
         this.context = context;
         this.oderArrayList = oderArrayList;
+        this.imageClickr = imageClickr;
     }
 
     public void setorderlist(ArrayList<Oder> oderArrayList) {
@@ -63,7 +65,7 @@ public class CancelAdapterOder extends RecyclerView.Adapter<CancelAdapterOder.my
                 }
                 if (giatri == 3) {
                     recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
-                    products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(0).getProducts());
+                    products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(0).getProducts(),imageClickr);
                     recyclerView.setAdapter(products_oder_adapter);
 
                 }
@@ -90,7 +92,7 @@ public class CancelAdapterOder extends RecyclerView.Adapter<CancelAdapterOder.my
 
             recyclerView = itemView.findViewById(R.id.recy_cancel_oder);
             recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
-            products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(0).getProducts());
+            products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(0).getProducts(),imageClickr);
             recyclerView.setAdapter(products_oder_adapter);
             appCompatButton.setOnClickListener(this);
             itemView.setOnClickListener(this);

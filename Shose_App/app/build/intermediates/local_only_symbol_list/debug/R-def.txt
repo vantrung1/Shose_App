@@ -13,6 +13,7 @@ color cam_nhat
 color gray
 color lavender
 color nav
+color notifi
 color purple_200
 color purple_500
 color purple_700
@@ -121,8 +122,11 @@ id Notifications
 id Profile
 id RecoveryPassword
 id RecyclerViewHome_brand
+id RecyclerView_Notification
 id SearchViewHome
 id SignUp
+id bodyLocation
+id bodyNotifi
 id bottomAppBar
 id bottomNavigationView
 id btnGmail
@@ -188,6 +192,8 @@ id image1
 id image2
 id image3
 id image4
+id imageLocation
+id imageNotifi
 id imageView
 id imageView_icon1
 id imageView_icon2
@@ -332,6 +338,8 @@ id textView8
 id textView9
 id textViewAppSettings
 id textViewPassword
+id titleNotifi
+id titlelocatin
 id toolbar
 id toolbar2
 id toolbar_allproduct
@@ -381,6 +389,7 @@ id txt_total2
 id txt_update_at
 id txt_update_at_2
 id txta
+id txtakdks
 id txttime2
 id update
 id viewPager
@@ -431,7 +440,9 @@ layout item_delivered_oder
 layout item_feed_back
 layout item_image
 layout item_image_feed_back
+layout item_location
 layout item_my_cart
+layout item_notifi
 layout item_product2
 layout item_product_home
 layout item_products_oder
@@ -453,6 +464,7 @@ string app_name
 string channel_description
 string channel_name
 string default_web_client_id
+string firebase_database_url
 string gcm_defaultSenderId
 string google_api_key
 string google_app_id

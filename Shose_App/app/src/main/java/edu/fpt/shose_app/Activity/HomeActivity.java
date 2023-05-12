@@ -16,6 +16,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,9 +26,16 @@ import android.widget.Toast;
 
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -41,7 +49,9 @@ import edu.fpt.shose_app.Adapter.Brand_Adapter;
 import edu.fpt.shose_app.Adapter.ProducAdapter2;
 import edu.fpt.shose_app.Adapter.ProductAdapter;
 import edu.fpt.shose_app.Adapter.ProductAdapter3;
-import edu.fpt.shose_app.EventBus.BrandEvent;
+import edu.fpt.shose_app.Model.loginRequest;
+import edu.fpt.shose_app.Service.FirebaseMessReceiver;
+import edu.fpt.shose_app.dialogModel.EventBus.BrandEvent;
 import edu.fpt.shose_app.Model.Brand;
 import edu.fpt.shose_app.Model.Product;
 import edu.fpt.shose_app.Model.ProductRequest;
@@ -99,7 +109,7 @@ public class HomeActivity extends AppCompatActivity {
         initUi();
         initAction();
         initHeader();
-
+        gettokkenFirebase();
 //        startAutoScroll();
 //        stopAutoScroll();
 
@@ -296,6 +306,7 @@ public class HomeActivity extends AppCompatActivity {
                         editor.apply();
                         Intent i4 = new Intent(HomeActivity.this, SignInActivity.class);
                         startActivity(i4);
+                        FirebaseAuth.getInstance().signOut();
                         break;
                     default:
                 }
@@ -421,5 +432,31 @@ public class HomeActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         initHeader();
+    }
+    public void gettokkenFirebase(){
+        FirebaseMessaging.getInstance().getToken().addOnSuccessListener(new OnSuccessListener<String>() {
+            @Override
+            public void onSuccess(String s) {
+                if(!TextUtils.isEmpty(s)){
+                    Utils.Users_Utils.setToken(s);
+//                    Call<loginRequest> objCall = apiInterface._updateUser(Utils.Users_Utils.getId(),Utils.Users_Utils);
+//                    objCall.enqueue(new Callback<loginRequest>() {
+//                        @Override
+//                        public void onResponse(Call<loginRequest> call, Response<loginRequest> response) {
+//
+//                        }
+//
+//                        @Override
+//                        public void onFailure(Call<loginRequest> call, Throwable t) {
+//
+//                        }
+//                    });
+                    DatabaseReference tokensRef = FirebaseDatabase.getInstance().getReference("tokens");
+                    tokensRef.child(Utils.Users_Utils.getId()+"").setValue(s)
+                            .addOnSuccessListener(aVoid -> System.out.println("Successfully saved FCM token to Firebase"))
+                            .addOnFailureListener(e -> System.out.println("Failed to save FCM token to Firebase: " + e.getMessage()));
+                }
+            }
+        });
     }
 }

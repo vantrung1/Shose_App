@@ -28,7 +28,7 @@ import org.greenrobot.eventbus.EventBus;
 import java.text.DecimalFormat;
 import java.util.List;
 
-import edu.fpt.shose_app.EventBus.TotalEvent;
+import edu.fpt.shose_app.dialogModel.EventBus.TotalEvent;
 import edu.fpt.shose_app.Model.Cart;
 import edu.fpt.shose_app.R;
 import edu.fpt.shose_app.Utils.Utils;

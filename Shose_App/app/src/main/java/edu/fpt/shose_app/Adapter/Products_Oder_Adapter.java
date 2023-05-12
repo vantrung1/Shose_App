@@ -18,16 +18,19 @@ import com.bumptech.glide.Glide;
 import java.text.DecimalFormat;
 import java.util.List;
 
+import edu.fpt.shose_app.Interface.ImageClickr;
 import edu.fpt.shose_app.Model.Products_Oder;
 import edu.fpt.shose_app.R;
 
 public class Products_Oder_Adapter extends RecyclerView.Adapter<Products_Oder_Adapter.MyViewHolder> {
     private Context context;
     private List<Products_Oder> products_oderList;
-
-    public Products_Oder_Adapter(Context context, List<Products_Oder> products_oderList) {
+    private ImageClickr imageClickListenner;
+    private boolean mIsExpanded = true;
+    public Products_Oder_Adapter(Context context, List<Products_Oder> products_oderList , ImageClickr imageClickListenner) {
         this.context = context;
         this.products_oderList = products_oderList;
+        this.imageClickListenner = imageClickListenner;
     }
 
     @NonNull
@@ -41,17 +44,27 @@ public class Products_Oder_Adapter extends RecyclerView.Adapter<Products_Oder_Ad
     @Override
     public void onBindViewHolder(@NonNull Products_Oder_Adapter.MyViewHolder holder, int position) {
         holder.bind(products_oderList.get(position));
-        holder.setListenner(new ImageClickListenner() {
+        holder.imgProduct.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onImageClick(View view, int pos, int giatri) {
-                Toast.makeText(context, "sp1", Toast.LENGTH_SHORT).show();
+            public void onClick(View view) {
+                if (imageClickListenner != null) {
+                    imageClickListenner.onImageClick(position);
+                }
             }
         });
     }
 
     @Override
     public int getItemCount() {
-        return products_oderList.size();
+        if (mIsExpanded) {
+            return products_oderList.size();
+        } else {
+            return 1;
+        }
+    }
+    public void expand() {
+        mIsExpanded = !mIsExpanded;
+        notifyDataSetChanged();
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
@@ -67,7 +80,7 @@ public class Products_Oder_Adapter extends RecyclerView.Adapter<Products_Oder_Ad
             txtquantity = itemView.findViewById(R.id.item_txt_quantity);
             txtprice = itemView.findViewById(R.id.item_txt_price);
             txtsale = itemView.findViewById(R.id.item_txt_sale);
-            itemView.setOnClickListener(this);
+           // itemView.setOnClickListener(this);
         }
 
         void bind(final Products_Oder p_oder) {

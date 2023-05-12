@@ -3,7 +3,7 @@
 
         import android.annotation.SuppressLint;
         import android.app.Dialog;
-        import android.app.Notification;
+      //  import android.app.Notification;
         import android.app.NotificationManager;
         import android.content.Context;
         import android.content.Intent;
@@ -28,7 +28,7 @@
         import android.widget.EditText;
         import android.widget.TextView;
         import android.widget.Toast;
-
+        //import com.google.firebase.messaging.Notification;
         import androidx.appcompat.app.AppCompatActivity;
         import androidx.appcompat.widget.AppCompatButton;
         import androidx.appcompat.widget.Toolbar;
@@ -36,6 +36,13 @@
         import androidx.core.app.NotificationManagerCompat;
 
         import com.google.android.material.imageview.ShapeableImageView;
+        import com.google.firebase.auth.FirebaseUser;
+
+        import com.google.firebase.database.DataSnapshot;
+        import com.google.firebase.database.DatabaseError;
+        import com.google.firebase.database.DatabaseReference;
+        import com.google.firebase.database.FirebaseDatabase;
+        import com.google.firebase.database.ValueEventListener;
         import com.google.gson.Gson;
         import com.google.gson.GsonBuilder;
 
@@ -48,11 +55,14 @@
 
         import edu.fpt.shose_app.Model.Cart;
 
+        import edu.fpt.shose_app.Model.FCMRequest;
+        import edu.fpt.shose_app.Model.NotiResponse;
         import edu.fpt.shose_app.Model.addRess_response;
         import edu.fpt.shose_app.Model.address;
         import edu.fpt.shose_app.Model.products;
         import edu.fpt.shose_app.R;
         import edu.fpt.shose_app.Retrofit.ApiApp;
+        import edu.fpt.shose_app.Retrofit.PostNotifi;
         import edu.fpt.shose_app.Utils.Utils;
         import edu.fpt.shose_app.dialogModel.dialogOrder;
         import edu.fpt.shose_app.zalo.Api.CreateOrder;
@@ -82,7 +92,9 @@
     AppCompatButton btn_payment;
     private String PaymentAmount = "Cash on delivery";
     private String jsonprocuts;
-    private int id_oder;
+    private String token_admin;
+    private DatabaseReference databaseReference;
+    private int soluong,id_oder;
     String data_price,codezalo,address;
     List<address> addressList;
     AutoCompleteTextView autoCompleteTextView,autoCompleteAdress;
@@ -106,13 +118,14 @@
         apiInterface = retrofit.create(ApiApp.class);
         Intent intent = getIntent();
         address= "";
-
+        databaseReference = FirebaseDatabase.getInstance().getReference("notifications");
         initUi();
         initAction();
-
+        getTocken_admin();
 
 
         data_price = intent.getStringExtra("STRING_DATA");
+        soluong = intent.getIntExtra("STRING_soluong",1);
         txt_total_check_out = findViewById(R.id.txt_price_subtotal_check_out);
         txt_price_total_check_out = findViewById(R.id.txt_price_total_check_out);
         txt_total_check_out.setText(data_price);
@@ -175,9 +188,7 @@
                     CreateOder(Utils.Users_Utils.getId(), address, phonecheckout.getText().toString(), data_price,"note",PaymentAmount,"1",jsonprocuts,3);
                 }
 
-                if(PaymentAmount.equalsIgnoreCase("Cash on delivery")){
-                    SendNotification();//--------------------Notification
-                }
+
 
             }
         });
@@ -236,6 +247,8 @@
                         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
                         dialog.getWindow().setGravity(Gravity.CENTER);
+                      //  SendNotification();//--------------------Notification
+                        seNotification(token_admin,"Thông báo đơn hàng","Bạn có đơn hàng mới");
                     }
                 }
             }
@@ -335,30 +348,57 @@
         super.onNewIntent(intent);
         ZaloPaySDK.getInstance().onResult(intent);
     }
-
-    @SuppressLint("MissingPermission")
-    private void SendNotification(){
-        Bitmap bitmap = BitmapFactory.decodeResource( getResources(), R.mipmap.ic_launcher);
-
-        Notification notification = new NotificationCompat.Builder(this, MyApplication.CHANNEL_ID)
-                .setContentTitle("Order Success")
-                .setContentText("Your order will be delivered in 3 to 5 days")
-                .setSmallIcon(R.drawable.notifications_24)
-                .setLargeIcon(bitmap)
-                .build();
-
-        NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(this);
-        notificationManagerCompat.notify(getNotificationId(), notification);
-
-        /*NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-        if (notificationManager != null){
-            notificationManager.notify(getNotificationId(), notification);
-        }*/
-    }
     private int getNotificationId(){
         return (int) new Date().getTime();
     }
+    public void seNotification(String recipientToken, String title, String message){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://fcm.googleapis.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
+        PostNotifi  fcmService = retrofit.create(PostNotifi .class);
+        FCMRequest fcmRequest = new FCMRequest();
+        fcmRequest.setTo(recipientToken);
+        FCMRequest.FCMNotification notification = new FCMRequest.FCMNotification();
+        notification.setTitle(title);
+        notification.setBody(message);
+        fcmRequest.setNotification(notification);
+
+        Call<NotiResponse> call = fcmService.sendNotification(fcmRequest);
+        call.enqueue(new Callback<NotiResponse>() {
+            @Override
+            public void onResponse(Call<NotiResponse> call, Response<NotiResponse> response) {
+                // Xử lý khi gửi thành công
+                saveNotification( recipientToken,  title,  message);
+
+            }
+
+            @Override
+            public void onFailure(Call<NotiResponse> call, Throwable t) {
+                // Xử lý khi gửi thất bại
+            }
+        });
+    }
+            public void saveNotification(String recipientToken, String title, String message) {
+                String timestamp = String.valueOf(System.currentTimeMillis());
+                  // Tạo một key duy nhất cho thông báo
+
+                databaseReference = FirebaseDatabase.getInstance().getReference("notifications");
+                    // Tạo đối tượng Notification
+                FCMRequest fcmRequest = new FCMRequest();
+                fcmRequest.setTo(recipientToken);
+                FCMRequest.FCMNotification notification = new FCMRequest.FCMNotification();
+                notification.setTitle(title);
+                notification.setBody(message);
+                fcmRequest.setNotification(notification);
+
+                    // Lưu thông báo vào Firebase Realtime Database trong nút con của người dùng
+                    databaseReference.child("admin").child(timestamp).setValue(fcmRequest)
+                            .addOnSuccessListener(aVoid -> System.out.println("Successfully saved notification to Firebase"))
+                            .addOnFailureListener(e -> System.out.println("Failed to save notification to Firebase: " + e.getMessage()));
+
+            }
     private void OpenDialogUpdatePhone(int gravity){
         final Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -468,5 +508,25 @@
             }
         });
         dialog.show();
+    }
+    private void getTocken_admin(){
+        DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("tokens").child("admin");
+        userRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // Kiểm tra xem dữ liệu có tồn tại hay không
+                if (dataSnapshot.exists()) {
+                    // Lấy giá trị dữ liệu từ dataSnapshot
+                     token_admin = dataSnapshot.getValue(String.class);
+                } else {
+
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Xử lý lỗi nếu có
+            }
+        });
     }
 }

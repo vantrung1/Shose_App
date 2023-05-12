@@ -32,7 +32,7 @@ import java.util.Map;
 
 import edu.fpt.shose_app.Adapter.imageAdapter;
 import edu.fpt.shose_app.Adapter.sizeAdapter;
-import edu.fpt.shose_app.EventBus.ImageEvent;
+import edu.fpt.shose_app.dialogModel.EventBus.ImageEvent;
 import edu.fpt.shose_app.dialogModel.dialogProduct;
 import edu.fpt.shose_app.Model.Image;
 import edu.fpt.shose_app.Model.Product;

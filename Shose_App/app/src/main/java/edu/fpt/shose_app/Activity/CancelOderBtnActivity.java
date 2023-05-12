@@ -33,6 +33,7 @@ import java.util.List;
 import java.util.Map;
 
 import edu.fpt.shose_app.Adapter.Products_Oder_Adapter;
+import edu.fpt.shose_app.Interface.ImageClickr;
 import edu.fpt.shose_app.Model.Image;
 import edu.fpt.shose_app.Model.Oder;
 import edu.fpt.shose_app.Model.OderRequest;
@@ -50,7 +51,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class CancelOderBtnActivity extends AppCompatActivity {
+public class CancelOderBtnActivity extends AppCompatActivity implements ImageClickr {
     private edu.fpt.shose_app.Adapter.Products_Oder_Adapter products_oder_adapter;
     RecyclerView recyclerView;
     private Oder oder;
@@ -107,7 +108,7 @@ public class CancelOderBtnActivity extends AppCompatActivity {
         });
         //-------------
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
-        products_oder_adapter = new Products_Oder_Adapter(this, oder.getProducts());
+        products_oder_adapter = new Products_Oder_Adapter(this, oder.getProducts(),this);
         recyclerView.setAdapter(products_oder_adapter);
 
         txtNameUser.setText(oder.getName());
@@ -172,5 +173,9 @@ public class CancelOderBtnActivity extends AppCompatActivity {
 
             }
         });
+    }
+    @Override
+    public void onImageClick(int position) {
+        Toast.makeText(getApplicationContext(),position+"",Toast.LENGTH_SHORT).show();
     }
 }
