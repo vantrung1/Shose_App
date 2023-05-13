@@ -10,7 +10,10 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 
@@ -44,6 +47,31 @@ public class Notifi_adapter extends RecyclerView.Adapter<Notifi_adapter.myViewHo
         Notification notification = NotifiList.get(position);
         holder.title.setText(notification.getFcmRequest().getNotification().getTitle());
         holder.body.setText(notification.getFcmRequest().getNotification().getBody());
+        Date currentDate = new Date();
+
+        String pattern ="EEE MMM dd HH:mm:ss zzz yyyy";
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
+        try {
+            Date date = dateFormat.parse(notification.getTimestap());
+            long timeDiff = currentDate.getTime() - date.getTime();
+            long minutes = timeDiff / (60 * 1000); // Đơn vị phút
+            long hours = timeDiff / (60 * 60 * 1000); // Đơn vị giờ
+            long days = timeDiff / (24 * 60 * 60 * 1000); // Đơn vị ngày
+
+            if(days>=1){
+                holder.time.setText(days+" ngày trước");
+            }
+            else if(hours>=1){
+                holder.time.setText(hours+" giờ trước");
+            }
+            else {
+                holder.time.setText(minutes+" phút trước");
+            }
+        } catch (ParseException e) {
+            e.printStackTrace();
+            holder.time.setText(notification.getTimestap());
+        }
     }
 
     @Override
@@ -52,11 +80,12 @@ public class Notifi_adapter extends RecyclerView.Adapter<Notifi_adapter.myViewHo
     }
 
     public class myViewHolder extends RecyclerView.ViewHolder {
-        TextView title, body;
+        TextView title, body,time;
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.titleNotifi);
             body = itemView.findViewById(R.id.bodyNotifi);
+            time = itemView.findViewById(R.id.txttime);
         }
     }
 }

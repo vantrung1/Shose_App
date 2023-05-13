@@ -170,7 +170,6 @@ id dialog_txt_quantity_cart_update
 id drawerlayout
 id edEmail
 id edNewPass
-id edNewemail
 id edReNewPass
 id edUsername
 id ed_Email
@@ -393,6 +392,7 @@ id txt_update_at
 id txt_update_at_2
 id txta
 id txtakdks
+id txttime
 id txttime2
 id update
 id viewPager

@@ -18,4 +18,5 @@ public class Utils {
     public static final String MESS = "message";
     public static final String DATETIME = "datetime";
     public static final String PATH_CHAT = "chat";
+    public static String token = "chat";
 }

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 
 import android.os.Bundle;
@@ -45,6 +46,7 @@ public class SignUpActivity extends AppCompatActivity {
     AppCompatButton btnSignUp;
     ApiApp apiInterface;
     FirebaseAuth firebaseAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,9 +81,11 @@ public class SignUpActivity extends AppCompatActivity {
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 //                Intent i = new Intent(SignUpActivity.this, SignInActivity.class);
 //                startActivity(i);
                 if (!validateUserName() | !validateEmail() | !validatePass() | !validateConfirmPass()) {
+
                     return;
                 }
 
@@ -140,19 +144,23 @@ public class SignUpActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     if(response.body().getStatus().equals("200")){
                         Toast.makeText(getApplicationContext(), "Đăng Ký Thành Công", Toast.LENGTH_LONG).show();
+                      //  progressDialog.dismiss();
                     }
                     else {
                         Toast.makeText(getApplicationContext(), "Email đã tồn tại", Toast.LENGTH_LONG).show();
+                      //  progressDialog.dismiss();
                     }
 
                 } else {
                     Toast.makeText(getApplicationContext(), "them khong thanh cong", Toast.LENGTH_LONG).show();
+                   // progressDialog.dismiss();
                 }
             }
 
             @Override
             public void onFailure(Call<serverRepest> call, Throwable t) {
-
+                Toast.makeText(getApplicationContext(), "them khong thanh cong", Toast.LENGTH_LONG).show();
+               // progressDialog.dismiss();
             }
         });
     }
@@ -164,12 +172,8 @@ public class SignUpActivity extends AppCompatActivity {
         if (username.isEmpty()) {
             txt1.setError("Field can't be empty");
             return false;
-        } else if (username.length() >= 20) {
+        } else if (username.length() >= 50) {
             txt1.setError("UserName to Long");
-            return false;
-        } else if (!username.matches(val)) {
-            txt1.requestFocus();
-            txt1.setError("Enter only alphabetical character");
             return false;
         } else {
             txt1.setError(null);

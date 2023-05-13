@@ -48,6 +48,7 @@
 
         import org.json.JSONObject;
 
+        import java.text.SimpleDateFormat;
         import java.util.ArrayList;
         import java.util.Date;
         import java.util.List;
@@ -259,6 +260,7 @@
                         dialog.getWindow().setGravity(Gravity.CENTER);
                       //  SendNotification();//--------------------Notification
                         seNotification(token_admin,"Thông báo đơn hàng","Bạn có đơn hàng mới");
+                        seNotification(Utils.token,"Thông báo đơn hàng","Đơn hàng của bạn đã được tạo, đang đợi hệ thống xác nhận");
                     }
                 }
             }
@@ -391,8 +393,11 @@
         });
     }
             public void saveNotification(String recipientToken, String title, String message) {
-                String timestamp = String.valueOf(System.currentTimeMillis());
-                  // Tạo một key duy nhất cho thông báo
+                String pattern = "EEE MMM dd HH:mm:ss zzz yyyy";
+
+                SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
+                Date currentDate = new Date();
+                String dateString = dateFormat.format(currentDate);
 
                 databaseReference = FirebaseDatabase.getInstance().getReference("notifications");
                     // Tạo đối tượng Notification
@@ -404,9 +409,10 @@
                 fcmRequest.setNotification(notification);
 
                     // Lưu thông báo vào Firebase Realtime Database trong nút con của người dùng
-                    databaseReference.child("admin").child(timestamp).setValue(fcmRequest)
+                    databaseReference.child("admin").child(dateString).setValue(fcmRequest)
                             .addOnSuccessListener(aVoid -> System.out.println("Successfully saved notification to Firebase"))
                             .addOnFailureListener(e -> System.out.println("Failed to save notification to Firebase: " + e.getMessage()));
+
 
             }
     private void OpenDialogUpdatePhone(int gravity){

@@ -454,7 +454,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onSuccess(String s) {
                 if(!TextUtils.isEmpty(s)){
-                    Utils.Users_Utils.setToken(s);
+                    Utils.token  = s ;
 
                     DatabaseReference tokensRef = FirebaseDatabase.getInstance().getReference("tokens");
                     tokensRef.child(Utils.Users_Utils.getId()+"").setValue(s)

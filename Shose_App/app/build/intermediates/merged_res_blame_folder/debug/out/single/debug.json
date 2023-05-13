@@ -308,6 +308,10 @@
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\layout\\fragment_onboadrd2.xml"
     },
     {
+        "merged": "edu.fpt.shose_app-merged_res-43:/layout_item_notifi.xml.flat",
+        "source": "edu.fpt.shose_app-main-45:/layout/item_notifi.xml"
+    },
+    {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\drawable_background_custombtn.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\drawable\\background_custombtn.xml"
     },
@@ -362,10 +366,6 @@
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\drawable_baseline_search_24.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\drawable\\baseline_search_24.xml"
-    },
-    {
-        "merged": "edu.fpt.shose_app-merged_res-43:/layout_layout_dialog_custom_mail.xml.flat",
-        "source": "edu.fpt.shose_app-main-45:/layout/layout_dialog_custom_mail.xml"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\anim_slide_in_right.xml.flat",
@@ -582,10 +582,6 @@
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\drawable_mess_inputtextback.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\drawable\\mess_inputtextback.xml"
-    },
-    {
-        "merged": "edu.fpt.shose_app-merged_res-43:/layout_activity_check_out_main.xml.flat",
-        "source": "edu.fpt.shose_app-main-45:/layout/activity_check_out_main.xml"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\layout_item_location.xml.flat",

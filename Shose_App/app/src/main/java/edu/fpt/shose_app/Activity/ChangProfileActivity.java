@@ -45,14 +45,13 @@ public class ChangProfileActivity extends AppCompatActivity {
 
     private void initView() {
         edthovaten = findViewById(R.id.edoldten);
-        edtEmail = findViewById(R.id.edNewemail);
         edthovaten.setText(Utils.Users_Utils.getName());
-        edtEmail.setText(Utils.Users_Utils.getEmail());
+
         btn = findViewById(R.id.btn_thaydoi2);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!validateUserName() | !validateEmail()) {
+                if (!validateUserName()) {
                     return;
                 }
                 thaydoi();
@@ -62,7 +61,6 @@ public class ChangProfileActivity extends AppCompatActivity {
 
     private void thaydoi() {
         Utils.Users_Utils.setName(edthovaten.getText().toString());
-        Utils.Users_Utils.setEmail(edtEmail.getText().toString());
         Call<loginRequest> objCall = apiInterface._updateUser(Utils.Users_Utils.getId(),Utils.Users_Utils);
         objCall.enqueue(new Callback<loginRequest>() {
             @Override
@@ -93,17 +91,5 @@ public class ChangProfileActivity extends AppCompatActivity {
             return true;
         }
     }
-    private boolean validateEmail() {
-        String email = edtEmail.getText().toString();
-        if (email.isEmpty()) {
-            edtEmail.setError("Field can't be empty");
-            return false;
-        } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            edtEmail.setError("Please enter a valid email anddress");
-            return false;
-        } else {
-            edtEmail.setError(null);
-            return true;
-        }
-    }
+
 }

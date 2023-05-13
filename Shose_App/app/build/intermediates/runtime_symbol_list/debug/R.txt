@@ -3314,7 +3314,6 @@ int id easeOut 0x7f0900f5
 int id east 0x7f0900f6
 int id edEmail 0x7f0900f7
 int id edNewPass 0x7f0900f8
-int id edNewemail 0x7f090341
 int id edReNewPass 0x7f0900f9
 int id edUsername 0x7f0900fa
 int id ed_Email 0x7f0900fb
@@ -3863,6 +3862,7 @@ int id txt_update_at 0x7f090317
 int id txt_update_at_2 0x7f090318
 int id txta 0x7f090319
 int id txtakdks 0x7f09031a
+int id txttime 0x7f090344
 int id txttime2 0x7f09031b
 int id ucrop 0x7f09031c
 int id ucrop_frame 0x7f09031d

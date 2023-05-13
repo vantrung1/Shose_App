@@ -55,7 +55,7 @@
             android:layout_marginTop="62dp"
             android:layout_marginEnd="20dp"
             app:boxBackgroundColor="@color/white"
-            app:endIconMode="password_toggle"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintVertical_bias="0.122"
@@ -66,54 +66,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:ems="20"
-                android:hint="Password"
+                android:hint="Họ và Tên"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="Địa chỉ email"
-            android:textColor="#1A2530"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.125"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout1"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/textInputLayout2"
-            style="@style/TextInputLayout"
-            android:layout_width="335dp"
-            android:layout_height="wrap_content"
-            app:boxBackgroundColor="@color/white"
-            android:layout_marginTop="30dp"
-            app:endIconMode="password_toggle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout1"
-            app:layout_constraintVertical_bias="0.122">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/edNewemail"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:ems="20"
-                android:hint="NewPassword"
-                android:textSize="14sp" />
-        </com.google.android.material.textfield.TextInputLayout>
-
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_thaydoi2"
-            android:layout_marginTop="50dp"
             android:layout_width="335dp"
             android:layout_height="0dp"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="84dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/background_btn_dangnhap"
             android:elevation="3dp"
@@ -123,8 +85,10 @@
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_percent="0.07"
+
+            app:layout_constraintHorizontal_bias="0.611"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout1"
             app:layout_constraintWidth_percent="0.7" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
