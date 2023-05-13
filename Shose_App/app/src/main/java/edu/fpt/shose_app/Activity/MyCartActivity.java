@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
@@ -57,10 +58,15 @@ public class MyCartActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // price = txt_total.getText().toString();
-                Intent intent = new Intent(MyCartActivity.this,Check_Out_MainActivity.class);
-                intent.putExtra("STRING_DATA", price);
-                intent.putExtra("STRING_soluong", soluong);
-                startActivity(intent);
+                if(!price.equals("")){
+                    Intent intent = new Intent(MyCartActivity.this,Check_Out_MainActivity.class);
+                    intent.putExtra("STRING_DATA", price);
+                    intent.putExtra("STRING_soluong", soluong);
+                    startActivity(intent);
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),"hãy chọn sản phẩm",Toast.LENGTH_SHORT).show();
+                }
             }
         });
         recyclerViewCart = findViewById(R.id.recy_my_cart);
@@ -89,7 +95,7 @@ public class MyCartActivity extends AppCompatActivity {
         long total = 0;
         for (int i = 0; i < Utils.cartLists.size(); i++) {
             if(Utils.cartLists.get(i).isIscheck()){
-                total = total + (Utils.cartLists.get(i).getPrice() * Utils.cartLists.get(i).getQuantity());
+                total = total + (Utils.cartLists.get(i).getSale() * Utils.cartLists.get(i).getQuantity());
                 soluong = soluong+(Utils.cartLists.get(i).getQuantity());
             }
         }

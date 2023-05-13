@@ -1,5 +1,6 @@
 package edu.fpt.shose_app.Activity;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
@@ -18,17 +19,22 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthCredential;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import edu.fpt.shose_app.MainActivity;
 import edu.fpt.shose_app.Model.User;
 import edu.fpt.shose_app.Model.loginRequest;
+import edu.fpt.shose_app.Model.serverRepest;
 import edu.fpt.shose_app.R;
 import edu.fpt.shose_app.Retrofit.ApiApp;
 import edu.fpt.shose_app.Utils.Utils;
@@ -64,13 +70,14 @@ public class SignInActivity extends AppCompatActivity {
         initAction();
         String username = sharedPreferences.getString("username", "1");
         String pass = sharedPreferences.getString("pass", "1");
+        Log.d("TAG", "onCreate: "+username+pass);
         firebaseAuth = FirebaseAuth.getInstance();
         if(pass.equals("1")||username.equals("1")){
             return;
         }
         else {
             edEmail.setText(username);
-            Log.d("TAG", "onCreate: "+username+pass);
+          //  Log.d("TAG", "onCreate: "+username+pass);
             POST_Retrofit_Login(username,pass);
         }
     }
@@ -123,29 +130,6 @@ public class SignInActivity extends AppCompatActivity {
         });
     }
 
-    private void loginFirebase(String email, String pass) {
-        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-
-// Đăng nhập bằng email và mật khẩu
-
-
-        firebaseAuth.signInWithEmailAndPassword(email, pass)
-                .addOnCompleteListener(task -> {
-                    if (task.isSuccessful()) {
-                        // Lấy thông tin người dùng hiện tại
-                        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
-                        // Kiểm tra nếu người dùng không null
-                        if (currentUser != null) {
-                            String uid = currentUser.getUid();
-
-                        }
-                    } else {
-                        // Đăng nhập thất bại
-                        Exception exception = task.getException();
-
-                    }
-                });
-    }
 
     //Post api len sever
     void POST_Retrofit_Login(String emai, String pass) {
@@ -203,8 +187,10 @@ public class SignInActivity extends AppCompatActivity {
         if (requestCode == RC_SIGN_IN) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
-                task.getResult(ApiException.class);
-                firebaseAuthWithGoogle();
+                GoogleSignInAccount account = task.getResult(ApiException.class);
+              //  firebaseAuthWithGoogle(account);
+                Log.w("TAG", "Google sign " +account.getEmail()+account.getDisplayName()+account.getId()+account.getPhotoUrl());
+                SingupWithGoogle(account);
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
                 Log.w("TAG", "Google sign in failed", e);
@@ -212,12 +198,50 @@ public class SignInActivity extends AppCompatActivity {
         }
     }
 
-    private void firebaseAuthWithGoogle() {
-        finish();
-        Intent i = new Intent(SignInActivity.this, HomeActivity.class);
-        startActivity(i);
+    private void SingupWithGoogle(GoogleSignInAccount account) {
+        Gson gson = new GsonBuilder().setLenient().create();
 
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(Utils.BASE_URL_API)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build();
+        apiInterface = retrofit.create(ApiApp.class);
+        // tạo đối tượng DTO để gửi lên server
+        User objUser = new User();
+        objUser.setName(account.getDisplayName());
+        objUser.setEmail(account.getEmail());
+        objUser.setPassword(account.getId());
+        objUser.setAvatar(account.getPhotoUrl()+"");
+        Call<serverRepest> objCall = apiInterface.postUser(objUser);
+        objCall.enqueue(new Callback<serverRepest>() {
+            @Override
+            public void onResponse(Call<serverRepest> call, Response<serverRepest> response) {
+
+                if (response.isSuccessful()) {
+                    serverRepest serverRepest = response.body();
+                    if(serverRepest.getStatus().equals("200")){
+                       POST_Retrofit_Login(account.getEmail(),account.getId());
+                        Log.d("TAG", "onResponse: "+account.getIdToken());
+                    }
+                    else  {
+                        POST_Retrofit_Login(account.getEmail(),account.getId());
+                        Log.d("TAG", "onResponse: "+"dang nhap");
+
+                    }
+                } else {
+                    POST_Retrofit_Login(account.getEmail(),account.getId());
+                    Log.d("TAG", "onResponse: "+"dang nhap");
+                }
+            }
+
+            @Override
+            public void onFailure(Call<serverRepest> call, Throwable t) {
+                POST_Retrofit_Login(account.getEmail(),account.getId());
+            }
+        });
     }
+
+
 
     private boolean validateEmail() {
         String email = txt1.getEditText().getText().toString();

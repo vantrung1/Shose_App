@@ -19,7 +19,7 @@
         app:civ_border_width="1dp"
     />
     <TextView
-        android:text="Hey, Hello "
+        android:text="Hey, Xin CHào "
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

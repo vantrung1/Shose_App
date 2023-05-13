@@ -20,12 +20,12 @@
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\drawable\\iconmenu.png"
     },
     {
-        "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\layout_fragment_change_password.xml.flat",
-        "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\layout\\fragment_change_password.xml"
-    },
-    {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\layout_item_transport_oder.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\layout\\item_transport_oder.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\layout_fragment_change_password.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\layout\\fragment_change_password.xml"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\drawable_drop_down_24.xml.flat",
@@ -316,12 +316,12 @@
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\layout_itemsize.xml.flat",
-        "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\layout\\itemsize.xml"
-    },
-    {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\layout_activity_infor_oder.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\layout\\activity_infor_oder.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\layout_itemsize.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\layout\\itemsize.xml"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\drawable_logo.png.flat",
@@ -364,6 +364,10 @@
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\drawable\\baseline_search_24.xml"
     },
     {
+        "merged": "edu.fpt.shose_app-merged_res-43:/layout_layout_dialog_custom_mail.xml.flat",
+        "source": "edu.fpt.shose_app-main-45:/layout/layout_dialog_custom_mail.xml"
+    },
+    {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\anim_slide_in_right.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\anim\\slide_in_right.xml"
     },
@@ -378,10 +382,6 @@
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\layout_item_delivered_oder.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\layout\\item_delivered_oder.xml"
-    },
-    {
-        "merged": "edu.fpt.shose_app-merged_res-43:/layout_item_location.xml.flat",
-        "source": "edu.fpt.shose_app-main-45:/layout/item_location.xml"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\drawable_background_tittle.xml.flat",
@@ -584,6 +584,10 @@
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\drawable\\mess_inputtextback.xml"
     },
     {
+        "merged": "edu.fpt.shose_app-merged_res-43:/layout_activity_check_out_main.xml.flat",
+        "source": "edu.fpt.shose_app-main-45:/layout/activity_check_out_main.xml"
+    },
+    {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\layout_item_location.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\layout\\item_location.xml"
     },
@@ -654,6 +658,10 @@
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\drawable_location_24.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\drawable\\location_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\layout_activity_chang_profile.xml.flat",
+        "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\layout\\activity_chang_profile.xml"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",

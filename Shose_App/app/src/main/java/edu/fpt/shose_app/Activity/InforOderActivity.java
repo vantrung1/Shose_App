@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -15,12 +16,19 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.text.DecimalFormat;
+import java.util.List;
+
 import edu.fpt.shose_app.Adapter.Products_Oder_Adapter;
 import edu.fpt.shose_app.Interface.ImageClickr;
 import edu.fpt.shose_app.Model.Oder;
+import edu.fpt.shose_app.Model.Product;
 import edu.fpt.shose_app.R;
 import edu.fpt.shose_app.Retrofit.ApiApp;
 import edu.fpt.shose_app.Utils.Utils;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -32,7 +40,7 @@ public class InforOderActivity extends AppCompatActivity implements ImageClickr 
     Gson gson;
     ApiApp apiInterface;
     Toolbar toolbar;
-    TextView txtNameUser, txtPhone, txtAddress, txtPaymentAmount, txtTotal, txtCreateAt, txtTotal2;
+    TextView txtNameUser, txtPhone, txtAddress, txtPaymentAmount, txtTotal, txtCreateAt, txtTotal2,txt_UPdate;
     AppCompatButton btnChat, btnCancel;
 
     @Override
@@ -56,6 +64,7 @@ public class InforOderActivity extends AppCompatActivity implements ImageClickr 
         txtPaymentAmount = findViewById(R.id.txt_paymentAmount);
         txtTotal = findViewById(R.id.txt_total);
         txtCreateAt = findViewById(R.id.txt_createAt);
+        txtCreateAt = findViewById(R.id.txt_UPdate);
         txtTotal2 = findViewById(R.id.txt_total2);
         btnChat = findViewById(R.id.btn_chat_infor);
 
@@ -79,12 +88,36 @@ public class InforOderActivity extends AppCompatActivity implements ImageClickr 
         txtNameUser.setText(oder.getName());
         txtPhone.setText(oder.getNumber());
         txtPaymentAmount.setText(oder.getPaymentAmount());
-        txtCreateAt.setText(oder.getCreated_at());
+        txtCreateAt.setText(oder.getTimeUTCCreate());
+        txt_UPdate.setText(oder.getTimeUTC());
         txtAddress.setText(oder.getAddress_id());
+        txtTotal.setText(new DecimalFormat("###,###,### VNĐ").format(Integer.parseInt(oder.getTotal())));
+        txtTotal2.setText(new DecimalFormat("###,###,### VNĐ").format(Integer.parseInt(oder.getTotal())));
     }
 
+    public void getProduct(int id){
+
+        Call<List<Product>> objGetOder = apiInterface.getProduct(id);
+        objGetOder.enqueue(new Callback<List<Product>>() {
+            @Override
+            public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
+                if(response.isSuccessful()){
+                    Product products = response.body().get(0);
+                    Intent intent=new Intent(getApplicationContext(), ProductDetailActivity.class);
+                    intent.putExtra("product",products);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    getApplicationContext().startActivity(intent);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Product>> call, Throwable t) {
+
+            }
+        });
+    }
     @Override
     public void onImageClick(int position) {
-        Toast.makeText(getApplicationContext(),position+"",Toast.LENGTH_SHORT).show();
+        getProduct(position);
     }
 }

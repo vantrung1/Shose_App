@@ -87,7 +87,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/topicProduct"
-                            android:text="Popular Shoes"
+                            android:text="Phổ Biến"
                             android:textColor="@color/black"
                             android:textSize="26dp"
                             android:textStyle="bold" />
@@ -107,7 +107,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:id="@+id/topicProduct2"
-                            android:text="New Arrivals"
+                            android:text="Sản Phẩm Mới"
                             android:textColor="@color/black"
                             android:textSize="26dp"
                             android:textStyle="bold" />
@@ -140,7 +140,7 @@
                             android:layout_marginTop="10dp"
                             android:layout_marginEnd="10dp"
                             android:layout_marginBottom="10dp"
-                            android:text="See All" />
+                            android:text="Tất Cả" />
                         <androidx.recyclerview.widget.RecyclerView
                             android:id="@+id/recy_3_product"
                             android:layout_marginTop="10dp"

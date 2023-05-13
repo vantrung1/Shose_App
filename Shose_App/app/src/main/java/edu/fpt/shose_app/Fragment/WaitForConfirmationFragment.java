@@ -61,6 +61,11 @@ public class WaitForConfirmationFragment extends Fragment implements ImageClickr
     }
 
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         recy_wait_for = view.findViewById(R.id.recy_wait_for);
@@ -76,8 +81,9 @@ public class WaitForConfirmationFragment extends Fragment implements ImageClickr
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
         apiInterface = retrofit.create(ApiApp.class);
-        get_oder(Utils.Users_Utils.getId(),1);
         oderArrayList = new ArrayList<>();
+        get_oder(Utils.Users_Utils.getId(),1);
+
         oderAdapter = new OderAdapter(getActivity(), oderArrayList,this);
         recy_wait_for.setAdapter(oderAdapter);
     }
@@ -92,11 +98,11 @@ public class WaitForConfirmationFragment extends Fragment implements ImageClickr
                     OderRequest oderRequest = response.body();
 //                    oderArrayList.clear();
                     oderArrayList = oderRequest.getData();
-//                    if (oderArrayList.size() == 0) {
-//                        txta.setVisibility(View.VISIBLE);
-//                    } else {
-//                        txta.setVisibility(View.INVISIBLE);
-//                    }
+                    if (oderArrayList.size() == 0) {
+                        txta.setVisibility(View.VISIBLE);
+                    } else {
+                        txta.setVisibility(View.INVISIBLE);
+                    }
 
                     Log.d("zzzzzz", "onResponse: " + oderArrayList.size());
                     oderAdapter.setorderlist(oderArrayList);
@@ -134,7 +140,8 @@ public class WaitForConfirmationFragment extends Fragment implements ImageClickr
 
     @Override
     public void onImageClick(int position) {
-        getProduct(oderArrayList.get(0).getProducts().get(position).getProduct_id());
+        getProduct(position);
+
     }
     
 }

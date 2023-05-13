@@ -28,6 +28,7 @@ import java.util.ArrayList;
 
 import edu.fpt.shose_app.Model.Brand;
 import edu.fpt.shose_app.Model.User;
+import edu.fpt.shose_app.Model.serverRepest;
 import edu.fpt.shose_app.R;
 import edu.fpt.shose_app.Retrofit.ApiApp;
 import edu.fpt.shose_app.Utils.Utils;
@@ -128,16 +129,21 @@ public class SignUpActivity extends AppCompatActivity {
         objUser.setName(edUsername.getText().toString());
         objUser.setEmail(edEmail.getText().toString());
         objUser.setPassword(edpassword.getText().toString());
+
         //objUser.setFilebase_id(user.getUid());
 
-        Call<User> objCall = apiInterface.postUser(objUser);
-        objCall.enqueue(new Callback<User>() {
+        Call<serverRepest> objCall = apiInterface.postUser(objUser);
+        objCall.enqueue(new Callback<serverRepest>() {
             @Override
-            public void onResponse(Call<User> call, Response<User> response) {
+            public void onResponse(Call<serverRepest> call, Response<serverRepest> response) {
 
                 if (response.isSuccessful()) {
-                    User user = response.body();
-                    Toast.makeText(getApplicationContext(), "them thanh cong", Toast.LENGTH_LONG).show();
+                    if(response.body().getStatus().equals("200")){
+                        Toast.makeText(getApplicationContext(), "Đăng Ký Thành Công", Toast.LENGTH_LONG).show();
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(), "Email đã tồn tại", Toast.LENGTH_LONG).show();
+                    }
 
                 } else {
                     Toast.makeText(getApplicationContext(), "them khong thanh cong", Toast.LENGTH_LONG).show();
@@ -145,7 +151,7 @@ public class SignUpActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<User> call, Throwable t) {
+            public void onFailure(Call<serverRepest> call, Throwable t) {
 
             }
         });

@@ -1,5 +1,6 @@
 package edu.fpt.shose_app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -19,11 +20,14 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import edu.fpt.shose_app.Activity.ProductDetailActivity;
 import edu.fpt.shose_app.Adapter.TransportAtapter;
 import edu.fpt.shose_app.Interface.ImageClickr;
 import edu.fpt.shose_app.Model.Oder;
 import edu.fpt.shose_app.Model.OderRequest;
+import edu.fpt.shose_app.Model.Product;
 import edu.fpt.shose_app.R;
 import edu.fpt.shose_app.Retrofit.ApiApp;
 import edu.fpt.shose_app.Utils.Utils;
@@ -101,9 +105,29 @@ public class TransportFragment extends Fragment implements ImageClickr {
 
         });
     }
+    public void getProduct(int id){
 
+        Call<List<Product>> objGetOder = apiInterface.getProduct(id);
+        objGetOder.enqueue(new Callback<List<Product>>() {
+            @Override
+            public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
+                if(response.isSuccessful()){
+                    Product products = response.body().get(0);
+                    Intent intent=new Intent(getContext(), ProductDetailActivity.class);
+                    intent.putExtra("product",products);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    getContext().startActivity(intent);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Product>> call, Throwable t) {
+
+            }
+        });
+    }
     @Override
     public void onImageClick(int position) {
-
+        getProduct(position);
     }
 }

@@ -19,7 +19,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import com.android.volley.AuthFailureError;
-import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.textfield.TextInputEditText;
@@ -29,18 +28,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 import edu.fpt.shose_app.Model.User;
+import edu.fpt.shose_app.Model.loginRequest;
 import edu.fpt.shose_app.R;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import edu.fpt.shose_app.Retrofit.ApiApp;
+import edu.fpt.shose_app.Utils.Utils;
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ChangePassword_activity extends AppCompatActivity {
     private User user;
@@ -52,10 +58,12 @@ public class ChangePassword_activity extends AppCompatActivity {
     private TextInputLayout textInputLayout3;
     private AppCompatButton btnthay_doi;
     private ProgressBar progressBar;
-
+    String userName,pass;
     private String oldPass, newPass, reNewPass;
     String URL = "https://shoseapp.click/api/users";
-
+    Retrofit retrofit;
+    Gson gson;
+    ApiApp apiInterface;
 
 
     @Override
@@ -63,9 +71,19 @@ public class ChangePassword_activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
         AnhXa();
+        gson = new GsonBuilder().setLenient().create();
+        retrofit = new Retrofit.Builder()
+                .baseUrl(Utils.BASE_URL_API)
+                .addConverterFactory(GsonConverterFactory.create(gson))
+                .build();
+
+        apiInterface = retrofit.create(ApiApp.class);
+        SharedPreferences preferences = getApplicationContext().getSharedPreferences("MyPreferences",Context.MODE_PRIVATE);
+         userName = preferences.getString("username","");
+         pass = preferences.getString("pass", "1");
         btnthay_doi.setOnClickListener(view -> {
             if (validate()>0) {
-                updateMatKhau();
+                updateMatKhau(newPass);
             }
         });
     }
@@ -83,73 +101,24 @@ public class ChangePassword_activity extends AppCompatActivity {
         //
         user = new User();
 //        loading = new Loading(this);
-        getThongTinUser();
+
     }
-    private void updateMatKhau() {
-        RequestQueue queue = Volley.newRequestQueue(getApplicationContext());
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+    private void updateMatKhau(String newPass) {
+        Utils.Users_Utils.setPassword(newPass);
+        Call<loginRequest> objCall = apiInterface._updateUser(Utils.Users_Utils.getId(),Utils.Users_Utils);
+        objCall.enqueue(new Callback<loginRequest>() {
             @Override
-            public void onResponse(String response) {
-                progressBar.setVisibility(View.GONE);
-                if (response.equals("success")) {
-
-                } else
-                    Toast.makeText(getApplicationContext(), response, Toast.LENGTH_SHORT).show();
+            public void onResponse(Call<loginRequest> call, Response<loginRequest> response) {
+                if(response.isSuccessful()){
+                    Toast.makeText(getApplicationContext(),"Thay đổi thành công",Toast.LENGTH_SHORT).show();
+                }
             }
-        }, new Response.ErrorListener() {
+
             @Override
-            public void onErrorResponse(VolleyError error) {
-                progressBar.setVisibility(View.GONE);
-                error.printStackTrace();
-            }
-        }) {
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<>();
-                params.put("id", String.valueOf(user.getId()));
-                params.put("password", edOldPass.getText().toString());
-                params.put("newpassword",edNewPass.getText().toString());
-                params.put("Renewpassword",edReNewPass.getText().toString());
-                return params;
-            }
-        };
-        queue.add(stringRequest);
-    }
-    private void getThongTinUser(){
-        SharedPreferences preferences = getApplicationContext().getSharedPreferences("accout_file",Context.MODE_PRIVATE);
-        String userName = preferences.getString("username","");
+            public void onFailure(Call<loginRequest> call, Throwable t) {
 
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL,
-                response -> {
-                    try {
-                        JSONArray jsonArray = new JSONArray(response);
-                        JSONObject jsonObject = jsonArray.getJSONObject(0);
-                        user.setId(jsonObject.getInt("id"));
-                        user.setName(jsonObject.getString("name"));
-                        user.setAddress_id(jsonObject.getString("address_id"));
-                        user.setRole_id(jsonObject.getString("role_id"));
-                        user.setPhoneNumber(jsonObject.getString("phoneNumber"));
-                        user.setEmail(jsonObject.getString("email"));
-                        user.setPassword(jsonObject.getString("password"));
-                        user.setAvatar(jsonObject.getString("avatar"));
-                        user.setToken(jsonObject.getString("token"));
-                        user.setStatus(jsonObject.getString("status"));
-                        user.setCreated_at(jsonObject.getString("created_at"));
-                        user.setUpdated_at(jsonObject.getString("updated_at"));
-
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                },
-                error -> Toast.makeText(getApplicationContext(), "Sever Err! " + error.getMessage(), Toast.LENGTH_SHORT).show()) {
-            @Override
-            protected Map<String, String> getParams() {
-                Map<String, String> params = new HashMap<>();
-                params.put("username", userName);
-                return params;
             }
-        };
-        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-        requestQueue.add(stringRequest);
+        });
     }
     private  void Dialog(String mess){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -189,7 +158,7 @@ public class ChangePassword_activity extends AppCompatActivity {
         } else {
             textInputLayout1.setError(null);
         }
-        if (!oldPass.equals(user.getPassword())) {
+        if (!oldPass.equals(pass)) {
             textInputLayout1.setError("Mật khẩu cũ không chính xác!");
             edOldPass.requestFocus();
             check = -1;

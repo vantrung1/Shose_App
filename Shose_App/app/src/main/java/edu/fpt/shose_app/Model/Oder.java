@@ -1,6 +1,10 @@
 package edu.fpt.shose_app.Model;
 
 import java.io.Serializable;
+import java.time.OffsetDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
 
@@ -148,5 +152,45 @@ public class Oder implements Serializable {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+    public String getTimeUTC(){
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            OffsetDateTime utcDateTime = OffsetDateTime.parse(getUpdated_at(), DateTimeFormatter.ISO_OFFSET_DATE_TIME);
+
+            // Đặt múi giờ của Việt Nam
+            ZoneId vietnamZone = ZoneId.of("Asia/Ho_Chi_Minh");
+
+            // Chuyển đổi múi giờ từ UTC sang Việt Nam
+            ZonedDateTime vietnamDateTime = utcDateTime.atZoneSameInstant(vietnamZone);
+
+            // Định dạng đầu ra
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+            // Hiển thị thời gian ở múi giờ Việt Nam
+            String vietnamTime = vietnamDateTime.format(formatter);
+            System.out.println("Thời gian ở múi giờ Việt Nam: " + vietnamTime);
+            return vietnamTime;
+        }
+        return "";
+    }
+    public String getTimeUTCCreate(){
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            OffsetDateTime utcDateTime = OffsetDateTime.parse(getUpdated_at(), DateTimeFormatter.ISO_OFFSET_DATE_TIME);
+
+            // Đặt múi giờ của Việt Nam
+            ZoneId vietnamZone = ZoneId.of("Asia/Ho_Chi_Minh");
+
+            // Chuyển đổi múi giờ từ UTC sang Việt Nam
+            ZonedDateTime vietnamDateTime = utcDateTime.atZoneSameInstant(vietnamZone);
+
+            // Định dạng đầu ra
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+
+            // Hiển thị thời gian ở múi giờ Việt Nam
+            String vietnamTime = vietnamDateTime.format(formatter);
+            System.out.println("Thời gian ở múi giờ Việt Nam: " + vietnamTime);
+            return vietnamTime;
+        }
+        return "";
     }
 }

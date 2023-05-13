@@ -117,7 +117,7 @@ drawable successful
 font fonttext
 id CircleIndicator
 id CoordinatorLayouthome
-id Favorite
+id DonHang
 id Notifications
 id Profile
 id RecoveryPassword
@@ -151,6 +151,7 @@ id btn_detail_cancel
 id btn_send_evaluate
 id btn_submit
 id btn_thaydoi
+id btn_thaydoi2
 id btn_transport
 id btn_wait_for_confirm
 id btn_xacnhan
@@ -169,6 +170,7 @@ id dialog_txt_quantity_cart_update
 id drawerlayout
 id edEmail
 id edNewPass
+id edNewemail
 id edReNewPass
 id edUsername
 id ed_Email
@@ -177,6 +179,7 @@ id ed_inputext
 id ed_password
 id edchangepassword
 id edoldpass
+id edoldten
 id edpassword
 id edt_add_mail
 id edt_add_phone
@@ -363,6 +366,7 @@ id tvThongBao
 id tvTitleFav
 id txtInputLayout1
 id txtInputLayout2
+id txt_UPdate
 id txt_address_users
 id txt_attributes_evaluate
 id txt_createAt
@@ -374,7 +378,6 @@ id txt_namepr_evaluate
 id txt_paymentAmount
 id txt_phone_users
 id txt_price
-id txt_price_shopping
 id txt_price_subtotal_check_out
 id txt_price_total
 id txt_price_total_check_out
@@ -397,6 +400,7 @@ id view_pager
 layout activity_account_settings
 layout activity_cancel_detail
 layout activity_cancel_oder_btn
+layout activity_chang_profile
 layout activity_change_password
 layout activity_chat_box
 layout activity_check_out_main
@@ -425,7 +429,6 @@ layout dialog_thong_bao
 layout dialog_update_cart
 layout drop_down_item
 layout fragment_cancel
-layout fragment_change_password
 layout fragment_delivered
 layout fragment_onboadrd2
 layout fragment_onboadrd3

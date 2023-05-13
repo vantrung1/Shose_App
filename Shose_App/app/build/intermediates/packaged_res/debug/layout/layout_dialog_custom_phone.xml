@@ -12,7 +12,7 @@
         android:padding="12dp"
         android:textColor="@color/white"
         android:textSize="16sp"
-        android:text="Add Your Phone"
+        android:text="Thêm Số Điện Thoại"
         android:gravity="center"
         android:background="@drawable/bg_blue_conner_16_topleft_topright"
         />
@@ -24,7 +24,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text= "Please add your phone"
+            android:text= "hãy ghi sso điện thoại"
             android:textColor="@color/white"
             android:textSize="14sp"
             android:gravity="center"
@@ -55,7 +55,7 @@
                 android:layout_marginEnd="10dp"
                 android:background="@drawable/bg_gray_conner_10"
                 android:alpha="0.4"
-                android:text="Cancel"/>
+                android:text="Hủy"/>
             <Button
                 android:id="@+id/btn_add_phone"
                 android:layout_width="0dp"
@@ -63,7 +63,7 @@
                 android:layout_weight="1"
                 android:textSize="14sp"
                 android:background="@drawable/bg_blue_conner_10"
-                android:text="Add"/>
+                android:text="Thêm"/>
         </LinearLayout>
     </LinearLayout>
 

@@ -42,7 +42,7 @@ public class FirebaseMessReceiver extends FirebaseMessagingService {
         Notification notification = new NotificationCompat.Builder(this, MyApplication.CHANNEL_ID)
                 .setContentTitle(t)
                 .setContentText(b)
-                .setSmallIcon(R.drawable.notifications_24)
+                .setSmallIcon(R.mipmap.ic_launcher)
                 .setLargeIcon(bitmap)
                 .build();
 
@@ -62,7 +62,7 @@ public class FirebaseMessReceiver extends FirebaseMessagingService {
         Intent intent =  new Intent(this, HomeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(),"noti")
-                .setSmallIcon(R.drawable.notifications_24)
+                .setSmallIcon(R.mipmap.ic_launcher)
                 .setAutoCancel(true)
                 .setVibrate(new long[]{1000,1000,1000,1000})
                 .setOnlyAlertOnce(true)

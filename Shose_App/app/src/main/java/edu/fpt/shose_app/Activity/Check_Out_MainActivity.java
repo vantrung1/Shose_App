@@ -60,6 +60,7 @@
         import edu.fpt.shose_app.Model.addRess_response;
         import edu.fpt.shose_app.Model.address;
         import edu.fpt.shose_app.Model.products;
+        import edu.fpt.shose_app.Model.serverRepest;
         import edu.fpt.shose_app.R;
         import edu.fpt.shose_app.Retrofit.ApiApp;
         import edu.fpt.shose_app.Retrofit.PostNotifi;
@@ -89,17 +90,19 @@
             TextView phonecheckout;
             TextView address_checkout;
     List<products> productsList_checkOut;
+            List<String> address;
     AppCompatButton btn_payment;
-    private String PaymentAmount = "Cash on delivery";
+    private String PaymentAmount = "Thanh toán khi nhận hàng";
     private String jsonprocuts;
     private String token_admin;
     private DatabaseReference databaseReference;
     private int soluong,id_oder;
-    String data_price,codezalo,address;
+    String data_price,codezalo,addressoder;
     List<address> addressList;
     AutoCompleteTextView autoCompleteTextView,autoCompleteAdress;
     ShapeableImageView img_update_phone,img_update_mail;
-
+            ArrayAdapter<String> adapter2;
+            ArrayAdapter<String> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -117,7 +120,7 @@
                 .build();
         apiInterface = retrofit.create(ApiApp.class);
         Intent intent = getIntent();
-        address= "";
+        addressoder= "";
         databaseReference = FirebaseDatabase.getInstance().getReference("notifications");
         initUi();
         initAction();
@@ -132,9 +135,9 @@
         txt_price_total_check_out.setText(data_price);
 
 
-        String[] type = new String[]{"Cash on delivery","Zalo Pay"};
+        String[] type = new String[]{"Thanh toán khi nhận hàng","Zalo Pay"};
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+         adapter = new ArrayAdapter<>(
                 this,R.layout.drop_down_item,type);
 
         autoCompleteTextView = findViewById(R.id.filled_exposed);
@@ -152,7 +155,11 @@
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                // Toast.makeText(Check_Out_MainActivity.this, autoCompleteAdress.getText().toString(), Toast.LENGTH_SHORT).show();
-                address = autoCompleteAdress.getText().toString();
+                addressoder = autoCompleteAdress.getText().toString();
+                if(addressoder .equals( "thêm mới địa chỉ")){
+                    OpenDialogUpdateMail(Gravity.CENTER);
+                    addressoder="";
+                }
             }
         });
     }
@@ -163,7 +170,10 @@
             public void onClick(View v) {
 
                 Log.d("TAG", "onClick: "+PaymentAmount);
-
+                if(addressoder.equals("")||addressoder.equals("thêm mới địa chỉ")){
+                    Toast.makeText(getApplicationContext(), "Chọn địa chỉ nhận hàng", Toast.LENGTH_LONG).show();
+                    return;
+                }
                 if(PaymentAmount.equalsIgnoreCase("Zalo Pay")){
                     CreateOrder orderApi = new CreateOrder();
 
@@ -185,7 +195,7 @@
 
                 }
                 else {
-                    CreateOder(Utils.Users_Utils.getId(), address, phonecheckout.getText().toString(), data_price,"note",PaymentAmount,"1",jsonprocuts,soluong);
+                    CreateOder(Utils.Users_Utils.getId(), addressoder, phonecheckout.getText().toString(), data_price,"note",PaymentAmount,"1",jsonprocuts,soluong);
                 }
 
 
@@ -201,7 +211,7 @@
         img_update_mail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                OpenDialogUpdateMail(Gravity.CENTER);
+
             }
         });
 
@@ -212,7 +222,7 @@
 
             @Override
             public void onPaymentSucceeded(String s, String s1, String s2) {
-                CreateOder(Utils.Users_Utils.getId(), address,phonecheckout.getText().toString(), data_price,"note",codezalo,"1",jsonprocuts,soluong);
+                CreateOder(Utils.Users_Utils.getId(), addressoder,phonecheckout.getText().toString(), data_price,"note",codezalo,"1",jsonprocuts,soluong);
                 Intent intent = new Intent(Check_Out_MainActivity.this,HomeActivity.class);
                 startActivity(intent);
             }
@@ -240,7 +250,7 @@
                     ApiApp.MyResponse myResponse = response.body();
                     if(myResponse.getStatus().equals("success")){
                         id_oder = Integer.parseInt(myResponse.getId_oder());
-                     //   Toast.makeText(Check_Out_MainActivity.this,myResponse.getMessage(),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Check_Out_MainActivity.this,myResponse.getMessage(),Toast.LENGTH_SHORT).show();
                         dialogOrder dialog = new dialogOrder(Check_Out_MainActivity.this);
                         dialog.show();
                         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -310,17 +320,17 @@
 
     private void getaddress() {
         addressList = new ArrayList<>();
+        address = new ArrayList<>();
         Call<addRess_response> objgetaddress = apiInterface.getallAdess(Utils.Users_Utils.getId());
+        address.add("thêm mới địa chỉ");
         objgetaddress.enqueue(new Callback<addRess_response>() {
             @Override
             public void onResponse(Call<addRess_response> call, Response<addRess_response> response) {
                if(response.isSuccessful()){
                    addRess_response addRess_response = response.body();
                    if(addRess_response.getStatus() == 202){
-
                         addressList = addRess_response.getData();
-                       List<String> address = new ArrayList<>();
-                       address.add("add your new address");
+
                        Log.d("TAG", "onResponse: "+addressList.size());
                         if(addressList.size()>0){
 
@@ -329,7 +339,7 @@
                             }
 
 
-                            ArrayAdapter<String> adapter2 = new ArrayAdapter<>(Check_Out_MainActivity.this,R.layout.drop_down_item,address);
+                             adapter2 = new ArrayAdapter<>(Check_Out_MainActivity.this,R.layout.drop_down_item,address);
                             autoCompleteAdress.setAdapter(adapter2);
                         }
                    }
@@ -483,7 +493,7 @@
         Button btn_cancel_mail = dialog.findViewById(R.id.btn_cancel_mail);
         Button btn_add_mail = dialog.findViewById(R.id.btn_add_mail);
 
-        edt_add_mail.setText(emailcheck_out.getText().toString());
+      //  edt_add_mail.setText(emailcheck_out.getText().toString());
         btn_cancel_mail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -497,19 +507,34 @@
                 if (TextUtils.isEmpty(matkhau)){
                     edt_add_mail.setError("please add your mail");
                 }
-                if (!android.util.Patterns.EMAIL_ADDRESS.matcher(matkhau).matches()) {
-                    edt_add_mail.setError("Please Enter valid email");
-                    edt_add_mail.requestFocus();
-                }
                 else {
-                    emailcheck_out.setText(edt_add_mail.getText().toString());
-                    dialog.dismiss();
+                    Call<serverRepest> call = apiInterface.themdiachi(Utils.Users_Utils.getId(),matkhau );
+                    call.enqueue(new Callback<serverRepest>() {
+                        @Override
+                        public void onResponse(Call<serverRepest> call, Response<serverRepest> response) {
+                            // Xử lý khi gửi thành công
+                            if(response.isSuccessful()){
+                                address.add(matkhau);
+                                adapter2.notifyDataSetChanged();
+                                dialog.dismiss();
+                            }
+
+                        }
+
+                        @Override
+                        public void onFailure(Call<serverRepest> call, Throwable t) {
+                            // Xử lý khi gửi thất bại
+                        }
+                    });
+
                 }
             }
         });
         dialog.show();
     }
-    private void getTocken_admin(){
+
+
+            private void getTocken_admin(){
         DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("tokens").child("admin");
         userRef.addValueEventListener(new ValueEventListener() {
             @Override

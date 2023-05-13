@@ -61,14 +61,14 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.myviewHo
 
     @Override
     public void onBindViewHolder(@NonNull ProductAdapter.myviewHolder holder, @SuppressLint("RecyclerView") int i) {
-
+        DecimalFormat decimalFormat = new DecimalFormat("###,###,### VNĐ");
 
 
 
         Glide.with(context).load(productArrayList.get(i).getImage().get(0).get("image1").getName()).into(holder.itemproduct_img);
         // Log.d("TAG", "onBindViewHolder: "+myObjects.get(0).getImage());
         holder.itemproduct_name.setText(productArrayList.get(i).getName());
-        holder.itemproduct_price.setText(productArrayList.get(i).getPrice()+"");
+        holder.itemproduct_price.setText(decimalFormat.format(productArrayList.get(i).getPrice()));
 
         holder.itemproduct_name.setOnClickListener(new View.OnClickListener() {
             @Override

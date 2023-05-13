@@ -48,7 +48,7 @@ public class Products_Oder_Adapter extends RecyclerView.Adapter<Products_Oder_Ad
             @Override
             public void onClick(View view) {
                 if (imageClickListenner != null) {
-                    imageClickListenner.onImageClick(position);
+                    imageClickListenner.onImageClick(products_oderList.get(position).getProduct_id());
                 }
             }
         });

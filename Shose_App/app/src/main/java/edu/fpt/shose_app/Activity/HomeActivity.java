@@ -26,6 +26,9 @@ import android.widget.Toast;
 
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -194,9 +197,9 @@ public class HomeActivity extends AppCompatActivity {
                         // Handle home button click
                         Log.d("TAG", "onNavigationItemSelected: Home");
                         return true;
-                    case R.id.Favorite:
+                    case R.id.DonHang:
                         // Handle profile button click
-                        Intent icc = new Intent(HomeActivity.this, FavouriteActivity.class);
+                        Intent icc = new Intent(HomeActivity.this, OderActivity.class);
                         startActivity(icc);
                         return true;
                     case R.id.Notifications:
@@ -307,6 +310,19 @@ public class HomeActivity extends AppCompatActivity {
                         Intent i4 = new Intent(HomeActivity.this, SignInActivity.class);
                         startActivity(i4);
                         FirebaseAuth.getInstance().signOut();
+
+                        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                                .requestEmail()
+                                .build();
+
+                        GoogleSignInClient  mGoogleSignInClient = GoogleSignIn.getClient(getApplicationContext(), gso);
+                        mGoogleSignInClient.signOut().addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                finish();
+                            }
+                        });
+
                         break;
                     default:
                 }
@@ -433,24 +449,13 @@ public class HomeActivity extends AppCompatActivity {
         super.onResume();
         initHeader();
     }
-    public void gettokkenFirebase(){
+    public void gettokkenFirebase(){ 
         FirebaseMessaging.getInstance().getToken().addOnSuccessListener(new OnSuccessListener<String>() {
             @Override
             public void onSuccess(String s) {
                 if(!TextUtils.isEmpty(s)){
                     Utils.Users_Utils.setToken(s);
-//                    Call<loginRequest> objCall = apiInterface._updateUser(Utils.Users_Utils.getId(),Utils.Users_Utils);
-//                    objCall.enqueue(new Callback<loginRequest>() {
-//                        @Override
-//                        public void onResponse(Call<loginRequest> call, Response<loginRequest> response) {
-//
-//                        }
-//
-//                        @Override
-//                        public void onFailure(Call<loginRequest> call, Throwable t) {
-//
-//                        }
-//                    });
+
                     DatabaseReference tokensRef = FirebaseDatabase.getInstance().getReference("tokens");
                     tokensRef.child(Utils.Users_Utils.getId()+"").setValue(s)
                             .addOnSuccessListener(aVoid -> System.out.println("Successfully saved FCM token to Firebase"))

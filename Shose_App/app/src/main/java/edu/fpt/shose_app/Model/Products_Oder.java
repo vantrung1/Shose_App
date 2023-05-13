@@ -8,19 +8,19 @@ public class Products_Oder implements Serializable {
     private String name;
     private int price;
     private int product_id;
-    private int idSP;
+
     private int quantity;
     private int sale;
     private int status;
 
 
-    public Products_Oder(String attributes, String image, String name, int price, int product_id, int idSP, int quantity, int sale, int status) {
+    public Products_Oder(String attributes, String image, String name, int price, int product_id, int quantity, int sale, int status) {
         this.attributes = attributes;
         this.image = image;
         this.name = name;
         this.price = price;
         this.product_id = product_id;
-        this.idSP = idSP;
+
         this.quantity = quantity;
         this.sale = sale;
         this.status = status;
@@ -65,15 +65,6 @@ public class Products_Oder implements Serializable {
     public void setProduct_id(int product_id) {
         this.product_id = product_id;
     }
-
-    public int getIdSP() {
-        return idSP;
-    }
-
-    public void setIdSP(int idSP) {
-        this.idSP = idSP;
-    }
-
     public int getQuantity() {
         return quantity;
     }

@@ -5,7 +5,7 @@
         android:title=""
         android:icon="@drawable/baseline_home_24"/>
     <item
-        android:id="@+id/Favorite"
+        android:id="@+id/DonHang"
         android:title=""
         android:icon="@drawable/baseline_favorite_border_24"/>
     <item

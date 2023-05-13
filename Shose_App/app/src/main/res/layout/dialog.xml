@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_margin="20dp"
     android:layout_height="match_parent">
     <LinearLayout
         android:orientation="vertical"
@@ -33,7 +34,7 @@
             android:elevation="3dp"
             android:layout_marginTop="20dp"
             android:layout_gravity="center"
-            android:text="Back To Shopping"
+            android:text="Tiếp Tục Mua Hàng"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18sp" />

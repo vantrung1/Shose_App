@@ -30,7 +30,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Contact Information"
+            android:text="Thông Tin Đặt Hàng"
             android:textSize="14dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="16dp"
@@ -65,6 +65,7 @@
             </LinearLayout>
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/img_update_mail"
+                android:visibility="invisible"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginTop="10dp"
@@ -96,7 +97,7 @@
                     android:layout_width="250dp"
                     android:textSize="12dp"
                     android:layout_height="wrap_content"
-                    android:text="Phone"/>
+                    android:text="Số điện Thoại"/>
             </LinearLayout>
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/img_update_phone"
@@ -111,7 +112,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="12dp"
-            android:text="Address"
+            android:text="Địa Chỉ"
             android:textColor="#1A2530"
             android:textSize="14dp" />
         <LinearLayout
@@ -130,7 +131,7 @@
                     android:layout_width="310dp"
 
                     android:layout_height="wrap_content"
-                    android:hint="choose your address"
+                    android:hint="Chọn địa chỉ"
                     style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
                     <AutoCompleteTextView
                         android:id="@+id/filled_exposed_address"
@@ -147,7 +148,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="12dp"
-            android:text="Payment Method"
+            android:text="Phương Thức Thanh Toán"
             android:textColor="#1A2530"
             android:textSize="14dp" />
         <LinearLayout
@@ -158,7 +159,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="choose Payment Method"
+                android:hint="Thanh Toán"
                 style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu">
                 <AutoCompleteTextView
                     android:id="@+id/filled_exposed"
@@ -197,7 +198,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:text="Subtotal"
+                    android:text="Tổng Tiền"
                     android:textColor="@color/xam"
                     android:textSize="18dp"
                     android:textStyle="bold" />
@@ -211,38 +212,6 @@
                     android:textSize="18dp"
                     android:textStyle="bold" />
 
-
-            </LinearLayout>
-
-
-            <LinearLayout
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginBottom="10dp"
-                android:orientation="horizontal"
-                android:weightSum="2">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="Shopping"
-                    android:textColor="@color/xam"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/txt_price_shopping"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:textColor="@color/black"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -264,7 +233,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:text="Total Cost"
+                    android:text="Thanh Toán"
                     android:textColor="@color/black"
                     android:textSize="20dp"
                     android:textStyle="bold" />
@@ -289,7 +258,7 @@
                 android:layout_marginRight="15dp"
                 android:background="@drawable/background_btn_dangnhap"
                 android:elevation="3dp"
-                android:text="Payment"
+                android:text="Đặt Hàng"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="18sp" />

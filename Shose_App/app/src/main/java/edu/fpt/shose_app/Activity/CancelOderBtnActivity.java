@@ -28,6 +28,7 @@ import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -114,8 +115,11 @@ public class CancelOderBtnActivity extends AppCompatActivity implements ImageCli
         txtNameUser.setText(oder.getName());
         txtPhone.setText(oder.getNumber());
         txtPaymentAmount.setText(oder.getPaymentAmount());
-        txtCreateAt.setText(oder.getCreated_at());
+        txtCreateAt.setText(oder.getTimeUTCCreate());
         txtAddress.setText(oder.getAddress_id());
+       // txtTotal2.setText(oder.getTotal());
+        txtTotal.setText(new DecimalFormat("###,###,### VNĐ").format(Integer.parseInt(oder.getTotal())));
+        txtTotal2.setText(new DecimalFormat("###,###,### VNĐ").format(Integer.parseInt(oder.getTotal())));
     }
 
     public void btn_cancel_oder() {
@@ -174,8 +178,29 @@ public class CancelOderBtnActivity extends AppCompatActivity implements ImageCli
             }
         });
     }
+    public void getProduct(int id){
+
+        Call<List<Product>> objGetOder = apiInterface.getProduct(id);
+        objGetOder.enqueue(new Callback<List<Product>>() {
+            @Override
+            public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
+                if(response.isSuccessful()){
+                    Product products = response.body().get(0);
+                    Intent intent=new Intent(getApplicationContext(), ProductDetailActivity.class);
+                    intent.putExtra("product",products);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    getApplicationContext().startActivity(intent);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Product>> call, Throwable t) {
+
+            }
+        });
+    }
     @Override
     public void onImageClick(int position) {
-        Toast.makeText(getApplicationContext(),position+"",Toast.LENGTH_SHORT).show();
+        getProduct(position);
     }
 }

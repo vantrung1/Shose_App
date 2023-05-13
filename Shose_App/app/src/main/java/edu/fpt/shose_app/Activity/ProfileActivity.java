@@ -75,7 +75,7 @@ public class ProfileActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.update) {
-            Intent intent =new Intent(this,ChangePassword_activity.class);
+            Intent intent =new Intent(getApplicationContext(),ChangProfileActivity.class);
             startActivity(intent);
             return true;
         }
@@ -209,5 +209,14 @@ public class ProfileActivity extends AppCompatActivity {
         // txtPass.setText(Utils.Users_Utils.getPassword());
         txtEmail.setText(Utils.Users_Utils.getEmail());
         Glide.with(ProfileActivity.this).load(Utils.Users_Utils.getAvatar()).placeholder(R.drawable.image_profile).into(profile_image);
+        txtPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(getApplicationContext(),ChangePassword_activity.class);
+                startActivity(intent);
+            }
+        });
     }
+
+
 }

@@ -12,7 +12,7 @@
         android:padding="12dp"
         android:textColor="@color/white"
         android:textSize="16sp"
-        android:text="Add Your Mail"
+        android:text="Thêm địa chỉ "
         android:gravity="center"
         android:background="@drawable/bg_blue_conner_16_topleft_topright"
         />
@@ -24,7 +24,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text= "Please add your mail"
+            android:text= "hãy ghi địa chỉ "
             android:textColor="@color/white"
             android:textSize="14sp"
             android:gravity="center"
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:padding="12dp"
             android:layout_marginTop="16dp"
-            android:hint="mail"
+            android:hint="địa chỉ"
             android:background="@drawable/bg_white_conner_10_gray"
             android:textColor="@color/black"
             />
@@ -54,7 +54,7 @@
                 android:layout_weight="1"
                 android:alpha="0.4"
                 android:background="@drawable/bg_gray_conner_10"
-                android:text="Cancel"
+                android:text="Hủy"
                 android:textSize="14sp" />
 
             <Button
@@ -63,7 +63,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/bg_blue_conner_10"
-                android:text="Add"
+                android:text="Thêm"
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>

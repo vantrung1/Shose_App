@@ -12,7 +12,9 @@ import edu.fpt.shose_app.Model.ProductRequest;
 import edu.fpt.shose_app.Model.SizeRequest;
 import edu.fpt.shose_app.Model.User;
 import edu.fpt.shose_app.Model.addRess_response;
+import edu.fpt.shose_app.Model.address;
 import edu.fpt.shose_app.Model.loginRequest;
+import edu.fpt.shose_app.Model.serverRepest;
 import edu.fpt.shose_app.Utils.Const;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -37,7 +39,7 @@ public interface ApiApp {
     Call<List<Product>> getProduct(@Path("id") int id);
 
     @POST("register")
-    Call<User> postUser(@Body User objUser);
+    Call<serverRepest> postUser(@Body User objUser);
 
     @GET("brands")
     Call<ArrayList<Brand>> getAllBrand();
@@ -130,4 +132,7 @@ public interface ApiApp {
     );
     @PUT("users/{id}")
     Call<loginRequest> _updateUser(@Path("id") int id,@Body User user);
+    @POST("address")
+    @FormUrlEncoded
+    Call<serverRepest> themdiachi(@Field("user_id")int id,@Field("desc") String de);
 }
