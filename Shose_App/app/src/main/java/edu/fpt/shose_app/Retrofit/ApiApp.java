@@ -9,6 +9,7 @@ import edu.fpt.shose_app.Model.Oder;
 import edu.fpt.shose_app.Model.OderRequest;
 import edu.fpt.shose_app.Model.Product;
 import edu.fpt.shose_app.Model.ProductRequest;
+import edu.fpt.shose_app.Model.RatingModel;
 import edu.fpt.shose_app.Model.SizeRequest;
 import edu.fpt.shose_app.Model.User;
 import edu.fpt.shose_app.Model.addRess_response;
@@ -135,4 +136,7 @@ public interface ApiApp {
     @POST("address")
     @FormUrlEncoded
     Call<serverRepest> themdiachi(@Field("user_id")int id,@Field("desc") String de);
+    @GET("ratings/{id}")
+
+    Call<RatingModel> getRating(@Path("id") String id);
 }

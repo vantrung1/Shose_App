@@ -31,10 +31,11 @@
         android:layout_above="@id/layoutBottom"
         android:layout_below="@id/toolbar_detail"
         android:layout_width="match_parent"
-        android:layout_marginBottom="10dp"
+
         android:layout_height="match_parent">
         <RelativeLayout
             android:layout_width="match_parent"
+
             android:layout_height="match_parent">
 
             <ImageView
@@ -47,7 +48,9 @@
                 android:layout_marginBottom="30dp"
                 android:src="@drawable/loading" />
             <LinearLayout
+
                 android:paddingStart="20dp"
+                android:id="@+id/layout2"
                 android:layout_below="@id/img_detail"
                 android:layout_width="match_parent"
                 android:orientation="vertical"
@@ -132,7 +135,51 @@
                     android:id="@+id/recySizeDetail"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"/>
+                <FrameLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/txt000"
+                        android:layout_gravity="center"
+                        android:text="Chưa có đánh giá nào"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:paddingEnd="20dp"
+                        android:id="@+id/soluogndanhgia"
+                        android:textColor="@color/red"
+                        android:text="Số lượng đánh giá: 0 (3.5*)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"/>
+                    <RatingBar
+                        android:id="@+id/simpleRatingBar2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:progressBackgroundTint="@color/xam_nhe"
+                        android:progressTint="@color/yellow"
+                        android:rating="5"
+                        android:layout_marginStart="-80dp"
+                        android:layout_marginTop="5dp"
+                        android:scaleX="0.3"
+                        android:scaleY="0.3"
+                        android:secondaryProgressTint="@color/yellow"
+                         />
+
+                    <TextView
+                       android:layout_gravity="end"
+                        android:paddingEnd="20dp"
+                        android:gravity="end"
+                        android:id="@+id/danhhia"
+                        android:textColor="@color/red"
+                        android:text="Xem Đánh Giá"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </FrameLayout>
             </LinearLayout>
+
         </RelativeLayout>
     </ScrollView>
     <RelativeLayout
@@ -140,6 +187,7 @@
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
         android:paddingTop="10dp"
+
         android:elevation="8dp"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"

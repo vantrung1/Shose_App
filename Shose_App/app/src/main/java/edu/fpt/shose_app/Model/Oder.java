@@ -175,7 +175,7 @@ public class Oder implements Serializable {
     }
     public String getTimeUTCCreate(){
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            OffsetDateTime utcDateTime = OffsetDateTime.parse(getUpdated_at(), DateTimeFormatter.ISO_OFFSET_DATE_TIME);
+            OffsetDateTime utcDateTime = OffsetDateTime.parse(getCreated_at(), DateTimeFormatter.ISO_OFFSET_DATE_TIME);
 
             // Đặt múi giờ của Việt Nam
             ZoneId vietnamZone = ZoneId.of("Asia/Ho_Chi_Minh");

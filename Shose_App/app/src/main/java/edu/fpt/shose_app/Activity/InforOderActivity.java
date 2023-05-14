@@ -64,7 +64,7 @@ public class InforOderActivity extends AppCompatActivity implements ImageClickr 
         txtPaymentAmount = findViewById(R.id.txt_paymentAmount);
         txtTotal = findViewById(R.id.txt_total);
         txtCreateAt = findViewById(R.id.txt_createAt);
-        txtCreateAt = findViewById(R.id.txt_UPdate);
+        txt_UPdate = findViewById(R.id.txt_UPdate);
         txtTotal2 = findViewById(R.id.txt_total2);
         btnChat = findViewById(R.id.btn_chat_infor);
 
@@ -89,7 +89,7 @@ public class InforOderActivity extends AppCompatActivity implements ImageClickr 
         txtPhone.setText(oder.getNumber());
         txtPaymentAmount.setText(oder.getPaymentAmount());
         txtCreateAt.setText(oder.getTimeUTCCreate());
-        txt_UPdate.setText(oder.getTimeUTC());
+        txt_UPdate.setText(oder.getTimeUTC()+"");
         txtAddress.setText(oder.getAddress_id());
         txtTotal.setText(new DecimalFormat("###,###,### VNĐ").format(Integer.parseInt(oder.getTotal())));
         txtTotal2.setText(new DecimalFormat("###,###,### VNĐ").format(Integer.parseInt(oder.getTotal())));

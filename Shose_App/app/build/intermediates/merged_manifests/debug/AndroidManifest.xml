@@ -58,6 +58,9 @@
         android:theme="@style/Theme.Shose_App"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="edu.fpt.shose_app.Activity.RatingsActivity"
+            android:exported="false" />
+        <activity
             android:name="edu.fpt.shose_app.Activity.ChangProfileActivity"
             android:exported="false" />
         <activity

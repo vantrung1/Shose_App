@@ -6,6 +6,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.drawable.ColorDrawable;
@@ -15,11 +16,13 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.reflect.TypeToken;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -32,6 +35,7 @@ import java.util.Map;
 
 import edu.fpt.shose_app.Adapter.imageAdapter;
 import edu.fpt.shose_app.Adapter.sizeAdapter;
+import edu.fpt.shose_app.Model.RatingModel;
 import edu.fpt.shose_app.dialogModel.EventBus.ImageEvent;
 import edu.fpt.shose_app.dialogModel.dialogProduct;
 import edu.fpt.shose_app.Model.Image;
@@ -61,6 +65,12 @@ public class ProductDetailActivity extends AppCompatActivity {
     Gson gson;
     ApiApp apiInterface;
     List<SizeRequest.SizeQuantity> sizeQuantityList;
+    TextView danhhia,soluogndanhgia,txt000;
+    Float sodanhgia = Float.valueOf(0); ;
+    Float saotrungbinh = Float.valueOf(0);
+    String saotrungbinhs = "0";
+    private RatingBar ratingBar;
+    RatingModel ratingModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +83,7 @@ public class ProductDetailActivity extends AppCompatActivity {
                 .build();
 
         apiInterface = retrofit.create(ApiApp.class);
+        getRating(product.getId()+"");
         initiu();
         initactionbar();
         initAction();
@@ -100,7 +111,15 @@ public class ProductDetailActivity extends AppCompatActivity {
     }
 
     private void initAction() {
-
+        danhhia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =new Intent(getApplicationContext(),RatingsActivity.class);
+                i.putExtra("rating",ratingModel);
+                i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(i);
+            }
+        });
         add_to_cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -136,16 +155,21 @@ public class ProductDetailActivity extends AppCompatActivity {
         txtName = findViewById(R.id.detailname);
         txtDesc = findViewById(R.id.detailDesc);
         txtprice = findViewById(R.id.detailprice);
+        txt000 = findViewById(R.id.txt000);
         txtsale = findViewById(R.id.detailsale);
         txtsaleTop = findViewById(R.id.detailSaleTop);
+        soluogndanhgia = findViewById(R.id.soluogndanhgia);
+        ratingBar = findViewById(R.id.simpleRatingBar2);
         txtcontent = findViewById(R.id.detailcontent);
         imageViewdetail = findViewById(R.id.img_detail);
         recyImage = findViewById(R.id.recyImageDetail);
         recySize = findViewById(R.id.recySizeDetail);
         add_to_cart = findViewById(R.id.btn_addCart);
+        danhhia = findViewById(R.id.danhhia);
         txtName.setText(product.getName());
         txtDesc.setText(product.getDesc());
         txtcontent.setText(product.getContent());
+
         txtprice.setText(new DecimalFormat("###,###,###").format(product.getPrice()));
         txtsale.setText(new DecimalFormat("###,###,###").format(product.getSale()));
         txtsaleTop.setText(new DecimalFormat("###,###,###").format(product.getSale()));
@@ -179,6 +203,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         recyImage.setAdapter(imageAdapter);
         recySize.setAdapter(sizeAdapter);
     }
+
     @Override
     protected void onDestroy() {
 
@@ -200,5 +225,43 @@ public class ProductDetailActivity extends AppCompatActivity {
             Glide.with(getApplicationContext()).load(imageAdapter.getSelected()).placeholder(R.drawable.loading).into(imageViewdetail);
         }
 
+    }
+    private void getRating(String selected) {
+        Call<RatingModel> objgetBrands = apiInterface.getRating(selected);
+        // thực hiện gọi
+        objgetBrands.enqueue(new Callback<RatingModel>() {
+            @Override
+            public void onResponse(Call<RatingModel>call, Response<RatingModel >response) {
+                if (response.isSuccessful()) {
+                    ratingModel = response.body();
+                    if(response.body().getData().size() == 0){
+                        sodanhgia = Float.valueOf(0);
+                        saotrungbinh = Float.valueOf(0);
+                        danhhia.setVisibility(View.INVISIBLE);
+                        soluogndanhgia.setVisibility(View.INVISIBLE);
+                        ratingBar.setVisibility(View.INVISIBLE);
+                        txt000.setVisibility(View.VISIBLE);
+                        return;
+                    }
+
+                    Float tsl = Float.valueOf(0);
+                    sodanhgia = Float.valueOf(response.body().getData().size());
+                    for(RatingModel.rating rating:response.body().getData()){
+                        tsl =tsl+ Integer.parseInt(rating.getStar());
+                    }
+                    saotrungbinh = tsl/sodanhgia;
+
+                    DecimalFormat decimalFormat = new DecimalFormat("#.#");
+                    DecimalFormat decimalFormat2 = new DecimalFormat("#");
+                    soluogndanhgia.setText("Số đánh giá: "+ decimalFormat.format(sodanhgia));
+                    ratingBar.setRating(saotrungbinh);
+
+                }
+            }
+            @Override
+            public void onFailure(Call<RatingModel> call, Throwable t) {
+                Log.d("ssssssssss", "onFailure: "+t.getLocalizedMessage());
+            }
+        });
     }
 }
