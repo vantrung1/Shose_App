@@ -3328,6 +3328,7 @@ id ed_password
 id edchangepassword
 id edit_query
 id edoldpass
+id edoldsdt
 id edoldten
 id edpassword
 id edt_add_mail
@@ -3515,6 +3516,7 @@ id material_timepicker_view
 id material_value_index
 id matrix
 id menuSl
+id menuSldt
 id menu_crop
 id menu_loader
 id message
@@ -3575,6 +3577,7 @@ id noState
 id none
 id normal
 id north
+id note
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -3647,7 +3650,6 @@ id recy_transport
 id recy_wait_for
 id recy_waitconfirm
 id recy_waiting
-id recycler_dialog_color
 id recycler_dialog_size
 id recycleview_boxchat
 id reverseSawtooth

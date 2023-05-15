@@ -172,10 +172,6 @@
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\drawable\\background_btn_dangnhapgmail.xml"
     },
     {
-        "merged": "edu.fpt.shose_app-merged_res-43:/layout_activity_product_detail.xml.flat",
-        "source": "edu.fpt.shose_app-main-45:/layout/activity_product_detail.xml"
-    },
-    {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\drawable_ic_send_24.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\drawable\\ic_send_24.xml"
     },
@@ -282,6 +278,10 @@
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\drawable_star_border_yellow.xml.flat",
         "source": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-main-45:\\drawable\\star_border_yellow.xml"
+    },
+    {
+        "merged": "edu.fpt.shose_app-merged_res-43:/layout_dialog_update_cart.xml.flat",
+        "source": "edu.fpt.shose_app-main-45:/layout/dialog_update_cart.xml"
     },
     {
         "merged": "C:\\Users\\admin\\.gradle\\daemon\\7.5\\edu.fpt.shose_app-merged_res-43:\\layout_fragment_wait_for_confirmation.xml.flat",

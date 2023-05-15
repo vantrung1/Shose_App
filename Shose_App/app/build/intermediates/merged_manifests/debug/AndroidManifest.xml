@@ -122,18 +122,19 @@
         <activity
             android:name="edu.fpt.shose_app.Activity.SignInActivity"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="edu.fpt.shose_app.Activity.Onboard_Activity"
             android:exported="true" />
         <activity
             android:name="edu.fpt.shose_app.Activity.splash_activity"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="edu.fpt.shose_app.MainActivity"
             android:exported="true" />

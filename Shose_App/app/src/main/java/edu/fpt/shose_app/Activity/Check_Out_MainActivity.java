@@ -98,6 +98,7 @@
     private String token_admin;
     private DatabaseReference databaseReference;
     private int soluong,id_oder;
+    private EditText noted;
     String data_price,codezalo,addressoder;
     List<address> addressList;
     AutoCompleteTextView autoCompleteTextView,autoCompleteAdress;
@@ -144,7 +145,11 @@
         autoCompleteTextView = findViewById(R.id.filled_exposed);
         autoCompleteTextView.setText("Cash on delivery");
         autoCompleteTextView.setAdapter(adapter);
-
+        autoCompleteAdress = findViewById(R.id.filled_exposed_address);
+        address = new ArrayList<>();
+        address.add("thêm mới địa chỉ");
+        adapter2 = new ArrayAdapter<>(Check_Out_MainActivity.this,R.layout.drop_down_item,address);
+        autoCompleteAdress.setAdapter(adapter2);
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -183,7 +188,7 @@
                         //  Log.d("Amount", txtAmount.getText().toString());
                         //lblZpTransToken.setVisibility(View.VISIBLE);
                         String code = data.getString("return_code");
-                        Toast.makeText(getApplicationContext(), "return_code: " + code, Toast.LENGTH_LONG).show();
+                      //  Toast.makeText(getApplicationContext(), "return_code: " + code, Toast.LENGTH_LONG).show();
 
                         if (code.equals("1")) {
 
@@ -196,7 +201,7 @@
 
                 }
                 else {
-                    CreateOder(Utils.Users_Utils.getId(), addressoder, phonecheckout.getText().toString(), data_price,"note",PaymentAmount,"1",jsonprocuts,soluong);
+                    CreateOder(Utils.Users_Utils.getId(), addressoder, phonecheckout.getText().toString(), data_price,noted.getText().toString(),PaymentAmount,"1",jsonprocuts,soluong);
                 }
 
 
@@ -274,12 +279,18 @@
     }
 
     private void initUi(){
+        noted = findViewById(R.id.note);
         toolbar = findViewById(R.id.toolbar_check_out_main);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Checkout");
+        getSupportActionBar().setTitle("Thanh Toán");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationIcon(R.drawable.icon_back);
-
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         btn_payment = findViewById(R.id.btn_Payment);
         emailcheck_out = findViewById(R.id.email_checkout);
         phonecheckout = findViewById(R.id.phone_checkout);
@@ -287,7 +298,7 @@
         emailcheck_out.setText(Utils.Users_Utils.getEmail());
         phonecheckout.setText("0"+Utils.Users_Utils.getPhoneNumber());
         // address
-        autoCompleteAdress = findViewById(R.id.filled_exposed_address);
+
         img_update_phone = findViewById(R.id.img_update_phone);
         img_update_mail  = findViewById(R.id.img_update_mail);
         /*if(Utils.Users_Utils.getPhoneNumber().equals("")){
@@ -298,12 +309,7 @@
         }*/
 
         // address_checkout.setText(Utils.Users_Utils.getEmail());
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+
         productsList_checkOut = new ArrayList<>();
         for(Cart product : Utils.cartLists){
             if(product.isIscheck() == true){
@@ -317,14 +323,15 @@
         // Chuyển đối tượng JSONArray sang chuỗi JSON
         jsonprocuts = gson.toJson(productsList_checkOut);
         Log.d("TAG", "initUi: "+ jsonprocuts);
+
         getaddress();
     }
 
     private void getaddress() {
         addressList = new ArrayList<>();
-        address = new ArrayList<>();
+
         Call<addRess_response> objgetaddress = apiInterface.getallAdess(Utils.Users_Utils.getId());
-        address.add("thêm mới địa chỉ");
+
         objgetaddress.enqueue(new Callback<addRess_response>() {
             @Override
             public void onResponse(Call<addRess_response> call, Response<addRess_response> response) {
@@ -339,8 +346,6 @@
                             for(address abc : addressList){
                                 address.add(abc.getDesc());
                             }
-
-
                              adapter2 = new ArrayAdapter<>(Check_Out_MainActivity.this,R.layout.drop_down_item,address);
                             autoCompleteAdress.setAdapter(adapter2);
                         }

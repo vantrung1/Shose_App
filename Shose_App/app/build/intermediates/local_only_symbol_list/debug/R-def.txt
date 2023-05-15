@@ -182,6 +182,7 @@ id ed_inputext
 id ed_password
 id edchangepassword
 id edoldpass
+id edoldsdt
 id edoldten
 id edpassword
 id edt_add_mail
@@ -262,6 +263,7 @@ id linear_photo_library
 id ln_item_dv
 id logo
 id menuSl
+id menuSldt
 id mnu_Chat
 id mnu_cart
 id mnu_exit
@@ -271,6 +273,7 @@ id mnu_orders
 id mnu_profile
 id name_brand
 id navigation
+id note
 id phone_checkout
 id profile_Name_header
 id profile_email
@@ -314,7 +317,6 @@ id recy_transport
 id recy_wait_for
 id recy_waitconfirm
 id recy_waiting
-id recycler_dialog_color
 id recycler_dialog_size
 id recycleview_boxchat
 id scorllView

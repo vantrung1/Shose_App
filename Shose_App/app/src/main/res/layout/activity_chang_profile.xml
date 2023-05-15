@@ -69,7 +69,40 @@
                 android:hint="Họ và Tên"
                 android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số Điện Thoại"
+            android:textColor="#1A2530"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.125"
+            app:layout_constraintStart_toStartOf="parent" />
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            style="@style/TextInputLayout"
+            android:layout_width="335dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:boxBackgroundColor="@color/white"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="0.122"
+            app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edoldsdt"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ems="20"
+                android:hint="Số điện thoại"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_thaydoi2"
             android:layout_width="335dp"
@@ -88,7 +121,7 @@
 
             app:layout_constraintHorizontal_bias="0.611"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textInputLayout1"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
             app:layout_constraintWidth_percent="0.7" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

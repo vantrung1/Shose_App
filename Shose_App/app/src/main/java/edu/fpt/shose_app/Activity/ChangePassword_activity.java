@@ -17,6 +17,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.Toolbar;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.VolleyError;
@@ -90,6 +91,17 @@ public class ChangePassword_activity extends AppCompatActivity {
 
     public void AnhXa(){
 //        String email = getIntent().getExtras().getString("email");
+         Toolbar toolbar = findViewById(R.id.toolbar2);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Thông tin");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationIcon(R.drawable.icon_back);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         edOldPass = findViewById(R.id.edoldpass);
         edNewPass = findViewById(R.id.edNewPass);
         edReNewPass = findViewById(R.id.edReNewPass);

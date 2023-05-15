@@ -158,15 +158,26 @@ public class SignInActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     loginRequest loginRequest = response.body();
                     if(loginRequest.getStatus().equals("202")){
-                        progressDialog.dismiss();
-                        Utils.Users_Utils = loginRequest.getData();
+
+
                        // Toast.makeText(getApplicationContext(), loginRequest.getMessage(), Toast.LENGTH_LONG).show();
-                        Intent i = new Intent(SignInActivity.this, HomeActivity.class);
-                        startActivity(i);
+                        if(response.body().getData().getStatus().equals("2")){
+                            Toast.makeText(getApplicationContext(), "Hãy kiểm tra mail để kích hoạt tài khoản", Toast.LENGTH_LONG).show();
+                            return;
+                        }
+                        else if(response.body().getData().getStatus().equals("2")){
+                            Toast.makeText(getApplicationContext(), "Tài khoản của bạn đã bị khóa", Toast.LENGTH_LONG).show();
+                            return;
+                        }
+                        Utils.Users_Utils = loginRequest.getData();
                         Utils.Users_Utils.setPassword(pass);
                         editor.putString("username", emai);
                         editor.putString("pass", pass);
                         editor.apply();
+                        Intent i = new Intent(SignInActivity.this, HomeActivity.class);
+                        progressDialog.dismiss();
+                        startActivity(i);
+
 
                     }
                     else {
