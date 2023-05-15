@@ -125,7 +125,7 @@
         databaseReference = FirebaseDatabase.getInstance().getReference("notifications");
         initUi();
         initAction();
-        getTocken_admin();
+
 
 
         data_price = intent.getStringExtra("STRING_DATA");
@@ -259,7 +259,7 @@
                         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
                         dialog.getWindow().setGravity(Gravity.CENTER);
                       //  SendNotification();//--------------------Notification
-                        seNotification(token_admin,"Thông báo đơn hàng","Bạn có đơn hàng mới");
+                        seNotification(Utils.tokenadmin,"Thông báo đơn hàng","Bạn có đơn hàng mới");
                         seNotification(Utils.token,"Thông báo đơn hàng","Đơn hàng của bạn đã được tạo, đang đợi hệ thống xác nhận");
                     }
                 }
@@ -540,24 +540,5 @@
     }
 
 
-            private void getTocken_admin(){
-        DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("tokens").child("admin");
-        userRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // Kiểm tra xem dữ liệu có tồn tại hay không
-                if (dataSnapshot.exists()) {
-                    // Lấy giá trị dữ liệu từ dataSnapshot
-                     token_admin = dataSnapshot.getValue(String.class);
-                } else {
 
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                // Xử lý lỗi nếu có
-            }
-        });
-    }
 }

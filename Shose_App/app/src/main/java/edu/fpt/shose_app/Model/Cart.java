@@ -11,6 +11,9 @@ public class Cart {
     private int size;
     private boolean ischeck;
 
+    public Cart() {
+    }
+
     public boolean isIscheck() {
         return ischeck;
     }

@@ -20,6 +20,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,22 +37,28 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.nex3z.notificationbadge.NotificationBadge;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import edu.fpt.shose_app.Adapter.Brand_Adapter;
 import edu.fpt.shose_app.Adapter.ProducAdapter2;
 import edu.fpt.shose_app.Adapter.ProductAdapter;
 import edu.fpt.shose_app.Adapter.ProductAdapter3;
+import edu.fpt.shose_app.Model.Cart;
 import edu.fpt.shose_app.Model.loginRequest;
 import edu.fpt.shose_app.Service.FirebaseMessReceiver;
 import edu.fpt.shose_app.dialogModel.EventBus.BrandEvent;
@@ -91,6 +98,8 @@ public class HomeActivity extends AppCompatActivity {
     private Runnable runnable;
     View header_view;
     TextView txta,textViewsee;
+    FrameLayout layoutGioHang;
+    NotificationBadge notificationBadge;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -109,12 +118,36 @@ public class HomeActivity extends AppCompatActivity {
         productAdapter = new ProductAdapter(this,productArrayList);
         productAdapter2 = new ProducAdapter2(this,productArrayList);
         productAdapter3 = new ProductAdapter3(this,productArrayList);
+
         initUi();
         initAction();
         initHeader();
         gettokkenFirebase();
 //        startAutoScroll();
 //        stopAutoScroll();
+        getcart();
+    }
+
+    private void getcart() {
+        DatabaseReference cartRef = FirebaseDatabase.getInstance().getReference("carts").child(Utils.Users_Utils.getId()+"");
+        cartRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                List<Cart> cartList = new ArrayList<>();
+
+                for (DataSnapshot cartSnapshot : dataSnapshot.getChildren()) {
+                    Cart cart = cartSnapshot.getValue(Cart.class);
+                    cartList.add(cart);
+                }
+                Utils.cartLists = cartList;
+                setsl();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // Xảy ra lỗi
+            }
+        });
 
     }
 
@@ -160,35 +193,14 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void initAction() {
-        SearchViewHome.setOnSearchClickListener(new View.OnClickListener() {
+        SearchViewHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intentSearch = new Intent(HomeActivity.this, SearchActivity.class);
                 startActivity(intentSearch);
             }
         });
-        SearchViewHome.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
 
-                return true;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-                Intent intentSearch = new Intent(HomeActivity.this, SearchActivity.class);
-                startActivity(intentSearch);
-                return true;
-            }
-        });
-        SearchViewHome.setOnCloseListener(new SearchView.OnCloseListener() {
-            @Override
-            public boolean onClose() {
-                // Bắt sự kiện khi người dùng đóng SearchView ở đây
-                SearchViewHome.clearFocus();
-                return false;
-            }
-        });
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -225,7 +237,14 @@ public class HomeActivity extends AppCompatActivity {
         textViewsee.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this,AllProduct.class));
+                startActivity(new Intent(HomeActivity.this,SearchActivity.class));
+            }
+        });
+        layoutGioHang = findViewById(R.id.layoutGioHang);
+        layoutGioHang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this,MyCartActivity.class));
             }
         });
     }
@@ -262,6 +281,7 @@ public class HomeActivity extends AppCompatActivity {
         recy_1_product.setAdapter(productAdapter);
         recy_2_product.setAdapter(productAdapter2);
         recy_3_product.setAdapter(productAdapter3);
+        notificationBadge = findViewById(R.id.menuSl);
 
 
         getallBrand();
@@ -330,6 +350,10 @@ public class HomeActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    private void setsl() {
+        notificationBadge.setText(Utils.cartLists.size()+"");
     }
 
     private void getAllProduct() {
@@ -448,8 +472,9 @@ public class HomeActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         initHeader();
+        setsl();
     }
-    public void gettokkenFirebase(){ 
+    public void gettokkenFirebase(){
         FirebaseMessaging.getInstance().getToken().addOnSuccessListener(new OnSuccessListener<String>() {
             @Override
             public void onSuccess(String s) {

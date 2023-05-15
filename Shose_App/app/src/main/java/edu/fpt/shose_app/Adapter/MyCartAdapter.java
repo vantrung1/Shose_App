@@ -16,6 +16,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
@@ -110,7 +111,12 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.myViewHold
                 }
                 if (giatri == 2) {
                     if (cartList.get(pos).getQuantity() >= 1) {
+                        if(cartList.get(pos).getQuantity() == 5){
+                            Toast.makeText(context, "Tối đa số lượng 5", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
                         int quantityNew = cartList.get(pos).getQuantity() + 1;
+
                         cartList.get(pos).setQuantity(quantityNew);
                         holder.txt_quantity_cart.setText(cartList.get(pos).getQuantity() + "");
                         EventBus.getDefault().postSticky(new TotalEvent());
@@ -137,7 +143,7 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.myViewHold
                     Glide.with(context).load(cart.getImage()).into(img_update_cart);
                     txt_price.setText(holder.txt_price_cart.getText());
                     txt_price.setPaintFlags(txt_price.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-                    txt_sale.setText(holder.txt_price_cart.getText());
+                    txt_sale.setText(holder.txt_sale_cart.getText());
                     txt_quantity_cart_update.setText(holder.txt_quantity_cart.getText());
 
                     img_close.setOnClickListener(new View.OnClickListener() {

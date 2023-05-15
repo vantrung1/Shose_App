@@ -1,6 +1,7 @@
 package edu.fpt.shose_app.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import com.bumptech.glide.Glide;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+import edu.fpt.shose_app.Activity.ProductDetailActivity;
 import edu.fpt.shose_app.Model.Product;
 import edu.fpt.shose_app.R;
 
@@ -45,6 +47,15 @@ public class ProducAdapter2 extends RecyclerView.Adapter<ProducAdapter2.myViewHo
         // Log.d("TAG", "onBindViewHolder: "+myObjects.get(0).getImage());
         holder.itemproduct_name2.setText(productArrayList.get(position).getName());
         holder.itemproduct_price2.setText(decimalFormat.format(productArrayList.get(position).getPrice())+" VNĐ");
+        holder.itemproduct_price2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context, ProductDetailActivity.class);
+                intent.putExtra("product",productArrayList.get(position));
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

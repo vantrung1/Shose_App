@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -25,8 +27,16 @@ import java.util.Locale;
 
 import edu.fpt.shose_app.Adapter.ChatAdapter;
 import edu.fpt.shose_app.Model.ChatMessage;
+import edu.fpt.shose_app.Model.FCMRequest;
+import edu.fpt.shose_app.Model.NotiResponse;
 import edu.fpt.shose_app.R;
+import edu.fpt.shose_app.Retrofit.PostNotifi;
 import edu.fpt.shose_app.Utils.Utils;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ChatBoxActivity extends AppCompatActivity {
     RecyclerView recyclerView;
@@ -81,6 +91,7 @@ public class ChatBoxActivity extends AppCompatActivity {
             message.put(Utils.DATETIME,new Date());
             db.collection(Utils.PATH_CHAT).add(message);
             edMess.setText("");
+            seNotification(Utils.tokenadmin+"","Tin Nhắn",Utils.Users_Utils.getName()+":"+str_mess);
         }
     }
     private void listenmess(){
@@ -124,5 +135,57 @@ public class ChatBoxActivity extends AppCompatActivity {
     private String format_date(Date date){
         return new SimpleDateFormat("dd MMMM, yyyy - H:mm:ss", Locale.getDefault()).format(date);
     }
+    private int getNotificationId(){
+        return (int) new Date().getTime();
+    }
+    public void seNotification(String recipientToken, String title, String message){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://fcm.googleapis.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
 
+        PostNotifi fcmService = retrofit.create(PostNotifi .class);
+        FCMRequest fcmRequest = new FCMRequest();
+        fcmRequest.setTo(recipientToken);
+        FCMRequest.FCMNotification notification = new FCMRequest.FCMNotification();
+        notification.setTitle(title);
+        notification.setBody(message);
+        fcmRequest.setNotification(notification);
+
+        Call<NotiResponse> call = fcmService.sendNotification(fcmRequest);
+        call.enqueue(new Callback<NotiResponse>() {
+            @Override
+            public void onResponse(Call<NotiResponse> call, Response<NotiResponse> response) {
+                // Xử lý khi gửi thành công
+                saveNotification( recipientToken,  title,  message);
+
+            }
+
+            @Override
+            public void onFailure(Call<NotiResponse> call, Throwable t) {
+                // Xử lý khi gửi thất bại
+            }
+        });
+    }
+    public void saveNotification(String recipientToken, String title, String message) {
+        String pattern = "EEE MMM dd HH:mm:ss zzz yyyy";
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
+        Date currentDate = new Date();
+        String dateString = dateFormat.format(currentDate);
+
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("notifications");
+        // Tạo đối tượng Notification
+        FCMRequest fcmRequest = new FCMRequest();
+        fcmRequest.setTo(recipientToken);
+        FCMRequest.FCMNotification notification = new FCMRequest.FCMNotification();
+        notification.setTitle(title);
+        notification.setBody(message);
+        fcmRequest.setNotification(notification);
+
+        // Lưu thông báo vào Firebase Realtime Database trong nút con của người dùng
+        databaseReference.child("admin").child("Tin Nhắn").setValue(fcmRequest)
+                .addOnSuccessListener(aVoid -> System.out.println("Successfully saved notification to Firebase"))
+                .addOnFailureListener(e -> System.out.println("Failed to save notification to Firebase: " + e.getMessage()));
+    }
 }

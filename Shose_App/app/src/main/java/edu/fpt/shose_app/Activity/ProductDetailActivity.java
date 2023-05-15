@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -23,6 +24,7 @@ import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import com.nex3z.notificationbadge.NotificationBadge;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -71,6 +73,8 @@ public class ProductDetailActivity extends AppCompatActivity {
     String saotrungbinhs = "0";
     private RatingBar ratingBar;
     RatingModel ratingModel;
+    FrameLayout frameLayout;
+    NotificationBadge notificationBadge;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -149,9 +153,19 @@ public class ProductDetailActivity extends AppCompatActivity {
 
             }
         });
+        frameLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),MyCartActivity.class));
+            }
+        });
     }
-
+    private void setsl() {
+        notificationBadge.setText(Utils.cartLists.size()+"");
+    }
     private void initiu() {
+        frameLayout = findViewById(R.id.layoutGioHang_detail);
+        notificationBadge = findViewById(R.id.menuSldt);
         txtName = findViewById(R.id.detailname);
         txtDesc = findViewById(R.id.detailDesc);
         txtprice = findViewById(R.id.detailprice);
@@ -202,6 +216,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         sizeAdapter = new sizeAdapter(this, sizeList);
         recyImage.setAdapter(imageAdapter);
         recySize.setAdapter(sizeAdapter);
+        setsl();
     }
 
     @Override
@@ -212,6 +227,12 @@ public class ProductDetailActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         EventBus.getDefault().register(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setsl();
     }
 
     @Override

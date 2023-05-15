@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -55,10 +56,13 @@ public class SignInActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences ;
     SharedPreferences.Editor editor;
     FirebaseAuth firebaseAuth;
+    private ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         sharedPreferences = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+        progressDialog = new ProgressDialog(this);
+
         editor = sharedPreferences.edit();
         setContentView(R.layout.activity_sign_in);
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -76,6 +80,7 @@ public class SignInActivity extends AppCompatActivity {
             return;
         }
         else {
+
             edEmail.setText(username);
           //  Log.d("TAG", "onCreate: "+username+pass);
             POST_Retrofit_Login(username,pass);
@@ -133,6 +138,7 @@ public class SignInActivity extends AppCompatActivity {
 
     //Post api len sever
     void POST_Retrofit_Login(String emai, String pass) {
+        progressDialog.show();
         // tạo đối tượng chuyển đổi
         Gson gson = new GsonBuilder().setLenient().create();
 
@@ -152,8 +158,9 @@ public class SignInActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     loginRequest loginRequest = response.body();
                     if(loginRequest.getStatus().equals("202")){
+                        progressDialog.dismiss();
                         Utils.Users_Utils = loginRequest.getData();
-                        Toast.makeText(getApplicationContext(), loginRequest.getMessage(), Toast.LENGTH_LONG).show();
+                       // Toast.makeText(getApplicationContext(), loginRequest.getMessage(), Toast.LENGTH_LONG).show();
                         Intent i = new Intent(SignInActivity.this, HomeActivity.class);
                         startActivity(i);
                         Utils.Users_Utils.setPassword(pass);
@@ -163,17 +170,20 @@ public class SignInActivity extends AppCompatActivity {
 
                     }
                     else {
+                        progressDialog.dismiss();
                         Toast.makeText(getApplicationContext(), loginRequest.getMessage(), Toast.LENGTH_LONG).show();
                     }
 
 
                 } else {
+                    progressDialog.dismiss();
                     Toast.makeText(getApplicationContext(), "Dang nhap khong thanh cong", Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
             public void onFailure(Call<loginRequest> call, Throwable t) {
+                progressDialog.dismiss();
                 Toast.makeText(getApplicationContext(), "Error Sever", Toast.LENGTH_LONG).show();
             }
         });
@@ -267,4 +277,5 @@ public class SignInActivity extends AppCompatActivity {
             return true;
         }
     }
+
 }

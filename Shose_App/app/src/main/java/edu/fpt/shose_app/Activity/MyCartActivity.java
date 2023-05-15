@@ -1,16 +1,23 @@
 package edu.fpt.shose_app.Activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -31,13 +38,35 @@ public class MyCartActivity extends AppCompatActivity {
     MyCartAdapter adapter;
     String price;
     int soluong= 0;
-
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference cartRef = database.getReference("carts");
+    ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_cart);
+        progressDialog = new ProgressDialog(this);
+        progressDialog.show();
         initUi();
         totalCartCost();
+        postCart();
+    }
+
+    private void postCart() {
+        cartRef.child(Utils.Users_Utils.getId()+"").setValue(Utils.cartLists)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        // Thao tác thành công
+                        progressDialog.dismiss();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        // Xảy ra lỗi
+                    }
+                });
     }
 
     private void initUi() {
@@ -129,4 +158,9 @@ public class MyCartActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        postCart();
+        super.onBackPressed();
+    }
 }

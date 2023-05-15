@@ -7,6 +7,7 @@ import android.graphics.Paint;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatButton;
@@ -53,15 +54,23 @@ public class dialogProduct extends Dialog {
         // Handle the event here
         if(event != null){
 
-            for (SizeRequest.SizeQuantity sizeQuantity : sizeQuantityList){
-                if(sizeQuantity.getSize().equals(adapter.getSelected())){
-                    quantity= Integer.parseInt(sizeQuantity.getQuantity());
-                    txt_quantity.setText(quantity+"");
+            setquantity();
+        }
+    }
+    private void setquantity(){
+        for (SizeRequest.SizeQuantity sizeQuantity : sizeQuantityList){
+            if(sizeQuantity.getSize().equals(adapter.getSelected())){
+                quantity= Integer.parseInt(sizeQuantity.getQuantity());
+
+                if(quantity==0){
+                    txt_quantity.setText("Hết hàng");
+                }
+                else {
+                    txt_quantity.setText("Kho: "+quantity);
                 }
             }
         }
     }
-
     public dialogProduct(@NonNull Context context, Product product, sizeAdapter sizeAdapter,List<SizeRequest.SizeQuantity> sizeQuantityLists) {
         super(context);
         setContentView(R.layout.dialog_update_cart);
@@ -91,8 +100,8 @@ public class dialogProduct extends Dialog {
         txt_price.setPaintFlags(txt_price.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
         txt_sale.setText(new DecimalFormat("###,###,###,###").format(product.getSale()));
         txt_quantity_cart_update.setText(soluong+"");
-        quantity = Integer.parseInt(sizeQuantityList.get(0).getQuantity());
-        txt_quantity.setText(quantity+"");
+        setquantity();
+       // txt_quantity.setText(quantity+"");
         item_btnIMG_minus_cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -108,10 +117,13 @@ public class dialogProduct extends Dialog {
         item_btnIMG_plus_cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               if(soluong >= quantity){
+               if(soluong >=5){
+
+                       Toast.makeText(context, "Tối đa số lượng 5", Toast.LENGTH_SHORT).show();
                    return;
                }
                else {
+
                    soluong = soluong +1 ;
                    txt_quantity_cart_update.setText(soluong+"");
                }
