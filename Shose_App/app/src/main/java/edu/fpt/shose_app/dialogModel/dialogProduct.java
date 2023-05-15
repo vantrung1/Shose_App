@@ -87,7 +87,7 @@ public class dialogProduct extends Dialog {
          txt_quantity = findViewById(R.id.txt_quantity);
         TextView txt_quantity_cart_update = findViewById(R.id.dialog_txt_quantity_cart_update);
 
-        RecyclerView recycler_dialog_color = findViewById(R.id.recycler_dialog_color);
+        //RecyclerView recycler_dialog_color = findViewById(R.id.recycler_dialog_color);
         RecyclerView recycler_dialog_size = findViewById(R.id.recycler_dialog_size);
 
         AppCompatButton appCompatButton2 = findViewById(R.id.btn_xacnhan);

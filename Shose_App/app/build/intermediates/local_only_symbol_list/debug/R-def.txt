@@ -321,7 +321,6 @@ id recy_transport
 id recy_wait_for
 id recy_waitconfirm
 id recy_waiting
-id recycler_dialog_color
 id recycler_dialog_size
 id recycleview_boxchat
 id relati_address

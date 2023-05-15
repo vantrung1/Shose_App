@@ -63,12 +63,15 @@ public class ChatBoxActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         initControl();
         listenmess();
-        insertUser();
+     //   insertUser();
     }
-    private void insertUser(){
+    private void insertUser(String body, String time){
         HashMap<String, Object> user = new HashMap<>();
-        user.put("id",Utils.Users_Utils.getId());
+        user.put("id",Utils.Users_Utils.getId()+"");
         user.put("name",Utils.Users_Utils.getName());
+        user.put("avatar",Utils.Users_Utils.getAvatar());
+        user.put("body",body);
+        user.put("time",time);
         db.collection("users").document(String.valueOf(Utils.Users_Utils.getId())).set(user);
     }
     private void initControl(){
@@ -90,8 +93,13 @@ public class ChatBoxActivity extends AppCompatActivity {
             message.put(Utils.MESS,str_mess);
             message.put(Utils.DATETIME,new Date());
             db.collection(Utils.PATH_CHAT).add(message);
-            edMess.setText("");
+            String pattern = "EEE MMM dd HH:mm:ss zzz yyyy";
+            SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
+            Date currentDate = new Date();
+            String dateString = dateFormat.format(currentDate);
+            insertUser(str_mess,dateString);
             seNotification(Utils.tokenadmin+"","Tin Nhắn",Utils.Users_Utils.getName()+":"+str_mess);
+            edMess.setText("");
         }
     }
     private void listenmess(){

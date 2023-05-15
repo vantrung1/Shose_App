@@ -62,6 +62,7 @@ public class Activity_profiles extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .build();
         apiApp = retrofit.create(ApiApp.class);
+        progressDialog = new ProgressDialog(this);
         initView();
         initAction();
         initActionBar();
@@ -99,8 +100,8 @@ public class Activity_profiles extends AppCompatActivity {
                             String imageUrl = downloadUri.toString();
                             // Xử lý URL của ảnh tải lên Firebase Storage
                             Utils.Users_Utils.setAvatar(imageUrl);
-                            updateUser(Utils.Users_Utils.getId(), Utils.Users_Utils);//
-                            Glide.with(Activity_profiles.this).load(imageUrl).placeholder(R.drawable.image_profile).into(profile_image);
+                            updateUser(Utils.Users_Utils.getId(),Utils.Users_Utils);//
+                            Glide.with(getApplicationContext()).load(imageUrl).placeholder(R.drawable.image_profile).into(profile_image);
 
                         }
                     });

@@ -136,7 +136,7 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.myViewHold
                     TextView txt_quantity = dialog.findViewById(R.id.txt_quantity);
                     TextView txt_quantity_cart_update = dialog.findViewById(R.id.dialog_txt_quantity_cart_update);
 
-                    RecyclerView recycler_dialog_color = dialog.findViewById(R.id.recycler_dialog_color);
+                   // RecyclerView recycler_dialog_color = dialog.findViewById(R.id.recycler_dialog_color);
                     RecyclerView recycler_dialog_size = dialog.findViewById(R.id.recycler_dialog_size);
                     AppCompatButton appCompatButton2 = dialog.findViewById(R.id.btn_xacnhan);
 

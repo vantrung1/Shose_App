@@ -39,8 +39,6 @@ public class Brand_Adapter extends RecyclerView.Adapter<Brand_Adapter.myViewHold
         this.brandList = new ArrayList<>();
         this.brandList = brandList;
         notifyDataSetChanged();
-
-
     }
     @NonNull
     @Override

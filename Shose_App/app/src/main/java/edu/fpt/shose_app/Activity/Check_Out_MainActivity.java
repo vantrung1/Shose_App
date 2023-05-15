@@ -246,7 +246,9 @@
     }
 
     private void CreateOder(int user_id, String address_id, String number, String data_price, String note, String Payment, String status, String jsondata,int quantity) {
-
+        if(note.equals("")){
+            note = "Note";
+        }
         Call<ApiApp.MyResponse> objgetBrands = apiInterface.create_oder(user_id, address_id, number, data_price, note, Payment, status, jsondata, quantity);
         // thực hiện gọi
         objgetBrands.enqueue(new Callback<ApiApp.MyResponse>() {
@@ -265,6 +267,7 @@
                         dialog.getWindow().setGravity(Gravity.CENTER);
                       //  SendNotification();//--------------------Notification
                         seNotification(Utils.tokenadmin,"Thông báo đơn hàng","Bạn có đơn hàng mới");
+                        saveNotification( Utils.tokenadmin,  "Thông báo đơn hàng",  "Bạn có đơn hàng mới");
                         seNotification(Utils.token,"Thông báo đơn hàng","Đơn hàng của bạn đã được tạo, đang đợi hệ thống xác nhận");
                     }
                 }
@@ -387,7 +390,7 @@
             @Override
             public void onResponse(Call<NotiResponse> call, Response<NotiResponse> response) {
                 // Xử lý khi gửi thành công
-                saveNotification( recipientToken,  title,  message);
+
 
             }
 
