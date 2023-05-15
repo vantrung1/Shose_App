@@ -172,97 +172,107 @@
 
 
         </LinearLayout>
-
+        <EditText
+            android:background="@drawable/edittext_no_underline"
+            android:id="@+id/note"
+            android:elevation="8dp"
+            android:gravity="start|top"
+            android:textSize="14dp"
+            android:hint="Chú Thích khi giao hàng"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="422dp"
+        android:layout_height="201dp"
+        android:background="@drawable/background_buttom_sheet"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
         <LinearLayout
-            android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="254dp"
-            android:background="@drawable/background_buttom_sheet"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginRight="15dp"
-                android:orientation="horizontal"
-                android:weightSum="2">
+                android:layout_weight="2"
+                android:text="Tổng Tiền"
+                android:textColor="@color/xam"
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="Tổng Tiền"
-                    android:textColor="@color/xam"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/txt_price_subtotal_check_out"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Shopping"
-                    android:textColor="@color/black"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-
-            </LinearLayout>
-
-            <ImageView
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/txt_price_subtotal_check_out"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:background="@drawable/img_net_dut" />
+                android:text="Shopping"
+                android:textColor="@color/black"
+                android:textSize="18dp"
+                android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:orientation="horizontal"
-                android:weightSum="2">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:text="Thanh Toán"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/txt_price_total_check_out"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Shopping"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btn_Payment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="15dp"
-                android:background="@drawable/background_btn_dangnhap"
-                android:elevation="3dp"
-                android:text="Đặt Hàng"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
         </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/img_net_dut" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Thanh Toán"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_price_total_check_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shopping"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_Payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/background_btn_dangnhap"
+            android:elevation="3dp"
+            android:text="Đặt Hàng"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

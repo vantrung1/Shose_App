@@ -58,6 +58,15 @@
         android:theme="@style/Theme.Shose_App"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="edu.fpt.shose_app.Activity.PutphoneActivity"
+            android:exported="false" />
+        <activity
+            android:name="edu.fpt.shose_app.Activity.PutnameActivity"
+            android:exported="false" />
+        <activity
+            android:name="edu.fpt.shose_app.Activity.Activity_profiles"
+            android:exported="false" />
+        <activity
             android:name="edu.fpt.shose_app.Activity.RatingsActivity"
             android:exported="false" />
         <activity
@@ -121,8 +130,7 @@
             android:exported="true" />
         <activity
             android:name="edu.fpt.shose_app.Activity.SignInActivity"
-            android:exported="true" >
-        </activity>
+            android:exported="true" />
         <activity
             android:name="edu.fpt.shose_app.Activity.Onboard_Activity"
             android:exported="true" />

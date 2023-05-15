@@ -31,6 +31,15 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".Activity.PutphoneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.PutnameActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activity.Activity_profiles"
+            android:exported="false" />
+        <activity
             android:name=".Activity.RatingsActivity"
             android:exported="false" />
         <activity
@@ -94,15 +103,13 @@
             android:exported="true" />
         <activity
             android:name=".Activity.SignInActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".Activity.Onboard_Activity"
             android:exported="true" />
         <activity
             android:name=".Activity.splash_activity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

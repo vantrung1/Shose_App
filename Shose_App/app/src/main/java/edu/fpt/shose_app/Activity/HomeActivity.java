@@ -220,7 +220,7 @@ public class HomeActivity extends AppCompatActivity {
                         return true;
                     case R.id.Profile:
                         // Handle settings button click
-                        Intent i = new Intent(HomeActivity.this, ProfileActivity.class);
+                        Intent i = new Intent(HomeActivity.this, Activity_profiles.class);
                         startActivity(i);
                         return true;
                 }
