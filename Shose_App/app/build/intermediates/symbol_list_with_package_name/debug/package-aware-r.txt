@@ -3325,6 +3325,8 @@ id ed_Email
 id ed_cmt
 id ed_inputext
 id ed_password
+id ed_putName
+id ed_putPhonenumber
 id edchangepassword
 id edit_query
 id edoldpass
@@ -3394,6 +3396,7 @@ id image1
 id image2
 id image3
 id image4
+id image5
 id imageLocation
 id imageNotifi
 id imageView
@@ -3412,6 +3415,7 @@ id image_view_state_rotate
 id image_view_state_scale
 id img_btnchat
 id img_camera
+id img_cameras
 id img_close
 id img_detail
 id img_update_cart
@@ -3650,8 +3654,13 @@ id recy_transport
 id recy_wait_for
 id recy_waitconfirm
 id recy_waiting
+id recycler_dialog_color
 id recycler_dialog_size
 id recycleview_boxchat
+id relati_address
+id relati_email
+id relati_name
+id relati_phone
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3660,6 +3669,7 @@ id right_side
 id rotate_scroll_wheel
 id rounded
 id row_index_key
+id save
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3834,6 +3844,9 @@ id toolbar_inforoder
 id toolbar_notification
 id toolbar_oder
 id toolbar_profile
+id toolbar_profiles
+id toolbar_putname
+id toolbar_putphonenumber
 id toolbar_title
 id top
 id topPanel
@@ -3851,7 +3864,12 @@ id transition_transform
 id triangle
 id ttttt
 id tv1
+id tvAddress
+id tvChangePassword
+id tvEmail
 id tvMess
+id tvPhoneNumber
+id tvTen
 id tvThongBao
 id tvTitleFav
 id tv_badge_text
@@ -4050,6 +4068,9 @@ layout activity_oder
 layout activity_onboard
 layout activity_product_detail
 layout activity_profile
+layout activity_profiles
+layout activity_putname
+layout activity_putphone
 layout activity_ratings
 layout activity_search
 layout activity_sign_in
@@ -4186,6 +4207,7 @@ layout ucrop_view
 menu bottom_menu
 menu nav_menu
 menu profile_menu
+menu profile_save
 menu ucrop_menu_activity
 mipmap ic_launcher
 mipmap ic_launcher_round

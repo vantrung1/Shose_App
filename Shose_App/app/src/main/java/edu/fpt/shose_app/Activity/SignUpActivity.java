@@ -145,6 +145,8 @@ public class SignUpActivity extends AppCompatActivity {
                     if(response.body().getStatus().equals("200")){
                         Toast.makeText(getApplicationContext(), "Đăng Ký Thành Công", Toast.LENGTH_LONG).show();
                       //  progressDialog.dismiss();
+                        Intent i = new Intent(SignUpActivity.this, SignInActivity.class);
+                        startActivity(i);
                     }
                     else {
                         Toast.makeText(getApplicationContext(), "Email đã tồn tại", Toast.LENGTH_LONG).show();

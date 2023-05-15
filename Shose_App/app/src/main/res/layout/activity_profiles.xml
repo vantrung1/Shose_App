@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar_profiles"
+        android:layout_width="match_parent"
+        android:elevation="8dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/background"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="143dp"
+        android:src="@drawable/image_profile"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_profiles" />
+
+    <ImageView
+        android:id="@+id/img_cameras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="176dp"
+        android:src="@drawable/camera_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/profile_image" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_cameras">
+        <RelativeLayout
+            android:id="@+id/relati_name"
+            app:layout_constraintTop_toTopOf="@+id/profile_image"
+            android:layout_marginTop="15dp"
+            style="@style/RelactiveSettings_settingContainer">
+            <TextView
+                style="@style/easySettings_textView_title"
+                android:text="Tên"/>
+            <TextView
+                android:text="aaaaaa"
+                android:id="@+id/tvTen"
+                style="@style/easySettings_textView_title"
+                android:layout_toStartOf="@+id/image1"
+                android:gravity="right"
+                android:layout_marginRight="10dp"
+                />
+
+            <ImageView
+                android:id="@+id/image1"
+                android:src="@drawable/baseline_chevron_right_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relati_address"
+            style="@style/RelactiveSettings_settingContainer"
+            android:layout_marginTop="1dp">
+
+            <TextView
+                style="@style/easySettings_textView_title"
+                android:text="Địa chỉ" />
+
+            <TextView
+                android:id="@+id/tvAddress"
+                style="@style/easySettings_textView_title"
+                android:layout_marginRight="10dp"
+                android:layout_toStartOf="@+id/image2"
+                android:gravity="right"
+                android:text=" aaaaa " />
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/baseline_chevron_right_24" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relati_phone"
+            android:layout_marginTop="1dp"
+            style="@style/RelactiveSettings_settingContainer">
+            <TextView
+                style="@style/easySettings_textView_title"
+                android:text="Số Điện Thoại"/>
+            <TextView
+                android:id="@+id/tvPhoneNumber"
+                style="@style/easySettings_textView_title"
+                android:layout_toStartOf="@+id/image3"
+                android:gravity="right"
+                android:layout_marginRight="10dp"/>
+
+            <ImageView
+                android:id="@+id/image3"
+                android:src="@drawable/baseline_chevron_right_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/relati_email"
+            android:layout_marginTop="1dp"
+            style="@style/RelactiveSettings_settingContainer">
+            <TextView
+                style="@style/easySettings_textView_title"
+                android:text="Email"/>
+            <TextView
+                android:id="@+id/tvEmail"
+                android:text="  "
+                style="@style/easySettings_textView_title"
+                android:gravity="right"
+                android:layout_marginRight="10dp"/>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="1dp"
+            style="@style/RelactiveSettings_settingContainer">
+            <TextView
+                android:id="@+id/tvChangePassword"
+                android:text="Đổi mật khẩu "
+                style="@style/easySettings_textView_title"
+                android:layout_toStartOf="@+id/image5"/>
+
+            <ImageView
+                android:id="@+id/image5"
+                android:src="@drawable/baseline_chevron_right_24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
