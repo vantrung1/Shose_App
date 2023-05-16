@@ -320,7 +320,7 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(i3);
                         break;
                     case R.id.mnu_notifi:
-
+                            startActivity(new Intent(HomeActivity.this,Notification.class));
                         break;
                     case R.id.mnu_exit:
                         SharedPreferences sharedPreferences = getSharedPreferences("MyPreferences", 0);

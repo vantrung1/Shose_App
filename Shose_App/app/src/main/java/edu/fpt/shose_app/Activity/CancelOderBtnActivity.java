@@ -70,7 +70,7 @@ public class CancelOderBtnActivity extends AppCompatActivity implements ImageCli
     Toolbar toolbar;
     TextView txtNameUser, txtPhone, txtAddress, txtPaymentAmount, txtNameProduct, txtAttributes, txtQuantity, txtPrice, txtsale, txtTotal, txtCreateAt, txtTotal2;
     AppCompatButton btnChat, btnCancel;
-    String selectedValue;
+    String selectedValue ="";
     RadioGroup radioGroup;
 
     @Override
@@ -129,7 +129,6 @@ public class CancelOderBtnActivity extends AppCompatActivity implements ImageCli
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         products_oder_adapter = new Products_Oder_Adapter(this, oder.getProducts(),this);
         recyclerView.setAdapter(products_oder_adapter);
-
         txtNameUser.setText(oder.getName());
         txtPhone.setText(oder.getNumber());
         txtPaymentAmount.setText(oder.getPaymentAmount());
