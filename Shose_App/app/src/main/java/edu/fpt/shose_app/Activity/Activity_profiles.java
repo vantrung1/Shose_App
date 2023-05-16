@@ -220,6 +220,7 @@ public class Activity_profiles extends AppCompatActivity {
         tvTen.setText(Utils.Users_Utils.getName());
         tvEmail.setText(Utils.Users_Utils.getEmail());
         tvPhoneNumber.setText(Utils.Users_Utils.getPhoneNumber());
+        Glide.with(getApplicationContext()).load(Utils.Users_Utils.getAvatar()).placeholder(R.drawable.image_profile).into(profile_image);
         tvPhoneNumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
