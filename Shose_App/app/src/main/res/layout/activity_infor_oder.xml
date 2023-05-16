@@ -231,10 +231,8 @@
                     android:layout_margin="5dp"
                     android:layout_marginTop="10dp"
                     android:gravity="right"
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     android:weightSum="3">
-
-
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btn_chat_infor"
                         android:layout_width="match_parent"
@@ -244,6 +242,17 @@
                         android:text="Liên hệ shop"
                         android:textAllCaps="false"
                         android:textColor="@color/black"
+                        android:textSize="18sp" />
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnNhanHang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_btn_red"
+                        android:text=" Đã Nhận Được Hàng"
+                        android:textAllCaps="false"
+
+                        android:textColor="@color/white"
                         android:textSize="18sp" />
                 </LinearLayout>
             </LinearLayout>

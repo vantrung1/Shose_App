@@ -1,6 +1,7 @@
 package edu.fpt.shose_app.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,8 @@ import java.util.Date;
 import java.util.List;
 
 
+import edu.fpt.shose_app.Activity.ChatBoxActivity;
+import edu.fpt.shose_app.Activity.OderActivity;
 import edu.fpt.shose_app.Model.Notification;
 import edu.fpt.shose_app.R;
 
@@ -72,6 +75,22 @@ public class Notifi_adapter extends RecyclerView.Adapter<Notifi_adapter.myViewHo
             e.printStackTrace();
             holder.time.setText(notification.getTimestap());
         }
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (holder.title.getText().toString().equals("Tin Nhắn")){
+                    Intent intent = new Intent(context, ChatBoxActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+
+                } else if (holder.title.getText().toString().equals("Thông báo đơn hàng")) {
+                    Intent intent = new Intent(context, OderActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+
+                }
+            }
+        });
     }
 
     @Override
@@ -86,6 +105,15 @@ public class Notifi_adapter extends RecyclerView.Adapter<Notifi_adapter.myViewHo
             title = itemView.findViewById(R.id.titleNotifi);
             body = itemView.findViewById(R.id.bodyNotifi);
             time = itemView.findViewById(R.id.txttime);
+
+        }
+        public void actinon(Notification notificationmodel){
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
         }
     }
 }

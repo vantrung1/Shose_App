@@ -72,6 +72,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:visibility="gone"
             android:id="@+id/relati_address"
             style="@style/RelactiveSettings_settingContainer"
             android:layout_marginTop="1dp">
@@ -98,6 +99,7 @@
         </RelativeLayout>
 
         <RelativeLayout
+
             android:id="@+id/relati_phone"
             android:layout_marginTop="1dp"
             style="@style/RelactiveSettings_settingContainer">

@@ -56,6 +56,7 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.myviewHolder> 
     public void onBindViewHolder(@NonNull OderAdapter.myviewHolder holder, int position) {
         holder.txt_quantity2.setText(oderArrayList.get(position).getQuantity() + " sản phẩm");
         holder.txtTotal.setText(oderArrayList.get(position).getTotal());
+        holder.idoder.setText("Đơn Hàng"+oderArrayList.get(position).getOder_id()+"");
         recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
         products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(position).getProducts(),imageClickr);
         recyclerView.setAdapter(products_oder_adapter);
@@ -65,7 +66,7 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.myviewHolder> 
         }
         else {
             holder.txtShow.setVisibility(View.VISIBLE);
-            products_oder_adapter.expand();
+           // products_oder_adapter.expand();
         }
         holder.setListenner(new ImageClickListenner() {
             @Override
@@ -97,7 +98,7 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.myviewHolder> 
 
     public class myviewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        TextView txt_quantity2, txtTotal, txtShow;
+        TextView txt_quantity2, txtTotal, txtShow,idoder;
         AppCompatButton appCompatButton;
         ImageClickListenner listenner;
 
@@ -107,6 +108,7 @@ public class OderAdapter extends RecyclerView.Adapter<OderAdapter.myviewHolder> 
             recyclerView = itemView.findViewById(R.id.recy_waitconfirm);
             txt_quantity2 = itemView.findViewById(R.id.item_txt_quantity2);
             txtTotal = itemView.findViewById(R.id.item_txt_total_confirm);
+            idoder = itemView.findViewById(R.id.idoder);
             appCompatButton = itemView.findViewById(R.id.btn_wait_for_confirm);
             txtShow = itemView.findViewById(R.id.txt_show_more);
 

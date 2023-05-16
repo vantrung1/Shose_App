@@ -2842,9 +2842,11 @@ drawable backgroud_circle
 drawable background_btn_dangnhap
 drawable background_btn_dangnhapgmail
 drawable background_btn_danhgia
+drawable background_btn_red
 drawable background_buttom_sheet
 drawable background_cmt
 drawable background_custombtn
+drawable background_custombtnred
 drawable background_dialog
 drawable background_item_my_cart
 drawable background_photo
@@ -2900,6 +2902,7 @@ drawable cardview_background_default
 drawable cardview_background_normal
 drawable cardview_background_pressed
 drawable check_box_outline_blank_24
+drawable checkout
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -2960,6 +2963,7 @@ drawable itemclick
 drawable loading
 drawable location_24
 drawable logo
+drawable logoapp
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3204,6 +3208,7 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btnGmail
 id btnLogin
+id btnNhanHang
 id btnThongBao
 id btn_OnboardNext
 id btn_Payment
@@ -3388,6 +3393,7 @@ id horizontal_only
 id icon
 id icon_group
 id icon_only
+id idoder
 id ifRoom
 id ignore
 id ignoreRequest
@@ -3490,7 +3496,6 @@ id linear_photo_library
 id listMode
 id list_item
 id ln_item_dv
-id logo
 id lytCameraPick
 id lytGalleryPick
 id m3_side_sheet
@@ -3618,6 +3623,7 @@ id progressBar
 id progress_circular
 id progress_horizontal
 id radio
+id radio_group
 id ratingBar
 id ratingName
 id ratingavatar
@@ -3828,6 +3834,7 @@ id titleNotifi
 id title_template
 id titlelocatin
 id toggle
+id toobarchatbox
 id toolbar
 id toolbar2
 id toolbar3
@@ -4049,6 +4056,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_account_settings
+layout activity_address
 layout activity_cancel_detail
 layout activity_cancel_oder_btn
 layout activity_chang_profile

@@ -48,6 +48,7 @@
 
         import org.json.JSONObject;
 
+        import java.text.DecimalFormat;
         import java.text.SimpleDateFormat;
         import java.util.ArrayList;
         import java.util.Date;
@@ -133,8 +134,10 @@
         soluong = intent.getIntExtra("STRING_soluong",1);
         txt_total_check_out = findViewById(R.id.txt_price_subtotal_check_out);
         txt_price_total_check_out = findViewById(R.id.txt_price_total_check_out);
-        txt_total_check_out.setText(data_price);
-        txt_price_total_check_out.setText(data_price);
+        DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
+
+        txt_total_check_out.setText(decimalFormat.format(Integer.parseInt(data_price)));
+        txt_price_total_check_out.setText(decimalFormat.format(Integer.parseInt(data_price)));
 
 
         String[] type = new String[]{"Thanh toán khi nhận hàng","Zalo Pay"};
@@ -266,9 +269,9 @@
                         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
                         dialog.getWindow().setGravity(Gravity.CENTER);
                       //  SendNotification();//--------------------Notification
-                        seNotification(Utils.tokenadmin,"Thông báo đơn hàng","Bạn có đơn hàng mới");
-                        saveNotification( Utils.tokenadmin,  "Thông báo đơn hàng",  "Bạn có đơn hàng mới");
-                        seNotification(Utils.token,"Thông báo đơn hàng","Đơn hàng của bạn đã được tạo, đang đợi hệ thống xác nhận");
+                        seNotification("admin",Utils.tokenadmin,"Thông báo đơn hàng","Bạn có đơn hàng mới");
+
+                        seNotification(String.valueOf(Utils.Users_Utils.getId()),Utils.token,"Thông báo đơn hàng","Đơn hàng của bạn đã được tạo, đang đợi hệ thống xác nhận");
                     }
                 }
             }
@@ -371,7 +374,7 @@
     private int getNotificationId(){
         return (int) new Date().getTime();
     }
-    public void seNotification(String recipientToken, String title, String message){
+    public void seNotification(String nguoinhan,String recipientToken, String title, String message){
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://fcm.googleapis.com/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -390,7 +393,7 @@
             @Override
             public void onResponse(Call<NotiResponse> call, Response<NotiResponse> response) {
                 // Xử lý khi gửi thành công
-
+                saveNotification(nguoinhan, recipientToken,  title,  message);
 
             }
 
@@ -400,7 +403,7 @@
             }
         });
     }
-            public void saveNotification(String recipientToken, String title, String message) {
+            public void saveNotification(String nguotnhan,String recipientToken, String title, String message) {
                 String pattern = "EEE MMM dd HH:mm:ss zzz yyyy";
 
                 SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
@@ -417,7 +420,7 @@
                 fcmRequest.setNotification(notification);
 
                     // Lưu thông báo vào Firebase Realtime Database trong nút con của người dùng
-                    databaseReference.child("admin").child(dateString).setValue(fcmRequest)
+                    databaseReference.child(nguotnhan).child(dateString).setValue(fcmRequest)
                             .addOnSuccessListener(aVoid -> System.out.println("Successfully saved notification to Firebase"))
                             .addOnFailureListener(e -> System.out.println("Failed to save notification to Firebase: " + e.getMessage()));
 

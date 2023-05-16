@@ -37,12 +37,12 @@ public class FirebaseMessReceiver extends FirebaseMessagingService {
     }
     @SuppressLint("MissingPermission")
     private void SendNotification(String t, String b){
-        Bitmap bitmap = BitmapFactory.decodeResource( getResources(), R.mipmap.ic_launcher);
+        Bitmap bitmap = BitmapFactory.decodeResource( getResources(), R.drawable.logoapp);
 
         Notification notification = new NotificationCompat.Builder(this, MyApplication.CHANNEL_ID)
                 .setContentTitle(t)
                 .setContentText(b)
-                .setSmallIcon(R.mipmap.ic_launcher)
+                .setSmallIcon(R.drawable.logoapp)
                 .setLargeIcon(bitmap)
                 .build();
 
@@ -62,7 +62,7 @@ public class FirebaseMessReceiver extends FirebaseMessagingService {
         Intent intent =  new Intent(this, HomeActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(),"noti")
-                .setSmallIcon(R.mipmap.ic_launcher)
+                .setSmallIcon(R.drawable.logoapp)
                 .setAutoCancel(true)
                 .setVibrate(new long[]{1000,1000,1000,1000})
                 .setOnlyAlertOnce(true)
@@ -80,7 +80,7 @@ public class FirebaseMessReceiver extends FirebaseMessagingService {
         RemoteViews remoteViews = new RemoteViews(getApplicationContext().getPackageName(),R.layout.item_location);
         remoteViews.setTextViewText(R.id.titlelocatin,title);
         remoteViews.setTextViewText(R.id.bodyLocation,body);
-        remoteViews.setImageViewResource(R.id.imageLocation,R.drawable.notifications_24);
+        remoteViews.setImageViewResource(R.id.imageLocation,R.drawable.logoapp);
         return remoteViews;
     }
 }

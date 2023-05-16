@@ -80,6 +80,7 @@ public class Cancel_detail_activity extends AppCompatActivity implements ImageCl
         txtUpdateAt.setText(oder.getTimeUTC());
         txtUpdateAt2.setText(oder.getTimeUTC());
         txtPaymentAmount.setText(oder.getPaymentAmount());
+        txtReason.setText(oder.getNote());
     }
     public void getProduct(int id){
 

@@ -9,7 +9,7 @@
     <item android:id="@+id/mnu_Chat" android:title="Liên Hệ"
         android:icon="@drawable/baseline_chat_bubble_outline_24" />
     <item android:id="@+id/mnu_orders" android:title="Đơn Hàng"
-        android:icon="@drawable/baseline_favorite_border_24" />
+        android:icon="@drawable/checkout" />
     <item android:id="@+id/mnu_notifi" android:title="Thông Báo"
         android:iconTintMode="@color/white"
         android:icon="@drawable/baseline_notifications_none_24" />

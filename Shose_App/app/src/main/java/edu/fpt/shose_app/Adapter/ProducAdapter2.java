@@ -47,7 +47,7 @@ public class ProducAdapter2 extends RecyclerView.Adapter<ProducAdapter2.myViewHo
         // Log.d("TAG", "onBindViewHolder: "+myObjects.get(0).getImage());
         holder.itemproduct_name2.setText(productArrayList.get(position).getName());
         holder.itemproduct_price2.setText(decimalFormat.format(productArrayList.get(position).getPrice())+" VNĐ");
-        holder.itemproduct_price2.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(context, ProductDetailActivity.class);

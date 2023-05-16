@@ -77,6 +77,12 @@ public class TransportFragment extends Fragment implements ImageClickr {
         recy_transport.setAdapter(transportAtapter);
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        get_oder(Utils.Users_Utils.getId(), 2);
+    }
+
     private void get_oder(int id, int status) {
         Call<OderRequest> objGetOder = apiInterface.getOder(id, status);
         // thực hiện gọi

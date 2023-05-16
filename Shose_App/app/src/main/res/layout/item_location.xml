@@ -6,9 +6,9 @@
 
     <ImageView
         android:id="@+id/imageLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_launcher_foreground"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logoapp"
         />
     <TextView
         android:id="@+id/titlelocatin"

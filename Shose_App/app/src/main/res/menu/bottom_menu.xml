@@ -7,7 +7,7 @@
     <item
         android:id="@+id/DonHang"
         android:title=""
-        android:icon="@drawable/baseline_favorite_border_24"/>
+        android:icon="@drawable/checkout"/>
     <item
         android:id="@+id/fab"
         android:title=""

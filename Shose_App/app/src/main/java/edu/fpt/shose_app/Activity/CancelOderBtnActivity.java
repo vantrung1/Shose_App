@@ -17,6 +17,7 @@ import android.view.Window;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,17 +26,23 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
 import edu.fpt.shose_app.Adapter.Products_Oder_Adapter;
 import edu.fpt.shose_app.Interface.ImageClickr;
+import edu.fpt.shose_app.Model.FCMRequest;
 import edu.fpt.shose_app.Model.Image;
+import edu.fpt.shose_app.Model.NotiResponse;
 import edu.fpt.shose_app.Model.Oder;
 import edu.fpt.shose_app.Model.OderRequest;
 import edu.fpt.shose_app.Model.Product;
@@ -44,6 +51,7 @@ import edu.fpt.shose_app.Model.Size;
 import edu.fpt.shose_app.Model.SizeRequest;
 import edu.fpt.shose_app.R;
 import edu.fpt.shose_app.Retrofit.ApiApp;
+import edu.fpt.shose_app.Retrofit.PostNotifi;
 import edu.fpt.shose_app.Utils.Utils;
 import edu.fpt.shose_app.dialogModel.dialogProduct;
 import retrofit2.Call;
@@ -62,6 +70,8 @@ public class CancelOderBtnActivity extends AppCompatActivity implements ImageCli
     Toolbar toolbar;
     TextView txtNameUser, txtPhone, txtAddress, txtPaymentAmount, txtNameProduct, txtAttributes, txtQuantity, txtPrice, txtsale, txtTotal, txtCreateAt, txtTotal2;
     AppCompatButton btnChat, btnCancel;
+    String selectedValue;
+    RadioGroup radioGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +88,8 @@ public class CancelOderBtnActivity extends AppCompatActivity implements ImageCli
     }
 
     private void initUi() {
+
+
         recyclerView = findViewById(R.id.recy_cancel_oder_btn);
         txtNameUser = findViewById(R.id.txt_name_users);
         txtPhone = findViewById(R.id.txt_phone_users);
@@ -105,6 +117,12 @@ public class CancelOderBtnActivity extends AppCompatActivity implements ImageCli
             @Override
             public void onClick(View view) {
                 btn_cancel_oder();
+            }
+        });
+        btnChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getApplicationContext().startActivity(new Intent(getApplicationContext(),ChatBoxActivity.class));
             }
         });
         //-------------
@@ -135,6 +153,17 @@ public class CancelOderBtnActivity extends AppCompatActivity implements ImageCli
         RadioButton radioButton5 = dialog.findViewById(R.id.rd_reason_cancel5);
         RadioButton radioButton6 = dialog.findViewById(R.id.rd_reason_cancel6);
         AppCompatButton btn = dialog.findViewById(R.id.btn_submit);
+// Lấy đối tượng RadioGroup
+        radioGroup =(RadioGroup) dialog.findViewById(R.id.radio_group);
+// Lấy ID của RadioButton được chọn
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton selectedRadioButton = group.findViewById(checkedId);
+                selectedValue = selectedRadioButton.getText().toString();
+              //  Log.d("TAG", "onCheckedChanged: "+selectedValue);
+            }
+        });
 
         img.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -145,11 +174,16 @@ public class CancelOderBtnActivity extends AppCompatActivity implements ImageCli
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                put_status_oder();
-                dialog.dismiss();
-                Intent i = new Intent(getApplicationContext(), OderActivity.class);
-                startActivity(i);
-
+                if(selectedValue.equals("")){
+                    return;
+                }
+                else {
+                   // Log.d("TAG", "Selected value: " + selectedValue);
+                    put_status_oder(selectedValue);
+                    dialog.dismiss();
+                    Intent i = new Intent(getApplicationContext(), OderActivity.class);
+                    startActivity(i);
+                }
             }
         });
 
@@ -160,15 +194,15 @@ public class CancelOderBtnActivity extends AppCompatActivity implements ImageCli
         dialog.getWindow().setGravity(Gravity.BOTTOM);
     }
 
-    public void put_status_oder() {
-        Call<Oder> objPutOder = apiInterface.putOder(oder.getOder_id(), 4);
-
+    public void put_status_oder(String note) {
+        Call<Oder> objPutOder = apiInterface.huydon(oder.getOder_id(), 4,note);
         objPutOder.enqueue(new Callback<Oder>() {
 
             @Override
             public void onResponse(Call<Oder> call, Response<Oder> response) {
                 if (response.isSuccessful()) {
-                    Oder oder = response.body();
+                   // Oder oder = response.body();
+                    seNotification("admin",Utils.tokenadmin,"Thông báo đơn hàng","Đơn Hàng "+oder.getOder_id()+" đã được hủy bởi khách hàng");
                 }
             }
 
@@ -177,6 +211,57 @@ public class CancelOderBtnActivity extends AppCompatActivity implements ImageCli
 
             }
         });
+    }
+    public void seNotification(String nguoinhan,String recipientToken, String title, String message){
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://fcm.googleapis.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        PostNotifi fcmService = retrofit.create(PostNotifi .class);
+        FCMRequest fcmRequest = new FCMRequest();
+        fcmRequest.setTo(recipientToken);
+        FCMRequest.FCMNotification notification = new FCMRequest.FCMNotification();
+        notification.setTitle(title);
+        notification.setBody(message);
+        fcmRequest.setNotification(notification);
+
+        Call<NotiResponse> call = fcmService.sendNotification(fcmRequest);
+        call.enqueue(new Callback<NotiResponse>() {
+            @Override
+            public void onResponse(Call<NotiResponse> call, Response<NotiResponse> response) {
+                // Xử lý khi gửi thành công
+                saveNotification(nguoinhan, recipientToken,  title,  message);
+
+            }
+
+            @Override
+            public void onFailure(Call<NotiResponse> call, Throwable t) {
+                // Xử lý khi gửi thất bại
+            }
+        });
+    }
+    public void saveNotification(String nguotnhan,String recipientToken, String title, String message) {
+        String pattern = "EEE MMM dd HH:mm:ss zzz yyyy";
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
+        Date currentDate = new Date();
+        String dateString = dateFormat.format(currentDate);
+        DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("notifications");
+        // Tạo đối tượng Notification
+        FCMRequest fcmRequest = new FCMRequest();
+        fcmRequest.setTo(recipientToken);
+        FCMRequest.FCMNotification notification = new FCMRequest.FCMNotification();
+        notification.setTitle(title);
+        notification.setBody(message);
+        fcmRequest.setNotification(notification);
+
+        // Lưu thông báo vào Firebase Realtime Database trong nút con của người dùng
+        databaseReference.child(nguotnhan).child(dateString).setValue(fcmRequest)
+                .addOnSuccessListener(aVoid -> System.out.println("Successfully saved notification to Firebase"))
+                .addOnFailureListener(e -> System.out.println("Failed to save notification to Firebase: " + e.getMessage()));
+
+
     }
     public void getProduct(int id){
 

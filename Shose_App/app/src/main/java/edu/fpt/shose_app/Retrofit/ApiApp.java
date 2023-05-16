@@ -64,6 +64,11 @@ public interface ApiApp {
     @PUT("oderdetail/{oder_id}")
     Call<Oder> putOder(@Path("oder_id") int id,
                        @Field("status") int status);
+    @FormUrlEncoded
+    @PUT("oderdetail/{oder_id}")
+    Call<Oder> huydon(@Path("oder_id") int id,
+                       @Field("status") int status,
+                      @Field("note") String note);
 
     @POST("oderdetail")
     @FormUrlEncoded

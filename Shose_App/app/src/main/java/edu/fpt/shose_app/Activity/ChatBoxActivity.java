@@ -1,6 +1,7 @@
 package edu.fpt.shose_app.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -44,7 +45,7 @@ public class ChatBoxActivity extends AppCompatActivity {
     EditText edMess;
 
     FirebaseFirestore db;
-
+    Toolbar toolbar;
     ChatAdapter adapter;
     List<ChatMessage> list;
     @Override
@@ -61,6 +62,19 @@ public class ChatBoxActivity extends AppCompatActivity {
         list = new ArrayList<>();
         adapter = new ChatAdapter(getApplicationContext(),list,String.valueOf(Utils.Users_Utils.getId()));
         recyclerView.setAdapter(adapter);
+        toolbar = findViewById(R.id.toobarchatbox);
+
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Liên Hệ");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationIcon(R.drawable.icon_back);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         initControl();
         listenmess();
      //   insertUser();

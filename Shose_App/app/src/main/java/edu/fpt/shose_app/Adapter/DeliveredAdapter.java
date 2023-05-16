@@ -49,6 +49,10 @@ public class DeliveredAdapter extends RecyclerView.Adapter<DeliveredAdapter.myvi
     public void onBindViewHolder(@NonNull DeliveredAdapter.myviewHolder holder, int position) {
         holder.txt_quantity2.setText(oderArrayList.get(position).getQuantity() + "sản phẩm");
         holder.txtTotal.setText(oderArrayList.get(position).getTotal());
+        holder.idoder.setText("Đơn Hàng"+oderArrayList.get(position).getOder_id()+"");
+        recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
+        products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(position).getProducts(),imageClickr);
+        recyclerView.setAdapter(products_oder_adapter);
         holder.setListenner(new ImageClickListenner() {
             @Override
             public void onImageClick(View view, int pos, int giatri) {
@@ -74,7 +78,7 @@ public class DeliveredAdapter extends RecyclerView.Adapter<DeliveredAdapter.myvi
     }
 
     public class myviewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView txt_quantity2, txtTotal, txtShow;
+        TextView txt_quantity2, txtTotal, txtShow,idoder;
         AppCompatButton appCompatButton1, appCompatButton2;
         ImageClickListenner listenner;
 
@@ -82,14 +86,13 @@ public class DeliveredAdapter extends RecyclerView.Adapter<DeliveredAdapter.myvi
             super(itemView);
             txt_quantity2 = itemView.findViewById(R.id.item_txt_quantity2);
             txtTotal = itemView.findViewById(R.id.item_txt_total_delivered);
+            idoder = itemView.findViewById(R.id.idoder);
             appCompatButton1 = itemView.findViewById(R.id.btn_delivered);
             appCompatButton2 = itemView.findViewById(R.id.btn_delivered_repurchase);
             txtShow = itemView.findViewById(R.id.txt_show_more);
 
             recyclerView = itemView.findViewById(R.id.recy_delivered);
-            recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
-            products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(0).getProducts(),imageClickr);
-            recyclerView.setAdapter(products_oder_adapter);
+
 
             if (oderArrayList.size()>1){
                 txtShow.setVisibility(View.VISIBLE);

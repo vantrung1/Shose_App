@@ -35,9 +35,11 @@ drawable backgroud_circle
 drawable background_btn_dangnhap
 drawable background_btn_dangnhapgmail
 drawable background_btn_danhgia
+drawable background_btn_red
 drawable background_buttom_sheet
 drawable background_cmt
 drawable background_custombtn
+drawable background_custombtnred
 drawable background_dialog
 drawable background_item_my_cart
 drawable background_photo
@@ -85,6 +87,7 @@ drawable cardview_background_default
 drawable cardview_background_normal
 drawable cardview_background_pressed
 drawable check_box_outline_blank_24
+drawable checkout
 drawable drop_down_24
 drawable edittext_no_underline
 drawable ic_delete
@@ -105,6 +108,7 @@ drawable itemclick
 drawable loading
 drawable location_24
 drawable logo
+drawable logoapp
 drawable mess_boxchat
 drawable mess_inputtextback
 drawable nike
@@ -134,6 +138,7 @@ id bottomAppBar
 id bottomNavigationView
 id btnGmail
 id btnLogin
+id btnNhanHang
 id btnThongBao
 id btn_OnboardNext
 id btn_Payment
@@ -197,6 +202,7 @@ id filled_exposed_address
 id history_item_delete
 id history_item_text
 id home
+id idoder
 id image1
 id image2
 id image3
@@ -265,7 +271,6 @@ id linearLayout_item
 id linear_photo
 id linear_photo_library
 id ln_item_dv
-id logo
 id menuSl
 id menuSldt
 id mnu_Chat
@@ -287,6 +292,7 @@ id profile_name
 id profile_password
 id profile_phone
 id progressBar
+id radio_group
 id ratingBar
 id ratingName
 id ratingavatar
@@ -370,6 +376,7 @@ id textViewcreateat
 id textnn
 id titleNotifi
 id titlelocatin
+id toobarchatbox
 id toolbar
 id toolbar2
 id toolbar3
@@ -437,6 +444,7 @@ id update
 id viewPager
 id view_pager
 layout activity_account_settings
+layout activity_address
 layout activity_cancel_detail
 layout activity_cancel_oder_btn
 layout activity_chang_profile

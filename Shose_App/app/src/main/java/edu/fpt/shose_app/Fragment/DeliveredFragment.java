@@ -129,4 +129,11 @@ public class DeliveredFragment extends Fragment implements ImageClickr  {
     public void onImageClick(int position) {
         getProduct(position);
     }
+
+    @Override
+    public void onResume() {
+        get_oder(Utils.Users_Utils.getId(), 3);
+        super.onResume();
+
+    }
 }

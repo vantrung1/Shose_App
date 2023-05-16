@@ -54,7 +54,10 @@ public class TransportAtapter extends RecyclerView.Adapter<TransportAtapter.myvi
     public void onBindViewHolder(@NonNull TransportAtapter.myviewHolder holder, int position) {
         holder.txt_quantity2.setText(oderArrayList.get(position).getQuantity() + "sản phẩm");
         holder.txtTotal.setText(oderArrayList.get(position).getTotal());
-
+        holder.txtidoder.setText("Đơn Hàng"+oderArrayList.get(position).getOder_id());
+        recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
+        products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(position).getProducts(),imageClickr);
+        recyclerView.setAdapter(products_oder_adapter);
         holder.setListenner(new TransportAtapter.ImageClickListenner() {
             @Override
             public void onImageClick(View view, int pos, int giatri) {
@@ -74,7 +77,7 @@ public class TransportAtapter extends RecyclerView.Adapter<TransportAtapter.myvi
     }
 
     public class myviewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView txt_quantity2, txtTotal, txtShow;
+        TextView txt_quantity2, txtTotal, txtShow,txtidoder;
         AppCompatButton appCompatButton;
         ImageClickListenner listenner;
 
@@ -85,9 +88,8 @@ public class TransportAtapter extends RecyclerView.Adapter<TransportAtapter.myvi
             appCompatButton = itemView.findViewById(R.id.btn_transport);
             txtShow = itemView.findViewById(R.id.txt_show_more);
             recyclerView = itemView.findViewById(R.id.recy_transport);
-            recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
-            products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(0).getProducts(),imageClickr);
-            recyclerView.setAdapter(products_oder_adapter);
+            txtidoder = itemView.findViewById(R.id.idoder);
+
 
             if (oderArrayList.size() > 1) {
                 txtShow.setVisibility(View.VISIBLE);

@@ -122,10 +122,12 @@ public class MyCartActivity extends AppCompatActivity {
 
     private void totalCartCost() {
         long total = 0;
+        int soluongs = 0;
         for (int i = 0; i < Utils.cartLists.size(); i++) {
             if(Utils.cartLists.get(i).isIscheck()){
                 total = total + (Utils.cartLists.get(i).getSale() * Utils.cartLists.get(i).getQuantity());
-                soluong = soluong+(Utils.cartLists.get(i).getQuantity());
+                soluongs = soluongs+(Utils.cartLists.get(i).getQuantity());
+                soluong = soluongs;
             }
         }
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");

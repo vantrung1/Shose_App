@@ -53,7 +53,10 @@ public class CancelAdapterOder extends RecyclerView.Adapter<CancelAdapterOder.my
     public void onBindViewHolder(@NonNull CancelAdapterOder.myviewHolder holder, int position) {
         holder.txt_quantity2.setText(oderArrayList.get(position).getQuantity() + "sản phẩm");
         holder.txtTotal.setText(oderArrayList.get(position).getTotal());
-
+        holder.txtidoder.setText("Đơn Hàng"+oderArrayList.get(position).getOder_id()+"");
+        recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
+        products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(position).getProducts(),imageClickr);
+        recyclerView.setAdapter(products_oder_adapter);
         holder.setListenner(new CancelAdapterOder.ImageClickListenner() {
             @Override
             public void onImageClick(View view, int pos, int giatri) {
@@ -65,7 +68,7 @@ public class CancelAdapterOder extends RecyclerView.Adapter<CancelAdapterOder.my
                 }
                 if (giatri == 3) {
                     recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
-                    products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(0).getProducts(),imageClickr);
+                    products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(position).getProducts(),imageClickr);
                     recyclerView.setAdapter(products_oder_adapter);
 
                 }
@@ -79,7 +82,7 @@ public class CancelAdapterOder extends RecyclerView.Adapter<CancelAdapterOder.my
     }
 
     public class myviewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        TextView txt_quantity2, txtTotal, txtShow;
+        TextView txt_quantity2, txtTotal, txtShow,txtidoder;
         AppCompatButton appCompatButton;
         ImageClickListenner listenner;
 
@@ -87,13 +90,12 @@ public class CancelAdapterOder extends RecyclerView.Adapter<CancelAdapterOder.my
             super(itemView);
             txt_quantity2 = itemView.findViewById(R.id.item_txt_quantity2);
             txtTotal = itemView.findViewById(R.id.item_txt_total_cancel);
+            txtidoder = itemView.findViewById(R.id.idoder);
             appCompatButton = itemView.findViewById(R.id.btn_detail_cancel);
             txtShow = itemView.findViewById(R.id.txt_show_more);
 
             recyclerView = itemView.findViewById(R.id.recy_cancel_oder);
-            recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false));
-            products_oder_adapter = new Products_Oder_Adapter(context, oderArrayList.get(0).getProducts(),imageClickr);
-            recyclerView.setAdapter(products_oder_adapter);
+
             appCompatButton.setOnClickListener(this);
             itemView.setOnClickListener(this);
             txtShow.setOnClickListener(this);
