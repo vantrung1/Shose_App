@@ -14,6 +14,8 @@ public class Product implements Serializable {
     private int brandID;
     private String desc;
     private String content;
+    private String quantity;
+
     private String status;
     private String create_at;
     private String update_at;
@@ -28,6 +30,14 @@ public class Product implements Serializable {
     }
 
     public Product() {
+    }
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
     }
 
     public int getId() {
@@ -127,19 +137,20 @@ public class Product implements Serializable {
         this.size = size;
     }
 
-    public Product(int id, String name, List<Map<String, Image>> image, List<Map<String, Size>> size, int price, int sale, int brandID, String desc, String content, String status, String create_at, String update_at, String color) {
+    public Product(int id, String name, List<Map<String, Image>> image, List<Map<String, Size>> size, int price, int sale, int brandID, String desc, String content, String quantity, String status, String create_at, String update_at, String color) {
         this.id = id;
         this.name = name;
         this.image = image;
-        this.color = color;
         this.size = size;
         this.price = price;
         this.sale = sale;
         this.brandID = brandID;
         this.desc = desc;
         this.content = content;
+        this.quantity = quantity;
         this.status = status;
         this.create_at = create_at;
         this.update_at = update_at;
+        this.color = color;
     }
 }

@@ -113,6 +113,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="80dp"/>
                 <TextView
+
+                    android:id="@+id/detailquantity"
+                    android:text="Kho :4"
+                    android:textSize="16dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
                     android:text="Gallery"
                     android:textSize="16dp"
                     android:layout_marginTop="5dp"

@@ -3296,6 +3296,7 @@ id detailSaleTop
 id detailcontent
 id detailname
 id detailprice
+id detailquantity
 id detailsale
 id dialog_btnIMG_minus_cart
 id dialog_btnIMG_plus_cart

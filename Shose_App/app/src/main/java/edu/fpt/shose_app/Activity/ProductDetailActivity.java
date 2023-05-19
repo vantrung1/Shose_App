@@ -19,6 +19,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
@@ -39,6 +40,7 @@ import edu.fpt.shose_app.Adapter.imageAdapter;
 import edu.fpt.shose_app.Adapter.sizeAdapter;
 import edu.fpt.shose_app.Model.RatingModel;
 import edu.fpt.shose_app.dialogModel.EventBus.ImageEvent;
+import edu.fpt.shose_app.dialogModel.EventBus.SizeEvent;
 import edu.fpt.shose_app.dialogModel.dialogProduct;
 import edu.fpt.shose_app.Model.Image;
 import edu.fpt.shose_app.Model.Product;
@@ -55,7 +57,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ProductDetailActivity extends AppCompatActivity {
      private Product product;
-    private  TextView txtName,txtDesc,txtprice,txtsale,txtcontent,txtsaleTop;
+    private  TextView txtName,txtDesc,txtprice,txtsale,txtcontent,txtsaleTop,txtkho;
     private Toolbar toolbar;
     private RecyclerView recyImage,recySize;
     private int soluong = 1;
@@ -167,6 +169,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         frameLayout = findViewById(R.id.layoutGioHang_detail);
         notificationBadge = findViewById(R.id.menuSldt);
         txtName = findViewById(R.id.detailname);
+        txtkho = findViewById(R.id.detailquantity);
         txtDesc = findViewById(R.id.detailDesc);
         txtprice = findViewById(R.id.detailprice);
         txt000 = findViewById(R.id.txt000);
@@ -183,6 +186,13 @@ public class ProductDetailActivity extends AppCompatActivity {
         txtName.setText(product.getName());
         txtDesc.setText(product.getDesc());
         txtcontent.setText(product.getContent());
+        if(product.getQuantity() == null){
+            txtkho.setText("kho: 0");
+        }
+        else {
+            txtkho.setText("kho:" +product.getQuantity());
+        }
+
 
         txtprice.setText(new DecimalFormat("###,###,###").format(product.getPrice()));
         txtsale.setText(new DecimalFormat("###,###,###").format(product.getSale()));
@@ -244,6 +254,12 @@ public class ProductDetailActivity extends AppCompatActivity {
     public void eventBrand(ImageEvent event) {
         if (event != null) {
             Glide.with(getApplicationContext()).load(imageAdapter.getSelected()).placeholder(R.drawable.loading).into(imageViewdetail);
+        }
+
+    } @Subscribe(sticky = true, threadMode = ThreadMode.MAIN)
+    public void sizeEvent(SizeEvent event) {
+        if (event != null) {
+           // Toast.makeText(this, "adsad", Toast.LENGTH_SHORT).show();
         }
 
     }

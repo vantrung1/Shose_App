@@ -60,15 +60,21 @@ public class dialogProduct extends Dialog {
     private void setquantity(){
         for (SizeRequest.SizeQuantity sizeQuantity : sizeQuantityList){
             if(sizeQuantity.getSize().equals(adapter.getSelected())){
-                quantity= Integer.parseInt(sizeQuantity.getQuantity());
 
-                if(quantity==0){
+                if (sizeQuantity.getQuantity()== null) {
                     txt_quantity.setText("Hết hàng");
+                    return;
                 }
-                else {
+                  else  if(sizeQuantity.getQuantity().equals("0")){
+
+                        txt_quantity.setText("Hết hàng");
+                    return;
+                    }
+                }else {
+                    quantity= Integer.parseInt(sizeQuantity.getQuantity());
                     txt_quantity.setText("Kho: "+quantity);
                 }
-            }
+
         }
     }
     public dialogProduct(@NonNull Context context, Product product, sizeAdapter sizeAdapter,List<SizeRequest.SizeQuantity> sizeQuantityLists) {

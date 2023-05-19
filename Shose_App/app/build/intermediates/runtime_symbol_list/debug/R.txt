@@ -3295,6 +3295,7 @@ int id detailSaleTop 0x7f0900dc
 int id detailcontent 0x7f0900dd
 int id detailname 0x7f0900de
 int id detailprice 0x7f0900df
+int id detailquantity 0x7f09036c
 int id detailsale 0x7f0900e0
 int id dialog_btnIMG_minus_cart 0x7f0900e1
 int id dialog_btnIMG_plus_cart 0x7f0900e2
