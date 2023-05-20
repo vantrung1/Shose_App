@@ -59,7 +59,7 @@ public class FogetPassActivity extends AppCompatActivity {
             public void onResponse(Call<User> call, Response<User> response) {
 
                 if (response.isSuccessful()) {
-                    Toast.makeText(getApplicationContext(), "them thanh cong", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "vào lại gmail của bạn để nhận mã đăng nhập", Toast.LENGTH_LONG).show();
                 } else {
                     Toast.makeText(getApplicationContext(), "them khong thanh cong", Toast.LENGTH_LONG).show();
 
