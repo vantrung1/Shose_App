@@ -35,6 +35,7 @@ drawable backgroud_circle
 drawable background_btn_dangnhap
 drawable background_btn_dangnhapgmail
 drawable background_btn_danhgia
+drawable background_btn_dialog
 drawable background_btn_red
 drawable background_buttom_sheet
 drawable background_cmt
@@ -90,6 +91,7 @@ drawable check_box_outline_blank_24
 drawable checkout
 drawable drop_down_24
 drawable edittext_no_underline
+drawable fail2
 drawable ic_delete
 drawable ic_history
 drawable ic_invalid
@@ -135,6 +137,7 @@ id RecyclerViewHome_brand
 id RecyclerView_Notification
 id SearchViewHome
 id SignUp
+id a
 id bodyLocation
 id bodyNotifi
 id bottomAppBar
@@ -159,6 +162,7 @@ id btn_create
 id btn_delivered
 id btn_delivered_repurchase
 id btn_detail_cancel
+id btn_dialog
 id btn_send_evaluate
 id btn_submit
 id btn_thaydoi
@@ -167,6 +171,7 @@ id btn_transport
 id btn_wait_for_confirm
 id btn_xacnhan
 id btncontinue
+id btnfail_dialog
 id btnloginGmail
 id ccp
 id checkbox_item_cart
@@ -202,6 +207,7 @@ id edt_add_phone
 id email_checkout
 id fab
 id fab_home
+id fail_dialog
 id filled_exposed
 id filled_exposed_address
 id history_item_delete
@@ -356,11 +362,13 @@ id soluogndanhgia
 id starId
 id start_journ
 id status
+id success_dialog
 id switch_1
 id switch_2
 id switch_3
 id switch_4
 id tab_layout
+id text2_dialog
 id textInputLayout1
 id textInputLayout2
 id textInputLayout3
@@ -380,6 +388,7 @@ id textView9
 id textViewAppSettings
 id textViewPassword
 id textViewcreateat
+id text_dialog
 id textnn
 id titleNotifi
 id titlelocatin
@@ -486,6 +495,7 @@ layout dialog_reason_cancel_oder
 layout dialog_thong_bao
 layout dialog_update_cart
 layout drop_down_item
+layout fail_dialog
 layout fragment_cancel
 layout fragment_delivered
 layout fragment_onboadrd2
@@ -518,6 +528,7 @@ layout layout_dialog_custom_phone
 layout loading
 layout rating_item
 layout search_history_item_layout
+layout success_dialog
 menu bottom_menu
 menu nav_menu
 menu profile_menu
