@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -36,13 +37,13 @@ public class OderActivity extends AppCompatActivity {
     private void initUi() {
         toolbar = findViewById(R.id.toolbar_oder);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Oder");
+        getSupportActionBar().setTitle("Đơn Hàng");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationIcon(R.drawable.icon_back);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+               startActivity(new Intent(OderActivity.this,HomeActivity.class));
             }
         });
     }

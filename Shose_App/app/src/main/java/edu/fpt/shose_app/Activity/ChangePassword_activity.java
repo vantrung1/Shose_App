@@ -1,5 +1,6 @@
 package edu.fpt.shose_app.Activity;
 
+import android.app.ProgressDialog;
 import android.app.backup.SharedPreferencesBackupHelper;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -58,6 +59,7 @@ public class ChangePassword_activity extends AppCompatActivity {
     private TextInputLayout textInputLayout2;
     private TextInputLayout textInputLayout3;
     private AppCompatButton btnthay_doi;
+    private ProgressDialog progressDialog;
     private ProgressBar progressBar;
     String userName,pass;
     private String oldPass, newPass, reNewPass;
@@ -67,8 +69,12 @@ public class ChangePassword_activity extends AppCompatActivity {
     ApiApp apiInterface;
 
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Vui lòng đợi...");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_password);
         AnhXa();
@@ -116,6 +122,7 @@ public class ChangePassword_activity extends AppCompatActivity {
 
     }
     private void updateMatKhau(String newPass) {
+        progressDialog.show();
         Utils.Users_Utils.setPassword(newPass);
         Call<loginRequest> objCall = apiInterface._updateUser(Utils.Users_Utils.getId(),Utils.Users_Utils);
         objCall.enqueue(new Callback<loginRequest>() {
@@ -123,12 +130,14 @@ public class ChangePassword_activity extends AppCompatActivity {
             public void onResponse(Call<loginRequest> call, Response<loginRequest> response) {
                 if(response.isSuccessful()){
                     Toast.makeText(getApplicationContext(),"Thay đổi thành công",Toast.LENGTH_SHORT).show();
+                    progressDialog.dismiss();
                 }
             }
 
             @Override
             public void onFailure(Call<loginRequest> call, Throwable t) {
-
+                Toast.makeText(getApplicationContext(),"Thay đổi không thành công",Toast.LENGTH_SHORT).show();
+                progressDialog.dismiss();
             }
         });
     }
