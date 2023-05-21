@@ -173,7 +173,7 @@ public class Activity_profiles extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                startActivity(new Intent(Activity_profiles.this,HomeActivity.class));
             }
         });
     }

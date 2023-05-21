@@ -144,4 +144,8 @@ public interface ApiApp {
     @GET("ratings/{id}")
 
     Call<RatingModel> getRating(@Path("id") String id);
+
+    @PUT("users/{id}")
+    @FormUrlEncoded
+    Call<loginRequest> _updateUserPhone(@Path("id") int id,@Field("phoneNumber") String user);
 }

@@ -20,6 +20,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -77,7 +78,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class HomeActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
-    SearchView SearchViewHome;
+    EditText SearchViewHome;
     RecyclerView recyclerViewBrand,recy_1_product,recy_2_product,recy_3_product;
     ArrayList<Brand> brandArrayList;
     ArrayList<Product> productArrayList;

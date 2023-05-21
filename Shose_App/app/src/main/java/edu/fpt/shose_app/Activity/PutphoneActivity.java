@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -42,6 +43,7 @@ public class PutphoneActivity extends AppCompatActivity {
     private CountryCodePicker ccp;
     private ImageView imgcheck;
     private ProgressDialog progressDialog;
+    boolean ischeck = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,10 +91,15 @@ public class PutphoneActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id == R.id.save) {
-            updateUser();
-            Intent intent =new Intent(getApplicationContext(),Activity_profiles.class);
-            startActivity(intent);
-            return true;
+            if(ischeck){
+                updateUser();
+
+
+            }
+            else {
+                Toast.makeText(getApplicationContext(), "Số Điện thoại chưa đúng", Toast.LENGTH_SHORT).show();
+            }
+
         }
 
         return super.onOptionsItemSelected(item);
@@ -123,8 +130,10 @@ public class PutphoneActivity extends AppCompatActivity {
             public void onValidityChanged(boolean isValidNumber) {
                 if(isValidNumber) {
                     imgcheck.setImageResource(R.drawable.ic_valid);
+                    ischeck = true;
                 }else{
                     imgcheck.setImageResource(R.drawable.ic_invalid);
+                    ischeck = false;
                 }
             }
         });
@@ -137,7 +146,7 @@ public class PutphoneActivity extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                startActivity(new Intent(PutphoneActivity.this,Activity_profiles.class));
             }
         });
         ed_putPhonenumber = findViewById(R.id.ed_putPhonenumber);
@@ -148,19 +157,30 @@ public class PutphoneActivity extends AppCompatActivity {
 
     //-------------
     private void updateUser() {
-        Utils.Users_Utils.setPhoneNumber(ed_putPhonenumber.getText().toString());
-        Call<loginRequest> objCall = apiInterface._updateUser(Utils.Users_Utils.getId(), Utils.Users_Utils);
+        String phonenew = "0"+ed_putPhonenumber.getText().toString();
+        Log.d("TAG", "updateUser: "+("0"+ed_putPhonenumber.getText().toString()));
+        Call<loginRequest> objCall = apiInterface._updateUserPhone(Utils.Users_Utils.getId(),phonenew.replaceAll(" ", ""));
         objCall.enqueue(new Callback<loginRequest>() {
             @Override
             public void onResponse(Call<loginRequest> call, Response<loginRequest> response) {
-                if (response.isSuccessful()) {
-                    Toast.makeText(getApplicationContext(), "Thay đổi thành công", Toast.LENGTH_SHORT).show();
+                if(response.isSuccessful()){
+                    if(response.body().getStatus().equals("200")){
+                        Utils.Users_Utils = response.body().getData();
+                        Toast.makeText(getApplicationContext(),"Thay đổi thành công",Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(PutphoneActivity.this,Activity_profiles.class));
+                    }
+                    else {
+                        Log.d("TAG", "sadsadsadasd: ");
+                    }
+                }
+                else {
+                    Log.d("TAG", "onResponse: "+12321312);
                 }
             }
 
             @Override
             public void onFailure(Call<loginRequest> call, Throwable t) {
-
+                Log.d("TAG", "onFailure: "+t.getLocalizedMessage());
             }
         });
     }

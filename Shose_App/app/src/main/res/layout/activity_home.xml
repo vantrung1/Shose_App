@@ -56,10 +56,12 @@
                     android:orientation="vertical"
                     android:layout_height="match_parent">
 
-                    <androidx.appcompat.widget.SearchView
+                    <EditText
+                        android:background="@drawable/edittext_no_underline"
                         android:layout_margin="10dp"
                         android:id="@+id/SearchViewHome"
                         android:hint="Looking for shoes"
+                        android:drawableLeft="@drawable/baseline_search_24"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                     <androidx.recyclerview.widget.RecyclerView
