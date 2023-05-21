@@ -75,7 +75,7 @@ public class ProductAdapter3 extends RecyclerView.Adapter<ProductAdapter3.myview
         else {
             holder.status.setVisibility(View.INVISIBLE);
         }
-        holder.itemproduct_name.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(context, ProductDetailActivity.class);

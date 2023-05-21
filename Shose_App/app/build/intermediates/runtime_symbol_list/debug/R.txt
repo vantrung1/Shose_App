@@ -4154,6 +4154,7 @@ int id simpleRatingBar2 0x7f0902ef
 int id sin 0x7f0902f0
 int id sizeItem 0x7f0902f1
 int id size_name 0x7f0902f2
+int id sizemsamd 0x7f0903d4
 int id skipCollapsed 0x7f0902f3
 int id skipped 0x7f0902f4
 int id slide 0x7f0902f5
@@ -4163,6 +4164,7 @@ int id snackbar_text 0x7f0902f8
 int id snap 0x7f0902f9
 int id snapMargins 0x7f0902fa
 int id soluogndanhgia 0x7f0902fb
+int id soluongdaban 0x7f0903d5
 int id south 0x7f0902fc
 int id spacer 0x7f0902fd
 int id special_effects_controller_view_tag 0x7f0902fe
@@ -4312,6 +4314,7 @@ int id tvThongBao 0x7f09038d
 int id tvTitleFav 0x7f09038e
 int id tv_badge_text 0x7f09038f
 int id txt000 0x7f090390
+int id txtDaban 0x7f0903d6
 int id txtInputLayout1 0x7f090391
 int id txtInputLayout2 0x7f090392
 int id txt_UPdate 0x7f090393

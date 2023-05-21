@@ -148,4 +148,6 @@ public interface ApiApp {
     @PUT("users/{id}")
     @FormUrlEncoded
     Call<loginRequest> _updateUserPhone(@Path("id") int id,@Field("phoneNumber") String user);
+    @GET("oder_status/{status}")
+    Call<OderRequest> getOderAll(@Path("status") int status);
 }
