@@ -129,17 +129,20 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void CheckLogin() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Thông Báo");
-        builder.setMessage("Bạn Chưa Đăng Nhập?");
-        builder.setPositiveButton("Đăng Nhập", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                startActivity(new Intent(HomeActivity.this,SignInActivity.class));
-            }
-        });
+        if(Utils.Users_Utils == null){
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Thông Báo");
+            builder.setMessage("Bạn Chưa Đăng Nhập?");
+            builder.setPositiveButton("Đăng Nhập", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    startActivity(new Intent(HomeActivity.this,SignInActivity.class));
+                }
+            });
 
-        builder.show();
+            builder.show();
+        }
+
     }
 
     private void getcart() {
@@ -503,4 +506,5 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
     }
+
 }
