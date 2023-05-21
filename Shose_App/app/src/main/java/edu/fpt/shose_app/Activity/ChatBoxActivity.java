@@ -2,9 +2,14 @@ package edu.fpt.shose_app.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -25,6 +30,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import android.Manifest;
 
 import edu.fpt.shose_app.Adapter.ChatAdapter;
 import edu.fpt.shose_app.Model.ChatMessage;
@@ -40,27 +46,47 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ChatBoxActivity extends AppCompatActivity {
+
     RecyclerView recyclerView;
-    ImageView imgsend;
+    ImageView imgsend,img_phonenumber;
     EditText edMess;
 
     FirebaseFirestore db;
     Toolbar toolbar;
     ChatAdapter adapter;
     List<ChatMessage> list;
+    private static final int CALL_PHONE_REQUEST_CODE = 1;
+    private static final String DEFAULT_PHONE_NUMBER = "1234567890";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat_box);
         recyclerView = findViewById(R.id.recycleview_boxchat);
         imgsend = findViewById(R.id.img_btnchat);
+        img_phonenumber = findViewById(R.id.img_phonenumber);
+        img_phonenumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (ContextCompat.checkSelfPermission(ChatBoxActivity.this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(ChatBoxActivity.this, new String[]{Manifest.permission.CALL_PHONE}, CALL_PHONE_REQUEST_CODE);
+                } else {
+                    // Intent để khởi chạy ứng dụng gọi điện thoại
+                    String phoneNumber = "tel:" + DEFAULT_PHONE_NUMBER;
+                    Intent callIntent = new Intent(Intent.ACTION_CALL);
+                    callIntent.setData(Uri.parse(phoneNumber));
+                    startActivity(callIntent);
+                }
+
+            }
+        });
+
         edMess = findViewById(R.id.ed_inputext);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
         db = FirebaseFirestore.getInstance();
         list = new ArrayList<>();
-        adapter = new ChatAdapter(getApplicationContext(),list,String.valueOf(Utils.Users_Utils.getId()));
+        adapter = new ChatAdapter(getApplicationContext(), list, String.valueOf(Utils.Users_Utils.getId()));
         recyclerView.setAdapter(adapter);
         toolbar = findViewById(R.id.toobarchatbox);
 
@@ -77,7 +103,7 @@ public class ChatBoxActivity extends AppCompatActivity {
         });
         initControl();
         listenmess();
-     //   insertUser();
+        //   insertUser();
     }
     private void insertUser(String body, String time){
         HashMap<String, Object> user = new HashMap<>();

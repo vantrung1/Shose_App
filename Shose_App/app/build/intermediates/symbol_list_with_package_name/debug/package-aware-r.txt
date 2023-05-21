@@ -3371,6 +3371,7 @@ drawable notify_panel_notification_icon_bg
 drawable onboard1
 drawable onboard2
 drawable onboard3
+drawable phone
 drawable product
 drawable shadow
 drawable star_border_yellow
@@ -3839,6 +3840,7 @@ id img_clear_query
 id img_close
 id img_detail
 id img_dismiss
+id img_phonenumber
 id img_update_cart
 id img_update_mail
 id img_update_phone
