@@ -1,5 +1,6 @@
 package edu.fpt.shose_app.Activity;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -7,6 +8,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -31,13 +33,16 @@ public class FogetPassActivity extends AppCompatActivity {
     ApiApp apiApp;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
     ProgressBar progressBar ;
-
-
+    Toolbar toolbar;
+    private ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_foget_pass);
         anhxa();
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Vui lòng đợi...");
+
         Gson gson = new GsonBuilder().setLenient().create();
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Utils.BASE_URL_API)
@@ -52,7 +57,7 @@ public class FogetPassActivity extends AppCompatActivity {
         });
     }
     void initcontrol(String email) {
-
+        progressDialog.show();
         Call<User> objCall = apiApp._forgotpassword(email);
         objCall.enqueue(new Callback<User>() {
             @Override
@@ -60,9 +65,10 @@ public class FogetPassActivity extends AppCompatActivity {
 
                 if (response.isSuccessful()) {
                     Toast.makeText(getApplicationContext(), "vào lại gmail của bạn để nhận mã đăng nhập", Toast.LENGTH_LONG).show();
+                    progressDialog.dismiss();
                 } else {
                     Toast.makeText(getApplicationContext(), "them khong thanh cong", Toast.LENGTH_LONG).show();
-
+                    progressDialog.dismiss();
                 }
             }
 
@@ -70,6 +76,7 @@ public class FogetPassActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<User> call, Throwable t) {
                 Toast.makeText(getApplicationContext(), "Error Sever", Toast.LENGTH_LONG).show();
+                progressDialog.dismiss();
             }
         });
     }
@@ -96,7 +103,17 @@ public class FogetPassActivity extends AppCompatActivity {
 
 
     private void anhxa(){
-
+        toolbar = findViewById(R.id.toolbarabc);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Thông tin");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationIcon(R.drawable.icon_back);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         progressBar = findViewById(R.id.progressBar);
         txt1 = findViewById(R.id.textInputLayout1);
         email = findViewById(R.id.edEmail);
