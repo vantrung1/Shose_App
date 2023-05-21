@@ -2912,6 +2912,7 @@ drawable backgroud_circle
 drawable background_btn_dangnhap
 drawable background_btn_dangnhapgmail
 drawable background_btn_danhgia
+drawable background_btn_dialog
 drawable background_btn_red
 drawable background_buttom_sheet
 drawable background_cmt
@@ -3000,6 +3001,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable drop_down_24
 drawable edittext_no_underline
+drawable fail2
 drawable fastscroll__default_bubble
 drawable fastscroll__default_handle
 drawable flag_afghanistan
@@ -3509,6 +3511,7 @@ id VOICEMAIL
 id VOIP
 id WanderingCubes
 id Wave
+id a
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -3624,6 +3627,7 @@ id btn_create
 id btn_delivered
 id btn_delivered_repurchase
 id btn_detail_cancel
+id btn_dialog
 id btn_send_evaluate
 id btn_submit
 id btn_thaydoi
@@ -3632,6 +3636,7 @@ id btn_transport
 id btn_wait_for_confirm
 id btn_xacnhan
 id btncontinue
+id btnfail_dialog
 id btnloginGmail
 id buttonPanel
 id cache_measures
@@ -3756,6 +3761,7 @@ id expanded_menu
 id fab
 id fab_home
 id fade
+id fail_dialog
 id fastscroll
 id fill
 id fill_horizontal
@@ -4185,6 +4191,7 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id success_dialog
 id supportScrollUp
 id switch_1
 id switch_2
@@ -4207,6 +4214,7 @@ id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
 id text
 id text2
+id text2_dialog
 id textEnd
 id textInputLayout1
 id textInputLayout2
@@ -4236,6 +4244,7 @@ id textView_noresult
 id textView_selectedCountry
 id textView_title
 id textViewcreateat
+id text_dialog
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -4532,6 +4541,7 @@ layout dialog_reason_cancel_oder
 layout dialog_thong_bao
 layout dialog_update_cart
 layout drop_down_item
+layout fail_dialog
 layout fastscroll__default_bubble
 layout fragment_cancel
 layout fragment_delivered
@@ -4630,6 +4640,7 @@ layout search_history_item_layout
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout success_dialog
 layout support_simple_spinner_dropdown_item
 layout ucrop_activity_photobox
 layout ucrop_aspect_ratio
