@@ -68,7 +68,7 @@ public class ProductDetailActivity extends AppCompatActivity {
     Retrofit retrofit;
     Gson gson;
     ApiApp apiInterface;
-    List<SizeRequest.SizeQuantity> sizeQuantityList;
+    List<SizeRequest.SizeQuantity> sizeQuantityList =new ArrayList<>();
     TextView danhhia,soluogndanhgia,txt000;
     Float sodanhgia = Float.valueOf(0); ;
     Float saotrungbinh = Float.valueOf(0);
@@ -80,6 +80,8 @@ public class ProductDetailActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sizeQuantityList = new ArrayList<>();
+        sizeAdapter = new sizeAdapter(this,sizeQuantityList);
         setContentView(R.layout.activity_product_detail);
         product= (Product) getIntent().getSerializableExtra("product");
         gson = new GsonBuilder().setLenient().create();
@@ -90,11 +92,12 @@ public class ProductDetailActivity extends AppCompatActivity {
 
         apiInterface = retrofit.create(ApiApp.class);
         getRating(product.getId()+"");
+        getQuantilySize(product.getId());
         initiu();
         initactionbar();
         initAction();
-        getQuantilySize(product.getId());
-        sizeQuantityList = new ArrayList<>();
+
+
     }
 
     private void getQuantilySize(int id) {
@@ -106,6 +109,7 @@ public class ProductDetailActivity extends AppCompatActivity {
                 if(response.isSuccessful()){
                     SizeRequest sizeRequest = response.body();
                     sizeQuantityList = sizeRequest.getData();
+                    sizeAdapter.setSizeList(sizeQuantityList);
                 }
             }
 
@@ -223,7 +227,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         }
 
         imageAdapter = new imageAdapter(this, imageUrls);
-        sizeAdapter = new sizeAdapter(this, sizeList);
+        sizeAdapter = new sizeAdapter(this, sizeQuantityList);
         recyImage.setAdapter(imageAdapter);
         recySize.setAdapter(sizeAdapter);
         setsl();

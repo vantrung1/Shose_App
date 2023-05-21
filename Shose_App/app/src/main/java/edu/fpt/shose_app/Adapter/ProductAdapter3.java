@@ -69,7 +69,12 @@ public class ProductAdapter3 extends RecyclerView.Adapter<ProductAdapter3.myview
        // Log.d("TAG", "onBindViewHolder: "+myObjects.get(0).getImage());
         holder.itemproduct_name.setText(productArrayList.get(i).getName());
         holder.itemproduct_price.setText(new DecimalFormat("###,###,### VNĐ").format(productArrayList.get(i).getPrice()));
-
+        if(productArrayList.get(i).getQuantity()==null||productArrayList.get(i).getQuantity().equals("0")){
+            holder.status.setVisibility(View.VISIBLE);
+        }
+        else {
+            holder.status.setVisibility(View.INVISIBLE);
+        }
         holder.itemproduct_name.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,7 +110,7 @@ public class ProductAdapter3 extends RecyclerView.Adapter<ProductAdapter3.myview
                         if(response.isSuccessful()){
                             SizeRequest sizeRequest = response.body();
                             sizeQuantityList = sizeRequest.getData();
-                            dialogProduct dialog = new dialogProduct(context,productArrayList.get(i),new sizeAdapter(context, sizeList),sizeQuantityList);
+                            dialogProduct dialog = new dialogProduct(context,productArrayList.get(i),new sizeAdapter(context, sizeQuantityList),sizeQuantityList);
                             dialog.show();
                             dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -131,12 +136,13 @@ public class ProductAdapter3 extends RecyclerView.Adapter<ProductAdapter3.myview
 
     public class myviewHolder extends RecyclerView.ViewHolder  {
         ImageView itemproduct_img,itemClickFav;
-        TextView itemproduct_name,itemproduct_price;
+        TextView itemproduct_name,itemproduct_price,status;
          OnItemClickListener onItemClickListener;
         public myviewHolder(@NonNull View itemView) {
             super(itemView);
             itemproduct_img = itemView.findViewById(R.id.item_product_image);
             itemClickFav = itemView.findViewById(R.id.itemclcik);
+            status = itemView.findViewById(R.id.status);
             itemproduct_name = itemView.findViewById(R.id.item_product_name);
             itemproduct_price = itemView.findViewById(R.id.item_product_price);
         }

@@ -13,19 +13,27 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import org.greenrobot.eventbus.EventBus;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import edu.fpt.shose_app.Model.SizeRequest;
 import edu.fpt.shose_app.dialogModel.EventBus.SizeEvent;
 import edu.fpt.shose_app.Model.Size;
 import edu.fpt.shose_app.R;
 
 public class sizeAdapter extends RecyclerView.Adapter<sizeAdapter.MyViewHolder> {
     private Context context;
-    private List<Size > sizeList;
+    private List<SizeRequest.SizeQuantity> sizeList;
     private int ischeckPostion = 0;
-    public sizeAdapter(Context context, List<edu.fpt.shose_app.Model.Size> sizeList) {
+    public sizeAdapter(Context context, List<SizeRequest.SizeQuantity> sizeList) {
         this.context = context;
         this.sizeList = sizeList;
+    }
+
+    public void setSizeList(List<SizeRequest.SizeQuantity> sizeList1) {
+        this.sizeList = new ArrayList<>();
+        this.sizeList = sizeList1;
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -40,9 +48,9 @@ public class sizeAdapter extends RecyclerView.Adapter<sizeAdapter.MyViewHolder> 
     public void onBindViewHolder(@NonNull sizeAdapter.MyViewHolder holder, int position) {
             holder.bind(sizeList.get(position));
     }
-    public String getSelected(){
+    public SizeRequest.SizeQuantity getSelected(){
         if(ischeckPostion != -1){
-            return sizeList.get(ischeckPostion).getSize();
+            return sizeList.get(ischeckPostion);
         }
         else {
             return null;
@@ -59,7 +67,7 @@ public class sizeAdapter extends RecyclerView.Adapter<sizeAdapter.MyViewHolder> 
             super(itemView);
             textView = itemView.findViewById(R.id.size_name);
         }
-        void bind(edu.fpt.shose_app.Model.Size size){
+        void bind(SizeRequest.SizeQuantity size){
             textView.setText(size.getSize());
             if(ischeckPostion == -1){
 

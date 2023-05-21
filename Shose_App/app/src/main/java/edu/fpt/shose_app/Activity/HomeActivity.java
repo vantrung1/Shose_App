@@ -118,7 +118,7 @@ public class HomeActivity extends AppCompatActivity {
         productAdapter = new ProductAdapter(this,productArrayList);
         productAdapter2 = new ProducAdapter2(this,productArrayList);
         productAdapter3 = new ProductAdapter3(this,productArrayList);
-
+        CheckLogin();
         initUi();
         initAction();
         initHeader();
@@ -126,6 +126,20 @@ public class HomeActivity extends AppCompatActivity {
 //        startAutoScroll();
 //        stopAutoScroll();
         getcart();
+    }
+
+    private void CheckLogin() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Thông Báo");
+        builder.setMessage("Bạn Chưa Đăng Nhập?");
+        builder.setPositiveButton("Đăng Nhập", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                startActivity(new Intent(HomeActivity.this,SignInActivity.class));
+            }
+        });
+
+        builder.show();
     }
 
     private void getcart() {

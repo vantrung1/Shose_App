@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Paint;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -59,7 +60,7 @@ public class dialogProduct extends Dialog {
     }
     private void setquantity(){
         for (SizeRequest.SizeQuantity sizeQuantity : sizeQuantityList){
-            if(sizeQuantity.getSize().equals(adapter.getSelected())){
+            if(sizeQuantity.getSize().equals(adapter.getSelected().getSize())){
 
                 if (sizeQuantity.getQuantity()== null) {
                     txt_quantity.setText("Hết hàng");
@@ -70,11 +71,12 @@ public class dialogProduct extends Dialog {
                         txt_quantity.setText("Hết hàng");
                     return;
                     }
-                }else {
+                else {
                     quantity= Integer.parseInt(sizeQuantity.getQuantity());
                     txt_quantity.setText("Kho: "+quantity);
+                    Log.d("TAG", "setquantity: "+quantity);
                 }
-
+            }
         }
     }
     public dialogProduct(@NonNull Context context, Product product, sizeAdapter sizeAdapter,List<SizeRequest.SizeQuantity> sizeQuantityLists) {
@@ -144,11 +146,16 @@ public class dialogProduct extends Dialog {
         appCompatButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(adapter.getSelected().getQuantity() == null){
+                    Toast.makeText(context,"Hết hàng",Toast.LENGTH_SHORT).show();
+                    return;
+                } else if (adapter.getSelected().getQuantity().equals("0")) {
+                    Toast.makeText(context,"Hết hàng",Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 boolean flag=false;
-
-
                 for(Cart cart: Utils.cartLists){
-                        if( cart.getIdProduct() == product.getId()&&cart.getSize() == Integer.parseInt(adapter.getSelected())){
+                        if( cart.getIdProduct() == product.getId()&&cart.getSize() == Integer.parseInt(adapter.getSelected().getSize())){
                             int sl =cart.getQuantity()+soluong;
                             cart.setQuantity(sl);
                             flag = true;
@@ -158,7 +165,7 @@ public class dialogProduct extends Dialog {
                         }
                 }
                 if(flag == false){
-                    Utils.cartLists.add(new Cart(product.getId(),product.getImage().get(0).get("image1").getName(),product.getName(),product.getPrice(),soluong,product.getColor(),Integer.parseInt(adapter.getSelected()),product.getSale(),false));
+                    Utils.cartLists.add(new Cart(product.getId(),product.getImage().get(0).get("image1").getName(),product.getName(),product.getPrice(),soluong,product.getColor(),Integer.parseInt(adapter.getSelected().getSize()),product.getSale(),false));
                     Intent i =new Intent(context, MyCartActivity.class);
                     dismiss();
                     context.startActivity(i);
