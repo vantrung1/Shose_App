@@ -100,7 +100,7 @@ public class Activity_profiles extends AppCompatActivity {
                             String imageUrl = downloadUri.toString();
                             // Xử lý URL của ảnh tải lên Firebase Storage
                             Utils.Users_Utils.setAvatar(imageUrl);
-                            updateUser(Utils.Users_Utils.getId(),Utils.Users_Utils);//
+                            updateUser(Utils.Users_Utils.getId(), Utils.Users_Utils);//
                             Glide.with(getApplicationContext()).load(imageUrl).placeholder(R.drawable.image_profile).into(profile_image);
 
                         }
@@ -173,7 +173,7 @@ public class Activity_profiles extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Activity_profiles.this,HomeActivity.class));
+                startActivity(new Intent(Activity_profiles.this, HomeActivity.class));
             }
         });
     }
@@ -196,7 +196,7 @@ public class Activity_profiles extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), PutnameActivity.class);
-                intent.putExtra("putname",Utils.Users_Utils.getName());
+                intent.putExtra("putname", Utils.Users_Utils.getName());
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
@@ -207,15 +207,12 @@ public class Activity_profiles extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), PutphoneActivity.class);
-                intent.putExtra("putphone",Utils.Users_Utils.getPhoneNumber());
+                intent.putExtra("putphone", Utils.Users_Utils.getPhoneNumber());
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
         });
         //-------------------------
-
-
-
 //-----------
         tvTen.setText(Utils.Users_Utils.getName());
         tvEmail.setText(Utils.Users_Utils.getEmail());

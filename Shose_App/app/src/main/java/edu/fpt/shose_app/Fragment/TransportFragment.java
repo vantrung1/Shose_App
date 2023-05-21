@@ -1,5 +1,6 @@
 package edu.fpt.shose_app.Fragment;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -45,7 +46,6 @@ public class TransportFragment extends Fragment implements ImageClickr {
     TransportAtapter transportAtapter;
     TextView txta;
     RecyclerView recy_transport;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -93,11 +93,11 @@ public class TransportFragment extends Fragment implements ImageClickr {
                     OderRequest oderRequest = response.body();
 //                    oderArrayList.clear();
                     oderArrayList = oderRequest.getData();
-//                    if (oderArrayList.size() == 0) {
-//                        txta.setVisibility(View.VISIBLE);
-//                    } else {
-//                        txta.setVisibility(View.INVISIBLE);
-//                    }
+                    if (oderArrayList.size() == 0) {
+                        txta.setVisibility(View.VISIBLE);
+                    } else {
+                        txta.setVisibility(View.INVISIBLE);
+                    }
 
                     Log.d("zzzzzz", "onResponse: " + oderArrayList.size());
                     transportAtapter.setorderlist(oderArrayList);

@@ -177,7 +177,8 @@ public class Check_Out_MainActivity extends AppCompatActivity {
         btn_payment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!validatePhoneNumber(phonecheckout.getText().toString())){
+                if (!validatePhoneNumber(phonecheckout.getText().toString()) | phonecheckout.length() == 0) {
+                    Toast.makeText(getApplicationContext(), "Nhập số điện thoại", Toast.LENGTH_LONG).show();
                     return;
                 }
                 Log.d("TAG", "onClick: " + PaymentAmount);

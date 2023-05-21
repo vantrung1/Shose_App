@@ -4,28 +4,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.app.Dialog;
+
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Paint;
+
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
-import android.widget.CheckBox;
+
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
+
 
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.gson.Gson;
@@ -33,27 +34,21 @@ import com.google.gson.GsonBuilder;
 
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
+
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 import edu.fpt.shose_app.Adapter.Products_Oder_Adapter;
 import edu.fpt.shose_app.Interface.ImageClickr;
 import edu.fpt.shose_app.Model.FCMRequest;
-import edu.fpt.shose_app.Model.Image;
+
 import edu.fpt.shose_app.Model.NotiResponse;
 import edu.fpt.shose_app.Model.Oder;
-import edu.fpt.shose_app.Model.OderRequest;
 import edu.fpt.shose_app.Model.Product;
-import edu.fpt.shose_app.Model.Products_Oder;
-import edu.fpt.shose_app.Model.Size;
-import edu.fpt.shose_app.Model.SizeRequest;
 import edu.fpt.shose_app.R;
 import edu.fpt.shose_app.Retrofit.ApiApp;
 import edu.fpt.shose_app.Retrofit.PostNotifi;
 import edu.fpt.shose_app.Utils.Utils;
-import edu.fpt.shose_app.dialogModel.dialogProduct;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -68,7 +63,7 @@ public class CancelOderBtnActivity extends AppCompatActivity implements ImageCli
     Gson gson;
     ApiApp apiInterface;
     Toolbar toolbar;
-    TextView txtNameUser, txtPhone, txtAddress, txtPaymentAmount, txtNameProduct, txtAttributes, txtQuantity, txtPrice, txtsale, txtTotal, txtCreateAt, txtTotal2;
+    TextView txtNameUser, txtPhone, txtAddress, txtPaymentAmount, txtTotal, txtCreateAt, txtTotal2;
     AppCompatButton btnChat, btnCancel;
     String selectedValue ="";
     RadioGroup radioGroup;
@@ -77,6 +72,7 @@ public class CancelOderBtnActivity extends AppCompatActivity implements ImageCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cancel_oder_btn);
+
         oder = (Oder) getIntent().getSerializableExtra("oderConfirm");
         gson = new GsonBuilder().setLenient().create();
         retrofit = new Retrofit.Builder()
@@ -132,7 +128,7 @@ public class CancelOderBtnActivity extends AppCompatActivity implements ImageCli
         txtNameUser.setText(oder.getName());
         txtPhone.setText(oder.getNumber());
         txtPaymentAmount.setText(oder.getPaymentAmount());
-        txtCreateAt.setText(oder.getTimeUTCCreate());
+        txtCreateAt.setText(oder.getCreated_at());
         txtAddress.setText(oder.getAddress_id());
        // txtTotal2.setText(oder.getTotal());
         txtTotal.setText(new DecimalFormat("###,###,### VNĐ").format(Integer.parseInt(oder.getTotal())));
@@ -201,6 +197,7 @@ public class CancelOderBtnActivity extends AppCompatActivity implements ImageCli
             public void onResponse(Call<Oder> call, Response<Oder> response) {
                 if (response.isSuccessful()) {
                    // Oder oder = response.body();
+
                     seNotification("admin",Utils.tokenadmin,"Thông báo đơn hàng","Đơn Hàng "+oder.getOder_id()+" đã được hủy bởi khách hàng");
                 }
             }

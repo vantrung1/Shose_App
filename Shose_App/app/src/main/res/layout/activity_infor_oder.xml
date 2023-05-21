@@ -185,15 +185,16 @@
                         android:textColor="@color/xam" />
 
                     <TextView
-                        android:id="@+id/txt_createAt"
+                        android:maxLength="10"
+                        android:id="@+id/txt_createAtt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:gravity="right"
-                        android:maxLength="19"
                         android:text="19-04-2023 17:30"
                         android:textColor="@color/xam" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -206,19 +207,20 @@
                         android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
                         android:layout_weight="2"
-                        android:text="THời gian cập nhật"
+                        android:text="Thời gian cập nhật"
                         android:textColor="@color/xam" />
 
                     <TextView
-                        android:id="@+id/txt_UPdate"
+                        android:id="@+id/txt_UPdatee"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:gravity="right"
-                        android:maxLength="19"
+                        android:maxLength="10"
                         android:text="19-04-2023 17:30"
                         android:textColor="@color/xam" />
                 </LinearLayout>
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -233,6 +235,7 @@
                     android:gravity="right"
                     android:orientation="vertical"
                     android:weightSum="3">
+
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btn_chat_infor"
                         android:layout_width="match_parent"
@@ -243,6 +246,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/black"
                         android:textSize="18sp" />
+
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/btnNhanHang"
                         android:layout_width="match_parent"

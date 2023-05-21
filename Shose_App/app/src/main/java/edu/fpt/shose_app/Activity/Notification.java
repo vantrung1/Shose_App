@@ -104,7 +104,7 @@ public class Notification extends AppCompatActivity {
         progressDialog.show();
         toolbar = findViewById(R.id.toolbar_notification);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Notification");
+        getSupportActionBar().setTitle("Thông báo");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationIcon(R.drawable.icon_back);
 

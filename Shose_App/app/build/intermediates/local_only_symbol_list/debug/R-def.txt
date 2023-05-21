@@ -37,6 +37,7 @@ drawable background_btn_dangnhapgmail
 drawable background_btn_danhgia
 drawable background_btn_dialog
 drawable background_btn_red
+drawable background_btn_xam
 drawable background_buttom_sheet
 drawable background_cmt
 drawable background_custombtn
@@ -113,6 +114,7 @@ drawable itemclick
 drawable loading
 drawable location_24
 drawable logo
+drawable logo2
 drawable logoapp
 drawable mess_boxchat
 drawable mess_inputtextback
@@ -432,10 +434,11 @@ id txt000
 id txtDaban
 id txtInputLayout1
 id txtInputLayout2
-id txt_UPdate
+id txt_UPdatee
 id txt_address_users
 id txt_attributes_evaluate
 id txt_createAt
+id txt_createAtt
 id txt_feedback
 id txt_mess1
 id txt_mess2

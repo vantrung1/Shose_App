@@ -1,5 +1,6 @@
 package edu.fpt.shose_app.Fragment;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -82,14 +83,14 @@ public class WaitForConfirmationFragment extends Fragment implements ImageClickr
                 .build();
         apiInterface = retrofit.create(ApiApp.class);
         oderArrayList = new ArrayList<>();
-        get_oder(Utils.Users_Utils.getId(),1);
+        get_oder(Utils.Users_Utils.getId(), 1);
 
-        oderAdapter = new OderAdapter(getActivity(), oderArrayList,this);
+        oderAdapter = new OderAdapter(getActivity(), oderArrayList, this);
         recy_wait_for.setAdapter(oderAdapter);
     }
 
     private void get_oder(int id, int status) {
-        Call<OderRequest> objGetOder = apiInterface.getOder(id,status);
+        Call<OderRequest> objGetOder = apiInterface.getOder(id, status);
         // thực hiện gọi
         objGetOder.enqueue(new Callback<OderRequest>() {
             @Override
@@ -116,16 +117,17 @@ public class WaitForConfirmationFragment extends Fragment implements ImageClickr
 
         });
     }
-    public void getProduct(int id){
+
+    public void getProduct(int id) {
 
         Call<List<Product>> objGetOder = apiInterface.getProduct(id);
         objGetOder.enqueue(new Callback<List<Product>>() {
             @Override
             public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
-                if(response.isSuccessful()){
+                if (response.isSuccessful()) {
                     Product products = response.body().get(0);
-                    Intent intent=new Intent(getContext(), ProductDetailActivity.class);
-                    intent.putExtra("product",products);
+                    Intent intent = new Intent(getContext(), ProductDetailActivity.class);
+                    intent.putExtra("product", products);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     getContext().startActivity(intent);
                 }
@@ -143,5 +145,5 @@ public class WaitForConfirmationFragment extends Fragment implements ImageClickr
         getProduct(position);
 
     }
-    
+
 }

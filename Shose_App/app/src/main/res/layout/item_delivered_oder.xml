@@ -6,13 +6,15 @@
     android:background="@drawable/background_item_my_cart"
     android:elevation="8dp"
     android:orientation="vertical">
+
     <TextView
-        android:paddingStart="10dp"
         android:id="@+id/idoder"
-        android:layout_alignParentRight="true"
-        android:text="Đơn Hàng 30"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp"
+        android:paddingStart="10dp"
+        android:text="Đơn Hàng 30" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recy_delivered"
@@ -22,10 +24,10 @@
 
     <TextView
         android:id="@+id/txt_show_more"
-        android:layout_margin="5dp"
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:gravity="center"
         android:text="Xem thêm sản phẩm" />
 
     <ImageView
@@ -134,7 +136,6 @@
             android:textSize="18sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:visibility="gone"
             android:id="@+id/btn_delivered_repurchase"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -144,6 +145,7 @@
             android:text="Mua lại"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:visibility="gone" />
     </LinearLayout>
 </LinearLayout>
