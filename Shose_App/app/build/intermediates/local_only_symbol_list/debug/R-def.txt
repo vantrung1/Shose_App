@@ -355,6 +355,7 @@ id smart_gorge
 id soluogndanhgia
 id starId
 id start_journ
+id status
 id switch_1
 id switch_2
 id switch_3
