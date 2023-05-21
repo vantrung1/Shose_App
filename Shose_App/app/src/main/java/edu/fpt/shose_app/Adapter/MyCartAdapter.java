@@ -134,6 +134,7 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.myViewHold
                     TextView txt_price = dialog.findViewById(R.id.txt_price);
                     TextView txt_sale = dialog.findViewById(R.id.txt_sale);
                     TextView txt_quantity = dialog.findViewById(R.id.txt_quantity);
+                    TextView sizemsamd = dialog.findViewById(R.id.sizemsamd);
                     TextView txt_quantity_cart_update = dialog.findViewById(R.id.dialog_txt_quantity_cart_update);
 
                    // RecyclerView recycler_dialog_color = dialog.findViewById(R.id.recycler_dialog_color);
@@ -145,6 +146,7 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.myViewHold
                     txt_price.setPaintFlags(txt_price.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
                     txt_sale.setText(holder.txt_sale_cart.getText());
                     txt_quantity_cart_update.setText(holder.txt_quantity_cart.getText());
+                    sizemsamd.setText("Size: "+cart.getSize());
 
                     img_close.setOnClickListener(new View.OnClickListener() {
                         @Override

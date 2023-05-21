@@ -38,6 +38,8 @@ import java.util.Map;
 
 import edu.fpt.shose_app.Adapter.imageAdapter;
 import edu.fpt.shose_app.Adapter.sizeAdapter;
+import edu.fpt.shose_app.Model.Oder;
+import edu.fpt.shose_app.Model.Products_Oder;
 import edu.fpt.shose_app.Model.RatingModel;
 import edu.fpt.shose_app.dialogModel.EventBus.ImageEvent;
 import edu.fpt.shose_app.dialogModel.EventBus.SizeEvent;
@@ -69,7 +71,7 @@ public class ProductDetailActivity extends AppCompatActivity {
     Gson gson;
     ApiApp apiInterface;
     List<SizeRequest.SizeQuantity> sizeQuantityList =new ArrayList<>();
-    TextView danhhia,soluogndanhgia,txt000;
+    TextView danhhia,soluogndanhgia,txt000,soluongdabantext;
     Float sodanhgia = Float.valueOf(0); ;
     Float saotrungbinh = Float.valueOf(0);
     String saotrungbinhs = "0";
@@ -77,6 +79,7 @@ public class ProductDetailActivity extends AppCompatActivity {
     RatingModel ratingModel;
     FrameLayout frameLayout;
     NotificationBadge notificationBadge;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,11 +96,28 @@ public class ProductDetailActivity extends AppCompatActivity {
         apiInterface = retrofit.create(ApiApp.class);
         getRating(product.getId()+"");
         getQuantilySize(product.getId());
+
         initiu();
         initactionbar();
         initAction();
+        getSoLuong();
 
+    }
 
+    private void getSoLuong() {
+        List<Products_Oder> products_oders = new ArrayList<>();
+        int soluongdaban = 0 ;
+        for(Oder oder :Utils.oderArrayList){
+            for(Products_Oder oder1: oder.getProducts()){
+                products_oders.add(oder1);
+            }
+        }
+        for(Products_Oder oder: products_oders){
+            if(oder.getProduct_id() == product.getId()){
+                soluongdaban = soluongdaban+ oder.getQuantity();
+            }
+        }
+        soluongdabantext.setText("Đã Bán: "+ soluongdaban);
     }
 
     private void getQuantilySize(int id) {
@@ -172,6 +192,7 @@ public class ProductDetailActivity extends AppCompatActivity {
     private void initiu() {
         frameLayout = findViewById(R.id.layoutGioHang_detail);
         notificationBadge = findViewById(R.id.menuSldt);
+        soluongdabantext = findViewById(R.id.soluongdaban);
         txtName = findViewById(R.id.detailname);
         txtkho = findViewById(R.id.detailquantity);
         txtDesc = findViewById(R.id.detailDesc);

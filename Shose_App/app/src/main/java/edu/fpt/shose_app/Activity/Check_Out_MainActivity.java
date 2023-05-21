@@ -1,111 +1,112 @@
 
-        package edu.fpt.shose_app.Activity;
+package edu.fpt.shose_app.Activity;
 
-        import android.annotation.SuppressLint;
-        import android.app.Dialog;
-      //  import android.app.Notification;
-        import android.app.NotificationManager;
-        import android.content.Context;
-        import android.content.Intent;
-        import android.graphics.Bitmap;
-        import android.graphics.BitmapFactory;
-        import android.graphics.Color;
-        import android.graphics.drawable.ColorDrawable;
-        import android.os.Bundle;
-        import android.os.StrictMode;
-        import android.text.InputType;
-        import android.text.TextUtils;
-        import android.util.Log;
-        import android.view.Gravity;
-        import android.view.View;
-        import android.view.ViewGroup;
-        import android.view.Window;
-        import android.view.WindowManager;
-        import android.widget.AdapterView;
-        import android.widget.ArrayAdapter;
-        import android.widget.AutoCompleteTextView;
-        import android.widget.Button;
-        import android.widget.EditText;
-        import android.widget.TextView;
-        import android.widget.Toast;
-        //import com.google.firebase.messaging.Notification;
-        import androidx.appcompat.app.AppCompatActivity;
-        import androidx.appcompat.widget.AppCompatButton;
-        import androidx.appcompat.widget.Toolbar;
-        import androidx.core.app.NotificationCompat;
-        import androidx.core.app.NotificationManagerCompat;
+import android.annotation.SuppressLint;
+import android.app.Dialog;
+//  import android.app.Notification;
+import android.app.NotificationManager;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.os.StrictMode;
+import android.text.InputType;
+import android.text.TextUtils;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+//import com.google.firebase.messaging.Notification;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
-        import com.google.android.material.imageview.ShapeableImageView;
-        import com.google.firebase.auth.FirebaseUser;
+import com.google.android.material.imageview.ShapeableImageView;
+import com.google.firebase.auth.FirebaseUser;
 
-        import com.google.firebase.database.DataSnapshot;
-        import com.google.firebase.database.DatabaseError;
-        import com.google.firebase.database.DatabaseReference;
-        import com.google.firebase.database.FirebaseDatabase;
-        import com.google.firebase.database.ValueEventListener;
-        import com.google.gson.Gson;
-        import com.google.gson.GsonBuilder;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
-        import org.json.JSONObject;
+import org.json.JSONObject;
 
-        import java.text.DecimalFormat;
-        import java.text.SimpleDateFormat;
-        import java.util.ArrayList;
-        import java.util.Date;
-        import java.util.List;
-
-
-        import edu.fpt.shose_app.Model.Cart;
-
-        import edu.fpt.shose_app.Model.FCMRequest;
-        import edu.fpt.shose_app.Model.NotiResponse;
-        import edu.fpt.shose_app.Model.addRess_response;
-        import edu.fpt.shose_app.Model.address;
-        import edu.fpt.shose_app.Model.products;
-        import edu.fpt.shose_app.Model.serverRepest;
-        import edu.fpt.shose_app.R;
-        import edu.fpt.shose_app.Retrofit.ApiApp;
-        import edu.fpt.shose_app.Retrofit.PostNotifi;
-        import edu.fpt.shose_app.Utils.Utils;
-        import edu.fpt.shose_app.dialogModel.dialogOrder;
-        import edu.fpt.shose_app.zalo.Api.CreateOrder;
-        import retrofit2.Call;
-        import retrofit2.Callback;
-        import retrofit2.Response;
-        import retrofit2.Retrofit;
-        import retrofit2.converter.gson.GsonConverterFactory;
-        import vn.zalopay.sdk.Environment;
-        import vn.zalopay.sdk.ZaloPayError;
-        import vn.zalopay.sdk.ZaloPaySDK;
-        import vn.zalopay.sdk.listeners.PayOrderListener;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 
-        public class Check_Out_MainActivity extends AppCompatActivity {
-            private static final int NOTIFICATION_ID = 1;
-            Toolbar toolbar;
+import edu.fpt.shose_app.Model.Cart;
+
+import edu.fpt.shose_app.Model.FCMRequest;
+import edu.fpt.shose_app.Model.NotiResponse;
+import edu.fpt.shose_app.Model.addRess_response;
+import edu.fpt.shose_app.Model.address;
+import edu.fpt.shose_app.Model.products;
+import edu.fpt.shose_app.Model.serverRepest;
+import edu.fpt.shose_app.R;
+import edu.fpt.shose_app.Retrofit.ApiApp;
+import edu.fpt.shose_app.Retrofit.PostNotifi;
+import edu.fpt.shose_app.Utils.Utils;
+import edu.fpt.shose_app.dialogModel.dialogOrder;
+import edu.fpt.shose_app.zalo.Api.CreateOrder;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+import vn.zalopay.sdk.Environment;
+import vn.zalopay.sdk.ZaloPayError;
+import vn.zalopay.sdk.ZaloPaySDK;
+import vn.zalopay.sdk.listeners.PayOrderListener;
+
+
+public class Check_Out_MainActivity extends AppCompatActivity {
+    private static final int NOTIFICATION_ID = 1;
+    Toolbar toolbar;
     Retrofit retrofit;
     Gson gson;
     ApiApp apiInterface;
     TextView txt_total_check_out;
-            TextView txt_price_total_check_out;
-            TextView emailcheck_out;
-            TextView phonecheckout;
-            TextView address_checkout;
+    TextView txt_price_total_check_out;
+    TextView emailcheck_out;
+    TextView phonecheckout;
+    TextView address_checkout;
     List<products> productsList_checkOut;
-            List<String> address;
+    List<String> address;
     AppCompatButton btn_payment;
     private String PaymentAmount = "Thanh toán khi nhận hàng";
     private String jsonprocuts;
     private String token_admin;
     private DatabaseReference databaseReference;
-    private int soluong,id_oder;
+    private int soluong, id_oder;
     private EditText noted;
-    String data_price,codezalo,addressoder;
+    String data_price, codezalo, addressoder;
     List<address> addressList;
-    AutoCompleteTextView autoCompleteTextView,autoCompleteAdress;
-    ShapeableImageView img_update_phone,img_update_mail;
-            ArrayAdapter<String> adapter2;
-            ArrayAdapter<String> adapter;
+    AutoCompleteTextView autoCompleteTextView, autoCompleteAdress;
+    ShapeableImageView img_update_phone, img_update_mail;
+    ArrayAdapter<String> adapter2;
+    ArrayAdapter<String> adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -123,15 +124,14 @@
                 .build();
         apiInterface = retrofit.create(ApiApp.class);
         Intent intent = getIntent();
-        addressoder= "";
+        addressoder = "";
         databaseReference = FirebaseDatabase.getInstance().getReference("notifications");
         initUi();
         initAction();
 
 
-
         data_price = intent.getStringExtra("STRING_DATA");
-        soluong = intent.getIntExtra("STRING_soluong",1);
+        soluong = intent.getIntExtra("STRING_soluong", 1);
         txt_total_check_out = findViewById(R.id.txt_price_subtotal_check_out);
         txt_price_total_check_out = findViewById(R.id.txt_price_total_check_out);
         DecimalFormat decimalFormat = new DecimalFormat("###,###,###");
@@ -140,10 +140,10 @@
         txt_price_total_check_out.setText(decimalFormat.format(Integer.parseInt(data_price)));
 
 
-        String[] type = new String[]{"Thanh toán khi nhận hàng","Zalo Pay"};
+        String[] type = new String[]{"Thanh toán khi nhận hàng", "Zalo Pay"};
 
-         adapter = new ArrayAdapter<>(
-                this,R.layout.drop_down_item,type);
+        adapter = new ArrayAdapter<>(
+                this, R.layout.drop_down_item, type);
 
         autoCompleteTextView = findViewById(R.id.filled_exposed);
         autoCompleteTextView.setText("Cash on delivery");
@@ -151,7 +151,7 @@
         autoCompleteAdress = findViewById(R.id.filled_exposed_address);
         address = new ArrayList<>();
         address.add("thêm mới địa chỉ");
-        adapter2 = new ArrayAdapter<>(Check_Out_MainActivity.this,R.layout.drop_down_item,address);
+        adapter2 = new ArrayAdapter<>(Check_Out_MainActivity.this, R.layout.drop_down_item, address);
         autoCompleteAdress.setAdapter(adapter2);
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -163,11 +163,11 @@
         autoCompleteAdress.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-               // Toast.makeText(Check_Out_MainActivity.this, autoCompleteAdress.getText().toString(), Toast.LENGTH_SHORT).show();
+                // Toast.makeText(Check_Out_MainActivity.this, autoCompleteAdress.getText().toString(), Toast.LENGTH_SHORT).show();
                 addressoder = autoCompleteAdress.getText().toString();
-                if(addressoder .equals( "thêm mới địa chỉ")){
+                if (addressoder.equals("thêm mới địa chỉ")) {
                     OpenDialogUpdateMail(Gravity.CENTER);
-                    addressoder="";
+                    addressoder = "";
                 }
             }
         });
@@ -177,13 +177,15 @@
         btn_payment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Log.d("TAG", "onClick: "+PaymentAmount);
-                if(addressoder.equals("")||addressoder.equals("thêm mới địa chỉ")){
+                if(!validatePhoneNumber(phonecheckout.getText().toString())){
+                    return;
+                }
+                Log.d("TAG", "onClick: " + PaymentAmount);
+                if (addressoder.equals("") || addressoder.equals("thêm mới địa chỉ")) {
                     Toast.makeText(getApplicationContext(), "Chọn địa chỉ nhận hàng", Toast.LENGTH_LONG).show();
                     return;
                 }
-                if(PaymentAmount.equalsIgnoreCase("Zalo Pay")){
+                if (PaymentAmount.equalsIgnoreCase("Zalo Pay")) {
                     CreateOrder orderApi = new CreateOrder();
 
                     try {
@@ -191,7 +193,7 @@
                         //  Log.d("Amount", txtAmount.getText().toString());
                         //lblZpTransToken.setVisibility(View.VISIBLE);
                         String code = data.getString("return_code");
-                      //  Toast.makeText(getApplicationContext(), "return_code: " + code, Toast.LENGTH_LONG).show();
+                        //  Toast.makeText(getApplicationContext(), "return_code: " + code, Toast.LENGTH_LONG).show();
 
                         if (code.equals("1")) {
 
@@ -202,11 +204,9 @@
                         e.printStackTrace();
                     }
 
+                } else {
+                    CreateOder(Utils.Users_Utils.getId(), addressoder, phonecheckout.getText().toString(), data_price, noted.getText().toString(), PaymentAmount, "1", jsonprocuts, soluong);
                 }
-                else {
-                    CreateOder(Utils.Users_Utils.getId(), addressoder, phonecheckout.getText().toString(), data_price,noted.getText().toString(),PaymentAmount,"1",jsonprocuts,soluong);
-                }
-
 
 
             }
@@ -225,14 +225,15 @@
         });
 
     }
-    private void PayZalo(String codezalo){
+
+    private void PayZalo(String codezalo) {
 
         ZaloPaySDK.getInstance().payOrder(Check_Out_MainActivity.this, codezalo, "demozpdk://app", new PayOrderListener() {
 
             @Override
             public void onPaymentSucceeded(String s, String s1, String s2) {
-                CreateOder(Utils.Users_Utils.getId(), addressoder,phonecheckout.getText().toString(), data_price,"note",codezalo,"1",jsonprocuts,soluong);
-                Intent intent = new Intent(Check_Out_MainActivity.this,HomeActivity.class);
+                CreateOder(Utils.Users_Utils.getId(), addressoder, phonecheckout.getText().toString(), data_price, "note", codezalo, "1", jsonprocuts, soluong);
+                Intent intent = new Intent(Check_Out_MainActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
 
@@ -248,8 +249,8 @@
         });
     }
 
-    private void CreateOder(int user_id, String address_id, String number, String data_price, String note, String Payment, String status, String jsondata,int quantity) {
-        if(note.equals("")){
+    private void CreateOder(int user_id, String address_id, String number, String data_price, String note, String Payment, String status, String jsondata, int quantity) {
+        if (note.equals("")) {
             note = "Note";
         }
         Call<ApiApp.MyResponse> objgetBrands = apiInterface.create_oder(user_id, address_id, number, data_price, note, Payment, status, jsondata, quantity);
@@ -257,34 +258,34 @@
         objgetBrands.enqueue(new Callback<ApiApp.MyResponse>() {
             @Override
             public void onResponse(Call<ApiApp.MyResponse> call, Response<ApiApp.MyResponse> response) {
-                if(response.isSuccessful()){
+                if (response.isSuccessful()) {
                     ApiApp.MyResponse myResponse = response.body();
-                    if(myResponse.getStatus().equals("success")){
+                    if (myResponse.getStatus().equals("success")) {
                         id_oder = Integer.parseInt(myResponse.getId_oder());
-                        Toast.makeText(Check_Out_MainActivity.this,myResponse.getMessage(),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Check_Out_MainActivity.this, myResponse.getMessage(), Toast.LENGTH_SHORT).show();
                         dialogOrder dialog = new dialogOrder(Check_Out_MainActivity.this);
                         dialog.show();
                         dialog.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                         dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
                         dialog.getWindow().setGravity(Gravity.CENTER);
-                      //  SendNotification();//--------------------Notification
-                        seNotification("admin",Utils.tokenadmin,"Thông báo đơn hàng","Bạn có đơn hàng mới");
+                        //  SendNotification();//--------------------Notification
+                        seNotification("admin", Utils.tokenadmin, "Thông báo đơn hàng", "Bạn có đơn hàng mới");
 
-                        seNotification(String.valueOf(Utils.Users_Utils.getId()),Utils.token,"Thông báo đơn hàng","Đơn hàng của bạn đã được tạo, đang đợi hệ thống xác nhận");
+                        seNotification(String.valueOf(Utils.Users_Utils.getId()), Utils.token, "Thông báo đơn hàng", "Đơn hàng của bạn đã được tạo, đang đợi hệ thống xác nhận");
                     }
                 }
             }
 
             @Override
             public void onFailure(Call<ApiApp.MyResponse> call, Throwable t) {
-                Log.d("TAG", "onFailure: "+t.getLocalizedMessage());
+                Log.d("TAG", "onFailure: " + t.getLocalizedMessage());
 
             }
         });
     }
 
-    private void initUi(){
+    private void initUi() {
         noted = findViewById(R.id.note);
         toolbar = findViewById(R.id.toolbar_check_out_main);
         setSupportActionBar(toolbar);
@@ -302,11 +303,11 @@
         phonecheckout = findViewById(R.id.phone_checkout);
         //address_checkout = findViewById(R.id.address_checkout);
         emailcheck_out.setText(Utils.Users_Utils.getEmail());
-        phonecheckout.setText("0"+Utils.Users_Utils.getPhoneNumber());
+        phonecheckout.setText("0" + Utils.Users_Utils.getPhoneNumber());
         // address
 
         img_update_phone = findViewById(R.id.img_update_phone);
-        img_update_mail  = findViewById(R.id.img_update_mail);
+        img_update_mail = findViewById(R.id.img_update_mail);
         /*if(Utils.Users_Utils.getPhoneNumber().equals("")){
             phonecheckout.setText("hay nhap sdt");
         }
@@ -317,10 +318,10 @@
         // address_checkout.setText(Utils.Users_Utils.getEmail());
 
         productsList_checkOut = new ArrayList<>();
-        for(Cart product : Utils.cartLists){
-            if(product.isIscheck() == true){
-                String attributes = product.getColor()+","+product.getSize();
-                edu.fpt.shose_app.Model.products products1 =new products(product.getIdProduct(),product.getCartName(),product.getImage(),product.getQuantity(),product.getPrice(),product.getSale(),1,attributes);
+        for (Cart product : Utils.cartLists) {
+            if (product.isIscheck() == true) {
+                String attributes = product.getColor() + "," + product.getSize();
+                edu.fpt.shose_app.Model.products products1 = new products(product.getIdProduct(), product.getCartName(), product.getImage(), product.getQuantity(), product.getPrice(), product.getSale(), 1, attributes);
                 productsList_checkOut.add(products1);
             }
         }
@@ -328,7 +329,7 @@
 
         // Chuyển đối tượng JSONArray sang chuỗi JSON
         jsonprocuts = gson.toJson(productsList_checkOut);
-        Log.d("TAG", "initUi: "+ jsonprocuts);
+        Log.d("TAG", "initUi: " + jsonprocuts);
 
         getaddress();
     }
@@ -341,46 +342,48 @@
         objgetaddress.enqueue(new Callback<addRess_response>() {
             @Override
             public void onResponse(Call<addRess_response> call, Response<addRess_response> response) {
-               if(response.isSuccessful()){
-                   addRess_response addRess_response = response.body();
-                   if(addRess_response.getStatus() == 202){
+                if (response.isSuccessful()) {
+                    addRess_response addRess_response = response.body();
+                    if (addRess_response.getStatus() == 202) {
                         addressList = addRess_response.getData();
 
-                       Log.d("TAG", "onResponse: "+addressList.size());
-                        if(addressList.size()>0){
+                        Log.d("TAG", "onResponse: " + addressList.size());
+                        if (addressList.size() > 0) {
 
-                            for(address abc : addressList){
+                            for (address abc : addressList) {
                                 address.add(abc.getDesc());
                             }
-                             adapter2 = new ArrayAdapter<>(Check_Out_MainActivity.this,R.layout.drop_down_item,address);
+                            adapter2 = new ArrayAdapter<>(Check_Out_MainActivity.this, R.layout.drop_down_item, address);
                             autoCompleteAdress.setAdapter(adapter2);
                         }
-                   }
-               }
+                    }
+                }
             }
 
             @Override
             public void onFailure(Call<addRess_response> call, Throwable t) {
-                Log.d("TAG", "onFailure: "+ t.getLocalizedMessage());
+                Log.d("TAG", "onFailure: " + t.getLocalizedMessage());
             }
         });
     }
 
-            @Override
+    @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         ZaloPaySDK.getInstance().onResult(intent);
     }
-    private int getNotificationId(){
+
+    private int getNotificationId() {
         return (int) new Date().getTime();
     }
-    public void seNotification(String nguoinhan,String recipientToken, String title, String message){
+
+    public void seNotification(String nguoinhan, String recipientToken, String title, String message) {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://fcm.googleapis.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        PostNotifi  fcmService = retrofit.create(PostNotifi .class);
+        PostNotifi fcmService = retrofit.create(PostNotifi.class);
         FCMRequest fcmRequest = new FCMRequest();
         fcmRequest.setTo(recipientToken);
         FCMRequest.FCMNotification notification = new FCMRequest.FCMNotification();
@@ -393,7 +396,7 @@
             @Override
             public void onResponse(Call<NotiResponse> call, Response<NotiResponse> response) {
                 // Xử lý khi gửi thành công
-                saveNotification(nguoinhan, recipientToken,  title,  message);
+                saveNotification(nguoinhan, recipientToken, title, message);
 
             }
 
@@ -403,40 +406,42 @@
             }
         });
     }
-            public void saveNotification(String nguotnhan,String recipientToken, String title, String message) {
-                String pattern = "EEE MMM dd HH:mm:ss zzz yyyy";
 
-                SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
-                Date currentDate = new Date();
-                String dateString = dateFormat.format(currentDate);
+    public void saveNotification(String nguotnhan, String recipientToken, String title, String message) {
+        String pattern = "EEE MMM dd HH:mm:ss zzz yyyy";
 
-                databaseReference = FirebaseDatabase.getInstance().getReference("notifications");
-                    // Tạo đối tượng Notification
-                FCMRequest fcmRequest = new FCMRequest();
-                fcmRequest.setTo(recipientToken);
-                FCMRequest.FCMNotification notification = new FCMRequest.FCMNotification();
-                notification.setTitle(title);
-                notification.setBody(message);
-                fcmRequest.setNotification(notification);
+        SimpleDateFormat dateFormat = new SimpleDateFormat(pattern);
+        Date currentDate = new Date();
+        String dateString = dateFormat.format(currentDate);
 
-                    // Lưu thông báo vào Firebase Realtime Database trong nút con của người dùng
-                    databaseReference.child(nguotnhan).child(dateString).setValue(fcmRequest)
-                            .addOnSuccessListener(aVoid -> System.out.println("Successfully saved notification to Firebase"))
-                            .addOnFailureListener(e -> System.out.println("Failed to save notification to Firebase: " + e.getMessage()));
+        databaseReference = FirebaseDatabase.getInstance().getReference("notifications");
+        // Tạo đối tượng Notification
+        FCMRequest fcmRequest = new FCMRequest();
+        fcmRequest.setTo(recipientToken);
+        FCMRequest.FCMNotification notification = new FCMRequest.FCMNotification();
+        notification.setTitle(title);
+        notification.setBody(message);
+        fcmRequest.setNotification(notification);
+
+        // Lưu thông báo vào Firebase Realtime Database trong nút con của người dùng
+        databaseReference.child(nguotnhan).child(dateString).setValue(fcmRequest)
+                .addOnSuccessListener(aVoid -> System.out.println("Successfully saved notification to Firebase"))
+                .addOnFailureListener(e -> System.out.println("Failed to save notification to Firebase: " + e.getMessage()));
 
 
-            }
-    private void OpenDialogUpdatePhone(int gravity){
+    }
+
+    private void OpenDialogUpdatePhone(int gravity) {
         final Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.layout_dialog_custom_phone);
 
         Window window = dialog.getWindow();
-        if (window == null){
+        if (window == null) {
             return;
         }
 
-        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
         window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         WindowManager.LayoutParams windowAttributes = window.getAttributes();
@@ -444,9 +449,9 @@
         window.setAttributes(windowAttributes);
 
         //click out off dialog
-        if (Gravity.BOTTOM == gravity){
+        if (Gravity.BOTTOM == gravity) {
             dialog.setCancelable(true);
-        }else {
+        } else {
             dialog.setCancelable(false);
         }
 
@@ -466,33 +471,42 @@
             @Override
             public void onClick(View view) {
                 String matkhau = edt_add_phone.getText().toString();
-                if (TextUtils.isEmpty(matkhau)){
+                if (TextUtils.isEmpty(matkhau)) {
                     edt_add_phone.setError("please add your phone");
                 }
-                if (matkhau.length() != 10 ){
-                        edt_add_phone.setError("Please Enter valid phone number");
-                        edt_add_phone.requestFocus();
+                if (matkhau.length() != 10) {
+                    edt_add_phone.setError("Please Enter valid phone number");
+                    edt_add_phone.requestFocus();
                 } else {
-                phonecheckout.setText(edt_add_phone.getText().toString());
-                dialog.dismiss();
-            }
+                    phonecheckout.setText(edt_add_phone.getText().toString());
+                    dialog.dismiss();
+                }
 
             }
         });
 
         dialog.show();
     }
-    private void OpenDialogUpdateMail(int gravity){
+
+    public boolean validatePhoneNumber(String phoneNumber) {
+        // Biểu thức chính quy kiểm tra số điện thoại Việt Nam
+        String regex = "^(\\+?84|0)(3[2-9]|5[6|8|9]|7[0|6-9]|8[1-6|8-9]|9[0-9])\\d{7}$";
+
+        // Kiểm tra xem số điện thoại khớp với biểu thức chính quy hay không
+        return phoneNumber.matches(regex);
+    }
+
+    private void OpenDialogUpdateMail(int gravity) {
         final Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.layout_dialog_custom_mail);
 
         Window window = dialog.getWindow();
-        if (window == null){
+        if (window == null) {
             return;
         }
 
-        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.WRAP_CONTENT);
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.WRAP_CONTENT);
         window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
         WindowManager.LayoutParams windowAttributes = window.getAttributes();
@@ -500,9 +514,9 @@
         window.setAttributes(windowAttributes);
 
         //click out off dialog
-        if (Gravity.BOTTOM == gravity){
+        if (Gravity.BOTTOM == gravity) {
             dialog.setCancelable(true);
-        }else {
+        } else {
             dialog.setCancelable(false);
         }
 
@@ -510,7 +524,7 @@
         Button btn_cancel_mail = dialog.findViewById(R.id.btn_cancel_mail);
         Button btn_add_mail = dialog.findViewById(R.id.btn_add_mail);
 
-      //  edt_add_mail.setText(emailcheck_out.getText().toString());
+        //  edt_add_mail.setText(emailcheck_out.getText().toString());
         btn_cancel_mail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -521,16 +535,15 @@
             @Override
             public void onClick(View view) {
                 String matkhau = edt_add_mail.getText().toString();
-                if (TextUtils.isEmpty(matkhau)){
+                if (TextUtils.isEmpty(matkhau)) {
                     edt_add_mail.setError("please add your mail");
-                }
-                else {
-                    Call<serverRepest> call = apiInterface.themdiachi(Utils.Users_Utils.getId(),matkhau );
+                } else {
+                    Call<serverRepest> call = apiInterface.themdiachi(Utils.Users_Utils.getId(), matkhau);
                     call.enqueue(new Callback<serverRepest>() {
                         @Override
                         public void onResponse(Call<serverRepest> call, Response<serverRepest> response) {
                             // Xử lý khi gửi thành công
-                            if(response.isSuccessful()){
+                            if (response.isSuccessful()) {
                                 address.add(matkhau);
                                 adapter2.notifyDataSetChanged();
                                 dialog.dismiss();
@@ -549,7 +562,6 @@
         });
         dialog.show();
     }
-
 
 
 }

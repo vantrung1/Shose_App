@@ -34,7 +34,9 @@ import edu.fpt.shose_app.Activity.ProductDetailActivity;
 import edu.fpt.shose_app.Interface.OnItemClickListener;
 import edu.fpt.shose_app.Model.Brand;
 import edu.fpt.shose_app.Model.Image;
+import edu.fpt.shose_app.Model.Oder;
 import edu.fpt.shose_app.Model.Product;
+import edu.fpt.shose_app.Model.Products_Oder;
 import edu.fpt.shose_app.Model.Size;
 import edu.fpt.shose_app.Model.SizeRequest;
 import edu.fpt.shose_app.Model.abc;
@@ -52,6 +54,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.myviewHo
     private Context context;
     private ArrayList<Product> productListFull;
     private ArrayList<Product> productArrayList;
+
+
     Retrofit retrofit;
     Gson gson;
     ApiApp apiInterface;
@@ -79,7 +83,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.myviewHo
         DecimalFormat decimalFormat = new DecimalFormat("###,###,### VNĐ");
 
 
-
+        holder.txtDaban.setText("Đã bán: "+getSoLuong(productArrayList.get(i).getId()));
         Glide.with(context).load(productArrayList.get(i).getImage().get(0).get("image1").getName()).into(holder.itemproduct_img);
         // Log.d("TAG", "onBindViewHolder: "+myObjects.get(0).getImage());
         holder.itemproduct_name.setText(productArrayList.get(i).getName());
@@ -133,7 +137,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.myviewHo
 
             }
         });
-        holder.itemproduct_name.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(context, ProductDetailActivity.class);
@@ -143,7 +147,21 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.myviewHo
             }
         });
     }
-
+    private int getSoLuong(int id) {
+        List<Products_Oder> products_oders = new ArrayList<>();
+        int soluongdaban = 0 ;
+        for(Oder oder :Utils.oderArrayList){
+            for(Products_Oder oder1: oder.getProducts()){
+                products_oders.add(oder1);
+            }
+        }
+        for(Products_Oder oder: products_oders){
+            if(oder.getProduct_id() == id){
+                soluongdaban = soluongdaban+ oder.getQuantity();
+            }
+        }
+        return soluongdaban;
+    }
     @Override
     public int getItemCount() {
         return productArrayList.size();
@@ -187,7 +205,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.myviewHo
 
     public class myviewHolder extends RecyclerView.ViewHolder  {
         ImageView itemproduct_img,itemClickFav;
-        TextView itemproduct_name,itemproduct_price,status;
+        TextView itemproduct_name,itemproduct_price,status,txtDaban;
         OnItemClickListener onItemClickListener;
         public myviewHolder(@NonNull View itemView) {
             super(itemView);
@@ -196,6 +214,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.myviewHo
             status = itemView.findViewById(R.id.status);
             itemproduct_name = itemView.findViewById(R.id.item_product_name);
             itemproduct_price = itemView.findViewById(R.id.item_product_price);
+            txtDaban = itemView.findViewById(R.id.txtDaban);
         }
 
     }

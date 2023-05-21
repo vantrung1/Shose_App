@@ -4155,6 +4155,7 @@ id simpleRatingBar2
 id sin
 id sizeItem
 id size_name
+id sizemsamd
 id skipCollapsed
 id skipped
 id slide
@@ -4164,6 +4165,7 @@ id snackbar_text
 id snap
 id snapMargins
 id soluogndanhgia
+id soluongdaban
 id south
 id spacer
 id special_effects_controller_view_tag
@@ -4313,6 +4315,7 @@ id tvThongBao
 id tvTitleFav
 id tv_badge_text
 id txt000
+id txtDaban
 id txtInputLayout1
 id txtInputLayout2
 id txt_UPdate

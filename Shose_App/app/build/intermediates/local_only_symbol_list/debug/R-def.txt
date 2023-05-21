@@ -359,8 +359,10 @@ id simpleRatingBar
 id simpleRatingBar2
 id sizeItem
 id size_name
+id sizemsamd
 id smart_gorge
 id soluogndanhgia
+id soluongdaban
 id starId
 id start_journ
 id status
@@ -427,6 +429,7 @@ id tvTen
 id tvThongBao
 id tvTitleFav
 id txt000
+id txtDaban
 id txtInputLayout1
 id txtInputLayout2
 id txt_UPdate

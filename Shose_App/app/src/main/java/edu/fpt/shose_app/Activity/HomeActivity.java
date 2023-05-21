@@ -46,6 +46,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.annotations.Until;
 import com.nex3z.notificationbadge.NotificationBadge;
 
 import org.greenrobot.eventbus.EventBus;
@@ -60,6 +61,7 @@ import edu.fpt.shose_app.Adapter.ProducAdapter2;
 import edu.fpt.shose_app.Adapter.ProductAdapter;
 import edu.fpt.shose_app.Adapter.ProductAdapter3;
 import edu.fpt.shose_app.Model.Cart;
+import edu.fpt.shose_app.Model.OderRequest;
 import edu.fpt.shose_app.Model.loginRequest;
 import edu.fpt.shose_app.Service.FirebaseMessReceiver;
 import edu.fpt.shose_app.dialogModel.EventBus.BrandEvent;
@@ -101,6 +103,7 @@ public class HomeActivity extends AppCompatActivity {
     TextView txta,textViewsee;
     FrameLayout layoutGioHang;
     NotificationBadge notificationBadge;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -127,6 +130,7 @@ public class HomeActivity extends AppCompatActivity {
 //        startAutoScroll();
 //        stopAutoScroll();
         getcart();
+        getPRoductOder();
     }
 
     private void CheckLogin() {
@@ -507,5 +511,23 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
     }
+    public void getPRoductOder() {
+        Call<OderRequest> objGetOder = apiInterface.getOderAll(3);
+        // thực hiện gọi
+        objGetOder.enqueue(new Callback<OderRequest>() {
+            @Override
+            public void onResponse(Call<OderRequest> call, Response<OderRequest> response) {
+                if (response.isSuccessful()) {
+                    OderRequest oderRequest = response.body();
+                    Utils.oderArrayList = oderRequest.getData();
+                }
+            }
 
+            @Override
+            public void onFailure(Call<OderRequest> call, Throwable t) {
+                Log.d("ssssssssss", "onFailure: " + t.getLocalizedMessage());
+            }
+
+        });
+    }
 }

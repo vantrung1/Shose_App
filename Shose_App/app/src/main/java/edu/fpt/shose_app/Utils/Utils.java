@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.fpt.shose_app.Model.Cart;
+import edu.fpt.shose_app.Model.Oder;
+import edu.fpt.shose_app.Model.Products_Oder;
 import edu.fpt.shose_app.Model.User;
 
 public class Utils {
@@ -11,6 +13,8 @@ public class Utils {
     public static User Users_Utils = new User();
     public static List<Cart> cartLists = new ArrayList<>();
     public static List<Cart> buyCartLits = new ArrayList<>();
+    public static ArrayList<Oder> oderArrayList = new ArrayList<>();
+
 
     public static String ID_Received = "100";
     public static final String SEND_ID = "idsend";
@@ -20,4 +24,5 @@ public class Utils {
     public static final String PATH_CHAT = "chat";
     public static String token = "chat";
     public static String tokenadmin = "chat";
+
 }
