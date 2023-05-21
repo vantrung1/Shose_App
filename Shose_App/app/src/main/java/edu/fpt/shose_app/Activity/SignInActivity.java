@@ -158,8 +158,7 @@ public class SignInActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     loginRequest loginRequest = response.body();
                     if(loginRequest.getStatus().equals("202")){
-
-
+                        progressDialog.dismiss();
                        // Toast.makeText(getApplicationContext(), loginRequest.getMessage(), Toast.LENGTH_LONG).show();
                         if(response.body().getData().getStatus().equals("2")){
                             Toast.makeText(getApplicationContext(), "Hãy kiểm tra mail để kích hoạt tài khoản", Toast.LENGTH_LONG).show();

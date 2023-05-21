@@ -2911,6 +2911,7 @@ int drawable backgroud_circle 0x7f07007a
 int drawable background_btn_dangnhap 0x7f07007b
 int drawable background_btn_dangnhapgmail 0x7f07007c
 int drawable background_btn_danhgia 0x7f07007d
+int drawable background_btn_dialog 0x7f070262
 int drawable background_btn_red 0x7f07007e
 int drawable background_buttom_sheet 0x7f07007f
 int drawable background_cmt 0x7f070080
@@ -2992,6 +2993,7 @@ int drawable common_google_signin_btn_text_light 0x7f0700cb
 int drawable common_google_signin_btn_text_light_focused 0x7f0700cc
 int drawable common_google_signin_btn_text_light_normal 0x7f0700cd
 int drawable common_google_signin_btn_text_light_normal_background 0x7f0700ce
+int drawable custom_bkg 0x7f070263
 int drawable design_fab_background 0x7f0700cf
 int drawable design_ic_visibility 0x7f0700d0
 int drawable design_ic_visibility_off 0x7f0700d1
@@ -2999,6 +3001,7 @@ int drawable design_password_eye 0x7f0700d2
 int drawable design_snackbar_background 0x7f0700d3
 int drawable drop_down_24 0x7f0700d4
 int drawable edittext_no_underline 0x7f0700d5
+int drawable fail2 0x7f070264
 int drawable fastscroll__default_bubble 0x7f0700d6
 int drawable fastscroll__default_handle 0x7f0700d7
 int drawable flag_afghanistan 0x7f0700d8
@@ -3508,6 +3511,7 @@ int id VOICEMAIL 0x7f09006c
 int id VOIP 0x7f09006d
 int id WanderingCubes 0x7f09006e
 int id Wave 0x7f09006f
+int id a 0x7f0903cb
 int id accelerate 0x7f090070
 int id accessibility_action_clickable_span 0x7f090071
 int id accessibility_custom_action_0 0x7f090072
@@ -3623,6 +3627,7 @@ int id btn_create 0x7f0900df
 int id btn_delivered 0x7f0900e0
 int id btn_delivered_repurchase 0x7f0900e1
 int id btn_detail_cancel 0x7f0900e2
+int id btn_dialog 0x7f0903cc
 int id btn_send_evaluate 0x7f0900e3
 int id btn_submit 0x7f0900e4
 int id btn_thaydoi 0x7f0900e5
@@ -3631,6 +3636,7 @@ int id btn_transport 0x7f0900e7
 int id btn_wait_for_confirm 0x7f0900e8
 int id btn_xacnhan 0x7f0900e9
 int id btncontinue 0x7f0900ea
+int id btnfail_dialog 0x7f0903d0
 int id btnloginGmail 0x7f0900eb
 int id buttonPanel 0x7f0900ec
 int id cache_measures 0x7f0900ed
@@ -3755,6 +3761,7 @@ int id expanded_menu 0x7f090163
 int id fab 0x7f090164
 int id fab_home 0x7f090165
 int id fade 0x7f090166
+int id fail_dialog 0x7f0903d1
 int id fastscroll 0x7f090167
 int id fill 0x7f090168
 int id fill_horizontal 0x7f090169
@@ -4183,6 +4190,7 @@ int id stop 0x7f09030f
 int id stretch 0x7f090310
 int id submenuarrow 0x7f090311
 int id submit_area 0x7f090312
+int id success_dialog 0x7f0903cd
 int id supportScrollUp 0x7f090313
 int id switch_1 0x7f090314
 int id switch_2 0x7f090315
@@ -4205,6 +4213,7 @@ int id tag_unhandled_key_listeners 0x7f090325
 int id tag_window_insets_animation_callback 0x7f090326
 int id text 0x7f090327
 int id text2 0x7f090328
+int id text2_dialog 0x7f0903cf
 int id textEnd 0x7f090329
 int id textInputLayout1 0x7f09032a
 int id textInputLayout2 0x7f09032b
@@ -4234,6 +4243,7 @@ int id textView_noresult 0x7f090342
 int id textView_selectedCountry 0x7f090343
 int id textView_title 0x7f090344
 int id textViewcreateat 0x7f090345
+int id text_dialog 0x7f0903ce
 int id text_input_end_icon 0x7f090346
 int id text_input_error_icon 0x7f090347
 int id text_input_start_icon 0x7f090348
@@ -4530,6 +4540,7 @@ int layout dialog_reason_cancel_oder 0x7f0c004f
 int layout dialog_thong_bao 0x7f0c0050
 int layout dialog_update_cart 0x7f0c0051
 int layout drop_down_item 0x7f0c0052
+int layout fail_dialog 0x7f0c00be
 int layout fastscroll__default_bubble 0x7f0c0053
 int layout fragment_cancel 0x7f0c0054
 int layout fragment_delivered 0x7f0c0055
@@ -4628,6 +4639,7 @@ int layout search_history_item_layout 0x7f0c00b1
 int layout select_dialog_item_material 0x7f0c00b2
 int layout select_dialog_multichoice_material 0x7f0c00b3
 int layout select_dialog_singlechoice_material 0x7f0c00b4
+int layout success_dialog 0x7f0c00bd
 int layout support_simple_spinner_dropdown_item 0x7f0c00b5
 int layout ucrop_activity_photobox 0x7f0c00b6
 int layout ucrop_aspect_ratio 0x7f0c00b7

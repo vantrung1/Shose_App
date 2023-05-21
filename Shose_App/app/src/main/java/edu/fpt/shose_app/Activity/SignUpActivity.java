@@ -4,13 +4,18 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +29,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+
+import org.checkerframework.checker.units.qual.C;
 
 import java.util.ArrayList;
 
@@ -85,10 +92,11 @@ public class SignUpActivity extends AppCompatActivity {
 //                Intent i = new Intent(SignUpActivity.this, SignInActivity.class);
 //                startActivity(i);
                 if (!validateUserName() | !validateEmail() | !validatePass() | !validateConfirmPass()) {
-
-                    return;
+                    showsuccessdialog();
+                return;
+                }else{
+                    showfaildialog();
                 }
-
 
                 POST_Retrofit_User();
             }
@@ -143,17 +151,18 @@ public class SignUpActivity extends AppCompatActivity {
 
                 if (response.isSuccessful()) {
                     if(response.body().getStatus().equals("200")){
-                        Toast.makeText(getApplicationContext(), "Đăng Ký Thành Công", Toast.LENGTH_LONG).show();
+                        showsuccessdialog();
+                        Toast.makeText(getApplicationContext(), "Đăng ký thành công", Toast.LENGTH_LONG).show();
                       //  progressDialog.dismiss();
-                        Intent i = new Intent(SignUpActivity.this, SignInActivity.class);
-                        startActivity(i);
                     }
                     else {
+                        showfaildialog();
                         Toast.makeText(getApplicationContext(), "Email đã tồn tại", Toast.LENGTH_LONG).show();
                       //  progressDialog.dismiss();
                     }
 
                 } else {
+                    showfaildialog();
                     Toast.makeText(getApplicationContext(), "them khong thanh cong", Toast.LENGTH_LONG).show();
                    // progressDialog.dismiss();
                 }
@@ -229,5 +238,47 @@ public class SignUpActivity extends AppCompatActivity {
             txt4.setError(null);
             return true;
         }
+    }
+    private void showsuccessdialog(){
+        RelativeLayout relativeLayout= findViewById(R.id.success_dialog);
+        View view = LayoutInflater.from(SignUpActivity.this).inflate(R.layout.success_dialog,relativeLayout);
+        Button successdone =view.findViewById(R.id.btn_dialog);
+        AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this);
+        builder.setView(view);
+        final AlertDialog alertDialog = builder.create();
+        successdone.findViewById(R.id.btn_dialog).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialog.dismiss();
+                Toast.makeText(SignUpActivity.this,"Done",Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(SignUpActivity.this, SignInActivity.class);
+                startActivity(i);
+            }
+        });
+        if(alertDialog.getWindow()!=null){
+            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+        }
+        alertDialog.show();
+    }
+    private void showfaildialog(){
+        RelativeLayout relativeLayout= findViewById(R.id.fail_dialog);
+        View view = LayoutInflater.from(SignUpActivity.this).inflate(R.layout.fail_dialog,relativeLayout);
+        Button Failbtn =view.findViewById(R.id.btnfail_dialog);
+        AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this);
+        builder.setView(view);
+        final AlertDialog alertDialog = builder.create();
+        Failbtn.findViewById(R.id.btnfail_dialog).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialog.dismiss();
+                Toast.makeText(SignUpActivity.this,"Fail",Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(SignUpActivity.this, SignInActivity.class);
+                startActivity(i);
+            }
+        });
+        if(alertDialog.getWindow()!=null){
+            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+        }
+        alertDialog.show();
     }
 }
