@@ -91,9 +91,12 @@ drawable checkout
 drawable drop_down_24
 drawable edittext_no_underline
 drawable ic_delete
+drawable ic_history
+drawable ic_invalid
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_send_24
+drawable ic_valid
 drawable icon_back
 drawable icon_gg
 drawable icon_pen
@@ -165,6 +168,7 @@ id btn_wait_for_confirm
 id btn_xacnhan
 id btncontinue
 id btnloginGmail
+id ccp
 id checkbox_item_cart
 id danhhia
 id detailDesc
@@ -223,6 +227,7 @@ id image_view_item_feed_back
 id img_btnchat
 id img_camera
 id img_cameras
+id img_check
 id img_close
 id img_detail
 id img_update_cart

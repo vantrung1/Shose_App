@@ -14,25 +14,40 @@
         android:layout_height="wrap_content"
         android:background="@color/background" />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_cmt"
-        android:orientation="vertical">
+        android:padding="10dp"
+        android:background="@drawable/background_cmt">
+        <com.hbb20.CountryCodePicker
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_height="wrap_content"
+            android:id="@+id/ccp"/>
 
         <EditText
             android:id="@+id/ed_putPhonenumber"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@null" />
+            android:hint="Phone Number "
+            android:layout_toStartOf="@+id/img_check"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@+id/ccp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:inputType="phone"/>
+        <ImageView
+            android:id="@+id/img_check"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_valid"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
 
-    </LinearLayout>
-    <TextView
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Không vượt quá 10 chữ số" />
+
+    </RelativeLayout>
 
 </LinearLayout>

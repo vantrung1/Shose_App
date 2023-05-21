@@ -69,6 +69,8 @@ dependencies {
     implementation 'com.github.dhaval2404:imagepicker:2.1'
     //load
     implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    //validate phone
+    implementation 'com.hbb20:ccp:2.7.1'
     //  implementation 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.1'
     implementation("com.squareup.okhttp3:okhttp:4.6.0")
     implementation("commons-codec:commons-codec:1.14")
