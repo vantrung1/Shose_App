@@ -3370,6 +3370,7 @@ int drawable notify_panel_notification_icon_bg 0x7f070245
 int drawable onboard1 0x7f070246
 int drawable onboard2 0x7f070247
 int drawable onboard3 0x7f070248
+int drawable phone 0x7f070264
 int drawable product 0x7f070249
 int drawable shadow 0x7f07024a
 int drawable star_border_yellow 0x7f07024b
@@ -3838,6 +3839,7 @@ int id img_clear_query 0x7f0901b4
 int id img_close 0x7f0901b5
 int id img_detail 0x7f0901b6
 int id img_dismiss 0x7f0901b7
+int id img_phonenumber 0x7f0903d3
 int id img_update_cart 0x7f0901b8
 int id img_update_mail 0x7f0901b9
 int id img_update_phone 0x7f0901ba
