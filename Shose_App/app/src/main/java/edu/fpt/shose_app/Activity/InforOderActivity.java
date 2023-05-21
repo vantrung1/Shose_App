@@ -72,8 +72,8 @@ public class InforOderActivity extends AppCompatActivity implements ImageClickr 
         txtAddress = findViewById(R.id.txt_address_users);
         txtPaymentAmount = findViewById(R.id.txt_paymentAmount);
         txtTotal = findViewById(R.id.txt_total);
-        txtCreateAt = findViewById(R.id.txt_createAt);
-        txt_UPdate = findViewById(R.id.txt_UPdate);
+        txtCreateAt = findViewById(R.id.txt_createAtt);
+        txt_UPdate = findViewById(R.id.txt_UPdatee);
         txtTotal2 = findViewById(R.id.txt_total2);
         btnChat = findViewById(R.id.btn_chat_infor);
         btnNhanHang = findViewById(R.id.btnNhanHang);
@@ -107,8 +107,8 @@ public class InforOderActivity extends AppCompatActivity implements ImageClickr 
         txtNameUser.setText(oder.getName());
         txtPhone.setText(oder.getNumber());
         txtPaymentAmount.setText(oder.getPaymentAmount());
-        txtCreateAt.setText(oder.getTimeUTCCreate());
-        txt_UPdate.setText(oder.getTimeUTC()+"");
+        txtCreateAt.setText(oder.getCreated_at());
+        txt_UPdate.setText(oder.getUpdated_at());
         txtAddress.setText(oder.getAddress_id());
         txtTotal.setText(new DecimalFormat("###,###,### VNĐ").format(Integer.parseInt(oder.getTotal())));
         txtTotal2.setText(new DecimalFormat("###,###,### VNĐ").format(Integer.parseInt(oder.getTotal())));
@@ -118,7 +118,7 @@ public class InforOderActivity extends AppCompatActivity implements ImageClickr 
                 @Override
                 public void onClick(View v) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(InforOderActivity.this);
-                    builder.setTitle("THông báo xác nhận đơn hàng");
+                    builder.setTitle("Thông báo xác nhận đơn hàng");
                     builder.setMessage("Bạn chắc chắn đã nhận được đơn hàng ?");
                     builder.setPositiveButton("Xác Nhận", new DialogInterface.OnClickListener() {
                         @Override

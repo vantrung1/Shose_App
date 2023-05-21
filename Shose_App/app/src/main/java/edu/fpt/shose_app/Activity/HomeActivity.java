@@ -323,7 +323,7 @@ public class HomeActivity extends AppCompatActivity {
                 switch (item.getItemId())
                 {
                     case R.id.mnu_profile:
-                        Intent i = new Intent(HomeActivity.this, ProfileActivity.class);
+                        Intent i = new Intent(HomeActivity.this, Activity_profiles.class);
                         startActivity(i);
                         break;
                     case R.id.mnu_home:

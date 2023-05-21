@@ -73,7 +73,7 @@ public class MyCartActivity extends AppCompatActivity {
         appCompatButton = findViewById(R.id.btn_checkout);
         toolbar = findViewById(R.id.toolbar_cart);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("My Cart");
+        getSupportActionBar().setTitle("Giỏ hàng");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setNavigationIcon(R.drawable.icon_back);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

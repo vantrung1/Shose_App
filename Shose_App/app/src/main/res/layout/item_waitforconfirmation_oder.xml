@@ -7,6 +7,7 @@
     android:elevation="8dp"
     android:orientation="vertical">
     <TextView
+        android:layout_margin="5dp"
         android:paddingStart="10dp"
         android:id="@+id/idoder"
         android:layout_alignParentRight="true"
@@ -93,7 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/background_btn_danhgia"
+            android:background="@drawable/background_btn_xam"
             android:text="Đang xử lý"
             android:textAllCaps="false"
             android:textColor="@color/white"

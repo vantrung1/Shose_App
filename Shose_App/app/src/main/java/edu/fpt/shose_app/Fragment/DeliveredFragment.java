@@ -1,5 +1,6 @@
 package edu.fpt.shose_app.Fragment;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -38,7 +39,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class DeliveredFragment extends Fragment implements ImageClickr  {
+public class DeliveredFragment extends Fragment implements ImageClickr {
     ArrayList<Oder> oderArrayList;
     Retrofit retrofit;
     Gson gson;
@@ -46,6 +47,7 @@ public class DeliveredFragment extends Fragment implements ImageClickr  {
     DeliveredAdapter deliveredAdapter;
     TextView txta;
     RecyclerView recy_delivered;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -72,7 +74,7 @@ public class DeliveredFragment extends Fragment implements ImageClickr  {
         apiInterface = retrofit.create(ApiApp.class);
         get_oder(Utils.Users_Utils.getId(), 3);
         oderArrayList = new ArrayList<>();
-        deliveredAdapter = new DeliveredAdapter(getActivity(), oderArrayList,this);
+        deliveredAdapter = new DeliveredAdapter(getActivity(), oderArrayList, this);
         recy_delivered.setAdapter(deliveredAdapter);
     }
 
@@ -83,14 +85,15 @@ public class DeliveredFragment extends Fragment implements ImageClickr  {
             @Override
             public void onResponse(Call<OderRequest> call, Response<OderRequest> response) {
                 if (response.isSuccessful()) {
+
                     OderRequest oderRequest = response.body();
 //                    oderArrayList.clear();
                     oderArrayList = oderRequest.getData();
-//                    if (oderArrayList.size() == 0) {
-//                        txta.setVisibility(View.VISIBLE);
-//                    } else {
-//                        txta.setVisibility(View.INVISIBLE);
-//                    }
+                    if (oderArrayList.size() == 0) {
+                        txta.setVisibility(View.VISIBLE);
+                    } else {
+                        txta.setVisibility(View.INVISIBLE);
+                    }
 
                     Log.d("zzzzzz", "onResponse: " + oderArrayList.size());
                     deliveredAdapter.setorderlist(oderArrayList);
@@ -104,16 +107,17 @@ public class DeliveredFragment extends Fragment implements ImageClickr  {
 
         });
     }
-    public void getProduct(int id){
+
+    public void getProduct(int id) {
 
         Call<List<Product>> objGetOder = apiInterface.getProduct(id);
         objGetOder.enqueue(new Callback<List<Product>>() {
             @Override
             public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
-                if(response.isSuccessful()){
+                if (response.isSuccessful()) {
                     Product products = response.body().get(0);
-                    Intent intent=new Intent(getContext(), ProductDetailActivity.class);
-                    intent.putExtra("product",products);
+                    Intent intent = new Intent(getContext(), ProductDetailActivity.class);
+                    intent.putExtra("product", products);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     getContext().startActivity(intent);
                 }
@@ -125,6 +129,7 @@ public class DeliveredFragment extends Fragment implements ImageClickr  {
             }
         });
     }
+
     @Override
     public void onImageClick(int position) {
         getProduct(position);

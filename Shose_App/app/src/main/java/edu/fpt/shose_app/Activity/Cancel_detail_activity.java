@@ -77,8 +77,7 @@ public class Cancel_detail_activity extends AppCompatActivity implements ImageCl
         products_oder_adapter = new Products_Oder_Adapter(this, oder.getProducts(),this);
         recyclerView.setAdapter(products_oder_adapter);
         //-------------
-        txtUpdateAt.setText(oder.getTimeUTC());
-        txtUpdateAt2.setText(oder.getTimeUTC());
+        txtUpdateAt2.setText(oder.getUpdated_at());
         txtPaymentAmount.setText(oder.getPaymentAmount());
         txtReason.setText(oder.getNote());
     }
