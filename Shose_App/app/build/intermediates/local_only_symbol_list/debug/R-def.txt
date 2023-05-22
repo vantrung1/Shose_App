@@ -125,6 +125,7 @@ drawable onboard1
 drawable onboard2
 drawable onboard3
 drawable phone
+drawable phone2
 drawable product
 drawable shadow
 drawable star_border_yellow

@@ -90,12 +90,8 @@ public class SignUpActivity extends AppCompatActivity {
 //                Intent i = new Intent(SignUpActivity.this, SignInActivity.class);
 //                startActivity(i);
                 if (!validateUserName() | !validateEmail() | !validatePass() | !validateConfirmPass()) {
-                    showsuccessdialog();
-                    return;
-                }else{
-                    showfaildialog();
+                 return;
                 }
-
                 POST_Retrofit_User();
             }
         });
@@ -103,27 +99,6 @@ public class SignUpActivity extends AppCompatActivity {
 
     //Post api len sever
     void POST_Retrofit_User() {
-
-//        firebaseAuth = FirebaseAuth.getInstance();
-//        firebaseAuth.createUserWithEmailAndPassword(edEmail.getText().toString(),edpassword.getText().toString())
-//                .addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<AuthResult> task) {
-//                        if(task.isSuccessful()){
-//                            FirebaseUser user = firebaseAuth.getCurrentUser();
-//                            if(user!= null){
-//                                Log.d("TAG", "onComplete: "+user.getUid());
-//
-//                            }
-//                            else {
-//                                Toast.makeText(SignUpActivity.this,"email đã tồn tại",Toast.LENGTH_SHORT).show();
-//                            }
-//                        }
-//                        else {
-//                            Toast.makeText(SignUpActivity.this,"email đã tồn tại",Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//                });
 
 
         // tạo đối tượng chuyển đổi
@@ -161,14 +136,14 @@ public class SignUpActivity extends AppCompatActivity {
 
                 } else {
                     showfaildialog();
-                    Toast.makeText(getApplicationContext(), "them khong thanh cong", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Thêm không thành công", Toast.LENGTH_LONG).show();
                     // progressDialog.dismiss();
                 }
             }
 
             @Override
             public void onFailure(Call<serverRepest> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), "them khong thanh cong", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Lỗi sever!", Toast.LENGTH_LONG).show();
                 // progressDialog.dismiss();
             }
         });
@@ -270,8 +245,6 @@ public class SignUpActivity extends AppCompatActivity {
             public void onClick(View view) {
                 alertDialog.dismiss();
                 Toast.makeText(SignUpActivity.this,"Fail",Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(SignUpActivity.this, SignInActivity.class);
-                startActivity(i);
             }
         });
         if(alertDialog.getWindow()!=null){
