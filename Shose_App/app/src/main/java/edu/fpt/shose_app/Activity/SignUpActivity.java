@@ -89,10 +89,13 @@ public class SignUpActivity extends AppCompatActivity {
 
 //                Intent i = new Intent(SignUpActivity.this, SignInActivity.class);
 //                startActivity(i);
-                if (!validateUserName() | !validateEmail() | !validatePass() | !validateConfirmPass()) {
+                if (!validateUserName() || !validateEmail() || !validatePass() || !validateConfirmPass()) {
                  return;
                 }
-                POST_Retrofit_User();
+                else {
+                    POST_Retrofit_User();
+                }
+
             }
         });
     }
@@ -143,7 +146,7 @@ public class SignUpActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<serverRepest> call, Throwable t) {
-                Toast.makeText(getApplicationContext(), "Lỗi sever!", Toast.LENGTH_LONG).show();
+                showfaildialog();
                 // progressDialog.dismiss();
             }
         });
@@ -244,7 +247,6 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 alertDialog.dismiss();
-                Toast.makeText(SignUpActivity.this,"Fail",Toast.LENGTH_SHORT).show();
             }
         });
         if(alertDialog.getWindow()!=null){
