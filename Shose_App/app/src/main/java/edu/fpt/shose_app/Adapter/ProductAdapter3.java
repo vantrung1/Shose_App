@@ -25,7 +25,9 @@ import java.util.Map;
 
 import edu.fpt.shose_app.Activity.ProductDetailActivity;
 import edu.fpt.shose_app.Interface.OnItemClickListener;
+import edu.fpt.shose_app.Model.Oder;
 import edu.fpt.shose_app.Model.Product;
+import edu.fpt.shose_app.Model.Products_Oder;
 import edu.fpt.shose_app.Model.Size;
 import edu.fpt.shose_app.Model.SizeRequest;
 import edu.fpt.shose_app.R;
@@ -61,10 +63,24 @@ public class ProductAdapter3 extends RecyclerView.Adapter<ProductAdapter3.myview
         View view = LayoutInflater.from(context).inflate(R.layout.item_product_home,parent,false);
         return  new myviewHolder(view);
     }
-
+    private int getSoLuong(int id) {
+        List<Products_Oder> products_oders = new ArrayList<>();
+        int soluongdaban = 0 ;
+        for(Oder oder :Utils.oderArrayList){
+            for(Products_Oder oder1: oder.getProducts()){
+                products_oders.add(oder1);
+            }
+        }
+        for(Products_Oder oder: products_oders){
+            if(oder.getProduct_id() == id){
+                soluongdaban = soluongdaban+ oder.getQuantity();
+            }
+        }
+        return soluongdaban;
+    }
     @Override
     public void onBindViewHolder(@NonNull ProductAdapter3.myviewHolder holder, int i) {
-
+        holder.txtDaban.setText("Đã bán: "+getSoLuong(productArrayList.get(i).getId()));
         Glide.with(context).load(productArrayList.get(i).getImage().get(0).get("image1").getName()).into(holder.itemproduct_img);
        // Log.d("TAG", "onBindViewHolder: "+myObjects.get(0).getImage());
         holder.itemproduct_name.setText(productArrayList.get(i).getName());
@@ -136,7 +152,7 @@ public class ProductAdapter3 extends RecyclerView.Adapter<ProductAdapter3.myview
 
     public class myviewHolder extends RecyclerView.ViewHolder  {
         ImageView itemproduct_img,itemClickFav;
-        TextView itemproduct_name,itemproduct_price,status;
+        TextView itemproduct_name,itemproduct_price,status,txtDaban;
          OnItemClickListener onItemClickListener;
         public myviewHolder(@NonNull View itemView) {
             super(itemView);
@@ -145,6 +161,7 @@ public class ProductAdapter3 extends RecyclerView.Adapter<ProductAdapter3.myview
             status = itemView.findViewById(R.id.status);
             itemproduct_name = itemView.findViewById(R.id.item_product_name);
             itemproduct_price = itemView.findViewById(R.id.item_product_price);
+            txtDaban = itemView.findViewById(R.id.txtDaban);
         }
 
     }
