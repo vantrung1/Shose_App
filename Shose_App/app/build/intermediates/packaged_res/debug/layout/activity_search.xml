@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:gravity="center|top"
     android:orientation="vertical"
+    android:background="@color/background"
     android:layout_height="match_parent"
     tools:context=".Activity.SearchActivity">
 
@@ -67,6 +68,8 @@
             android:divider="@null"
             android:visibility="gone" />
         <androidx.recyclerview.widget.RecyclerView
+            android:background="@color/background"
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/rcv_search"/>
