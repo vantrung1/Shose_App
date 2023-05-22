@@ -157,9 +157,15 @@ public class PutphoneActivity extends AppCompatActivity {
 
     //-------------
     private void updateUser() {
-        String phonenew = "0"+ed_putPhonenumber.getText().toString();
-        Log.d("TAG", "updateUser: "+("0"+ed_putPhonenumber.getText().toString()));
-        Call<loginRequest> objCall = apiInterface._updateUserPhone(Utils.Users_Utils.getId(),phonenew.replaceAll(" ", ""));
+        String phonenew = ed_putPhonenumber.getText().toString();
+        String phonenew2= "";
+        if(phonenew.charAt(0)=='0'){
+            phonenew2 =ed_putPhonenumber.getText().toString();
+        }
+        else {
+            phonenew2 ="0"+ed_putPhonenumber.getText().toString();
+        }
+        Call<loginRequest> objCall = apiInterface._updateUserPhone(Utils.Users_Utils.getId(),phonenew2.replaceAll(" ", ""));
         objCall.enqueue(new Callback<loginRequest>() {
             @Override
             public void onResponse(Call<loginRequest> call, Response<loginRequest> response) {

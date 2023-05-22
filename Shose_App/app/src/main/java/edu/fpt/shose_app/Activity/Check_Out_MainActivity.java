@@ -304,7 +304,13 @@ public class Check_Out_MainActivity extends AppCompatActivity {
         phonecheckout = findViewById(R.id.phone_checkout);
         //address_checkout = findViewById(R.id.address_checkout);
         emailcheck_out.setText(Utils.Users_Utils.getEmail());
-        phonecheckout.setText("0" + Utils.Users_Utils.getPhoneNumber());
+        if(Utils.Users_Utils.getPhoneNumber().charAt(0)=='0'){
+            phonecheckout.setText(Utils.Users_Utils.getPhoneNumber());
+        }
+        else {
+            phonecheckout.setText("0" + Utils.Users_Utils.getPhoneNumber());
+        }
+
         // address
 
         img_update_phone = findViewById(R.id.img_update_phone);
